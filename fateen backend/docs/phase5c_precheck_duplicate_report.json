@@ -1,0 +1,27 @@
+{
+  "phase": "PHASE_5C_PRECHECK_READ_ONLY",
+  "verdict": "PRECHECK BLOCKED - DB CONNECTIVITY",
+  "blocked_reason": "SQL-over-TLS (Postgres wire) to canonical Supabase is filtered at this network's egress: TCP connect and PG SSLRequest negotiation succeed, but the TLS handshake is dropped every time (all 3 pooler IPs, ports 5432 and 6543, both SNI forms, TLS1.2+ variants, connect_timeout up to 90s).",
+  "connectivity": {
+    "host": "aws-0-ap-northeast-1.pooler.supabase.com",
+    "dns_ok": true,
+    "ips": [
+      "35.79.125.133",
+      "52.68.3.1",
+      "54.64.190.72"
+    ],
+    "tcp_connect": "OK (0.2-0.5s each)",
+    "pg_sslrequest": "OK - server replies S (accepts TLS) on all IPs",
+    "tls_handshake": "FAIL - TimeoutError dropped on all attempts (5432, 6543; blue/green SNI variants)",
+    "psycopg_connect": "FAIL - ConnectionTimeout (15s / 60s / 90s budgets)",
+    "direct_ipv6_endpoint": "db.<ref>.supabase.co not resolvable; no IPv6 egress on this host (WinError 10051)",
+    "https_443_egress": "OK - supabase.co REST reachable (HTTP 401 without key) - NOT a Postgres wire path",
+    "off_http": "UNREACHABLE (>60s, matches prior runs)"
+  },
+  "manifest_rows": 3198,
+  "classification": null,
+  "db_writes_attempted": 0,
+  "db_writes_committed": 0,
+  "action_taken": "No INSERT/UPDATE/DELETE/migration/ingestion/release performed.",
+  "next_step": "Run the identical PHASE 5C-PRECHECK (phase5c_precheck.py reads runtime URL from .env.runtime.url, connects via psycopg with the fateen_app least-privilege role, SELECT-only) from a network that permits TLS egress to aws-0-ap-northeast-1.pooler.supabase.com:5432/6543 - e.g. the backend's own host network, a corporate VPN with unrestricted egress, a small cloud VM, or a CI runner. Do NOT proceed to Phase 5C writes until connectivity is verified."
+}

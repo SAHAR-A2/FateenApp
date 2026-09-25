@@ -1,0 +1,6 @@
+POSTGRESQL EXTENSIONS
+=====================
+plpgsql  1.0   - PL/pgSQL procedural language
+pgcrypto 1.3   - Cryptographic functions (gen_random_uuid, etc.)
+citext   1.6   - Case-insensitive text type
+pg_trgm  1.6   - Trigram similarity matching

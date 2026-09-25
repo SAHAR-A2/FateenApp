@@ -1,0 +1,52 @@
+-- =============================================================================
+-- Triggers: Relationship & Junction Tables updated_at
+-- -----------------------------------------------------------------------------
+-- Purpose:       Wire the shared set_updated_at() function to every Mission 04
+--                relationship table carrying the audit lifecycle columns.
+-- Work orders:   Mission 04: Relationship & Junction Tables (work orders
+--                #001-#008).
+-- Dependencies:  Function set_updated_at() (06-functions, 0006). Mission 04
+--                relationship tables (0016).
+-- Migration:     0019_relationship_triggers.sql
+-- Rationale:     Every table with updated_at must stamp it on UPDATE. Declaring
+--                one trigger per table here keeps the rule explicit and auditable.
+-- =============================================================================
+CREATE TRIGGER product_ingredients_set_updated_at
+    BEFORE UPDATE ON product_ingredients
+    FOR EACH ROW
+    EXECUTE FUNCTION set_updated_at();
+
+CREATE TRIGGER product_allergens_set_updated_at
+    BEFORE UPDATE ON product_allergens
+    FOR EACH ROW
+    EXECUTE FUNCTION set_updated_at();
+
+CREATE TRIGGER product_nutrition_values_set_updated_at
+    BEFORE UPDATE ON product_nutrition_values
+    FOR EACH ROW
+    EXECUTE FUNCTION set_updated_at();
+
+CREATE TRIGGER product_health_flags_set_updated_at
+    BEFORE UPDATE ON product_health_flags
+    FOR EACH ROW
+    EXECUTE FUNCTION set_updated_at();
+
+CREATE TRIGGER ingredient_allergens_set_updated_at
+    BEFORE UPDATE ON ingredient_allergens
+    FOR EACH ROW
+    EXECUTE FUNCTION set_updated_at();
+
+CREATE TRIGGER ingredient_health_flags_set_updated_at
+    BEFORE UPDATE ON ingredient_health_flags
+    FOR EACH ROW
+    EXECUTE FUNCTION set_updated_at();
+
+CREATE TRIGGER ingredient_aliases_set_updated_at
+    BEFORE UPDATE ON ingredient_aliases
+    FOR EACH ROW
+    EXECUTE FUNCTION set_updated_at();
+
+CREATE TRIGGER entity_relationships_set_updated_at
+    BEFORE UPDATE ON entity_relationships
+    FOR EACH ROW
+    EXECUTE FUNCTION set_updated_at();

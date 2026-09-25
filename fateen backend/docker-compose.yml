@@ -1,0 +1,24 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: fateen
+      POSTGRES_PASSWORD: fateen
+      POSTGRES_DB: fateen
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://fateen:fateen@db:5432/fateen
+      AGENT_DRY_RUN: "true"
+    depends_on:
+      - db
+
+volumes:
+  pgdata:

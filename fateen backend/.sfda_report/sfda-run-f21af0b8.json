@@ -1,0 +1,1521 @@
+{
+  "run_id": "sfda-run-f21af0b8",
+  "mode": "dry-run",
+  "batch_size": 10,
+  "total": 100,
+  "position": 0,
+  "processed": 100,
+  "inserted": 0,
+  "quarantined": 0,
+  "failed": 100,
+  "skipped": 0,
+  "started_at": "2026-09-10T07:15:25+00:00",
+  "updated_at": "2026-09-10T07:15:26+00:00",
+  "source": "SFDA",
+  "candidates": {
+    "72cb027e36ec4f77b04b927f0e859ead": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "10f37ea60b72459e82fecaa5dee08d8d": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "2b60d9c1f5484f61823cf87e97626d4f": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "a0161dc002eb45f3b02d9b761dd3c0e9": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "e8c377dc0c844db293b81b536a5638c5": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "b564db45ad914375a21ce359e338bcc6": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "5c8d17be4b06405a9c80ca0f271338a7": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "261f8a401f224f2a87d106e3b1a44b38": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "dab9d2707eb343838c65f42859ef05f0": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "d8d4bc635184468b83f1fb4449966e42": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "82eb0191bc044baa8d72706a6d3fe9c6": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "5a1edde751e2480c99031de6c73b9703": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "4b9cd00efff641cab1273cbbcbc7681f": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "d0242a67276b4b408a9be455a76b718f": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "6e48afc3bafc44158e57c63d6c5caa80": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "ab6307f13d7940a4a660e6db6653ae36": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "b470cf763cd447548731ae4bfaf5b5e6": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "1ce196c0cba94cbba05c6a3f24757e27": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "f90644a9088c4f0aa40463dec4415999": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "d75c86cc4dd94a68982b5c419a2eb6b5": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "4db220681d294dbe839667d53cef4578": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "7fcce91756204f56b998b1099fb0d027": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "e7f00d7ba23d47e7b6bf79ab711ec9a2": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "9eaf344bf0754ec08c6583849e8870ff": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "19795bded707496d80e3d01e40671b3d": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "ba16c4688ff142bc8d5004e2bf869705": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "0b195705056e4f6a82a274ff2eb5fcab": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "0c44e7b91f1a4098955185ec0a07bf62": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "3f4db4aedee84b8c8938223da834a67a": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "f6f8d28353ab42249dbbf5833396fa7d": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "9011d107d13b4536adffbbad0e6c340f": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "0d39486c2e9643758992a73f07ce3235": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "a348f02dd89148d78e3f945c751ea2cf": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "63f16818c9384f18a6376dd984a881da": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "df99692976ff44e48166354a8137baa1": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "85476a5cd7f847e09744d257e8558957": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "baab1855006841ee813d47d117b63851": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "4c3507c59998479e94dffe28449810ee": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "aa4c933aba32434d83bae1418fd6e346": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "b544f0029cb44bb4be969266a6c3f579": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "dd594137e7eb41f4968a8a20b6a98bb5": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "bf0b1183a16d49709b9d31712845e488": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "55db89a9c7c34447b70715cfa2b14c7c": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "1324d14936bc4e8dabf39d206d6eff09": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "733d49ecb53f404680141126085255b4": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "470f058b35bd484481529d20024e724f": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "11c9473e127d4ad2b46dc8e187518e1e": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "8a04f14f4461491eb128071e1c057c99": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "30fa64563e074eba86f9d4781dc06b08": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "7bccaa4271574fbd85dddc5944d3783e": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "2ef1a9aea4594573a889c1d78fe77db3": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "5aa6ab7a45eb493dab02200fb83dec58": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "19ef868f9bb2466e991f341fe02b680c": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "fa16ebd5e6314d46ab2278267aeb1253": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "d616b5009a71436a90c6e9fb1e40c803": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "967572a57bf94c6d90878f23f097bb0f": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "d627ad57f6d748f6acc9be220a10812d": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "42ed2b00b6ec4a4c83deb02d8d77326d": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "590da996dca9461085240f7f29701447": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "53be5ba861ec4f3e8d485810379b3967": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "503cbd72cf084671a74a0c2f79d7fcde": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "1144b06353e340afb5998f4898f5f0b2": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "5ffd430089db4202a1893d566fefb196": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "2544b016829d4f1aaa6204e4a5d3e1d2": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "ddfca62d07c541c585a9132da129d2ed": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "9901942b955d4cd89f8179a2ce99c4c5": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "07fcc1a5e0f74d568b3c471149aeb920": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "7e822ac0ff5e4c628a5bf72eea633694": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "403c7cebecc64148bcd2c900f6a94b08": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "496b963a82dd47cbab0f0a1f93eff242": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "74eb972f97f84bc7be06e13a71fe596f": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "8025f80cb02c41329d017580a91009ae": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "d4f9e6303b52490fa9c4a342ee4d6ffb": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "c25528f72c0a41b4b52fa733380033ff": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "f51962bf28f24546b11d80bcb71300b0": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "2e719efc35b542948e0c1afbb0b77493": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "2ef99a6a29cf403980af2dff9eb1652b": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "eac040014a1e4de1b26984f060c2a238": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "6d48b207b456431caaa753b5c4f4a670": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "5f297bf164d6443180710f0d088f5945": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "3e7c2363dc4f4069a3af561f3c211542": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "6ac1c49b08924ae7a0966a3f1f32b658": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "a05f3a3dbfac4e0d8e71e41168d8b848": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "c1b4e2c53152496ba08d03eb785b86a2": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "74e81f9012354cc5a811ffe9c411bad6": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "9a6a871e5b7a4409ac749084dba55040": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "82d1baadbf2c4962b423aaa73a6a856d": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "799eaa88f054449885202d4e423892a3": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "bfc2b8b449a7425787ffa6286c7b7c92": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "6605d7b5c987431fba968280e8671273": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "019557a6df7d4b1b8b067a882f6678b1": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "ef0b2ae3c692492685bddbf3e3197101": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "68041dbc31694133b05b3a80dc7ad0e1": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "9db84eb3fb384622b59540bcc6e87234": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "c87c4697c0564b178076230f4158f0e5": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "d4e26e826b31448d9edab8fd75dbe7cf": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "b09f068669a04dfcb3a8e85f2563cb94": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "a8f8ca7e38584b73a775357e7af2ef61": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "5f5b4f2e384849448c88db2bc87935b6": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "e25e8fd10e904abf82a3a817689cb7df": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    }
+  },
+  "quarantine": [],
+  "notes": [
+    "effective dry_run=True (mode=dry-run, AGENT_DRY_RUN gate applied)"
+  ]
+}

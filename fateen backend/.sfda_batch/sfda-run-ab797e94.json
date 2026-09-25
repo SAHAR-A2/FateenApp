@@ -1,0 +1,66 @@
+{
+  "run_id": "sfda-run-ab797e94",
+  "mode": "dry-run",
+  "batch_size": 3,
+  "total": 3,
+  "position": 0,
+  "processed": 3,
+  "inserted": 0,
+  "quarantined": 0,
+  "failed": 3,
+  "skipped": 0,
+  "started_at": "2026-09-10T07:15:20+00:00",
+  "updated_at": "2026-09-10T07:15:23+00:00",
+  "source": "SFDA",
+  "candidates": {
+    "6dddce5569f24c5db410477ab7675812": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "794ac8c508ad423f811198272cf97589": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    },
+    "7cdcba3d86b34dbf8953b396a29369bf": {
+      "identifier": "FIXTURE-NOTFETCHED-0",
+      "mode": "barcode",
+      "status": "failed",
+      "barcode": null,
+      "trade_name": null,
+      "unresolved_ingredients": [],
+      "rejection_reasons": [
+        "fetch_failed"
+      ],
+      "validation_errors": [
+        "no fixture record for identifier"
+      ],
+      "processed_at": null
+    }
+  },
+  "quarantine": [],
+  "notes": [
+    "effective dry_run=True (mode=dry-run, AGENT_DRY_RUN gate applied)"
+  ]
+}

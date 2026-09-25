@@ -1,0 +1,13 @@
+ENUM TYPES IN DATABASE (58 total values across 10 types)
+=========================================================
+
+approval_status: pending_review, in_review, changes_requested, approved, rejected, cancelled
+candidate_status: discovered, enriched, normalized, pending_review, approved, merged, discarded
+confidence_band: very_low, low, medium, high, very_high
+entity_status: draft, active, inactive, deprecated, archived
+review_decision: approved, rejected, changes_requested, escalated
+review_tier: automated, standard, elevated, expert, consensus
+translation_status: draft, in_progress, pending_review, approved, rejected
+unit_dimension: mass, volume, energy, temperature, count, ratio, amount, other
+update_type: created, modified, published, unpublished, deprecated, archived, merged, split
+version_status: draft, pending_approval, approved, rejected, superseded

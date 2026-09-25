@@ -1,0 +1,4 @@
+SEQUENCES
+=========
+lifecycle_statuses_id_seq (owned by fateen) - Only auto-increment sequence
+All other primary keys use gen_random_uuid() via pgcrypto

@@ -1,0 +1,17 @@
+5329; 0 17783 TABLE DATA public allergens fateen
+5321; 0 17659 TABLE DATA public companies fateen
+5323; 0 17690 TABLE DATA public brands fateen
+5327; 0 17752 TABLE DATA public ingredients fateen
+5325; 0 17721 TABLE DATA public products fateen
+5360; 0 19179 TABLE DATA public barcodes fateen
+5339; 0 18153 TABLE DATA public ingredient_allergens fateen
+5341; 0 18187 TABLE DATA public ingredient_aliases fateen
+5340; 0 18170 TABLE DATA public ingredient_health_flags fateen
+5336; 0 18101 TABLE DATA public product_allergens fateen
+5369; 0 19500 TABLE DATA public product_barcodes fateen
+5335; 0 18082 TABLE DATA public product_ingredients fateen
+5338; 0 18136 TABLE DATA public product_health_flags fateen
+5368; 0 19483 TABLE DATA public product_images fateen
+5337; 0 18118 TABLE DATA public product_nutrition_values fateen
+5309; 0 17277 TABLE DATA public data_sources fateen
+5308; 0 17260 TABLE DATA public source_priorities fateen

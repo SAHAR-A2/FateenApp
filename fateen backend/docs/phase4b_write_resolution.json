@@ -1,0 +1,6222 @@
+{
+  "phase": "PHASE_4B_WRITE_RESOLUTION_SIMULATION",
+  "safe_to_write": 1692,
+  "products_would_succeed": 764,
+  "products_would_abort": 928,
+  "ingredient_failures": 347,
+  "allergen_failures": 90,
+  "nutrition_failures": 879,
+  "sample_abort_ids": [
+    [
+      "f5k_00012",
+      "0011110144348"
+    ],
+    [
+      "f5k_00013",
+      "0011210694170"
+    ],
+    [
+      "f5k_00014",
+      "0011359640106"
+    ],
+    [
+      "f5k_00017",
+      "0012000002656"
+    ],
+    [
+      "f5k_00018",
+      "0012000002946"
+    ],
+    [
+      "f5k_00019",
+      "0012000004070"
+    ],
+    [
+      "f5k_00020",
+      "0012000014338"
+    ],
+    [
+      "f5k_00021",
+      "0012000014383"
+    ],
+    [
+      "f5k_00022",
+      "0012000022760"
+    ],
+    [
+      "f5k_00031",
+      "0012000051845"
+    ],
+    [
+      "f5k_00032",
+      "0012000057212"
+    ],
+    [
+      "f5k_00041",
+      "0012000057496"
+    ],
+    [
+      "f5k_00043",
+      "0012000057519"
+    ],
+    [
+      "f5k_00049",
+      "0012000060090"
+    ],
+    [
+      "f5k_00051",
+      "0012000060830"
+    ],
+    [
+      "f5k_00054",
+      "0012000061417"
+    ],
+    [
+      "f5k_00056",
+      "0012000063411"
+    ],
+    [
+      "f5k_00059",
+      "0012000066313"
+    ],
+    [
+      "f5k_00061",
+      "0012000069666"
+    ],
+    [
+      "f5k_00062",
+      "0012000108402"
+    ],
+    [
+      "f5k_00064",
+      "0012000801969"
+    ],
+    [
+      "f5k_00065",
+      "0012000802850"
+    ],
+    [
+      "f5k_00069",
+      "0012000804571"
+    ],
+    [
+      "f5k_00070",
+      "0012000804670"
+    ],
+    [
+      "f5k_00073",
+      "0013000008143"
+    ],
+    [
+      "f5k_00081",
+      "0016000207554"
+    ],
+    [
+      "f5k_00084",
+      "0017273502179"
+    ],
+    [
+      "f5k_00096",
+      "0032894010339"
+    ],
+    [
+      "f5k_00097",
+      "0032894030481"
+    ],
+    [
+      "f5k_00099",
+      "0033400065041"
+    ]
+  ],
+  "unresolved_ingredients": {
+    "Milk Solids": 16,
+    "Fresh Cow's Milk": 12,
+    "Culture": 12,
+    "Onion Powder": 9,
+    "Vitamin D3": 9,
+    "Flour Treatment Agent (E300)": 7,
+    "Emulsifier (Soya Lecithin)": 7,
+    "Acidity Regulator (E330)": 7,
+    "Vitamin A": 6,
+    "Dried Wheat Sourdough": 6,
+    "E472e)": 6,
+    "carbon dioxide": 6,
+    "5%": 6,
+    "sweet potato": 5,
+    "sunflower seed": 5,
+    "shiitake mushroom": 5,
+    "Preservatives (E282": 5,
+    "Fresh Cream": 5,
+    "Stabilizer (E440)": 5,
+    "Corn Starch": 5,
+    "Fresh skimmed cow's milk": 5,
+    "onion": 4,
+    "Black Pepper": 4,
+    "broccoli": 4,
+    "chlorella": 4,
+    "kale": 4,
+    "Protein blend (pea protein": 4,
+    "milled golden flaxseed)": 4,
+    "Natural flavours": 4,
+    "Acacia gum": 4,
+    "Guar gum": 4,
+    "Xanthan gum": 4,
+    "Medium chain triglycerides (medium chain triglycerides from coconut oil": 4,
+    "acacia gum)": 4,
+    "Fruits": 4,
+    "spinach": 4,
+    "maitake mushroom": 4,
+    "Rebaudioside M": 4,
+    "Bacterial culture and enzymes blend (rice maltodextrin": 4,
+    "Bacillus subtilis": 4,
+    "vitamin B6": 4,
+    "Raising Agents (Sodium Bicarbonate": 4,
+    "Ammonium Bicarbonate)": 4,
+    "na": 4,
+    "E627": 4,
+    "price 3": 4,
+    "E200)": 4,
+    "price 4": 4,
+    "Milk Protein": 4,
+    "Vitamin &quot;A&quot;": 4,
+    "fresh cream": 4,
+    "Vitamin C": 4,
+    "Fresh Potatoes": 4,
+    "Vegetable Oil (Palmolein)": 4,
+    "Vegetable Oil (Sunflower)": 4,
+    "price 6": 4,
+    "E635)": 4,
+    "xanthan gum": 3,
+    "Soluble tapioca fibers": 3,
+    "tapioca maltodextrin*": 3,
+    "pumpkin": 3,
+    "cranberry": 3,
+    "pomegranate juice powder*": 3,
+    "amylase": 3,
+    "peanuts": 3,
+    "Faba protein": 3,
+    "Tapioca starch": 3,
+    "Potato protein": 3,
+    "vitamin D": 3,
+    "lactic culture": 3,
+    "price 8": 3,
+    "Vegetable Oil (Palm)": 3,
+    "E412": 3,
+    "E331)": 3,
+    "Full Fat Soya Flour": 3,
+    "Thickener (E412)": 3,
+    "E472e": 3,
+    "Preservative (E202)": 3,
+    "Emulsifiers (Vegetable Oil Origin": 3,
+    "E471": 3,
+    "Orange Juice Concentrate": 3,
+    "vitamin B12": 3,
+    "Preservatives (E202": 3,
+    "vitamin C": 3,
+    "D)": 3,
+    "price 7": 3,
+    "Cow's Milk Whey Powder": 3,
+    "E551)": 3,
+    "E508": 3,
+    "E330": 3,
+    "price 1.50": 3,
+    "Sodium Bicarbonate E500)": 3,
+    "soybean oil": 2,
+    "corn syrup": 2,
+    "corn starch": 2,
+    "thickener (guar gum)": 2,
+    "onion powder": 2,
+    "Ginger": 2,
+    "Cinnamon": 2,
+    "Monk fruit juice concentrate": 2
+  },
+  "unresolved_allergens": {
+    "en:gluten": 73,
+    "en:orange": 9,
+    "en:apple": 5,
+    "en:celery": 2,
+    "en:banana": 2,
+    "en:peach": 2,
+    "fr:Triticale": 1,
+    "en:Xanthan gum": 1,
+    "ar:يمنع للأمراض المزمنه و الحوامل و المرضعات و من دون 18 عام إلا بإشراف طبيب": 1,
+    "da:sojalecithin": 1,
+    "en:molluscs": 1,
+    "en:Casein": 1,
+    "en:sulphur-dioxide-and-sulphites": 1,
+    "en:Tomato skins": 1,
+    "en:Garlic": 1,
+    "en:Tomatoes": 1
+  },
+  "unresolved_nutrition_types": {
+    "energy-kj": 879
+  },
+  "unresolved_units": {},
+  "abort_disjoint_buckets": {
+    "ALLERGEN+INGREDIENT": 12,
+    "ALLERGEN+INGREDIENT+NUTRITION": 77,
+    "ALLERGEN+NUTRITION": 1,
+    "INGREDIENT": 37,
+    "INGREDIENT+NUTRITION": 221,
+    "NUTRITION": 580
+  },
+  "would_succeed": 764,
+  "abort_detail": {
+    "f5k_00012": {
+      "barcode": "0011110144348",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00013": {
+      "barcode": "0011210694170",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00014": {
+      "barcode": "0011359640106",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00017": {
+      "barcode": "0012000002656",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00018": {
+      "barcode": "0012000002946",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00019": {
+      "barcode": "0012000004070",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00020": {
+      "barcode": "0012000014338",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00021": {
+      "barcode": "0012000014383",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00022": {
+      "barcode": "0012000022760",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00031": {
+      "barcode": "0012000051845",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00032": {
+      "barcode": "0012000057212",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00041": {
+      "barcode": "0012000057496",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00043": {
+      "barcode": "0012000057519",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00049": {
+      "barcode": "0012000060090",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00051": {
+      "barcode": "0012000060830",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00054": {
+      "barcode": "0012000061417",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00056": {
+      "barcode": "0012000063411",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00059": {
+      "barcode": "0012000066313",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00061": {
+      "barcode": "0012000069666",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00062": {
+      "barcode": "0012000108402",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00064": {
+      "barcode": "0012000801969",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00065": {
+      "barcode": "0012000802850",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00069": {
+      "barcode": "0012000804571",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00070": {
+      "barcode": "0012000804670",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00073": {
+      "barcode": "0013000008143",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00081": {
+      "barcode": "0016000207554",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00084": {
+      "barcode": "0017273502179",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00096": {
+      "barcode": "0032894010339",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00097": {
+      "barcode": "0032894030481",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00099": {
+      "barcode": "0033400065041",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00101": {
+      "barcode": "0034000443505",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00120": {
+      "barcode": "0054881015332",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00133": {
+      "barcode": "0062810631058",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00146": {
+      "barcode": "0076397004075",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00148": {
+      "barcode": "0089686040159",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00149": {
+      "barcode": "0089686120226",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00150": {
+      "barcode": "0089686120714",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00182": {
+      "barcode": "0213203024005",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00192": {
+      "barcode": "0254448102677",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00248": {
+      "barcode": "0617950145691",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00249": {
+      "barcode": "0617950145714",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00253": {
+      "barcode": "0617950200017",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00255": {
+      "barcode": "0617950200529",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00259": {
+      "barcode": "0617950205425",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00260": {
+      "barcode": "0617950205531",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00274": {
+      "barcode": "0617950410065",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00282": {
+      "barcode": "0617950600947",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00283": {
+      "barcode": "0617950700197",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00284": {
+      "barcode": "0617950700371",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00285": {
+      "barcode": "0617950701378",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00286": {
+      "barcode": "0617950701439",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00287": {
+      "barcode": "0617950701446",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00289": {
+      "barcode": "0617950706328",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00290": {
+      "barcode": "0617950801450",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00291": {
+      "barcode": "0617950803232",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00292": {
+      "barcode": "0617950803560",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00293": {
+      "barcode": "0617950803720",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00294": {
+      "barcode": "0617950804246",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00295": {
+      "barcode": "0617950804536",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00296": {
+      "barcode": "0617950804857",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00297": {
+      "barcode": "0617950811169",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00299": {
+      "barcode": "0620514001036",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00300": {
+      "barcode": "0628011604026",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00305": {
+      "barcode": "0628120620009",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00314": {
+      "barcode": "0628451439196",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00315": {
+      "barcode": "0628451926634",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00319": {
+      "barcode": "0628504946060",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00324": {
+      "barcode": "0628678203181",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00325": {
+      "barcode": "0628678203518",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00326": {
+      "barcode": "0628678203556",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00327": {
+      "barcode": "0628678203617",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00328": {
+      "barcode": "0628678203655",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00329": {
+      "barcode": "0628678203679",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00331": {
+      "barcode": "0628678440425",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00332": {
+      "barcode": "0628678617544",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00333": {
+      "barcode": "0628678617568",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00334": {
+      "barcode": "0628678617582",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00337": {
+      "barcode": "0628693634052",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00338": {
+      "barcode": "0628693634083",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00340": {
+      "barcode": "0628693634151",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00341": {
+      "barcode": "0628693634175",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00345": {
+      "barcode": "0628920104006",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00347": {
+      "barcode": "0628942135880",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00353": {
+      "barcode": "0628942631771",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00356": {
+      "barcode": "0634158794285",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00358": {
+      "barcode": "0643131485515",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00362": {
+      "barcode": "0653871228129",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00397": {
+      "barcode": "0709565040437",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00398": {
+      "barcode": "0709565040444",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00403": {
+      "barcode": "0709993317040",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00405": {
+      "barcode": "0709993333200",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00407": {
+      "barcode": "0717273501591",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00408": {
+      "barcode": "0717273501607",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00409": {
+      "barcode": "0717273502109",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00410": {
+      "barcode": "0717273502123",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00413": {
+      "barcode": "0717273504516",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00427": {
+      "barcode": "0733603094250",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00428": {
+      "barcode": "0736211763730",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00429": {
+      "barcode": "0736542048599",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00430": {
+      "barcode": "0736924090178",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00444": {
+      "barcode": "0745178417679",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00445": {
+      "barcode": "0748485701387",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00448": {
+      "barcode": "0749460633518",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00476": {
+      "barcode": "0810116490905",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00492": {
+      "barcode": "0850040427592",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00500": {
+      "barcode": "0850084610530",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00501": {
+      "barcode": "0850084610554",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00505": {
+      "barcode": "0857183005380",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00513": {
+      "barcode": "0899009050105",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00527": {
+      "barcode": "1040209003333",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00540": {
+      "barcode": "2000602988353",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00558": {
+      "barcode": "2324710447404",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00559": {
+      "barcode": "2582280000003",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00562": {
+      "barcode": "2775698500016",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00564": {
+      "barcode": "2800003735156",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00566": {
+      "barcode": "2800003839830",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00567": {
+      "barcode": "2800003839908",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00568": {
+      "barcode": "2800004148184",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00569": {
+      "barcode": "2800004148191",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00570": {
+      "barcode": "2987027189285",
+      "categories": [
+        "ALLERGEN",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00575": {
+      "barcode": "3038351480100",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00580": {
+      "barcode": "3068320109657",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00583": {
+      "barcode": "3073781147087",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00586": {
+      "barcode": "3073781190960",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00587": {
+      "barcode": "3080216042022",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00588": {
+      "barcode": "3228022970195",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00590": {
+      "barcode": "3245411759742",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00594": {
+      "barcode": "3380380071270",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00595": {
+      "barcode": "3380380083617",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00596": {
+      "barcode": "3387390335859",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00597": {
+      "barcode": "3412290010992",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00615": {
+      "barcode": "3800139125462",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00618": {
+      "barcode": "3858890972504",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00629": {
+      "barcode": "4002860346164",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00632": {
+      "barcode": "4003994110010",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00633": {
+      "barcode": "4003994112427",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00639": {
+      "barcode": "4006375000030",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00640": {
+      "barcode": "4007933222710",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00641": {
+      "barcode": "4009900482806",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00648": {
+      "barcode": "4017100373909",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00673": {
+      "barcode": "4600823652378",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00675": {
+      "barcode": "4640103521352",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00695": {
+      "barcode": "4800344001420",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00704": {
+      "barcode": "4894375041159",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00706": {
+      "barcode": "4901872837144",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00711": {
+      "barcode": "5000108478119",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00713": {
+      "barcode": "5000119564429",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00715": {
+      "barcode": "5000159001274",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00716": {
+      "barcode": "5000159459228",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00717": {
+      "barcode": "5000159461122",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00722": {
+      "barcode": "5000396001730",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00723": {
+      "barcode": "5000396008784",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00727": {
+      "barcode": "5010251460848",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00729": {
+      "barcode": "5010525431871",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00737": {
+      "barcode": "5012246006444",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00738": {
+      "barcode": "5012246006475",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00740": {
+      "barcode": "5014213200732",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00753": {
+      "barcode": "5027952012986",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00756": {
+      "barcode": "5032722301566",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00757": {
+      "barcode": "5032722312920",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00758": {
+      "barcode": "5033712140202",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00765": {
+      "barcode": "5034000080675",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00767": {
+      "barcode": "5053827185226",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00770": {
+      "barcode": "5056036502709",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00775": {
+      "barcode": "5056555200711",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00776": {
+      "barcode": "5056555201138",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00777": {
+      "barcode": "5056555201183",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00778": {
+      "barcode": "5056555201190",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00780": {
+      "barcode": "5056555203521",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00785": {
+      "barcode": "5056569902649",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00787": {
+      "barcode": "5060092692182",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00794": {
+      "barcode": "5060686530050",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00796": {
+      "barcode": "5060689760065",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00797": {
+      "barcode": "5060689760072",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00803": {
+      "barcode": "5060961650947",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00804": {
+      "barcode": "5060961651616",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00811": {
+      "barcode": "5065000300128",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00826": {
+      "barcode": "5201301120823",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00830": {
+      "barcode": "5203447540145",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00835": {
+      "barcode": "5203912390886",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00837": {
+      "barcode": "5203912390916",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00841": {
+      "barcode": "5213010250883",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00849": {
+      "barcode": "5281804930396",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00855": {
+      "barcode": "5285000390626",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00857": {
+      "barcode": "5285000910572",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00858": {
+      "barcode": "5285001155255",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00871": {
+      "barcode": "5333300005143",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00879": {
+      "barcode": "5410126476941",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00881": {
+      "barcode": "5410171005103",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00883": {
+      "barcode": "5410986878428",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00885": {
+      "barcode": "5411361020869",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00886": {
+      "barcode": "5412158056160",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00893": {
+      "barcode": "5449000043399",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00898": {
+      "barcode": "5449000295040",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00899": {
+      "barcode": "5449000302670",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00904": {
+      "barcode": "5701211012572",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00906": {
+      "barcode": "5711953001406",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00909": {
+      "barcode": "5711953117558",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00910": {
+      "barcode": "5711953117589",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00911": {
+      "barcode": "5711953118371",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00914": {
+      "barcode": "5711953163906",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00915": {
+      "barcode": "5711953164071",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00917": {
+      "barcode": "5711953195228",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00918": {
+      "barcode": "5711953195235",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00919": {
+      "barcode": "5740900403550",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00920": {
+      "barcode": "5760466738040",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00921": {
+      "barcode": "5900020025067",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00922": {
+      "barcode": "5900020030245",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00923": {
+      "barcode": "5900020030924",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00924": {
+      "barcode": "5900020030962",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00925": {
+      "barcode": "5900020039705",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00926": {
+      "barcode": "5900020045348",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00938": {
+      "barcode": "5902609001844",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00939": {
+      "barcode": "5902898828511",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00941": {
+      "barcode": "5904358552547",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00956": {
+      "barcode": "5998067317436",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00965": {
+      "barcode": "6001240100066",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00974": {
+      "barcode": "6084001168208",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00977": {
+      "barcode": "6084012090161",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00978": {
+      "barcode": "6084012090192",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00979": {
+      "barcode": "6084012090253",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00980": {
+      "barcode": "6084012090284",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00981": {
+      "barcode": "6084012090420",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00984": {
+      "barcode": "6105840000396",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00990": {
+      "barcode": "6111245470054",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_00997": {
+      "barcode": "6191351800082",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_00998": {
+      "barcode": "6191351800099",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01000": {
+      "barcode": "6191537700557",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01002": {
+      "barcode": "6211205101025",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01003": {
+      "barcode": "6212682011012",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01017": {
+      "barcode": "6221134004922",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01020": {
+      "barcode": "6221134012965",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01025": {
+      "barcode": "6222000401487",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01026": {
+      "barcode": "6222024101110",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01027": {
+      "barcode": "6222024102896",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01032": {
+      "barcode": "6223000410448",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01033": {
+      "barcode": "6223000410455",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01034": {
+      "barcode": "6223000410721",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01043": {
+      "barcode": "6223015760163",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01044": {
+      "barcode": "6223016320076",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01050": {
+      "barcode": "6224010103139",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01053": {
+      "barcode": "6225000826519",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01054": {
+      "barcode": "6225000828995",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01061": {
+      "barcode": "6251932003070",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01062": {
+      "barcode": "6251934004426",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01063": {
+      "barcode": "6251934004457",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01064": {
+      "barcode": "6251934008417",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01065": {
+      "barcode": "6251934008424",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01068": {
+      "barcode": "6253334603285",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01069": {
+      "barcode": "6253348101807",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01070": {
+      "barcode": "6253348101821",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01071": {
+      "barcode": "6253348102132",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01072": {
+      "barcode": "6253348102156",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01073": {
+      "barcode": "6253348102514",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01084": {
+      "barcode": "6271001732052",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01086": {
+      "barcode": "6271002107774",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01089": {
+      "barcode": "6271002190219",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01090": {
+      "barcode": "6271002204114",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01092": {
+      "barcode": "6271002220916",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01093": {
+      "barcode": "6271002221111",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01094": {
+      "barcode": "6271002221517",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01095": {
+      "barcode": "6271002221616",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01096": {
+      "barcode": "6271002221715",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01099": {
+      "barcode": "6271003014019",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01105": {
+      "barcode": "6271100339954",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01106": {
+      "barcode": "6281000010020",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01107": {
+      "barcode": "6281000010105",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01108": {
+      "barcode": "6281000010174",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01109": {
+      "barcode": "6281000074039",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01110": {
+      "barcode": "6281000122075",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01119": {
+      "barcode": "6281003170202",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01124": {
+      "barcode": "6281004194139",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01148": {
+      "barcode": "6281006874008",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01151": {
+      "barcode": "6281007023122",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01152": {
+      "barcode": "6281007023276",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01154": {
+      "barcode": "6281007023504",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01155": {
+      "barcode": "6281007026017",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01156": {
+      "barcode": "6281007026031",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01159": {
+      "barcode": "6281007026420",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01161": {
+      "barcode": "6281007027380",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01162": {
+      "barcode": "6281007028288",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01163": {
+      "barcode": "6281007029612",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01164": {
+      "barcode": "6281007030410",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01165": {
+      "barcode": "6281007031202",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01166": {
+      "barcode": "6281007031233",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01167": {
+      "barcode": "6281007031257",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01169": {
+      "barcode": "6281007032070",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01171": {
+      "barcode": "6281007032254",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01172": {
+      "barcode": "6281007032261",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01173": {
+      "barcode": "6281007032285",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01175": {
+      "barcode": "6281007032520",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01176": {
+      "barcode": "6281007032568",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01177": {
+      "barcode": "6281007032582",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01178": {
+      "barcode": "6281007032759",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01180": {
+      "barcode": "6281007033114",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01181": {
+      "barcode": "6281007033190",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01182": {
+      "barcode": "6281007033565",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01184": {
+      "barcode": "6281007034012",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01185": {
+      "barcode": "6281007034043",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01186": {
+      "barcode": "6281007034067",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01187": {
+      "barcode": "6281007035019",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01190": {
+      "barcode": "6281007036023",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01195": {
+      "barcode": "6281007037181",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01197": {
+      "barcode": "6281007038621",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01198": {
+      "barcode": "6281007038898",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01199": {
+      "barcode": "6281007038928",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01202": {
+      "barcode": "6281007039826",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01203": {
+      "barcode": "6281007039833",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01206": {
+      "barcode": "6281007040655",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01207": {
+      "barcode": "6281007041584",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01209": {
+      "barcode": "6281007041980",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01211": {
+      "barcode": "6281007042871",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01212": {
+      "barcode": "6281007045780",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01213": {
+      "barcode": "6281007045865",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01215": {
+      "barcode": "6281007046046",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01217": {
+      "barcode": "6281007046381",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01218": {
+      "barcode": "6281007046466",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01219": {
+      "barcode": "6281007046725",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01221": {
+      "barcode": "6281007047654",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01222": {
+      "barcode": "6281007049207",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01224": {
+      "barcode": "6281007050166",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01225": {
+      "barcode": "6281007050173",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01229": {
+      "barcode": "6281007053549",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01230": {
+      "barcode": "6281007053594",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01236": {
+      "barcode": "6281007054980",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01237": {
+      "barcode": "6281007055017",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01239": {
+      "barcode": "6281007055468",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01240": {
+      "barcode": "6281007055741",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01246": {
+      "barcode": "6281007058704",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01250": {
+      "barcode": "6281007059565",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01254": {
+      "barcode": "6281007061032",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01257": {
+      "barcode": "6281007061292",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01261": {
+      "barcode": "6281007061971",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01263": {
+      "barcode": "6281007062978",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01264": {
+      "barcode": "6281007063067",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01265": {
+      "barcode": "6281007063081",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01275": {
+      "barcode": "6281007064729",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01282": {
+      "barcode": "6281007066204",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01283": {
+      "barcode": "6281007066884",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01286": {
+      "barcode": "6281007067294",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01288": {
+      "barcode": "6281007067591",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01290": {
+      "barcode": "6281007068055",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01296": {
+      "barcode": "6281007070324",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01297": {
+      "barcode": "6281007070577",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01302": {
+      "barcode": "6281007071154",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01304": {
+      "barcode": "6281007071840",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01308": {
+      "barcode": "6281007073127",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01309": {
+      "barcode": "6281007073134",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01310": {
+      "barcode": "6281007074483",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01312": {
+      "barcode": "6281007075060",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01313": {
+      "barcode": "6281007075619",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01314": {
+      "barcode": "6281007077705",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01315": {
+      "barcode": "6281007110402",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01316": {
+      "barcode": "6281007119054",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01317": {
+      "barcode": "6281007120401",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01318": {
+      "barcode": "6281007120807",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01319": {
+      "barcode": "6281007142366",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01320": {
+      "barcode": "6281007167826",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01321": {
+      "barcode": "6281007168205",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01322": {
+      "barcode": "6281007168403",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01323": {
+      "barcode": "6281007169004",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01324": {
+      "barcode": "6281007184489",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01329": {
+      "barcode": "6281011138836",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01330": {
+      "barcode": "6281011216435",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01350": {
+      "barcode": "6281012033178",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01351": {
+      "barcode": "6281012033185",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01352": {
+      "barcode": "6281012033321",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01361": {
+      "barcode": "6281013222069",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01364": {
+      "barcode": "6281013457904",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01369": {
+      "barcode": "6281014000994",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01371": {
+      "barcode": "6281014001083",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01372": {
+      "barcode": "6281014001656",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01377": {
+      "barcode": "6281014002844",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01381": {
+      "barcode": "6281014004145",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01382": {
+      "barcode": "6281014004381",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01384": {
+      "barcode": "6281014110013",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01385": {
+      "barcode": "6281014110020",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01388": {
+      "barcode": "6281014111027",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01389": {
+      "barcode": "6281014133005",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01390": {
+      "barcode": "6281014134019",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01391": {
+      "barcode": "6281014174510",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01395": {
+      "barcode": "6281014300018",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01401": {
+      "barcode": "6281014307024",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01404": {
+      "barcode": "6281014402149",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01407": {
+      "barcode": "6281014620208",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01408": {
+      "barcode": "6281014622134",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01409": {
+      "barcode": "6281014630108",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01411": {
+      "barcode": "6281014800426",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01412": {
+      "barcode": "6281014800433",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01413": {
+      "barcode": "6281014800440",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01414": {
+      "barcode": "6281014800471",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01417": {
+      "barcode": "6281016001074",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01418": {
+      "barcode": "6281016002446",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01419": {
+      "barcode": "6281016003177",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01421": {
+      "barcode": "6281016010489",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01426": {
+      "barcode": "6281016012247",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01428": {
+      "barcode": "6281016012308",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01429": {
+      "barcode": "6281016012322",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01431": {
+      "barcode": "6281016014555",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01438": {
+      "barcode": "6281016149240",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01441": {
+      "barcode": "6281016203423",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01443": {
+      "barcode": "6281016248042",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01444": {
+      "barcode": "6281016273594",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01445": {
+      "barcode": "6281016298221",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01448": {
+      "barcode": "6281016503547",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01450": {
+      "barcode": "6281016702261",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01451": {
+      "barcode": "6281016730318",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01454": {
+      "barcode": "6281016731711",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01459": {
+      "barcode": "6281016840710",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01460": {
+      "barcode": "6281016900469",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01461": {
+      "barcode": "6281016900483",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01462": {
+      "barcode": "6281016900506",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01467": {
+      "barcode": "6281016901725",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01469": {
+      "barcode": "6281016948652",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01472": {
+      "barcode": "6281016960432",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01473": {
+      "barcode": "6281016960470",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01477": {
+      "barcode": "6281016961163",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01480": {
+      "barcode": "6281018002536",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01481": {
+      "barcode": "6281018002598",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01482": {
+      "barcode": "6281018002604",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01483": {
+      "barcode": "6281018002635",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01484": {
+      "barcode": "6281018002642",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01485": {
+      "barcode": "6281018002659",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01486": {
+      "barcode": "6281018110323",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01487": {
+      "barcode": "6281018120322",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01488": {
+      "barcode": "6281018127048",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01489": {
+      "barcode": "6281018131786",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01490": {
+      "barcode": "6281018140368",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01491": {
+      "barcode": "6281018143581",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01492": {
+      "barcode": "6281018143840",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01493": {
+      "barcode": "6281018143949",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01494": {
+      "barcode": "6281018146841",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01495": {
+      "barcode": "6281018154549",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01496": {
+      "barcode": "6281018154648",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01497": {
+      "barcode": "6281018154945",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01498": {
+      "barcode": "6281018161868",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01499": {
+      "barcode": "6281018163916",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01500": {
+      "barcode": "6281018172680",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01501": {
+      "barcode": "6281018172888",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01503": {
+      "barcode": "6281018262947",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01505": {
+      "barcode": "6281018275541",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01507": {
+      "barcode": "6281018297987",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01510": {
+      "barcode": "6281020010314",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01511": {
+      "barcode": "6281020010413",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01512": {
+      "barcode": "6281020046009",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01514": {
+      "barcode": "6281020051218",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01516": {
+      "barcode": "6281020106215",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01517": {
+      "barcode": "6281020173965",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01518": {
+      "barcode": "6281020174825",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01524": {
+      "barcode": "6281022101188",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01525": {
+      "barcode": "6281022102901",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01526": {
+      "barcode": "6281022113150",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01527": {
+      "barcode": "6281022115352",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01528": {
+      "barcode": "6281022115659",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01529": {
+      "barcode": "6281022115710",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01530": {
+      "barcode": "6281022115727",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01531": {
+      "barcode": "6281022116472",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01532": {
+      "barcode": "6281022118186",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01533": {
+      "barcode": "6281022118247",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01534": {
+      "barcode": "6281022118308",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01535": {
+      "barcode": "6281022118483",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01536": {
+      "barcode": "6281022119206",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01537": {
+      "barcode": "6281022120226",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01538": {
+      "barcode": "6281022120417",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01539": {
+      "barcode": "6281022120431",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01540": {
+      "barcode": "6281022123128",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01541": {
+      "barcode": "6281022123135",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01543": {
+      "barcode": "6281022126587",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01544": {
+      "barcode": "6281022126594",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01545": {
+      "barcode": "6281022126822",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01546": {
+      "barcode": "6281022126938",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01547": {
+      "barcode": "6281022126945",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01548": {
+      "barcode": "6281022130393",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01549": {
+      "barcode": "6281022131307",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01550": {
+      "barcode": "6281022131314",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01551": {
+      "barcode": "6281022132267",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01552": {
+      "barcode": "6281022132359",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01553": {
+      "barcode": "6281022132366",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01554": {
+      "barcode": "6281022132397",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01555": {
+      "barcode": "6281022132670",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01556": {
+      "barcode": "6281022134056",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01557": {
+      "barcode": "6281022134117",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01558": {
+      "barcode": "6281022134315",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01559": {
+      "barcode": "6281022134322",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01563": {
+      "barcode": "6281022160109",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01564": {
+      "barcode": "6281022160659",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01566": {
+      "barcode": "6281022167726",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01567": {
+      "barcode": "6281022167740",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01568": {
+      "barcode": "6281022180312",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01571": {
+      "barcode": "6281024010709",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01572": {
+      "barcode": "6281024110027",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01579": {
+      "barcode": "6281025214588",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01585": {
+      "barcode": "6281026120789",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01588": {
+      "barcode": "6281026121007",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01589": {
+      "barcode": "6281026121038",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01590": {
+      "barcode": "6281026121090",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01591": {
+      "barcode": "6281026121182",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01592": {
+      "barcode": "6281026121274",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01593": {
+      "barcode": "6281026121366",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01599": {
+      "barcode": "6281026164004",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01600": {
+      "barcode": "6281026165100",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01601": {
+      "barcode": "6281026165643",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01614": {
+      "barcode": "6281028003615",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01616": {
+      "barcode": "6281030031842",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01617": {
+      "barcode": "6281030031958",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01618": {
+      "barcode": "6281033213023",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01626": {
+      "barcode": "6281033317073",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01634": {
+      "barcode": "6281033484683",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01637": {
+      "barcode": "6281034910259",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01643": {
+      "barcode": "6281036001481",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01645": {
+      "barcode": "6281036003430",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01646": {
+      "barcode": "6281036004321",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01647": {
+      "barcode": "6281036004345",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01652": {
+      "barcode": "6281036005427",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01653": {
+      "barcode": "6281036005434",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01655": {
+      "barcode": "6281036006479",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01658": {
+      "barcode": "6281036014030",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01659": {
+      "barcode": "6281036014054",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01660": {
+      "barcode": "6281036014207",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01663": {
+      "barcode": "6281036028600",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01664": {
+      "barcode": "6281036028761",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01665": {
+      "barcode": "6281036108005",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01666": {
+      "barcode": "6281036108104",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01668": {
+      "barcode": "6281036110107",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01671": {
+      "barcode": "6281036115201",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01672": {
+      "barcode": "6281036115508",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01673": {
+      "barcode": "6281036124708",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01676": {
+      "barcode": "6281036177155",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01678": {
+      "barcode": "6281036194107",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01679": {
+      "barcode": "6281036247506",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01681": {
+      "barcode": "6281036560100",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01682": {
+      "barcode": "6281036567208",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01683": {
+      "barcode": "6281039100914",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01684": {
+      "barcode": "6281039101119",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01685": {
+      "barcode": "6281039102017",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01686": {
+      "barcode": "6281039102161",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01687": {
+      "barcode": "6281039105018",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01688": {
+      "barcode": "6281039122015",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01689": {
+      "barcode": "6281039371215",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01691": {
+      "barcode": "6281039518214",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01692": {
+      "barcode": "6281039550511",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01693": {
+      "barcode": "6281039550610",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01694": {
+      "barcode": "6281039571219",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01695": {
+      "barcode": "6281039594010",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01699": {
+      "barcode": "6281039704815",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01704": {
+      "barcode": "6281040049622",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01710": {
+      "barcode": "6281041029012",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01716": {
+      "barcode": "6281041231118",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01722": {
+      "barcode": "6281041292515",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01724": {
+      "barcode": "6281048102244",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01725": {
+      "barcode": "6281050115041",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01736": {
+      "barcode": "6281051098183",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01739": {
+      "barcode": "6281055000298",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01740": {
+      "barcode": "6281055000564",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01742": {
+      "barcode": "6281055057087",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01743": {
+      "barcode": "6281055065778",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01745": {
+      "barcode": "6281057001118",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01746": {
+      "barcode": "6281057001125",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01747": {
+      "barcode": "6281057001248",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01748": {
+      "barcode": "6281057002610",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01749": {
+      "barcode": "6281057002641",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01750": {
+      "barcode": "6281057002702",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01751": {
+      "barcode": "6281057002719",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01753": {
+      "barcode": "6281057005093",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01754": {
+      "barcode": "6281057005918",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01755": {
+      "barcode": "6281057005932",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01756": {
+      "barcode": "6281057006120",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01757": {
+      "barcode": "6281057007004",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01758": {
+      "barcode": "6281057007028",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01759": {
+      "barcode": "6281057007035",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01761": {
+      "barcode": "6281057007264",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01765": {
+      "barcode": "6281057009077",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01766": {
+      "barcode": "6281057010011",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01767": {
+      "barcode": "6281057011001",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01768": {
+      "barcode": "6281057012015",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01769": {
+      "barcode": "6281057012213",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01770": {
+      "barcode": "6281057013555",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01771": {
+      "barcode": "6281057013562",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01774": {
+      "barcode": "6281057030026",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01777": {
+      "barcode": "6281057050031",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01781": {
+      "barcode": "6281058099336",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01785": {
+      "barcode": "6281058107314",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01786": {
+      "barcode": "6281058270698",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01788": {
+      "barcode": "6281060101980",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01789": {
+      "barcode": "6281060903201",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01798": {
+      "barcode": "6281063222637",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01805": {
+      "barcode": "6281063452089",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01810": {
+      "barcode": "6281063460329",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01814": {
+      "barcode": "6281063462484",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01815": {
+      "barcode": "6281063462767",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01819": {
+      "barcode": "6281063632290",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01823": {
+      "barcode": "6281063771050",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01828": {
+      "barcode": "6281063881070",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01829": {
+      "barcode": "6281063881278",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01831": {
+      "barcode": "6281063881490",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01832": {
+      "barcode": "6281063881902",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01835": {
+      "barcode": "6281063882305",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01836": {
+      "barcode": "6281063882343",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01837": {
+      "barcode": "6281063882527",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01838": {
+      "barcode": "6281063882701",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01839": {
+      "barcode": "6281063882718",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01840": {
+      "barcode": "6281063883296",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01845": {
+      "barcode": "6281071111169",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01846": {
+      "barcode": "6281071112166",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01854": {
+      "barcode": "6281073151866",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01861": {
+      "barcode": "6281073536007",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01874": {
+      "barcode": "6281099063815",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01880": {
+      "barcode": "6281100026600",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01891": {
+      "barcode": "6281100043997",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01892": {
+      "barcode": "6281100044017",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01893": {
+      "barcode": "6281100044031",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01894": {
+      "barcode": "6281100049920",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01899": {
+      "barcode": "6281100081029",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01900": {
+      "barcode": "6281100081036",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01903": {
+      "barcode": "6281100086116",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01910": {
+      "barcode": "6281100113133",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01915": {
+      "barcode": "6281100171683",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01920": {
+      "barcode": "6281100180487",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01931": {
+      "barcode": "6281100306405",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01935": {
+      "barcode": "6281100353409",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01938": {
+      "barcode": "6281100354215",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01939": {
+      "barcode": "6281100354673",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01940": {
+      "barcode": "6281100354727",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01942": {
+      "barcode": "6281100356127",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01944": {
+      "barcode": "6281100356264",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01945": {
+      "barcode": "6281100356554",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01951": {
+      "barcode": "6281100357759",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01953": {
+      "barcode": "6281100358107",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01956": {
+      "barcode": "6281100362043",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01965": {
+      "barcode": "6281100403227",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01968": {
+      "barcode": "6281100480136",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01975": {
+      "barcode": "6281100585091",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01979": {
+      "barcode": "6281100611844",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01983": {
+      "barcode": "6281100642442",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01988": {
+      "barcode": "6281100680253",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_01994": {
+      "barcode": "6281100681199",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01995": {
+      "barcode": "6281100681236",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01997": {
+      "barcode": "6281100681359",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_01999": {
+      "barcode": "6281100681748",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02000": {
+      "barcode": "6281100681779",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02001": {
+      "barcode": "6281100682080",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02002": {
+      "barcode": "6281100682127",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02004": {
+      "barcode": "6281100720133",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02005": {
+      "barcode": "6281100720157",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02007": {
+      "barcode": "6281100720195",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02011": {
+      "barcode": "6281100720959",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02013": {
+      "barcode": "6281100770930",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02019": {
+      "barcode": "6281100850090",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02023": {
+      "barcode": "6281101050697",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02024": {
+      "barcode": "6281101094431",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02027": {
+      "barcode": "6281101220779",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02028": {
+      "barcode": "6281101220786",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02041": {
+      "barcode": "6281101490813",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02062": {
+      "barcode": "6281102021795",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02064": {
+      "barcode": "6281102101176",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02066": {
+      "barcode": "6281102370305",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02071": {
+      "barcode": "6281102680305",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02073": {
+      "barcode": "6281102687038",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02076": {
+      "barcode": "6281102740160",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02077": {
+      "barcode": "6281102740184",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02078": {
+      "barcode": "6281102740351",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02079": {
+      "barcode": "6281102740429",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02082": {
+      "barcode": "6281103080012",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02083": {
+      "barcode": "6281103130113",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02084": {
+      "barcode": "6281103270642",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02093": {
+      "barcode": "6281104111951",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02094": {
+      "barcode": "6281104114112",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02099": {
+      "barcode": "6281104800046",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02101": {
+      "barcode": "6281104840011",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02112": {
+      "barcode": "6281105473065",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02113": {
+      "barcode": "6281105500280",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02117": {
+      "barcode": "6281105790087",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02121": {
+      "barcode": "6281105791541",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02123": {
+      "barcode": "6281105793750",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02126": {
+      "barcode": "6281105795037",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02127": {
+      "barcode": "6281105796300",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02155": {
+      "barcode": "6281123033203",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02158": {
+      "barcode": "6281123036013",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02164": {
+      "barcode": "6281168001359",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02167": {
+      "barcode": "6281168003124",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02170": {
+      "barcode": "6281183000023",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02171": {
+      "barcode": "6281183000061",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02176": {
+      "barcode": "6281183000306",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02179": {
+      "barcode": "6281183001549",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02180": {
+      "barcode": "6281183001648",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02193": {
+      "barcode": "6285009000051",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02194": {
+      "barcode": "6285009000631",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02199": {
+      "barcode": "6285009005247",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02200": {
+      "barcode": "6285021000237",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02201": {
+      "barcode": "6285021000251",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02205": {
+      "barcode": "6285102001535",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02212": {
+      "barcode": "6285438000288",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02213": {
+      "barcode": "6285572000694",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02215": {
+      "barcode": "6285572001264",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02216": {
+      "barcode": "6285572001271",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02217": {
+      "barcode": "6285572001639",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02218": {
+      "barcode": "6285572002001",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02221": {
+      "barcode": "6285602001431",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02222": {
+      "barcode": "6285602011768",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02224": {
+      "barcode": "6285602011805",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02228": {
+      "barcode": "6285602012017",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02229": {
+      "barcode": "6285602012246",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02230": {
+      "barcode": "6285602012581",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02233": {
+      "barcode": "6285602013533",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02236": {
+      "barcode": "6285806001176",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02246": {
+      "barcode": "6287000490862",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02257": {
+      "barcode": "6287001561707",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02258": {
+      "barcode": "6287001561714",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02268": {
+      "barcode": "6287001562452",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02270": {
+      "barcode": "6287001562544",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02272": {
+      "barcode": "6287001562964",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02280": {
+      "barcode": "6287001563695",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02282": {
+      "barcode": "6287001563718",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02283": {
+      "barcode": "6287001563756",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02284": {
+      "barcode": "6287001563855",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02295": {
+      "barcode": "6287002130681",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02306": {
+      "barcode": "6287004293513",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02308": {
+      "barcode": "6287004590353",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02309": {
+      "barcode": "6287004593453",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02322": {
+      "barcode": "6287006760013",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02324": {
+      "barcode": "6287006941801",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02325": {
+      "barcode": "6287007090515",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02326": {
+      "barcode": "6287007095022",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02329": {
+      "barcode": "6287007760180",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02337": {
+      "barcode": "6287009280013",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02353": {
+      "barcode": "6287011313372",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02360": {
+      "barcode": "6287011702220",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02368": {
+      "barcode": "6287013349041",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02376": {
+      "barcode": "6287014280015",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02377": {
+      "barcode": "6287014280565",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02393": {
+      "barcode": "6287018490137",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02394": {
+      "barcode": "6287018520018",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02395": {
+      "barcode": "6287018580364",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02396": {
+      "barcode": "6287018580425",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02402": {
+      "barcode": "6287018650739",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02403": {
+      "barcode": "6287018650746",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02413": {
+      "barcode": "6287022200081",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02417": {
+      "barcode": "6287024550344",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02421": {
+      "barcode": "6287025900124",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02423": {
+      "barcode": "6287025900247",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02430": {
+      "barcode": "6287032070018",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02431": {
+      "barcode": "6287033830017",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02432": {
+      "barcode": "6287034100010",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02433": {
+      "barcode": "6287034100034",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02434": {
+      "barcode": "6287034100041",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02435": {
+      "barcode": "6287034100096",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02436": {
+      "barcode": "6287034100171",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02437": {
+      "barcode": "6287034101055",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02438": {
+      "barcode": "6287034101253",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02439": {
+      "barcode": "6287034101314",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02444": {
+      "barcode": "6287036660437",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02453": {
+      "barcode": "6287042120949",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02454": {
+      "barcode": "6287042120956",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02459": {
+      "barcode": "6287042131327",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02460": {
+      "barcode": "6287042131396",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02462": {
+      "barcode": "6287043030759",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02463": {
+      "barcode": "6287043033590",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02464": {
+      "barcode": "6287043033637",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02470": {
+      "barcode": "6287043722425",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02472": {
+      "barcode": "6287043723354",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02474": {
+      "barcode": "6287043723408",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02483": {
+      "barcode": "6287043724351",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02486": {
+      "barcode": "6287043724450",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02488": {
+      "barcode": "6287043725822",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02489": {
+      "barcode": "6287043728014",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02490": {
+      "barcode": "6287043728076",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02491": {
+      "barcode": "6287043728250",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02492": {
+      "barcode": "6287043728274",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02493": {
+      "barcode": "6287043728304",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02501": {
+      "barcode": "6287043729134",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02502": {
+      "barcode": "6287043729141",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02505": {
+      "barcode": "6287043729585",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02506": {
+      "barcode": "6287044310010",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02512": {
+      "barcode": "6287048780079",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02513": {
+      "barcode": "6287050800024",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02515": {
+      "barcode": "6287058150138",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02520": {
+      "barcode": "6288004001030",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02523": {
+      "barcode": "6288007512472",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02524": {
+      "barcode": "6288082334303",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02531": {
+      "barcode": "6290360333328",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02532": {
+      "barcode": "6290361821688",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02534": {
+      "barcode": "6290361832233",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02535": {
+      "barcode": "6290361835227",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02536": {
+      "barcode": "6290361987698",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02545": {
+      "barcode": "6291003045790",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02552": {
+      "barcode": "6291003087158",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02556": {
+      "barcode": "6291003088193",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02561": {
+      "barcode": "6291003304293",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02563": {
+      "barcode": "6291003600272",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02570": {
+      "barcode": "6291011004093",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02574": {
+      "barcode": "6291014101232",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02576": {
+      "barcode": "6291014129366",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02578": {
+      "barcode": "6291014138948",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02586": {
+      "barcode": "6291100605866",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02591": {
+      "barcode": "6291104289031",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02597": {
+      "barcode": "6291105693196",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02604": {
+      "barcode": "6291106894219",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02605": {
+      "barcode": "6291107558332",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02608": {
+      "barcode": "6294001800019",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02610": {
+      "barcode": "6294003532956",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02611": {
+      "barcode": "6294003539153",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02616": {
+      "barcode": "6294003598310",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02619": {
+      "barcode": "6294011696787",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02622": {
+      "barcode": "6294017111079",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02625": {
+      "barcode": "6294017116968",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02632": {
+      "barcode": "6294017130551",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02633": {
+      "barcode": "6294017144190",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02654": {
+      "barcode": "6297000351315",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02655": {
+      "barcode": "6297000670164",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02656": {
+      "barcode": "6297000747767",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02658": {
+      "barcode": "6297000778754",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02659": {
+      "barcode": "6297001083499",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02661": {
+      "barcode": "6298044151770",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02662": {
+      "barcode": "6298044167573",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02664": {
+      "barcode": "6363367732439",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02674": {
+      "barcode": "6905418015216",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02680": {
+      "barcode": "6925425479948",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02691": {
+      "barcode": "6942836724221",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02693": {
+      "barcode": "6947753700020",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02706": {
+      "barcode": "7297192000854",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02710": {
+      "barcode": "7501017004379",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02711": {
+      "barcode": "7541080647257",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02716": {
+      "barcode": "7613036425322",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02724": {
+      "barcode": "7613287413048",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02725": {
+      "barcode": "7613287431943",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02726": {
+      "barcode": "7613287436382",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02727": {
+      "barcode": "7613287757418",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02736": {
+      "barcode": "7616100111817",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02744": {
+      "barcode": "7622201746650",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02746": {
+      "barcode": "7622201747145",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02747": {
+      "barcode": "7622201747152",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02751": {
+      "barcode": "7622201765231",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02752": {
+      "barcode": "7622201765286",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02753": {
+      "barcode": "7622202026744",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02760": {
+      "barcode": "7622210625090",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02763": {
+      "barcode": "7622300470326",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02773": {
+      "barcode": "7891000361917",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02775": {
+      "barcode": "7891515554828",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02776": {
+      "barcode": "7891515573119",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02777": {
+      "barcode": "7893000469815",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02778": {
+      "barcode": "7896423423822",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02779": {
+      "barcode": "7896423487657",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02780": {
+      "barcode": "7898132842116",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02781": {
+      "barcode": "8000215204790",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02782": {
+      "barcode": "8000215204820",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02786": {
+      "barcode": "8000500346273",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02792": {
+      "barcode": "8001860183584",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02796": {
+      "barcode": "8002270017506",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02797": {
+      "barcode": "8002270018749",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02807": {
+      "barcode": "8003740120313",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02808": {
+      "barcode": "8004030100817",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02811": {
+      "barcode": "8005709400016",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02825": {
+      "barcode": "8032625480471",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02826": {
+      "barcode": "8032817245857",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02827": {
+      "barcode": "8032817247042",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02830": {
+      "barcode": "8051128872545",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02842": {
+      "barcode": "8076809513739",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02848": {
+      "barcode": "8345025300455",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02849": {
+      "barcode": "8410014495167",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02851": {
+      "barcode": "8410076491213",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02852": {
+      "barcode": "8410076600479",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02854": {
+      "barcode": "8410076602138",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02857": {
+      "barcode": "8410076801630",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02858": {
+      "barcode": "8410076901194",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02859": {
+      "barcode": "8410184044196",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02861": {
+      "barcode": "8410376023831",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02862": {
+      "barcode": "8410376033267",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02863": {
+      "barcode": "8410376062090",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02866": {
+      "barcode": "8410522001133",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02870": {
+      "barcode": "8410525271397",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02875": {
+      "barcode": "8413178398244",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02879": {
+      "barcode": "8420701103176",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02883": {
+      "barcode": "8423915015655",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02886": {
+      "barcode": "8426944000296",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02897": {
+      "barcode": "8436542193290",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02913": {
+      "barcode": "8445290212863",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02915": {
+      "barcode": "8445290340993",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02916": {
+      "barcode": "8445290341860",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02926": {
+      "barcode": "8445291457942",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02933": {
+      "barcode": "8594017140573",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02935": {
+      "barcode": "8594017142515",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02938": {
+      "barcode": "8595229918615",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02956": {
+      "barcode": "8682530221081",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02960": {
+      "barcode": "8682790004431",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02963": {
+      "barcode": "8683280731899",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02975": {
+      "barcode": "8690526055657",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02980": {
+      "barcode": "8691066111155",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02981": {
+      "barcode": "8691707162607",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_02983": {
+      "barcode": "8692041000709",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02984": {
+      "barcode": "8692971031569",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02985": {
+      "barcode": "8694587148150",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_02996": {
+      "barcode": "8714529001609",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_02999": {
+      "barcode": "8716200200905",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_03001": {
+      "barcode": "8716200674942",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_03002": {
+      "barcode": "8716200675024",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03003": {
+      "barcode": "8716200675499",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03010": {
+      "barcode": "8718117603121",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_03020": {
+      "barcode": "8809761570997",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03022": {
+      "barcode": "8850124037350",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_03023": {
+      "barcode": "8850389113257",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03026": {
+      "barcode": "8852707102042",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03028": {
+      "barcode": "8852756396164",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03043": {
+      "barcode": "8888202026422",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_03054": {
+      "barcode": "8901200100045",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_03063": {
+      "barcode": "8901745100012",
+      "categories": [
+        "INGREDIENT"
+      ]
+    },
+    "f5k_03064": {
+      "barcode": "8904150502785",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT"
+      ]
+    },
+    "f5k_03067": {
+      "barcode": "8906055446515",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03081": {
+      "barcode": "8936036025620",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03097": {
+      "barcode": "8992696526013",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03098": {
+      "barcode": "8992741903318",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03099": {
+      "barcode": "8992741903325",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03106": {
+      "barcode": "8994251001188",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT"
+      ]
+    },
+    "f5k_03108": {
+      "barcode": "8995209800617",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03110": {
+      "barcode": "8996001301715",
+      "categories": [
+        "ALLERGEN",
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_03114": {
+      "barcode": "8996001414033",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03116": {
+      "barcode": "8996410287457",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03119": {
+      "barcode": "9100000772042",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_03129": {
+      "barcode": "9301860148163",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03132": {
+      "barcode": "9309000376353",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03139": {
+      "barcode": "9310885115517",
+      "categories": [
+        "INGREDIENT",
+        "NUTRITION"
+      ]
+    },
+    "f5k_03144": {
+      "barcode": "9317964007008",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03147": {
+      "barcode": "9338794000854",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03158": {
+      "barcode": "9415007021711",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03182": {
+      "barcode": "9556072210034",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03183": {
+      "barcode": "9556085318406",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03186": {
+      "barcode": "9556296000039",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03187": {
+      "barcode": "9556296000206",
+      "categories": [
+        "NUTRITION"
+      ]
+    },
+    "f5k_03192": {
+      "barcode": "9557062321136",
+      "categories": [
+        "INGREDIENT"
+      ]
+    }
+  }
+}

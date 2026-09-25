@@ -1,0 +1,46 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "fateen-app",
+          "appId": "1:322349985987:android:137f278a2ce05a41cc7276",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "fateen-app",
+          "configurations": {
+            "android": "1:322349985987:android:137f278a2ce05a41cc7276",
+            "ios": "1:322349985987:ios:2c2ad70f8f67870ccc7276",
+            "macos": "1:322349985987:ios:2c2ad70f8f67870ccc7276",
+            "web": "1:322349985987:web:68397aa58954ffd1cc7276",
+            "windows": "1:322349985987:web:4a445f85e2ea4335cc7276"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/api/**",
+        "run": {
+          "serviceId": "fateen-api",
+          "region": "asia-northeast1"
+        }
+      },
+      {
+        "destination": "/index.html",
+        "source": "**"
+      }
+    ],
+    "public": "build/web"
+  }
+}

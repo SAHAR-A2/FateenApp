@@ -1,0 +1,336 @@
+{
+  "meta": {
+    "kind": "synthetic_test_fixture",
+    "synthetic": true,
+    "schema_version": 1,
+    "note": "SYNTHETIC TEST FIXTURES. The product data below is invented for offline pipeline testing. It is NOT real, verified product information and must never be presented as production data. Barcodes are valid-format GTIN-13 values used only as test keys; brands/companies are fictional.",
+    "created": "2026-08-12",
+    "expected_counts": {
+      "verified": 5,
+      "needs_review": 2,
+      "conflict": 2,
+      "unresolved": 1,
+      "failed": 0,
+      "total": 10
+    }
+  },
+  "queries": [
+    {
+      "id": "case-01-complete-matching-sources",
+      "case": "Complete product with matching sources",
+      "query": { "barcode": "5901234123457" },
+      "expected_status": "VERIFIED",
+      "sources": [
+        {
+          "name": "openfoodfacts",
+          "source_type": "database",
+          "priority": "SECONDARY",
+          "url": "https://fixtures.example.invalid/api/product/5901234123457.json",
+          "language": "en",
+          "data": {
+            "code": "5901234123457",
+            "barcode": "5901234123457",
+            "product_name": "Synthetic Oat Bar",
+            "brands": "Acme Foods Co.",
+            "quantity": "45 g",
+            "ingredients_text": "Rolled oats, glucose syrup, palm oil, sugar, salt",
+            "allergens_tags": ["en:gluten"],
+            "image_front_url": "https://fixtures.example.invalid/img/5901234123457_front.jpg",
+            "nutriments": {
+              "energy-kcal": 410,
+              "proteins": 8.0,
+              "carbohydrates": 60.0,
+              "fat": 15.0,
+              "saturated-fat": 6.0,
+              "sugars": 20.0,
+              "sodium": 0.4,
+              "fiber": 5.0
+            }
+          }
+        },
+        {
+          "name": "manufacturer_official",
+          "source_type": "manufacturer",
+          "priority": "PRIMARY",
+          "url": "https://acme-foods.example.invalid/products/synthetic-oat-bar",
+          "language": "en",
+          "data": {
+            "barcode": "5901234123457",
+            "product_name": "Synthetic Oat Bar",
+            "brand": "Acme Foods Co.",
+            "company": "Acme Foods Co.",
+            "package_size": "45 g",
+            "ingredients": "Rolled oats, glucose syrup, palm oil, sugar, salt",
+            "allergens": ["gluten"],
+            "nutriments": {
+              "energy_kcal": 410,
+              "protein": 8.0,
+              "carbohydrate": 60.0,
+              "total_fat": 15.0,
+              "saturated_fat": 6.0,
+              "sugar": 20.0,
+              "sodium": 0.4,
+              "fiber": 5.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "case-02-missing-ingredients",
+      "case": "Product with missing ingredients",
+      "query": { "barcode": "5901234123464" },
+      "expected_status": "NEEDS_REVIEW",
+      "sources": [
+        {
+          "name": "openfoodfacts",
+          "source_type": "database",
+          "priority": "SECONDARY",
+          "url": "https://fixtures.example.invalid/api/product/5901234123464.json",
+          "language": "en",
+          "data": {
+            "code": "5901234123464",
+            "barcode": "5901234123464",
+            "product_name": "Synthetic Fruit Yogurt",
+            "brands": "Acme Dairy Ltd.",
+            "quantity": "150 g"
+          }
+        }
+      ]
+    },
+    {
+      "id": "case-03-conflicting-ingredients",
+      "case": "Product with conflicting ingredient data",
+      "query": { "barcode": "5901234123471" },
+      "expected_status": "CONFLICT",
+      "sources": [
+        {
+          "name": "openfoodfacts",
+          "source_type": "database",
+          "priority": "SECONDARY",
+          "url": "https://fixtures.example.invalid/api/product/5901234123471.json",
+          "language": "en",
+          "data": {
+            "code": "5901234123471",
+            "barcode": "5901234123471",
+            "product_name": "Synthetic Cereal Bites",
+            "brands": "Acme Foods Co.",
+            "ingredients_text": "Rolled oats, glucose syrup, sugar, salt",
+            "allergens_tags": ["en:gluten"]
+          }
+        },
+        {
+          "name": "manufacturer_official",
+          "source_type": "manufacturer",
+          "priority": "PRIMARY",
+          "url": "https://acme-foods.example.invalid/products/cereal-bites",
+          "language": "en",
+          "data": {
+            "barcode": "5901234123471",
+            "product_name": "Synthetic Cereal Bites",
+            "brand": "Acme Foods Co.",
+            "ingredients": "Whole grain oats, invert sugar syrup, sugar, sea salt",
+            "allergens": ["gluten"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "case-04-conflicting-allergens",
+      "case": "Product with conflicting allergen data",
+      "query": { "barcode": "5901234123488" },
+      "expected_status": "CONFLICT",
+      "sources": [
+        {
+          "name": "openfoodfacts",
+          "source_type": "database",
+          "priority": "SECONDARY",
+          "url": "https://fixtures.example.invalid/api/product/5901234123488.json",
+          "language": "en",
+          "data": {
+            "code": "5901234123488",
+            "barcode": "5901234123488",
+            "product_name": "Synthetic Dark Chocolate",
+            "brands": "Acme Confectionery",
+            "ingredients_text": "Cocoa mass, sugar, soy lecithin, vanilla",
+            "allergens_tags": ["en:milk"],
+            "nutriments": { "energy-kcal": 550 }
+          }
+        },
+        {
+          "name": "manufacturer_official",
+          "source_type": "manufacturer",
+          "priority": "PRIMARY",
+          "url": "https://acme-confectionery.example.invalid/products/dark-chocolate",
+          "language": "en",
+          "data": {
+            "barcode": "5901234123488",
+            "product_name": "Synthetic Dark Chocolate",
+            "brand": "Acme Confectionery",
+            "ingredients": "Cocoa mass, sugar, soy lecithin, vanilla",
+            "allergens": ["milk", "soy"],
+            "nutriments": { "energy_kcal": 550 }
+          }
+        }
+      ]
+    },
+    {
+      "id": "case-05-not-found",
+      "case": "Product not found / unresolved",
+      "query": { "barcode": "5901234123495" },
+      "expected_status": "UNRESOLVED",
+      "sources": []
+    },
+    {
+      "id": "case-06-arabic-product",
+      "case": "Arabic product data",
+      "query": { "barcode": "5901234123501" },
+      "expected_status": "VERIFIED",
+      "sources": [
+        {
+          "name": "openfoodfacts",
+          "source_type": "database",
+          "priority": "SECONDARY",
+          "url": "https://fixtures.example.invalid/api/product/5901234123501.json",
+          "language": "ar",
+          "data": {
+            "code": "5901234123501",
+            "barcode": "5901234123501",
+            "product_name": "حبوب الشوفان الطبيعية",
+            "brands": "شركة أكمل",
+            "quantity": "500 غ",
+            "ingredients_text": "شوفان، سكر، ملح، زيت نباتي",
+            "allergens_tags": ["en:gluten"],
+            "image_front_url": "https://fixtures.example.invalid/img/5901234123501_front.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "case-07-english-product",
+      "case": "English product data",
+      "query": { "barcode": "5901234123518" },
+      "expected_status": "VERIFIED",
+      "sources": [
+        {
+          "name": "openfoodfacts",
+          "source_type": "database",
+          "priority": "SECONDARY",
+          "url": "https://fixtures.example.invalid/api/product/5901234123518.json",
+          "language": "en",
+          "data": {
+            "code": "5901234123518",
+            "barcode": "5901234123518",
+            "product_name": "Synthetic Potato Chips",
+            "brands": "Acme Snacks Inc.",
+            "quantity": "100 g",
+            "ingredients_text": "Potatoes, sunflower oil, salt",
+            "allergens_tags": [],
+            "nutriments": { "energy-kcal": 530, "fat": 34.0, "sodium": 0.5 }
+          }
+        }
+      ]
+    },
+    {
+      "id": "case-08-barcode-mismatch",
+      "case": "Barcode mismatch (sources return a different product)",
+      "query": { "barcode": "5901234123525" },
+      "expected_status": "NEEDS_REVIEW",
+      "sources": [
+        {
+          "name": "openfoodfacts",
+          "source_type": "database",
+          "priority": "SECONDARY",
+          "url": "https://fixtures.example.invalid/api/product/5901234123532.json",
+          "language": "en",
+          "data": {
+            "code": "5901234123532",
+            "barcode": "5901234123532",
+            "product_name": "Synthetic Cola Drink",
+            "brands": "Acme Beverages",
+            "ingredients_text": "Carbonated water, sugar, caramel colour, phosphoric acid",
+            "allergens_tags": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "case-09-label-evidence",
+      "case": "Product with image/label evidence",
+      "query": { "barcode": "5901234123549" },
+      "expected_status": "VERIFIED",
+      "sources": [
+        {
+          "name": "label_photo",
+          "source_type": "label",
+          "priority": "PRIMARY",
+          "url": "https://fixtures.example.invalid/img/5901234123549_label.jpg",
+          "language": "en",
+          "data": {
+            "barcode": "5901234123549",
+            "product_name": "Synthetic Peanut Butter",
+            "brand": "Acme Spreads Co.",
+            "company": "Acme Spreads Co.",
+            "package_size": "340 g",
+            "ingredients": "Roasted peanuts, palm oil, salt",
+            "allergens": ["peanuts"],
+            "image_front_url": "https://fixtures.example.invalid/img/5901234123549_label.jpg",
+            "raw_excerpt": "Label front scanned text: Synthetic Peanut Butter 340 g, ingredients: Roasted peanuts, palm oil, salt. May contain tree nuts."
+          }
+        }
+      ]
+    },
+    {
+      "id": "case-10-multiple-sources-different-priorities",
+      "case": "Multiple sources with different source priorities",
+      "query": { "barcode": "5901234123556" },
+      "expected_status": "VERIFIED",
+      "sources": [
+        {
+          "name": "manufacturer_official",
+          "source_type": "manufacturer",
+          "priority": "PRIMARY",
+          "url": "https://acme-foods.example.invalid/products/oat-biscuits",
+          "language": "en",
+          "data": {
+            "barcode": "5901234123556",
+            "product_name": "Synthetic Oat Biscuits",
+            "brand": "Acme Foods Co.",
+            "company": "Acme Foods Co.",
+            "ingredients": "Rolled oats, wheat flour, sugar, vegetable oil, salt",
+            "allergens": ["gluten"]
+          }
+        },
+        {
+          "name": "openfoodfacts",
+          "source_type": "database",
+          "priority": "SECONDARY",
+          "url": "https://fixtures.example.invalid/api/product/5901234123556.json",
+          "language": "en",
+          "data": {
+            "code": "5901234123556",
+            "barcode": "5901234123556",
+            "product_name": "Synthetic Oat Biscuits",
+            "brands": "Acme Foods Co.",
+            "ingredients_text": "Rolled oats, wheat flour, sugar, vegetable oil, salt",
+            "allergens_tags": ["en:gluten"]
+          }
+        },
+        {
+          "name": "community_forum",
+          "source_type": "web",
+          "priority": "COMMUNITY",
+          "url": "https://forum.example.invalid/thread/synthetic-oat-biscuits",
+          "language": "en",
+            "data": {
+            "barcode": "5901234123556",
+            "product_name": "Synthetic Oat Biscuits",
+            "brand": "Acme Foods Co.",
+            "ingredients": "Rolled oats, wheat flour, sugar, vegetable oil, salt",
+            "allergens": []
+          }
+        }
+      ]
+    }
+  ]
+}

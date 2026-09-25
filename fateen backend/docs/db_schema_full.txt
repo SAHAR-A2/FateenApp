@@ -1,0 +1,91 @@
+﻿                                                                                                        List of relations
+ Schema |             Name              |   Type   | Owner  | Persistence | Access method |    Size    |                                                       Description                                                        
+--------+-------------------------------+----------+--------+-------------+---------------+------------+--------------------------------------------------------------------------------------------------------------------------
+ public | allergen_translations         | table    | fateen | permanent   | heap          | 8192 bytes | Per-language translations of allergens (unique per allergen and language).
+ public | allergen_types                | table    | fateen | permanent   | heap          | 16 kB      | Governed registry of allergen classes (business knowledge, not ENUM).
+ public | allergens                     | table    | fateen | permanent   | heap          | 16 kB      | Canonical registry of specific allergens (governed, provenance-tracked entity).
+ public | allergens_history             | table    | fateen | permanent   | heap          | 16 kB      | Immutable version-history of allergens (INSERT-only; one row per version).
+ public | audit_context                 | table    | fateen | permanent   | heap          | 8192 bytes | Per-operation audit context (one row per correlation/transaction pair).
+ public | audit_event_types             | table    | fateen | permanent   | heap          | 8192 bytes | Governed registry of audit event classes (created, updated, merged, ...).
+ public | audit_events                  | table    | fateen | permanent   | heap          | 8192 bytes | Normalized per-version event details (one row per version record written).
+ public | audit_log                     | table    | fateen | permanent   | heap          | 8192 bytes | Append-only audit event feed (self-contained per-change narrative).
+ public | barcode_types                 | table    | fateen | permanent   | heap          | 16 kB      | Governed registry of barcode symbologies.
+ public | barcodes                      | table    | fateen | permanent   | heap          | 16 kB      | Canonical registry of globally unique barcodes with lifecycle and verification statuses.
+ public | barcodes_history              | table    | fateen | permanent   | heap          | 16 kB      | Immutable version-history of barcodes (INSERT-only; one row per version).
+ public | brand_search_index            | table    | fateen | permanent   | heap          | 8192 bytes | Derived, rebuildable search index for brands (read model; no FK to brands).
+ public | brand_translations            | table    | fateen | permanent   | heap          | 8192 bytes | Per-language translations of brands (unique per brand and language).
+ public | brands                        | table    | fateen | permanent   | heap          | 16 kB      | Canonical registry of brands, each owned by exactly one company.
+ public | brands_history                | table    | fateen | permanent   | heap          | 16 kB      | Immutable version-history of brands (INSERT-only; one row per version).
+ public | change_sets                   | table    | fateen | permanent   | heap          | 8192 bytes | Logical grouping of version records produced by one governed change.
+ public | companies                     | table    | fateen | permanent   | heap          | 16 kB      | Canonical registry of companies (manufacturers, distributors, retailers).
+ public | companies_history             | table    | fateen | permanent   | heap          | 16 kB      | Immutable version-history of companies (INSERT-only; one row per version).
+ public | company_search_index          | table    | fateen | permanent   | heap          | 8192 bytes | Derived, rebuildable search index for companies (read model; no FK to companies).
+ public | company_translations          | table    | fateen | permanent   | heap          | 8192 bytes | Per-language translations of companies (unique per company and language).
+ public | condition_nutrition_rules     | table    | fateen | permanent   | heap          | 16 kB      | 
+ public | countries                     | table    | fateen | permanent   | heap          | 8192 bytes | Governed registry of countries (ISO 3166-1), Saudi-first with GCC/global scope.
+ public | coverage_snapshots            | table    | fateen | permanent   | heap          | 0 bytes    | 
+ public | data_conflicts                | table    | fateen | permanent   | heap          | 8192 bytes | 
+ public | data_sources                  | table    | fateen | permanent   | heap          | 16 kB      | Governed registry of concrete data sources feeding the knowledge base.
+ public | data_versions                 | table    | fateen | permanent   | heap          | 8192 bytes | 
+ public | discovery_candidates          | table    | fateen | permanent   | heap          | 16 kB      | 
+ public | entity_relationships          | table    | fateen | permanent   | heap          | 8192 bytes | Polymorphic knowledge-graph edges between canonical core entities.
+ public | entity_versions               | table    | fateen | permanent   | heap          | 8192 bytes | Generic registry of every published version across all history tables.
+ public | evidence_types                | table    | fateen | permanent   | heap          | 16 kB      | Governed registry of evidence kinds that back governed facts.
+ public | halal_evidence                | table    | fateen | permanent   | heap          | 16 kB      | 
+ public | health_conditions             | table    | fateen | permanent   | heap          | 16 kB      | 
+ public | health_flag_translations      | table    | fateen | permanent   | heap          | 8192 bytes | Per-language translations of health flags (unique per flag and language).
+ public | health_flag_types             | table    | fateen | permanent   | heap          | 16 kB      | Governed registry of health/risk flag classes (business knowledge, not ENUM).
+ public | health_flags                  | table    | fateen | permanent   | heap          | 16 kB      | Canonical registry of concrete health/risk flags and claims.
+ public | health_flags_history          | table    | fateen | permanent   | heap          | 16 kB      | Immutable version-history of health_flags (INSERT-only; one row per version).
+ public | image_types                   | table    | fateen | permanent   | heap          | 8192 bytes | Governed registry of product image categories.
+ public | images                        | table    | fateen | permanent   | heap          | 8192 bytes | Canonical registry of governed media records (references, not file storage).
+ public | images_history                | table    | fateen | permanent   | heap          | 8192 bytes | Immutable version-history of images (INSERT-only; one row per version).
+ public | ingredient_aliases            | table    | fateen | permanent   | heap          | 16 kB      | Alternate accepted names for an ingredient, for matching and search.
+ public | ingredient_allergens          | table    | fateen | permanent   | heap          | 16 kB      | Ingredient-to-allergen relationship (declared and precautionary).
+ public | ingredient_categories         | table    | fateen | permanent   | heap          | 8192 bytes | Governed hierarchical taxonomy of ingredient categories (self-referencing parent_id).
+ public | ingredient_categories_history | table    | fateen | permanent   | heap          | 8192 bytes | Immutable version-history of ingredient_categories (INSERT-only; one row per version).
+ public | ingredient_health_flags       | table    | fateen | permanent   | heap          | 8192 bytes | Ingredient-to-health-flag relationship (claims, warnings, risks).
+ public | ingredient_search_index       | table    | fateen | permanent   | heap          | 8192 bytes | Derived, rebuildable search index for ingredients (read model; no FK to ingredients).
+ public | ingredient_translations       | table    | fateen | permanent   | heap          | 8192 bytes | Per-language translations of ingredients (unique per ingredient and language).
+ public | ingredients                   | table    | fateen | permanent   | heap          | 16 kB      | Canonical registry of ingredients (governed, provenance-tracked core entity).
+ public | ingredients_history           | table    | fateen | permanent   | heap          | 16 kB      | Immutable version-history of ingredients (INSERT-only; one row per version).
+ public | languages                     | table    | fateen | permanent   | heap          | 16 kB      | Governed registry of supported platform languages (Arabic + English day one).
+ public | lifecycle_statuses            | table    | fateen | permanent   | heap          | 16 kB      | Shared non-destructive lifecycle vocabulary (ACTIVE, DEPRECATED, ARCHIVED); the status authority for every lookup table.
+ public | lifecycle_statuses_id_seq     | sequence | fateen | permanent   |               | 8192 bytes | 
+ public | measurement_bases             | table    | fateen | permanent   | heap          | 16 kB      | Governed registry of nutrition measurement bases (per_100g, per_serving, per_package, ...).
+ public | nutrition_type_translations   | table    | fateen | permanent   | heap          | 8192 bytes | Per-language translations of nutrition fact types (unique per type and language).
+ public | nutrition_types               | table    | fateen | permanent   | heap          | 16 kB      | Governed registry of nutrition fact types (business knowledge, not ENUM).
+ public | nutrition_types_history       | table    | fateen | permanent   | heap          | 16 kB      | Immutable version-history of nutrition_types (INSERT-only; one row per version).
+ public | package_types                 | table    | fateen | permanent   | heap          | 16 kB      | Governed registry of packaging types.
+ public | permission_types              | table    | fateen | permanent   | heap          | 8192 bytes | Governed registry of permission classes (read, write, approve, manage, ...).
+ public | product_allergens             | table    | fateen | permanent   | heap          | 16 kB      | Product-to-allergen exposure relationship (declared and precautionary).
+ public | product_barcodes              | table    | fateen | permanent   | heap          | 16 kB      | Product-to-barcode association relationship (many barcodes per product).
+ public | product_barcodes_history      | table    | fateen | permanent   | heap          | 72 kB      | Immutable version-history of product_barcodes associations (INSERT-only; one row per version).
+ public | product_categories            | table    | fateen | permanent   | heap          | 16 kB      | Governed hierarchical taxonomy of product categories (self-referencing parent_id).
+ public | product_categories_history    | table    | fateen | permanent   | heap          | 16 kB      | Immutable version-history of product_categories (INSERT-only; one row per version).
+ public | product_category_translations | table    | fateen | permanent   | heap          | 8192 bytes | Per-language translations of product categories (unique per category and language).
+ public | product_health_evaluations    | table    | fateen | permanent   | heap          | 16 kB      | 
+ public | product_health_flags          | table    | fateen | permanent   | heap          | 8192 bytes | Product-to-health-flag relationship (claims, warnings, risks).
+ public | product_images                | table    | fateen | permanent   | heap          | 8192 bytes | Product-to-image attachment relationship (many images per product).
+ public | product_images_history        | table    | fateen | permanent   | heap          | 8192 bytes | Immutable version-history of product_images attachments (INSERT-only; one row per version).
+ public | product_ingredients           | table    | fateen | permanent   | heap          | 16 kB      | Product-to-ingredient membership relationship with optional declared amount.
+ public | product_nutrition_values      | table    | fateen | permanent   | heap          | 48 kB      | Provenance-tracked nutrition fact values per product.
+ public | product_search_index          | table    | fateen | permanent   | heap          | 8192 bytes | Derived, rebuildable search index for products (read model; no FK to products).
+ public | product_translations          | table    | fateen | permanent   | heap          | 8192 bytes | Per-language translations of products (unique per product and language).
+ public | products                      | table    | fateen | permanent   | heap          | 16 kB      | Canonical registry of products (governed, provenance-tracked core entity).
+ public | products_history              | table    | fateen | permanent   | heap          | 16 kB      | Immutable version-history of products (INSERT-only; one row per version).
+ public | regions                       | table    | fateen | permanent   | heap          | 8192 bytes | Governed registry of geopolitical regions (GCC, MENA, Europe, ...) for market scoping.
+ public | regulatory_authorities        | table    | fateen | permanent   | heap          | 8192 bytes | Governed registry of regulatory and standard authorities (sfda, efsa, codex, ...).
+ public | relationship_types            | table    | fateen | permanent   | heap          | 16 kB      | Governed registry of knowledge-graph relationship types between entities.
+ public | role_types                    | table    | fateen | permanent   | heap          | 8192 bytes | Governed registry of platform user roles (admin, editor, reviewer, expert, ...).
+ public | scan_job_items                | table    | fateen | permanent   | heap          | 8192 bytes | 
+ public | scan_jobs                     | table    | fateen | permanent   | heap          | 16 kB      | 
+ public | schema_migrations             | table    | fateen | permanent   | heap          | 16 kB      | 
+ public | source_priorities             | table    | fateen | permanent   | heap          | 16 kB      | Governed trust/priority scale for data sources.
+ public | source_types                  | table    | fateen | permanent   | heap          | 16 kB      | Governed registry of data-source categories.
+ public | unit_conversions              | table    | fateen | permanent   | heap          | 16 kB      | 
+ public | units                         | table    | fateen | permanent   | heap          | 16 kB      | Governed registry of units of measure, grouped by physical dimension.
+ public | verification_statuses         | table    | fateen | permanent   | heap          | 16 kB      | Governed registry of barcode verification states (trust, not lifecycle).
+ public | version_metadata              | table    | fateen | permanent   | heap          | 8192 bytes | Key/value extension attributes scoped to one entity_versions entry.
+(86 rows)
+

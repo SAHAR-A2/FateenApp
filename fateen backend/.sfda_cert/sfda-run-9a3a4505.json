@@ -1,0 +1,18 @@
+{
+  "run_id": "sfda-run-9a3a4505",
+  "mode": "dry-run",
+  "batch_size": 1,
+  "total": 1,
+  "position": 0,
+  "processed": 1,
+  "inserted": 0,
+  "quarantined": 0,
+  "failed": 0,
+  "skipped": 0,
+  "started_at": "2026-09-10T07:17:58+00:00",
+  "updated_at": "2026-09-10T07:17:58+00:00",
+  "source": "SFDA",
+  "candidates": {},
+  "quarantine": [],
+  "notes": []
+}

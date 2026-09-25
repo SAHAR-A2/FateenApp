@@ -1,0 +1,95 @@
+-- =============================================================================
+-- Indexes: Canonical Core Entities
+-- -----------------------------------------------------------------------------
+-- Purpose:       Correctness-critical indexes only: every foreign-key column on
+--                the Mission 03 core entities and translation tables is indexed
+--                (PostgreSQL does not index FK columns automatically). No
+--                performance/search indexes yet.
+-- Work orders:   Mission 03: Canonical Core Entities (work orders #001-#008).
+-- Dependencies:  Tables (0012) and constraints (0013).
+-- Migration:     0014_core_entity_indexes.sql
+-- Rationale:     FK-supporting indexes are required for referential integrity
+--                performance and RI enforcement; UNIQUE constraints (internal
+--                code, (entity_id, language_id)) create their own indexes and
+--                need no duplicate here.
+-- =============================================================================
+CREATE INDEX companies_source_id_idx
+    ON companies (source_id);
+
+CREATE INDEX brands_company_id_idx
+    ON brands (company_id);
+
+CREATE INDEX brands_source_id_idx
+    ON brands (source_id);
+
+CREATE INDEX products_brand_id_idx
+    ON products (brand_id);
+
+CREATE INDEX products_product_category_id_idx
+    ON products (product_category_id);
+
+CREATE INDEX products_source_id_idx
+    ON products (source_id);
+
+CREATE INDEX ingredients_source_id_idx
+    ON ingredients (source_id);
+
+CREATE INDEX allergens_allergen_type_id_idx
+    ON allergens (allergen_type_id);
+
+CREATE INDEX allergens_source_id_idx
+    ON allergens (source_id);
+
+CREATE INDEX health_flags_health_flag_type_id_idx
+    ON health_flags (health_flag_type_id);
+
+CREATE INDEX health_flags_source_id_idx
+    ON health_flags (source_id);
+
+CREATE INDEX company_translations_company_id_idx
+    ON company_translations (company_id);
+
+CREATE INDEX company_translations_language_id_idx
+    ON company_translations (language_id);
+
+CREATE INDEX brand_translations_brand_id_idx
+    ON brand_translations (brand_id);
+
+CREATE INDEX brand_translations_language_id_idx
+    ON brand_translations (language_id);
+
+CREATE INDEX product_translations_product_id_idx
+    ON product_translations (product_id);
+
+CREATE INDEX product_translations_language_id_idx
+    ON product_translations (language_id);
+
+CREATE INDEX ingredient_translations_ingredient_id_idx
+    ON ingredient_translations (ingredient_id);
+
+CREATE INDEX ingredient_translations_language_id_idx
+    ON ingredient_translations (language_id);
+
+CREATE INDEX allergen_translations_allergen_id_idx
+    ON allergen_translations (allergen_id);
+
+CREATE INDEX allergen_translations_language_id_idx
+    ON allergen_translations (language_id);
+
+CREATE INDEX nutrition_type_translations_nutrition_type_id_idx
+    ON nutrition_type_translations (nutrition_type_id);
+
+CREATE INDEX nutrition_type_translations_language_id_idx
+    ON nutrition_type_translations (language_id);
+
+CREATE INDEX product_category_translations_product_category_id_idx
+    ON product_category_translations (product_category_id);
+
+CREATE INDEX product_category_translations_language_id_idx
+    ON product_category_translations (language_id);
+
+CREATE INDEX health_flag_translations_health_flag_id_idx
+    ON health_flag_translations (health_flag_id);
+
+CREATE INDEX health_flag_translations_language_id_idx
+    ON health_flag_translations (language_id);

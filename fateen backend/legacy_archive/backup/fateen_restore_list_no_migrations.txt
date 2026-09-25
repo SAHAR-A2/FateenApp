@@ -1,0 +1,1304 @@
+;
+; Archive created at 2026-08-11 16:35:20 UTC
+;     dbname: fateen
+;     TOC Entries: 1296
+;     Compression: gzip
+;     Dump Version: 1.16-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 17.10 (Debian 17.10-1.pgdg13+1)
+;     Dumped by pg_dump version: 17.10 (Debian 17.10-1.pgdg13+1)
+;
+;
+; Selected TOC Entries:
+;
+3; 3079 16785 EXTENSION - citext 
+5379; 0 0 COMMENT - EXTENSION citext 
+4; 3079 16890 EXTENSION - pg_trgm 
+5380; 0 0 COMMENT - EXTENSION pg_trgm 
+2; 3079 16748 EXTENSION - pgcrypto 
+5381; 0 0 COMMENT - EXTENSION pgcrypto 
+1046; 1247 16984 TYPE public approval_status fateen
+1064; 1247 17056 TYPE public candidate_status fateen
+1058; 1247 17032 TYPE public confidence_band fateen
+1043; 1247 16972 TYPE public entity_status fateen
+1052; 1247 17010 TYPE public review_decision fateen
+1049; 1247 16998 TYPE public review_tier fateen
+1061; 1247 17044 TYPE public translation_status fateen
+1070; 1247 17090 TYPE public unit_dimension fateen
+1067; 1247 17072 TYPE public update_type fateen
+1055; 1247 17020 TYPE public version_status fateen
+318; 1255 19745 FUNCTION public capture_entity_history() fateen
+5382; 0 0 COMMENT public FUNCTION capture_entity_history() fateen
+317; 1255 19126 FUNCTION public prevent_history_mutation() fateen
+5383; 0 0 COMMENT public FUNCTION prevent_history_mutation() fateen
+330; 1255 17402 FUNCTION public set_updated_at() fateen
+5384; 0 0 COMMENT public FUNCTION set_updated_at() fateen
+401; 1255 19746 FUNCTION public validate_entity_relationship_endpoints() fateen
+5385; 0 0 COMMENT public FUNCTION validate_entity_relationship_endpoints() fateen
+252; 1259 17799 TABLE public allergen_translations fateen
+5386; 0 0 COMMENT public TABLE allergen_translations fateen
+5387; 0 0 COMMENT public COLUMN allergen_translations.name fateen
+5388; 0 0 COMMENT public COLUMN allergen_translations.display_name fateen
+5389; 0 0 COMMENT public COLUMN allergen_translations.search_name fateen
+5390; 0 0 COMMENT public COLUMN allergen_translations.translation_status fateen
+236; 1259 17463 TABLE public allergen_types fateen
+5391; 0 0 COMMENT public TABLE allergen_types fateen
+5392; 0 0 COMMENT public COLUMN allergen_types.code fateen
+5393; 0 0 COMMENT public COLUMN allergen_types.version_number fateen
+251; 1259 17783 TABLE public allergens fateen
+5394; 0 0 COMMENT public TABLE allergens fateen
+5395; 0 0 COMMENT public COLUMN allergens.allergen_type_id fateen
+5396; 0 0 COMMENT public COLUMN allergens.internal_code fateen
+5397; 0 0 COMMENT public COLUMN allergens.confidence_level fateen
+5398; 0 0 COMMENT public COLUMN allergens.version_number fateen
+5399; 0 0 COMMENT public COLUMN allergens.created_by fateen
+5400; 0 0 COMMENT public COLUMN allergens.approved_by fateen
+269; 1259 18589 TABLE public allergens_history fateen
+5401; 0 0 COMMENT public TABLE allergens_history fateen
+5402; 0 0 COMMENT public COLUMN allergens_history.original_entity_id fateen
+5403; 0 0 COMMENT public COLUMN allergens_history.previous_version_id fateen
+5404; 0 0 COMMENT public COLUMN allergens_history.change_type fateen
+5405; 0 0 COMMENT public COLUMN allergens_history.allergen_type_id fateen
+5406; 0 0 COMMENT public COLUMN allergens_history.snapshot_hash fateen
+5407; 0 0 COMMENT public COLUMN allergens_history.checksum fateen
+5408; 0 0 COMMENT public COLUMN allergens_history.version_status fateen
+274; 1259 18680 TABLE public audit_context fateen
+5409; 0 0 COMMENT public TABLE audit_context fateen
+5410; 0 0 COMMENT public COLUMN audit_context.correlation_id fateen
+5411; 0 0 COMMENT public COLUMN audit_context.transaction_id fateen
+5412; 0 0 COMMENT public COLUMN audit_context.actor fateen
+5413; 0 0 COMMENT public COLUMN audit_context.role_id fateen
+5414; 0 0 COMMENT public COLUMN audit_context.ip_address fateen
+5415; 0 0 COMMENT public COLUMN audit_context.user_agent fateen
+242; 1259 17559 TABLE public audit_event_types fateen
+5416; 0 0 COMMENT public TABLE audit_event_types fateen
+5417; 0 0 COMMENT public COLUMN audit_event_types.code fateen
+5418; 0 0 COMMENT public COLUMN audit_event_types.version_number fateen
+276; 1259 18704 TABLE public audit_events fateen
+5419; 0 0 COMMENT public TABLE audit_events fateen
+5420; 0 0 COMMENT public COLUMN audit_events.audit_log_id fateen
+5421; 0 0 COMMENT public COLUMN audit_events.event_type_id fateen
+5422; 0 0 COMMENT public COLUMN audit_events.entity_type fateen
+5423; 0 0 COMMENT public COLUMN audit_events.entity_id fateen
+5424; 0 0 COMMENT public COLUMN audit_events.previous_version fateen
+5425; 0 0 COMMENT public COLUMN audit_events.new_version fateen
+5426; 0 0 COMMENT public COLUMN audit_events.event_time fateen
+277; 1259 18715 TABLE public audit_log fateen
+5427; 0 0 COMMENT public TABLE audit_log fateen
+5428; 0 0 COMMENT public COLUMN audit_log.change_set_id fateen
+5429; 0 0 COMMENT public COLUMN audit_log.event_type_id fateen
+5430; 0 0 COMMENT public COLUMN audit_log.entity_type fateen
+5431; 0 0 COMMENT public COLUMN audit_log.entity_id fateen
+5432; 0 0 COMMENT public COLUMN audit_log.previous_version fateen
+5433; 0 0 COMMENT public COLUMN audit_log.new_version fateen
+5434; 0 0 COMMENT public COLUMN audit_log.actor fateen
+5435; 0 0 COMMENT public COLUMN audit_log.role_id fateen
+5436; 0 0 COMMENT public COLUMN audit_log.ip_address fateen
+5437; 0 0 COMMENT public COLUMN audit_log.user_agent fateen
+5438; 0 0 COMMENT public COLUMN audit_log.logged_at fateen
+226; 1259 17194 TABLE public barcode_types fateen
+5439; 0 0 COMMENT public TABLE barcode_types fateen
+5440; 0 0 COMMENT public COLUMN barcode_types.digit_length fateen
+5441; 0 0 COMMENT public COLUMN barcode_types.version_number fateen
+282; 1259 19179 TABLE public barcodes fateen
+5442; 0 0 COMMENT public TABLE barcodes fateen
+5443; 0 0 COMMENT public COLUMN barcodes.barcode fateen
+5444; 0 0 COMMENT public COLUMN barcodes.barcode_type_id fateen
+5445; 0 0 COMMENT public COLUMN barcodes.verification_status_id fateen
+5446; 0 0 COMMENT public COLUMN barcodes.source_id fateen
+5447; 0 0 COMMENT public COLUMN barcodes.status_id fateen
+5448; 0 0 COMMENT public COLUMN barcodes.issued_country_id fateen
+5449; 0 0 COMMENT public COLUMN barcodes.confidence_level fateen
+5450; 0 0 COMMENT public COLUMN barcodes.version_number fateen
+284; 1259 19218 TABLE public barcodes_history fateen
+5451; 0 0 COMMENT public TABLE barcodes_history fateen
+5452; 0 0 COMMENT public COLUMN barcodes_history.original_entity_id fateen
+5453; 0 0 COMMENT public COLUMN barcodes_history.previous_version_id fateen
+5454; 0 0 COMMENT public COLUMN barcodes_history.change_type fateen
+5455; 0 0 COMMENT public COLUMN barcodes_history.verification_status_id fateen
+5456; 0 0 COMMENT public COLUMN barcodes_history.snapshot_hash fateen
+5457; 0 0 COMMENT public COLUMN barcodes_history.checksum fateen
+5458; 0 0 COMMENT public COLUMN barcodes_history.version_status fateen
+287; 1259 19421 TABLE public brand_search_index fateen
+5459; 0 0 COMMENT public TABLE brand_search_index fateen
+5460; 0 0 COMMENT public COLUMN brand_search_index.brand_id fateen
+5461; 0 0 COMMENT public COLUMN brand_search_index.search_name fateen
+5462; 0 0 COMMENT public COLUMN brand_search_index.search_text fateen
+5463; 0 0 COMMENT public COLUMN brand_search_index.search_tokens fateen
+5464; 0 0 COMMENT public COLUMN brand_search_index.language_codes fateen
+5465; 0 0 COMMENT public COLUMN brand_search_index.search_rank fateen
+5466; 0 0 COMMENT public COLUMN brand_search_index.generated_at fateen
+246; 1259 17706 TABLE public brand_translations fateen
+5467; 0 0 COMMENT public TABLE brand_translations fateen
+5468; 0 0 COMMENT public COLUMN brand_translations.name fateen
+5469; 0 0 COMMENT public COLUMN brand_translations.display_name fateen
+5470; 0 0 COMMENT public COLUMN brand_translations.search_name fateen
+5471; 0 0 COMMENT public COLUMN brand_translations.translation_status fateen
+245; 1259 17690 TABLE public brands fateen
+5472; 0 0 COMMENT public TABLE brands fateen
+5473; 0 0 COMMENT public COLUMN brands.company_id fateen
+5474; 0 0 COMMENT public COLUMN brands.internal_code fateen
+5475; 0 0 COMMENT public COLUMN brands.confidence_level fateen
+5476; 0 0 COMMENT public COLUMN brands.version_number fateen
+5477; 0 0 COMMENT public COLUMN brands.created_by fateen
+5478; 0 0 COMMENT public COLUMN brands.approved_by fateen
+266; 1259 18538 TABLE public brands_history fateen
+5479; 0 0 COMMENT public TABLE brands_history fateen
+5480; 0 0 COMMENT public COLUMN brands_history.original_entity_id fateen
+5481; 0 0 COMMENT public COLUMN brands_history.previous_version_id fateen
+5482; 0 0 COMMENT public COLUMN brands_history.change_type fateen
+5483; 0 0 COMMENT public COLUMN brands_history.company_id fateen
+5484; 0 0 COMMENT public COLUMN brands_history.snapshot_hash fateen
+5485; 0 0 COMMENT public COLUMN brands_history.checksum fateen
+5486; 0 0 COMMENT public COLUMN brands_history.version_status fateen
+275; 1259 18693 TABLE public change_sets fateen
+5487; 0 0 COMMENT public TABLE change_sets fateen
+5488; 0 0 COMMENT public COLUMN change_sets.correlation_id fateen
+5489; 0 0 COMMENT public COLUMN change_sets.transaction_id fateen
+5490; 0 0 COMMENT public COLUMN change_sets.description fateen
+5491; 0 0 COMMENT public COLUMN change_sets.applied_at fateen
+243; 1259 17659 TABLE public companies fateen
+5492; 0 0 COMMENT public TABLE companies fateen
+5493; 0 0 COMMENT public COLUMN companies.internal_code fateen
+5494; 0 0 COMMENT public COLUMN companies.confidence_level fateen
+5495; 0 0 COMMENT public COLUMN companies.version_number fateen
+5496; 0 0 COMMENT public COLUMN companies.created_by fateen
+5497; 0 0 COMMENT public COLUMN companies.approved_by fateen
+265; 1259 18521 TABLE public companies_history fateen
+5498; 0 0 COMMENT public TABLE companies_history fateen
+5499; 0 0 COMMENT public COLUMN companies_history.original_entity_id fateen
+5500; 0 0 COMMENT public COLUMN companies_history.previous_version_id fateen
+5501; 0 0 COMMENT public COLUMN companies_history.change_type fateen
+5502; 0 0 COMMENT public COLUMN companies_history.snapshot_hash fateen
+5503; 0 0 COMMENT public COLUMN companies_history.checksum fateen
+5504; 0 0 COMMENT public COLUMN companies_history.version_status fateen
+288; 1259 19436 TABLE public company_search_index fateen
+5505; 0 0 COMMENT public TABLE company_search_index fateen
+5506; 0 0 COMMENT public COLUMN company_search_index.company_id fateen
+5507; 0 0 COMMENT public COLUMN company_search_index.search_name fateen
+5508; 0 0 COMMENT public COLUMN company_search_index.search_text fateen
+5509; 0 0 COMMENT public COLUMN company_search_index.search_tokens fateen
+5510; 0 0 COMMENT public COLUMN company_search_index.language_codes fateen
+5511; 0 0 COMMENT public COLUMN company_search_index.search_rank fateen
+5512; 0 0 COMMENT public COLUMN company_search_index.generated_at fateen
+244; 1259 17675 TABLE public company_translations fateen
+5513; 0 0 COMMENT public TABLE company_translations fateen
+5514; 0 0 COMMENT public COLUMN company_translations.name fateen
+5515; 0 0 COMMENT public COLUMN company_translations.display_name fateen
+5516; 0 0 COMMENT public COLUMN company_translations.search_name fateen
+5517; 0 0 COMMENT public COLUMN company_translations.translation_status fateen
+223; 1259 17139 TABLE public countries fateen
+5518; 0 0 COMMENT public TABLE countries fateen
+5519; 0 0 COMMENT public COLUMN countries.code fateen
+5520; 0 0 COMMENT public COLUMN countries.alpha_3 fateen
+5521; 0 0 COMMENT public COLUMN countries.numeric_code fateen
+5522; 0 0 COMMENT public COLUMN countries.is_gcc_member fateen
+5523; 0 0 COMMENT public COLUMN countries.version_number fateen
+231; 1259 17277 TABLE public data_sources fateen
+5524; 0 0 COMMENT public TABLE data_sources fateen
+5525; 0 0 COMMENT public COLUMN data_sources.source_type_id fateen
+5526; 0 0 COMMENT public COLUMN data_sources.priority_id fateen
+5527; 0 0 COMMENT public COLUMN data_sources.country_id fateen
+5528; 0 0 COMMENT public COLUMN data_sources.is_verified fateen
+5529; 0 0 COMMENT public COLUMN data_sources.version_number fateen
+264; 1259 18205 TABLE public entity_relationships fateen
+5530; 0 0 COMMENT public TABLE entity_relationships fateen
+5531; 0 0 COMMENT public COLUMN entity_relationships.subject_entity_type fateen
+5532; 0 0 COMMENT public COLUMN entity_relationships.subject_id fateen
+5533; 0 0 COMMENT public COLUMN entity_relationships.object_entity_type fateen
+5534; 0 0 COMMENT public COLUMN entity_relationships.object_id fateen
+5535; 0 0 COMMENT public COLUMN entity_relationships.relationship_type_id fateen
+5536; 0 0 COMMENT public COLUMN entity_relationships.version_number fateen
+278; 1259 18726 TABLE public entity_versions fateen
+5537; 0 0 COMMENT public TABLE entity_versions fateen
+5538; 0 0 COMMENT public COLUMN entity_versions.entity_type fateen
+5539; 0 0 COMMENT public COLUMN entity_versions.entity_id fateen
+5540; 0 0 COMMENT public COLUMN entity_versions.version_number fateen
+5541; 0 0 COMMENT public COLUMN entity_versions.history_table fateen
+5542; 0 0 COMMENT public COLUMN entity_versions.history_row_id fateen
+5543; 0 0 COMMENT public COLUMN entity_versions.version_status fateen
+5544; 0 0 COMMENT public COLUMN entity_versions.previous_version_id fateen
+239; 1259 17511 TABLE public evidence_types fateen
+5545; 0 0 COMMENT public TABLE evidence_types fateen
+5546; 0 0 COMMENT public COLUMN evidence_types.code fateen
+5547; 0 0 COMMENT public COLUMN evidence_types.version_number fateen
+256; 1259 17860 TABLE public health_flag_translations fateen
+5548; 0 0 COMMENT public TABLE health_flag_translations fateen
+5549; 0 0 COMMENT public COLUMN health_flag_translations.name fateen
+5550; 0 0 COMMENT public COLUMN health_flag_translations.display_name fateen
+5551; 0 0 COMMENT public COLUMN health_flag_translations.search_name fateen
+5552; 0 0 COMMENT public COLUMN health_flag_translations.translation_status fateen
+232; 1259 17292 TABLE public health_flag_types fateen
+5553; 0 0 COMMENT public TABLE health_flag_types fateen
+5554; 0 0 COMMENT public COLUMN health_flag_types.code fateen
+5555; 0 0 COMMENT public COLUMN health_flag_types.version_number fateen
+255; 1259 17844 TABLE public health_flags fateen
+5556; 0 0 COMMENT public TABLE health_flags fateen
+5557; 0 0 COMMENT public COLUMN health_flags.health_flag_type_id fateen
+5558; 0 0 COMMENT public COLUMN health_flags.internal_code fateen
+5559; 0 0 COMMENT public COLUMN health_flags.confidence_level fateen
+5560; 0 0 COMMENT public COLUMN health_flags.version_number fateen
+5561; 0 0 COMMENT public COLUMN health_flags.created_by fateen
+5562; 0 0 COMMENT public COLUMN health_flags.approved_by fateen
+270; 1259 18606 TABLE public health_flags_history fateen
+5563; 0 0 COMMENT public TABLE health_flags_history fateen
+5564; 0 0 COMMENT public COLUMN health_flags_history.original_entity_id fateen
+5565; 0 0 COMMENT public COLUMN health_flags_history.previous_version_id fateen
+5566; 0 0 COMMENT public COLUMN health_flags_history.change_type fateen
+5567; 0 0 COMMENT public COLUMN health_flags_history.health_flag_type_id fateen
+5568; 0 0 COMMENT public COLUMN health_flags_history.snapshot_hash fateen
+5569; 0 0 COMMENT public COLUMN health_flags_history.checksum fateen
+5570; 0 0 COMMENT public COLUMN health_flags_history.version_status fateen
+227; 1259 17211 TABLE public image_types fateen
+5571; 0 0 COMMENT public TABLE image_types fateen
+5572; 0 0 COMMENT public COLUMN image_types.version_number fateen
+281; 1259 19158 TABLE public images fateen
+5573; 0 0 COMMENT public TABLE images fateen
+5574; 0 0 COMMENT public COLUMN images.image_type_id fateen
+5575; 0 0 COMMENT public COLUMN images.source_id fateen
+5576; 0 0 COMMENT public COLUMN images.language_id fateen
+5577; 0 0 COMMENT public COLUMN images.storage_uri fateen
+5578; 0 0 COMMENT public COLUMN images.content_hash fateen
+5579; 0 0 COMMENT public COLUMN images.mime_type fateen
+5580; 0 0 COMMENT public COLUMN images.file_size fateen
+5581; 0 0 COMMENT public COLUMN images.status_id fateen
+5582; 0 0 COMMENT public COLUMN images.metadata fateen
+5583; 0 0 COMMENT public COLUMN images.version_number fateen
+283; 1259 19196 TABLE public images_history fateen
+5584; 0 0 COMMENT public TABLE images_history fateen
+5585; 0 0 COMMENT public COLUMN images_history.original_entity_id fateen
+5586; 0 0 COMMENT public COLUMN images_history.previous_version_id fateen
+5587; 0 0 COMMENT public COLUMN images_history.change_type fateen
+5588; 0 0 COMMENT public COLUMN images_history.content_hash fateen
+5589; 0 0 COMMENT public COLUMN images_history.snapshot_hash fateen
+5590; 0 0 COMMENT public COLUMN images_history.checksum fateen
+5591; 0 0 COMMENT public COLUMN images_history.version_status fateen
+263; 1259 18187 TABLE public ingredient_aliases fateen
+5592; 0 0 COMMENT public TABLE ingredient_aliases fateen
+5593; 0 0 COMMENT public COLUMN ingredient_aliases.alias fateen
+5594; 0 0 COMMENT public COLUMN ingredient_aliases.language_id fateen
+5595; 0 0 COMMENT public COLUMN ingredient_aliases.relationship_type_id fateen
+5596; 0 0 COMMENT public COLUMN ingredient_aliases.version_number fateen
+261; 1259 18153 TABLE public ingredient_allergens fateen
+5597; 0 0 COMMENT public TABLE ingredient_allergens fateen
+5598; 0 0 COMMENT public COLUMN ingredient_allergens.relationship_type_id fateen
+5599; 0 0 COMMENT public COLUMN ingredient_allergens.version_number fateen
+234; 1259 17431 TABLE public ingredient_categories fateen
+5600; 0 0 COMMENT public TABLE ingredient_categories fateen
+5601; 0 0 COMMENT public COLUMN ingredient_categories.code fateen
+5602; 0 0 COMMENT public COLUMN ingredient_categories.parent_id fateen
+5603; 0 0 COMMENT public COLUMN ingredient_categories.version_number fateen
+273; 1259 18661 TABLE public ingredient_categories_history fateen
+5604; 0 0 COMMENT public TABLE ingredient_categories_history fateen
+5605; 0 0 COMMENT public COLUMN ingredient_categories_history.original_entity_id fateen
+5606; 0 0 COMMENT public COLUMN ingredient_categories_history.previous_version_id fateen
+5607; 0 0 COMMENT public COLUMN ingredient_categories_history.change_type fateen
+5608; 0 0 COMMENT public COLUMN ingredient_categories_history.parent_id fateen
+5609; 0 0 COMMENT public COLUMN ingredient_categories_history.snapshot_hash fateen
+5610; 0 0 COMMENT public COLUMN ingredient_categories_history.checksum fateen
+5611; 0 0 COMMENT public COLUMN ingredient_categories_history.version_status fateen
+262; 1259 18170 TABLE public ingredient_health_flags fateen
+5612; 0 0 COMMENT public TABLE ingredient_health_flags fateen
+5613; 0 0 COMMENT public COLUMN ingredient_health_flags.relationship_type_id fateen
+5614; 0 0 COMMENT public COLUMN ingredient_health_flags.version_number fateen
+286; 1259 19406 TABLE public ingredient_search_index fateen
+5615; 0 0 COMMENT public TABLE ingredient_search_index fateen
+5616; 0 0 COMMENT public COLUMN ingredient_search_index.ingredient_id fateen
+5617; 0 0 COMMENT public COLUMN ingredient_search_index.search_name fateen
+5618; 0 0 COMMENT public COLUMN ingredient_search_index.search_text fateen
+5619; 0 0 COMMENT public COLUMN ingredient_search_index.search_tokens fateen
+5620; 0 0 COMMENT public COLUMN ingredient_search_index.language_codes fateen
+5621; 0 0 COMMENT public COLUMN ingredient_search_index.search_rank fateen
+5622; 0 0 COMMENT public COLUMN ingredient_search_index.generated_at fateen
+250; 1259 17768 TABLE public ingredient_translations fateen
+5623; 0 0 COMMENT public TABLE ingredient_translations fateen
+5624; 0 0 COMMENT public COLUMN ingredient_translations.name fateen
+5625; 0 0 COMMENT public COLUMN ingredient_translations.display_name fateen
+5626; 0 0 COMMENT public COLUMN ingredient_translations.search_name fateen
+5627; 0 0 COMMENT public COLUMN ingredient_translations.translation_status fateen
+249; 1259 17752 TABLE public ingredients fateen
+5628; 0 0 COMMENT public TABLE ingredients fateen
+5629; 0 0 COMMENT public COLUMN ingredients.internal_code fateen
+5630; 0 0 COMMENT public COLUMN ingredients.confidence_level fateen
+5631; 0 0 COMMENT public COLUMN ingredients.version_number fateen
+5632; 0 0 COMMENT public COLUMN ingredients.created_by fateen
+5633; 0 0 COMMENT public COLUMN ingredients.approved_by fateen
+268; 1259 18572 TABLE public ingredients_history fateen
+5634; 0 0 COMMENT public TABLE ingredients_history fateen
+5635; 0 0 COMMENT public COLUMN ingredients_history.original_entity_id fateen
+5636; 0 0 COMMENT public COLUMN ingredients_history.previous_version_id fateen
+5637; 0 0 COMMENT public COLUMN ingredients_history.change_type fateen
+5638; 0 0 COMMENT public COLUMN ingredients_history.snapshot_hash fateen
+5639; 0 0 COMMENT public COLUMN ingredients_history.checksum fateen
+5640; 0 0 COMMENT public COLUMN ingredients_history.version_status fateen
+222; 1259 17123 TABLE public languages fateen
+5641; 0 0 COMMENT public TABLE languages fateen
+5642; 0 0 COMMENT public COLUMN languages.code fateen
+5643; 0 0 COMMENT public COLUMN languages.name fateen
+5644; 0 0 COMMENT public COLUMN languages.native_name fateen
+5645; 0 0 COMMENT public COLUMN languages.is_rtl fateen
+5646; 0 0 COMMENT public COLUMN languages.version_number fateen
+221; 1259 17108 TABLE public lifecycle_statuses fateen
+5647; 0 0 COMMENT public TABLE lifecycle_statuses fateen
+5648; 0 0 COMMENT public COLUMN lifecycle_statuses.id fateen
+5649; 0 0 COMMENT public COLUMN lifecycle_statuses.code fateen
+5650; 0 0 COMMENT public COLUMN lifecycle_statuses.version_number fateen
+220; 1259 17107 SEQUENCE public lifecycle_statuses_id_seq fateen
+289; 1259 19467 TABLE public measurement_bases fateen
+5651; 0 0 COMMENT public TABLE measurement_bases fateen
+5652; 0 0 COMMENT public COLUMN measurement_bases.code fateen
+5653; 0 0 COMMENT public COLUMN measurement_bases.name fateen
+5654; 0 0 COMMENT public COLUMN measurement_bases.display_order fateen
+5655; 0 0 COMMENT public COLUMN measurement_bases.status_id fateen
+5656; 0 0 COMMENT public COLUMN measurement_bases.version_number fateen
+253; 1259 17814 TABLE public nutrition_type_translations fateen
+5657; 0 0 COMMENT public TABLE nutrition_type_translations fateen
+5658; 0 0 COMMENT public COLUMN nutrition_type_translations.name fateen
+5659; 0 0 COMMENT public COLUMN nutrition_type_translations.display_name fateen
+5660; 0 0 COMMENT public COLUMN nutrition_type_translations.search_name fateen
+5661; 0 0 COMMENT public COLUMN nutrition_type_translations.translation_status fateen
+237; 1259 17479 TABLE public nutrition_types fateen
+5662; 0 0 COMMENT public TABLE nutrition_types fateen
+5663; 0 0 COMMENT public COLUMN nutrition_types.code fateen
+5664; 0 0 COMMENT public COLUMN nutrition_types.version_number fateen
+271; 1259 18623 TABLE public nutrition_types_history fateen
+5665; 0 0 COMMENT public TABLE nutrition_types_history fateen
+5666; 0 0 COMMENT public COLUMN nutrition_types_history.original_entity_id fateen
+5667; 0 0 COMMENT public COLUMN nutrition_types_history.previous_version_id fateen
+5668; 0 0 COMMENT public COLUMN nutrition_types_history.change_type fateen
+5669; 0 0 COMMENT public COLUMN nutrition_types_history.code fateen
+5670; 0 0 COMMENT public COLUMN nutrition_types_history.snapshot_hash fateen
+5671; 0 0 COMMENT public COLUMN nutrition_types_history.checksum fateen
+5672; 0 0 COMMENT public COLUMN nutrition_types_history.version_status fateen
+225; 1259 17178 TABLE public package_types fateen
+5673; 0 0 COMMENT public TABLE package_types fateen
+5674; 0 0 COMMENT public COLUMN package_types.display_order fateen
+5675; 0 0 COMMENT public COLUMN package_types.version_number fateen
+241; 1259 17543 TABLE public permission_types fateen
+5676; 0 0 COMMENT public TABLE permission_types fateen
+5677; 0 0 COMMENT public COLUMN permission_types.code fateen
+5678; 0 0 COMMENT public COLUMN permission_types.version_number fateen
+258; 1259 18101 TABLE public product_allergens fateen
+5679; 0 0 COMMENT public TABLE product_allergens fateen
+5680; 0 0 COMMENT public COLUMN product_allergens.relationship_type_id fateen
+5681; 0 0 COMMENT public COLUMN product_allergens.effective_from fateen
+5682; 0 0 COMMENT public COLUMN product_allergens.effective_to fateen
+5683; 0 0 COMMENT public COLUMN product_allergens.version_number fateen
+291; 1259 19500 TABLE public product_barcodes fateen
+5684; 0 0 COMMENT public TABLE product_barcodes fateen
+5685; 0 0 COMMENT public COLUMN product_barcodes.product_id fateen
+5686; 0 0 COMMENT public COLUMN product_barcodes.barcode_id fateen
+5687; 0 0 COMMENT public COLUMN product_barcodes.relationship_type_id fateen
+5688; 0 0 COMMENT public COLUMN product_barcodes.effective_from fateen
+5689; 0 0 COMMENT public COLUMN product_barcodes.effective_to fateen
+5690; 0 0 COMMENT public COLUMN product_barcodes.version_number fateen
+293; 1259 19535 TABLE public product_barcodes_history fateen
+5691; 0 0 COMMENT public TABLE product_barcodes_history fateen
+5692; 0 0 COMMENT public COLUMN product_barcodes_history.original_entity_id fateen
+5693; 0 0 COMMENT public COLUMN product_barcodes_history.previous_version_id fateen
+5694; 0 0 COMMENT public COLUMN product_barcodes_history.change_type fateen
+5695; 0 0 COMMENT public COLUMN product_barcodes_history.snapshot_hash fateen
+5696; 0 0 COMMENT public COLUMN product_barcodes_history.checksum fateen
+5697; 0 0 COMMENT public COLUMN product_barcodes_history.version_status fateen
+235; 1259 17447 TABLE public product_categories fateen
+5698; 0 0 COMMENT public TABLE product_categories fateen
+5699; 0 0 COMMENT public COLUMN product_categories.code fateen
+5700; 0 0 COMMENT public COLUMN product_categories.parent_id fateen
+5701; 0 0 COMMENT public COLUMN product_categories.version_number fateen
+272; 1259 18642 TABLE public product_categories_history fateen
+5702; 0 0 COMMENT public TABLE product_categories_history fateen
+5703; 0 0 COMMENT public COLUMN product_categories_history.original_entity_id fateen
+5704; 0 0 COMMENT public COLUMN product_categories_history.previous_version_id fateen
+5705; 0 0 COMMENT public COLUMN product_categories_history.change_type fateen
+5706; 0 0 COMMENT public COLUMN product_categories_history.parent_id fateen
+5707; 0 0 COMMENT public COLUMN product_categories_history.snapshot_hash fateen
+5708; 0 0 COMMENT public COLUMN product_categories_history.checksum fateen
+5709; 0 0 COMMENT public COLUMN product_categories_history.version_status fateen
+254; 1259 17829 TABLE public product_category_translations fateen
+5710; 0 0 COMMENT public TABLE product_category_translations fateen
+5711; 0 0 COMMENT public COLUMN product_category_translations.name fateen
+5712; 0 0 COMMENT public COLUMN product_category_translations.display_name fateen
+5713; 0 0 COMMENT public COLUMN product_category_translations.search_name fateen
+5714; 0 0 COMMENT public COLUMN product_category_translations.translation_status fateen
+260; 1259 18136 TABLE public product_health_flags fateen
+5715; 0 0 COMMENT public TABLE product_health_flags fateen
+5716; 0 0 COMMENT public COLUMN product_health_flags.relationship_type_id fateen
+5717; 0 0 COMMENT public COLUMN product_health_flags.version_number fateen
+290; 1259 19483 TABLE public product_images fateen
+5718; 0 0 COMMENT public TABLE product_images fateen
+5719; 0 0 COMMENT public COLUMN product_images.product_id fateen
+5720; 0 0 COMMENT public COLUMN product_images.image_id fateen
+5721; 0 0 COMMENT public COLUMN product_images.relationship_type_id fateen
+5722; 0 0 COMMENT public COLUMN product_images.effective_from fateen
+5723; 0 0 COMMENT public COLUMN product_images.effective_to fateen
+5724; 0 0 COMMENT public COLUMN product_images.version_number fateen
+292; 1259 19519 TABLE public product_images_history fateen
+5725; 0 0 COMMENT public TABLE product_images_history fateen
+5726; 0 0 COMMENT public COLUMN product_images_history.original_entity_id fateen
+5727; 0 0 COMMENT public COLUMN product_images_history.previous_version_id fateen
+5728; 0 0 COMMENT public COLUMN product_images_history.change_type fateen
+5729; 0 0 COMMENT public COLUMN product_images_history.snapshot_hash fateen
+5730; 0 0 COMMENT public COLUMN product_images_history.checksum fateen
+5731; 0 0 COMMENT public COLUMN product_images_history.version_status fateen
+257; 1259 18082 TABLE public product_ingredients fateen
+5732; 0 0 COMMENT public TABLE product_ingredients fateen
+5733; 0 0 COMMENT public COLUMN product_ingredients.relationship_type_id fateen
+5734; 0 0 COMMENT public COLUMN product_ingredients.amount_value fateen
+5735; 0 0 COMMENT public COLUMN product_ingredients.unit_id fateen
+5736; 0 0 COMMENT public COLUMN product_ingredients.effective_from fateen
+5737; 0 0 COMMENT public COLUMN product_ingredients.effective_to fateen
+5738; 0 0 COMMENT public COLUMN product_ingredients.version_number fateen
+259; 1259 18118 TABLE public product_nutrition_values fateen
+5739; 0 0 COMMENT public TABLE product_nutrition_values fateen
+5740; 0 0 COMMENT public COLUMN product_nutrition_values.relationship_type_id fateen
+5741; 0 0 COMMENT public COLUMN product_nutrition_values.amount_value fateen
+5742; 0 0 COMMENT public COLUMN product_nutrition_values.unit_id fateen
+5743; 0 0 COMMENT public COLUMN product_nutrition_values.version_number fateen
+285; 1259 19391 TABLE public product_search_index fateen
+5744; 0 0 COMMENT public TABLE product_search_index fateen
+5745; 0 0 COMMENT public COLUMN product_search_index.product_id fateen
+5746; 0 0 COMMENT public COLUMN product_search_index.search_name fateen
+5747; 0 0 COMMENT public COLUMN product_search_index.search_text fateen
+5748; 0 0 COMMENT public COLUMN product_search_index.search_tokens fateen
+5749; 0 0 COMMENT public COLUMN product_search_index.language_codes fateen
+5750; 0 0 COMMENT public COLUMN product_search_index.search_rank fateen
+5751; 0 0 COMMENT public COLUMN product_search_index.generated_at fateen
+248; 1259 17737 TABLE public product_translations fateen
+5752; 0 0 COMMENT public TABLE product_translations fateen
+5753; 0 0 COMMENT public COLUMN product_translations.name fateen
+5754; 0 0 COMMENT public COLUMN product_translations.display_name fateen
+5755; 0 0 COMMENT public COLUMN product_translations.search_name fateen
+5756; 0 0 COMMENT public COLUMN product_translations.translation_status fateen
+247; 1259 17721 TABLE public products fateen
+5757; 0 0 COMMENT public TABLE products fateen
+5758; 0 0 COMMENT public COLUMN products.brand_id fateen
+5759; 0 0 COMMENT public COLUMN products.product_category_id fateen
+5760; 0 0 COMMENT public COLUMN products.internal_code fateen
+5761; 0 0 COMMENT public COLUMN products.confidence_level fateen
+5762; 0 0 COMMENT public COLUMN products.version_number fateen
+5763; 0 0 COMMENT public COLUMN products.created_by fateen
+5764; 0 0 COMMENT public COLUMN products.approved_by fateen
+267; 1259 18555 TABLE public products_history fateen
+5765; 0 0 COMMENT public TABLE products_history fateen
+5766; 0 0 COMMENT public COLUMN products_history.original_entity_id fateen
+5767; 0 0 COMMENT public COLUMN products_history.previous_version_id fateen
+5768; 0 0 COMMENT public COLUMN products_history.change_type fateen
+5769; 0 0 COMMENT public COLUMN products_history.brand_id fateen
+5770; 0 0 COMMENT public COLUMN products_history.product_category_id fateen
+5771; 0 0 COMMENT public COLUMN products_history.snapshot_hash fateen
+5772; 0 0 COMMENT public COLUMN products_history.checksum fateen
+5773; 0 0 COMMENT public COLUMN products_history.version_status fateen
+233; 1259 17415 TABLE public regions fateen
+5774; 0 0 COMMENT public TABLE regions fateen
+5775; 0 0 COMMENT public COLUMN regions.code fateen
+5776; 0 0 COMMENT public COLUMN regions.version_number fateen
+238; 1259 17495 TABLE public regulatory_authorities fateen
+5777; 0 0 COMMENT public TABLE regulatory_authorities fateen
+5778; 0 0 COMMENT public COLUMN regulatory_authorities.code fateen
+5779; 0 0 COMMENT public COLUMN regulatory_authorities.version_number fateen
+228; 1259 17227 TABLE public relationship_types fateen
+5780; 0 0 COMMENT public TABLE relationship_types fateen
+5781; 0 0 COMMENT public COLUMN relationship_types.is_directional fateen
+5782; 0 0 COMMENT public COLUMN relationship_types.inverse_type_id fateen
+5783; 0 0 COMMENT public COLUMN relationship_types.version_number fateen
+240; 1259 17527 TABLE public role_types fateen
+5784; 0 0 COMMENT public TABLE role_types fateen
+5785; 0 0 COMMENT public COLUMN role_types.code fateen
+5786; 0 0 COMMENT public COLUMN role_types.version_number fateen
+230; 1259 17260 TABLE public source_priorities fateen
+5787; 0 0 COMMENT public TABLE source_priorities fateen
+5788; 0 0 COMMENT public COLUMN source_priorities.rank fateen
+5789; 0 0 COMMENT public COLUMN source_priorities.version_number fateen
+229; 1259 17244 TABLE public source_types fateen
+5790; 0 0 COMMENT public TABLE source_types fateen
+5791; 0 0 COMMENT public COLUMN source_types.version_number fateen
+224; 1259 17161 TABLE public units fateen
+5792; 0 0 COMMENT public TABLE units fateen
+5793; 0 0 COMMENT public COLUMN units.code fateen
+5794; 0 0 COMMENT public COLUMN units.name fateen
+5795; 0 0 COMMENT public COLUMN units.symbol fateen
+5796; 0 0 COMMENT public COLUMN units.dimension fateen
+5797; 0 0 COMMENT public COLUMN units.is_base_unit fateen
+5798; 0 0 COMMENT public COLUMN units.version_number fateen
+280; 1259 19142 TABLE public verification_statuses fateen
+5799; 0 0 COMMENT public TABLE verification_statuses fateen
+5800; 0 0 COMMENT public COLUMN verification_statuses.code fateen
+5801; 0 0 COMMENT public COLUMN verification_statuses.status_id fateen
+5802; 0 0 COMMENT public COLUMN verification_statuses.version_number fateen
+279; 1259 18741 TABLE public version_metadata fateen
+5803; 0 0 COMMENT public TABLE version_metadata fateen
+5804; 0 0 COMMENT public COLUMN version_metadata.entity_version_id fateen
+5805; 0 0 COMMENT public COLUMN version_metadata.key fateen
+5806; 0 0 COMMENT public COLUMN version_metadata.value fateen
+5330; 0 17799 TABLE DATA public allergen_translations fateen
+5314; 0 17463 TABLE DATA public allergen_types fateen
+5329; 0 17783 TABLE DATA public allergens fateen
+5347; 0 18589 TABLE DATA public allergens_history fateen
+5352; 0 18680 TABLE DATA public audit_context fateen
+5320; 0 17559 TABLE DATA public audit_event_types fateen
+5354; 0 18704 TABLE DATA public audit_events fateen
+5355; 0 18715 TABLE DATA public audit_log fateen
+5304; 0 17194 TABLE DATA public barcode_types fateen
+5360; 0 19179 TABLE DATA public barcodes fateen
+5362; 0 19218 TABLE DATA public barcodes_history fateen
+5365; 0 19421 TABLE DATA public brand_search_index fateen
+5324; 0 17706 TABLE DATA public brand_translations fateen
+5323; 0 17690 TABLE DATA public brands fateen
+5344; 0 18538 TABLE DATA public brands_history fateen
+5353; 0 18693 TABLE DATA public change_sets fateen
+5321; 0 17659 TABLE DATA public companies fateen
+5343; 0 18521 TABLE DATA public companies_history fateen
+5366; 0 19436 TABLE DATA public company_search_index fateen
+5322; 0 17675 TABLE DATA public company_translations fateen
+5301; 0 17139 TABLE DATA public countries fateen
+5309; 0 17277 TABLE DATA public data_sources fateen
+5342; 0 18205 TABLE DATA public entity_relationships fateen
+5356; 0 18726 TABLE DATA public entity_versions fateen
+5317; 0 17511 TABLE DATA public evidence_types fateen
+5334; 0 17860 TABLE DATA public health_flag_translations fateen
+5310; 0 17292 TABLE DATA public health_flag_types fateen
+5333; 0 17844 TABLE DATA public health_flags fateen
+5348; 0 18606 TABLE DATA public health_flags_history fateen
+5305; 0 17211 TABLE DATA public image_types fateen
+5359; 0 19158 TABLE DATA public images fateen
+5361; 0 19196 TABLE DATA public images_history fateen
+5341; 0 18187 TABLE DATA public ingredient_aliases fateen
+5339; 0 18153 TABLE DATA public ingredient_allergens fateen
+5312; 0 17431 TABLE DATA public ingredient_categories fateen
+5351; 0 18661 TABLE DATA public ingredient_categories_history fateen
+5340; 0 18170 TABLE DATA public ingredient_health_flags fateen
+5364; 0 19406 TABLE DATA public ingredient_search_index fateen
+5328; 0 17768 TABLE DATA public ingredient_translations fateen
+5327; 0 17752 TABLE DATA public ingredients fateen
+5346; 0 18572 TABLE DATA public ingredients_history fateen
+5300; 0 17123 TABLE DATA public languages fateen
+5299; 0 17108 TABLE DATA public lifecycle_statuses fateen
+5367; 0 19467 TABLE DATA public measurement_bases fateen
+5331; 0 17814 TABLE DATA public nutrition_type_translations fateen
+5315; 0 17479 TABLE DATA public nutrition_types fateen
+5349; 0 18623 TABLE DATA public nutrition_types_history fateen
+5303; 0 17178 TABLE DATA public package_types fateen
+5319; 0 17543 TABLE DATA public permission_types fateen
+5336; 0 18101 TABLE DATA public product_allergens fateen
+5369; 0 19500 TABLE DATA public product_barcodes fateen
+5371; 0 19535 TABLE DATA public product_barcodes_history fateen
+5313; 0 17447 TABLE DATA public product_categories fateen
+5350; 0 18642 TABLE DATA public product_categories_history fateen
+5332; 0 17829 TABLE DATA public product_category_translations fateen
+5338; 0 18136 TABLE DATA public product_health_flags fateen
+5368; 0 19483 TABLE DATA public product_images fateen
+5370; 0 19519 TABLE DATA public product_images_history fateen
+5335; 0 18082 TABLE DATA public product_ingredients fateen
+5337; 0 18118 TABLE DATA public product_nutrition_values fateen
+5363; 0 19391 TABLE DATA public product_search_index fateen
+5326; 0 17737 TABLE DATA public product_translations fateen
+5325; 0 17721 TABLE DATA public products fateen
+5345; 0 18555 TABLE DATA public products_history fateen
+5311; 0 17415 TABLE DATA public regions fateen
+5316; 0 17495 TABLE DATA public regulatory_authorities fateen
+5306; 0 17227 TABLE DATA public relationship_types fateen
+5318; 0 17527 TABLE DATA public role_types fateen
+5308; 0 17260 TABLE DATA public source_priorities fateen
+5307; 0 17244 TABLE DATA public source_types fateen
+5302; 0 17161 TABLE DATA public units fateen
+5358; 0 19142 TABLE DATA public verification_statuses fateen
+5357; 0 18741 TABLE DATA public version_metadata fateen
+5807; 0 0 SEQUENCE SET public lifecycle_statuses_id_seq fateen
+4486; 2606 17813 CONSTRAINT public allergen_translations allergen_translations_allergen_language_unique fateen
+4489; 2606 17811 CONSTRAINT public allergen_translations allergen_translations_pkey fateen
+4397; 2606 17478 CONSTRAINT public allergen_types allergen_types_code_unique fateen
+4399; 2606 17476 CONSTRAINT public allergen_types allergen_types_pkey fateen
+4637; 2606 18605 CONSTRAINT public allergens_history allergens_history_entity_version_unique fateen
+4640; 2606 18603 CONSTRAINT public allergens_history allergens_history_pkey fateen
+4480; 2606 17798 CONSTRAINT public allergens allergens_internal_code_unique fateen
+4482; 2606 17796 CONSTRAINT public allergens allergens_pkey fateen
+4684; 2606 18692 CONSTRAINT public audit_context audit_context_operation_unique fateen
+4686; 2606 18690 CONSTRAINT public audit_context audit_context_pkey fateen
+4427; 2606 17574 CONSTRAINT public audit_event_types audit_event_types_code_unique fateen
+4429; 2606 17572 CONSTRAINT public audit_event_types audit_event_types_pkey fateen
+4694; 2606 18714 CONSTRAINT public audit_events audit_events_pkey fateen
+4698; 2606 18725 CONSTRAINT public audit_log audit_log_pkey fateen
+4339; 2606 17210 CONSTRAINT public barcode_types barcode_types_code_unique fateen
+4341; 2606 17208 CONSTRAINT public barcode_types barcode_types_pkey fateen
+4728; 2606 19195 CONSTRAINT public barcodes barcodes_barcode_unique fateen
+4749; 2606 19235 CONSTRAINT public barcodes_history barcodes_history_entity_version_unique fateen
+4753; 2606 19233 CONSTRAINT public barcodes_history barcodes_history_pkey fateen
+4731; 2606 19193 CONSTRAINT public barcodes barcodes_pkey fateen
+4775; 2606 19435 CONSTRAINT public brand_search_index brand_search_index_brand_id_unique fateen
+4777; 2606 19433 CONSTRAINT public brand_search_index brand_search_index_pkey fateen
+4450; 2606 17720 CONSTRAINT public brand_translations brand_translations_brand_language_unique fateen
+4453; 2606 17718 CONSTRAINT public brand_translations brand_translations_pkey fateen
+4607; 2606 18554 CONSTRAINT public brands_history brands_history_entity_version_unique fateen
+4610; 2606 18552 CONSTRAINT public brands_history brands_history_pkey fateen
+4444; 2606 17705 CONSTRAINT public brands brands_internal_code_unique fateen
+4446; 2606 17703 CONSTRAINT public brands brands_pkey fateen
+4690; 2606 18703 CONSTRAINT public change_sets change_sets_pkey fateen
+4597; 2606 18537 CONSTRAINT public companies_history companies_history_entity_version_unique fateen
+4600; 2606 18535 CONSTRAINT public companies_history companies_history_pkey fateen
+4432; 2606 17674 CONSTRAINT public companies companies_internal_code_unique fateen
+4434; 2606 17672 CONSTRAINT public companies companies_pkey fateen
+4783; 2606 19450 CONSTRAINT public company_search_index company_search_index_company_id_unique fateen
+4785; 2606 19448 CONSTRAINT public company_search_index company_search_index_pkey fateen
+4438; 2606 17689 CONSTRAINT public company_translations company_translations_company_language_unique fateen
+4441; 2606 17687 CONSTRAINT public company_translations company_translations_pkey fateen
+4317; 2606 17158 CONSTRAINT public countries countries_alpha_3_unique fateen
+4319; 2606 17156 CONSTRAINT public countries countries_code_unique fateen
+4321; 2606 17160 CONSTRAINT public countries countries_numeric_code_unique fateen
+4323; 2606 17154 CONSTRAINT public countries countries_pkey fateen
+4367; 2606 17291 CONSTRAINT public data_sources data_sources_code_unique fateen
+4370; 2606 17289 CONSTRAINT public data_sources data_sources_pkey fateen
+4588; 2606 18224 CONSTRAINT public entity_relationships entity_relationships_edge_unique fateen
+4591; 2606 18222 CONSTRAINT public entity_relationships entity_relationships_pkey fateen
+4702; 2606 18740 CONSTRAINT public entity_versions entity_versions_entity_version_unique fateen
+4704; 2606 18738 CONSTRAINT public entity_versions entity_versions_pkey fateen
+4412; 2606 17526 CONSTRAINT public evidence_types evidence_types_code_unique fateen
+4414; 2606 17524 CONSTRAINT public evidence_types evidence_types_pkey fateen
+4510; 2606 17874 CONSTRAINT public health_flag_translations health_flag_translations_health_flag_language_unique fateen
+4513; 2606 17872 CONSTRAINT public health_flag_translations health_flag_translations_pkey fateen
+4375; 2606 17307 CONSTRAINT public health_flag_types health_flag_types_code_unique fateen
+4377; 2606 17305 CONSTRAINT public health_flag_types health_flag_types_pkey fateen
+4646; 2606 18622 CONSTRAINT public health_flags_history health_flags_history_entity_version_unique fateen
+4650; 2606 18620 CONSTRAINT public health_flags_history health_flags_history_pkey fateen
+4504; 2606 17859 CONSTRAINT public health_flags health_flags_internal_code_unique fateen
+4506; 2606 17857 CONSTRAINT public health_flags health_flags_pkey fateen
+4344; 2606 17226 CONSTRAINT public image_types image_types_code_unique fateen
+4346; 2606 17224 CONSTRAINT public image_types image_types_pkey fateen
+4717; 2606 19178 CONSTRAINT public images images_content_hash_unique fateen
+4737; 2606 19217 CONSTRAINT public images_history images_history_entity_version_unique fateen
+4742; 2606 19215 CONSTRAINT public images_history images_history_pkey fateen
+4721; 2606 19174 CONSTRAINT public images images_pkey fateen
+4725; 2606 19176 CONSTRAINT public images images_storage_uri_unique fateen
+4579; 2606 18204 CONSTRAINT public ingredient_aliases ingredient_aliases_ingredient_alias_unique fateen
+4583; 2606 18202 CONSTRAINT public ingredient_aliases ingredient_aliases_pkey fateen
+4561; 2606 18167 CONSTRAINT public ingredient_allergens ingredient_allergens_pkey fateen
+4566; 2606 18169 CONSTRAINT public ingredient_allergens ingredient_allergens_subject_unique fateen
+4385; 2606 17446 CONSTRAINT public ingredient_categories ingredient_categories_code_unique fateen
+4675; 2606 18679 CONSTRAINT public ingredient_categories_history ingredient_categories_history_entity_version_unique fateen
+4679; 2606 18677 CONSTRAINT public ingredient_categories_history ingredient_categories_history_pkey fateen
+4388; 2606 17444 CONSTRAINT public ingredient_categories ingredient_categories_pkey fateen
+4571; 2606 18184 CONSTRAINT public ingredient_health_flags ingredient_health_flags_pkey fateen
+4576; 2606 18186 CONSTRAINT public ingredient_health_flags ingredient_health_flags_subject_unique fateen
+4767; 2606 19420 CONSTRAINT public ingredient_search_index ingredient_search_index_ingredient_id_unique fateen
+4769; 2606 19418 CONSTRAINT public ingredient_search_index ingredient_search_index_pkey fateen
+4474; 2606 17782 CONSTRAINT public ingredient_translations ingredient_translations_ingredient_language_unique fateen
+4477; 2606 17780 CONSTRAINT public ingredient_translations ingredient_translations_pkey fateen
+4627; 2606 18588 CONSTRAINT public ingredients_history ingredients_history_entity_version_unique fateen
+4630; 2606 18586 CONSTRAINT public ingredients_history ingredients_history_pkey fateen
+4468; 2606 17767 CONSTRAINT public ingredients ingredients_internal_code_unique fateen
+4470; 2606 17765 CONSTRAINT public ingredients ingredients_pkey fateen
+4312; 2606 17138 CONSTRAINT public languages languages_code_unique fateen
+4314; 2606 17136 CONSTRAINT public languages languages_pkey fateen
+4308; 2606 17122 CONSTRAINT public lifecycle_statuses lifecycle_statuses_code_unique fateen
+4310; 2606 17120 CONSTRAINT public lifecycle_statuses lifecycle_statuses_pkey fateen
+4791; 2606 19482 CONSTRAINT public measurement_bases measurement_bases_code_unique fateen
+4793; 2606 19480 CONSTRAINT public measurement_bases measurement_bases_pkey fateen
+4493; 2606 17828 CONSTRAINT public nutrition_type_translations nutrition_type_translations_nutrition_type_language_unique fateen
+4495; 2606 17826 CONSTRAINT public nutrition_type_translations nutrition_type_translations_pkey fateen
+4402; 2606 17494 CONSTRAINT public nutrition_types nutrition_types_code_unique fateen
+4656; 2606 18641 CONSTRAINT public nutrition_types_history nutrition_types_history_entity_version_unique fateen
+4659; 2606 18639 CONSTRAINT public nutrition_types_history nutrition_types_history_pkey fateen
+4404; 2606 17492 CONSTRAINT public nutrition_types nutrition_types_pkey fateen
+4334; 2606 17193 CONSTRAINT public package_types package_types_code_unique fateen
+4336; 2606 17191 CONSTRAINT public package_types package_types_pkey fateen
+4422; 2606 17558 CONSTRAINT public permission_types permission_types_code_unique fateen
+4424; 2606 17556 CONSTRAINT public permission_types permission_types_pkey fateen
+4528; 2606 18115 CONSTRAINT public product_allergens product_allergens_pkey fateen
+4534; 2606 18117 CONSTRAINT public product_allergens product_allergens_subject_unique fateen
+4806; 2606 19516 CONSTRAINT public product_barcodes product_barcodes_association_unique fateen
+4831; 2606 19550 CONSTRAINT public product_barcodes_history product_barcodes_history_entity_version_unique fateen
+4835; 2606 19548 CONSTRAINT public product_barcodes_history product_barcodes_history_pkey fateen
+4810; 2606 19514 CONSTRAINT public product_barcodes product_barcodes_pkey fateen
+4391; 2606 17462 CONSTRAINT public product_categories product_categories_code_unique fateen
+4665; 2606 18660 CONSTRAINT public product_categories_history product_categories_history_entity_version_unique fateen
+4669; 2606 18658 CONSTRAINT public product_categories_history product_categories_history_pkey fateen
+4394; 2606 17460 CONSTRAINT public product_categories product_categories_pkey fateen
+4497; 2606 17843 CONSTRAINT public product_category_translations product_category_translations_category_language_unique fateen
+4500; 2606 17841 CONSTRAINT public product_category_translations product_category_translations_pkey fateen
+4550; 2606 18150 CONSTRAINT public product_health_flags product_health_flags_pkey fateen
+4556; 2606 18152 CONSTRAINT public product_health_flags product_health_flags_subject_unique fateen
+4796; 2606 19499 CONSTRAINT public product_images product_images_attachment_unique fateen
+4817; 2606 19534 CONSTRAINT public product_images_history product_images_history_entity_version_unique fateen
+4822; 2606 19532 CONSTRAINT public product_images_history product_images_history_pkey fateen
+4800; 2606 19497 CONSTRAINT public product_images product_images_pkey fateen
+4517; 2606 18098 CONSTRAINT public product_ingredients product_ingredients_pkey fateen
+4523; 2606 18100 CONSTRAINT public product_ingredients product_ingredients_subject_unique fateen
+4537; 2606 19552 CONSTRAINT public product_nutrition_values product_nutrition_values_fact_unique fateen
+4541; 2606 18133 CONSTRAINT public product_nutrition_values product_nutrition_values_pkey fateen
+4759; 2606 19403 CONSTRAINT public product_search_index product_search_index_pkey fateen
+4761; 2606 19405 CONSTRAINT public product_search_index product_search_index_product_id_unique fateen
+4463; 2606 17749 CONSTRAINT public product_translations product_translations_pkey fateen
+4466; 2606 17751 CONSTRAINT public product_translations product_translations_product_language_unique fateen
+4617; 2606 18571 CONSTRAINT public products_history products_history_entity_version_unique fateen
+4620; 2606 18569 CONSTRAINT public products_history products_history_pkey fateen
+4456; 2606 17736 CONSTRAINT public products products_internal_code_unique fateen
+4458; 2606 17734 CONSTRAINT public products products_pkey fateen
+4380; 2606 17430 CONSTRAINT public regions regions_code_unique fateen
+4382; 2606 17428 CONSTRAINT public regions regions_pkey fateen
+4407; 2606 17510 CONSTRAINT public regulatory_authorities regulatory_authorities_code_unique fateen
+4409; 2606 17508 CONSTRAINT public regulatory_authorities regulatory_authorities_pkey fateen
+4349; 2606 17243 CONSTRAINT public relationship_types relationship_types_code_unique fateen
+4352; 2606 17241 CONSTRAINT public relationship_types relationship_types_pkey fateen
+4417; 2606 17542 CONSTRAINT public role_types role_types_code_unique fateen
+4419; 2606 17540 CONSTRAINT public role_types role_types_pkey fateen
+4360; 2606 17274 CONSTRAINT public source_priorities source_priorities_code_unique fateen
+4362; 2606 17272 CONSTRAINT public source_priorities source_priorities_pkey fateen
+4364; 2606 17276 CONSTRAINT public source_priorities source_priorities_rank_unique fateen
+4355; 2606 17259 CONSTRAINT public source_types source_types_code_unique fateen
+4357; 2606 17257 CONSTRAINT public source_types source_types_pkey fateen
+4326; 2606 17175 CONSTRAINT public units units_code_unique fateen
+4329; 2606 17173 CONSTRAINT public units units_pkey fateen
+4332; 2606 17177 CONSTRAINT public units units_symbol_unique fateen
+4712; 2606 19157 CONSTRAINT public verification_statuses verification_statuses_code_unique fateen
+4714; 2606 19155 CONSTRAINT public verification_statuses verification_statuses_pkey fateen
+4708; 2606 18753 CONSTRAINT public version_metadata version_metadata_key_unique fateen
+4710; 2606 18751 CONSTRAINT public version_metadata version_metadata_pkey fateen
+4484; 1259 18060 INDEX public allergen_translations_allergen_id_idx fateen
+4487; 1259 18061 INDEX public allergen_translations_language_id_idx fateen
+4400; 1259 17642 INDEX public allergen_types_status_id_idx fateen
+4478; 1259 18048 INDEX public allergens_allergen_type_id_idx fateen
+4634; 1259 19088 INDEX public allergens_history_allergen_type_id_idx fateen
+4635; 1259 19092 INDEX public allergens_history_change_set_id_idx fateen
+4638; 1259 19087 INDEX public allergens_history_original_entity_id_idx fateen
+4641; 1259 19089 INDEX public allergens_history_previous_version_id_idx fateen
+4642; 1259 19090 INDEX public allergens_history_source_id_idx fateen
+4643; 1259 19091 INDEX public allergens_history_status_id_idx fateen
+4483; 1259 18049 INDEX public allergens_source_id_idx fateen
+4687; 1259 19116 INDEX public audit_context_role_id_idx fateen
+4430; 1259 17648 INDEX public audit_event_types_status_id_idx fateen
+4691; 1259 19121 INDEX public audit_events_audit_log_id_idx fateen
+4692; 1259 19122 INDEX public audit_events_event_type_id_idx fateen
+4695; 1259 19118 INDEX public audit_log_change_set_id_idx fateen
+4696; 1259 19119 INDEX public audit_log_event_type_id_idx fateen
+4699; 1259 19120 INDEX public audit_log_role_id_idx fateen
+4342; 1259 17394 INDEX public barcode_types_status_id_idx fateen
+4726; 1259 19366 INDEX public barcodes_barcode_type_id_idx fateen
+4746; 1259 19383 INDEX public barcodes_history_barcode_type_id_idx fateen
+4747; 1259 19380 INDEX public barcodes_history_change_set_id_idx fateen
+4750; 1259 19385 INDEX public barcodes_history_issued_country_id_idx fateen
+4751; 1259 19378 INDEX public barcodes_history_original_entity_id_idx fateen
+4754; 1259 19379 INDEX public barcodes_history_previous_version_id_idx fateen
+4755; 1259 19381 INDEX public barcodes_history_source_id_idx fateen
+4756; 1259 19382 INDEX public barcodes_history_status_id_idx fateen
+4757; 1259 19384 INDEX public barcodes_history_verification_status_id_idx fateen
+4729; 1259 19370 INDEX public barcodes_issued_country_id_idx fateen
+4732; 1259 19368 INDEX public barcodes_source_id_idx fateen
+4733; 1259 19369 INDEX public barcodes_status_id_idx fateen
+4734; 1259 19367 INDEX public barcodes_verification_status_id_idx fateen
+4778; 1259 19459 INDEX public brand_search_index_search_name_trgm_idx fateen
+4779; 1259 19462 INDEX public brand_search_index_search_rank_idx fateen
+4780; 1259 19460 INDEX public brand_search_index_search_text_trgm_idx fateen
+4781; 1259 19461 INDEX public brand_search_index_search_tokens_idx fateen
+4448; 1259 18054 INDEX public brand_translations_brand_id_idx fateen
+4451; 1259 18055 INDEX public brand_translations_language_id_idx fateen
+4442; 1259 18042 INDEX public brands_company_id_idx fateen
+4604; 1259 19074 INDEX public brands_history_change_set_id_idx fateen
+4605; 1259 19070 INDEX public brands_history_company_id_idx fateen
+4608; 1259 19069 INDEX public brands_history_original_entity_id_idx fateen
+4611; 1259 19071 INDEX public brands_history_previous_version_id_idx fateen
+4612; 1259 19072 INDEX public brands_history_source_id_idx fateen
+4613; 1259 19073 INDEX public brands_history_status_id_idx fateen
+4447; 1259 18043 INDEX public brands_source_id_idx fateen
+4688; 1259 19117 INDEX public change_sets_correlation_id_transaction_id_idx fateen
+4595; 1259 19068 INDEX public companies_history_change_set_id_idx fateen
+4598; 1259 19064 INDEX public companies_history_original_entity_id_idx fateen
+4601; 1259 19065 INDEX public companies_history_previous_version_id_idx fateen
+4602; 1259 19066 INDEX public companies_history_source_id_idx fateen
+4603; 1259 19067 INDEX public companies_history_status_id_idx fateen
+4435; 1259 18041 INDEX public companies_source_id_idx fateen
+4786; 1259 19463 INDEX public company_search_index_search_name_trgm_idx fateen
+4787; 1259 19466 INDEX public company_search_index_search_rank_idx fateen
+4788; 1259 19464 INDEX public company_search_index_search_text_trgm_idx fateen
+4789; 1259 19465 INDEX public company_search_index_search_tokens_idx fateen
+4436; 1259 18052 INDEX public company_translations_company_id_idx fateen
+4439; 1259 18053 INDEX public company_translations_language_id_idx fateen
+4324; 1259 17391 INDEX public countries_status_id_idx fateen
+4368; 1259 17389 INDEX public data_sources_country_id_idx fateen
+4371; 1259 17388 INDEX public data_sources_priority_id_idx fateen
+4372; 1259 17387 INDEX public data_sources_source_type_id_idx fateen
+4373; 1259 17399 INDEX public data_sources_status_id_idx fateen
+4589; 1259 18511 INDEX public entity_relationships_evidence_type_id_idx fateen
+4592; 1259 18509 INDEX public entity_relationships_relationship_type_id_idx fateen
+4593; 1259 18510 INDEX public entity_relationships_source_id_idx fateen
+4594; 1259 18512 INDEX public entity_relationships_status_id_idx fateen
+4700; 1259 19123 INDEX public entity_versions_change_set_id_idx fateen
+4705; 1259 19124 INDEX public entity_versions_previous_version_id_idx fateen
+4415; 1259 17645 INDEX public evidence_types_status_id_idx fateen
+4508; 1259 18066 INDEX public health_flag_translations_health_flag_id_idx fateen
+4511; 1259 18067 INDEX public health_flag_translations_language_id_idx fateen
+4378; 1259 17400 INDEX public health_flag_types_status_id_idx fateen
+4502; 1259 18050 INDEX public health_flags_health_flag_type_id_idx fateen
+4644; 1259 19098 INDEX public health_flags_history_change_set_id_idx fateen
+4647; 1259 19094 INDEX public health_flags_history_health_flag_type_id_idx fateen
+4648; 1259 19093 INDEX public health_flags_history_original_entity_id_idx fateen
+4651; 1259 19095 INDEX public health_flags_history_previous_version_id_idx fateen
+4652; 1259 19096 INDEX public health_flags_history_source_id_idx fateen
+4653; 1259 19097 INDEX public health_flags_history_status_id_idx fateen
+4507; 1259 18051 INDEX public health_flags_source_id_idx fateen
+4347; 1259 17395 INDEX public image_types_status_id_idx fateen
+4735; 1259 19373 INDEX public images_history_change_set_id_idx fateen
+4738; 1259 19376 INDEX public images_history_image_type_id_idx fateen
+4739; 1259 19377 INDEX public images_history_language_id_idx fateen
+4740; 1259 19371 INDEX public images_history_original_entity_id_idx fateen
+4743; 1259 19372 INDEX public images_history_previous_version_id_idx fateen
+4744; 1259 19374 INDEX public images_history_source_id_idx fateen
+4745; 1259 19375 INDEX public images_history_status_id_idx fateen
+4718; 1259 19362 INDEX public images_image_type_id_idx fateen
+4719; 1259 19364 INDEX public images_language_id_idx fateen
+4722; 1259 19363 INDEX public images_source_id_idx fateen
+4723; 1259 19365 INDEX public images_status_id_idx fateen
+4577; 1259 18507 INDEX public ingredient_aliases_evidence_type_id_idx fateen
+4580; 1259 18503 INDEX public ingredient_aliases_ingredient_id_idx fateen
+4581; 1259 18504 INDEX public ingredient_aliases_language_id_idx fateen
+4584; 1259 18505 INDEX public ingredient_aliases_relationship_type_id_idx fateen
+4585; 1259 18506 INDEX public ingredient_aliases_source_id_idx fateen
+4586; 1259 18508 INDEX public ingredient_aliases_status_id_idx fateen
+4557; 1259 18492 INDEX public ingredient_allergens_allergen_id_idx fateen
+4558; 1259 18495 INDEX public ingredient_allergens_evidence_type_id_idx fateen
+4559; 1259 18491 INDEX public ingredient_allergens_ingredient_id_idx fateen
+4562; 1259 18493 INDEX public ingredient_allergens_relationship_type_id_idx fateen
+4563; 1259 18494 INDEX public ingredient_allergens_source_id_idx fateen
+4564; 1259 18496 INDEX public ingredient_allergens_status_id_idx fateen
+4673; 1259 19115 INDEX public ingredient_categories_history_change_set_id_idx fateen
+4676; 1259 19110 INDEX public ingredient_categories_history_original_entity_id_idx fateen
+4677; 1259 19111 INDEX public ingredient_categories_history_parent_id_idx fateen
+4680; 1259 19112 INDEX public ingredient_categories_history_previous_version_id_idx fateen
+4681; 1259 19113 INDEX public ingredient_categories_history_source_id_idx fateen
+4682; 1259 19114 INDEX public ingredient_categories_history_status_id_idx fateen
+4386; 1259 17639 INDEX public ingredient_categories_parent_id_idx fateen
+4389; 1259 17638 INDEX public ingredient_categories_status_id_idx fateen
+4567; 1259 18501 INDEX public ingredient_health_flags_evidence_type_id_idx fateen
+4568; 1259 18498 INDEX public ingredient_health_flags_health_flag_id_idx fateen
+4569; 1259 18497 INDEX public ingredient_health_flags_ingredient_id_idx fateen
+4572; 1259 18499 INDEX public ingredient_health_flags_relationship_type_id_idx fateen
+4573; 1259 18500 INDEX public ingredient_health_flags_source_id_idx fateen
+4574; 1259 18502 INDEX public ingredient_health_flags_status_id_idx fateen
+4770; 1259 19455 INDEX public ingredient_search_index_search_name_trgm_idx fateen
+4771; 1259 19458 INDEX public ingredient_search_index_search_rank_idx fateen
+4772; 1259 19456 INDEX public ingredient_search_index_search_text_trgm_idx fateen
+4773; 1259 19457 INDEX public ingredient_search_index_search_tokens_idx fateen
+4472; 1259 18058 INDEX public ingredient_translations_ingredient_id_idx fateen
+4475; 1259 18059 INDEX public ingredient_translations_language_id_idx fateen
+4625; 1259 19086 INDEX public ingredients_history_change_set_id_idx fateen
+4628; 1259 19082 INDEX public ingredients_history_original_entity_id_idx fateen
+4631; 1259 19083 INDEX public ingredients_history_previous_version_id_idx fateen
+4632; 1259 19084 INDEX public ingredients_history_source_id_idx fateen
+4633; 1259 19085 INDEX public ingredients_history_status_id_idx fateen
+4471; 1259 18047 INDEX public ingredients_source_id_idx fateen
+4315; 1259 17390 INDEX public languages_status_id_idx fateen
+4794; 1259 19713 INDEX public measurement_bases_status_id_idx fateen
+4490; 1259 18063 INDEX public nutrition_type_translations_language_id_idx fateen
+4491; 1259 18062 INDEX public nutrition_type_translations_nutrition_type_id_idx fateen
+4654; 1259 19103 INDEX public nutrition_types_history_change_set_id_idx fateen
+4657; 1259 19099 INDEX public nutrition_types_history_original_entity_id_idx fateen
+4660; 1259 19100 INDEX public nutrition_types_history_previous_version_id_idx fateen
+4661; 1259 19101 INDEX public nutrition_types_history_source_id_idx fateen
+4662; 1259 19102 INDEX public nutrition_types_history_status_id_idx fateen
+4405; 1259 17643 INDEX public nutrition_types_status_id_idx fateen
+4337; 1259 17393 INDEX public package_types_status_id_idx fateen
+4425; 1259 17647 INDEX public permission_types_status_id_idx fateen
+4525; 1259 18473 INDEX public product_allergens_allergen_id_idx fateen
+4526; 1259 18476 INDEX public product_allergens_evidence_type_id_idx fateen
+4529; 1259 18472 INDEX public product_allergens_product_id_idx fateen
+4530; 1259 18474 INDEX public product_allergens_relationship_type_id_idx fateen
+4531; 1259 18475 INDEX public product_allergens_source_id_idx fateen
+4532; 1259 18477 INDEX public product_allergens_status_id_idx fateen
+4807; 1259 19722 INDEX public product_barcodes_barcode_id_idx fateen
+4808; 1259 19725 INDEX public product_barcodes_evidence_type_id_idx fateen
+4828; 1259 19740 INDEX public product_barcodes_history_barcode_id_idx fateen
+4829; 1259 19738 INDEX public product_barcodes_history_change_set_id_idx fateen
+4832; 1259 19743 INDEX public product_barcodes_history_evidence_type_id_idx fateen
+4833; 1259 19736 INDEX public product_barcodes_history_original_entity_id_idx fateen
+4836; 1259 19737 INDEX public product_barcodes_history_previous_version_id_idx fateen
+4837; 1259 19739 INDEX public product_barcodes_history_product_id_idx fateen
+4838; 1259 19741 INDEX public product_barcodes_history_relationship_type_id_idx fateen
+4839; 1259 19742 INDEX public product_barcodes_history_source_id_idx fateen
+4840; 1259 19744 INDEX public product_barcodes_history_status_id_idx fateen
+4811; 1259 19721 INDEX public product_barcodes_product_id_idx fateen
+4812; 1259 19723 INDEX public product_barcodes_relationship_type_id_idx fateen
+4813; 1259 19724 INDEX public product_barcodes_source_id_idx fateen
+4814; 1259 19726 INDEX public product_barcodes_status_id_idx fateen
+4663; 1259 19109 INDEX public product_categories_history_change_set_id_idx fateen
+4666; 1259 19104 INDEX public product_categories_history_original_entity_id_idx fateen
+4667; 1259 19105 INDEX public product_categories_history_parent_id_idx fateen
+4670; 1259 19106 INDEX public product_categories_history_previous_version_id_idx fateen
+4671; 1259 19107 INDEX public product_categories_history_source_id_idx fateen
+4672; 1259 19108 INDEX public product_categories_history_status_id_idx fateen
+4392; 1259 17641 INDEX public product_categories_parent_id_idx fateen
+4395; 1259 17640 INDEX public product_categories_status_id_idx fateen
+4498; 1259 18065 INDEX public product_category_translations_language_id_idx fateen
+4501; 1259 18064 INDEX public product_category_translations_product_category_id_idx fateen
+4547; 1259 18489 INDEX public product_health_flags_evidence_type_id_idx fateen
+4548; 1259 18486 INDEX public product_health_flags_health_flag_id_idx fateen
+4551; 1259 18485 INDEX public product_health_flags_product_id_idx fateen
+4552; 1259 18487 INDEX public product_health_flags_relationship_type_id_idx fateen
+4553; 1259 18488 INDEX public product_health_flags_source_id_idx fateen
+4554; 1259 18490 INDEX public product_health_flags_status_id_idx fateen
+4797; 1259 19719 INDEX public product_images_evidence_type_id_idx fateen
+4815; 1259 19729 INDEX public product_images_history_change_set_id_idx fateen
+4818; 1259 19734 INDEX public product_images_history_evidence_type_id_idx fateen
+4819; 1259 19731 INDEX public product_images_history_image_id_idx fateen
+4820; 1259 19727 INDEX public product_images_history_original_entity_id_idx fateen
+4823; 1259 19728 INDEX public product_images_history_previous_version_id_idx fateen
+4824; 1259 19730 INDEX public product_images_history_product_id_idx fateen
+4825; 1259 19732 INDEX public product_images_history_relationship_type_id_idx fateen
+4826; 1259 19733 INDEX public product_images_history_source_id_idx fateen
+4827; 1259 19735 INDEX public product_images_history_status_id_idx fateen
+4798; 1259 19716 INDEX public product_images_image_id_idx fateen
+4801; 1259 19715 INDEX public product_images_product_id_idx fateen
+4802; 1259 19717 INDEX public product_images_relationship_type_id_idx fateen
+4803; 1259 19718 INDEX public product_images_source_id_idx fateen
+4804; 1259 19720 INDEX public product_images_status_id_idx fateen
+4514; 1259 18469 INDEX public product_ingredients_evidence_type_id_idx fateen
+4515; 1259 18466 INDEX public product_ingredients_ingredient_id_idx fateen
+4518; 1259 18465 INDEX public product_ingredients_product_id_idx fateen
+4519; 1259 18467 INDEX public product_ingredients_relationship_type_id_idx fateen
+4520; 1259 18468 INDEX public product_ingredients_source_id_idx fateen
+4521; 1259 18471 INDEX public product_ingredients_status_id_idx fateen
+4524; 1259 18470 INDEX public product_ingredients_unit_id_idx fateen
+4535; 1259 18483 INDEX public product_nutrition_values_evidence_type_id_idx fateen
+4538; 1259 19714 INDEX public product_nutrition_values_measurement_basis_id_idx fateen
+4539; 1259 18479 INDEX public product_nutrition_values_nutrition_type_id_idx fateen
+4542; 1259 18478 INDEX public product_nutrition_values_product_id_idx fateen
+4543; 1259 18481 INDEX public product_nutrition_values_relationship_type_id_idx fateen
+4544; 1259 18482 INDEX public product_nutrition_values_source_id_idx fateen
+4545; 1259 18484 INDEX public product_nutrition_values_status_id_idx fateen
+4546; 1259 18480 INDEX public product_nutrition_values_unit_id_idx fateen
+4762; 1259 19451 INDEX public product_search_index_search_name_trgm_idx fateen
+4763; 1259 19454 INDEX public product_search_index_search_rank_idx fateen
+4764; 1259 19452 INDEX public product_search_index_search_text_trgm_idx fateen
+4765; 1259 19453 INDEX public product_search_index_search_tokens_idx fateen
+4461; 1259 18057 INDEX public product_translations_language_id_idx fateen
+4464; 1259 18056 INDEX public product_translations_product_id_idx fateen
+4454; 1259 18044 INDEX public products_brand_id_idx fateen
+4614; 1259 19076 INDEX public products_history_brand_id_idx fateen
+4615; 1259 19081 INDEX public products_history_change_set_id_idx fateen
+4618; 1259 19075 INDEX public products_history_original_entity_id_idx fateen
+4621; 1259 19078 INDEX public products_history_previous_version_id_idx fateen
+4622; 1259 19077 INDEX public products_history_product_category_id_idx fateen
+4623; 1259 19079 INDEX public products_history_source_id_idx fateen
+4624; 1259 19080 INDEX public products_history_status_id_idx fateen
+4459; 1259 18045 INDEX public products_product_category_id_idx fateen
+4460; 1259 18046 INDEX public products_source_id_idx fateen
+4383; 1259 17637 INDEX public regions_status_id_idx fateen
+4410; 1259 17644 INDEX public regulatory_authorities_status_id_idx fateen
+4350; 1259 17386 INDEX public relationship_types_inverse_type_id_idx fateen
+4353; 1259 17396 INDEX public relationship_types_status_id_idx fateen
+4420; 1259 17646 INDEX public role_types_status_id_idx fateen
+4365; 1259 17398 INDEX public source_priorities_status_id_idx fateen
+4358; 1259 17397 INDEX public source_types_status_id_idx fateen
+4327; 1259 17385 INDEX public units_one_base_unit_per_dimension_idx fateen
+4330; 1259 17392 INDEX public units_status_id_idx fateen
+4715; 1259 19361 INDEX public verification_statuses_status_id_idx fateen
+4706; 1259 19125 INDEX public version_metadata_entity_version_id_idx fateen
+5109; 2620 18077 TRIGGER public allergen_translations allergen_translations_set_updated_at fateen
+5087; 2620 17652 TRIGGER public allergen_types allergen_types_set_updated_at fateen
+5107; 2620 19751 TRIGGER public allergens allergens_capture_history fateen
+5128; 2620 19131 TRIGGER public allergens_history allergens_history_prevent_mutation fateen
+5108; 2620 18076 TRIGGER public allergens allergens_set_updated_at fateen
+5133; 2620 19136 TRIGGER public audit_context audit_context_set_updated_at fateen
+5094; 2620 17658 TRIGGER public audit_event_types audit_event_types_set_updated_at fateen
+5135; 2620 19139 TRIGGER public audit_events audit_events_set_updated_at fateen
+5136; 2620 19138 TRIGGER public audit_log audit_log_set_updated_at fateen
+5075; 2620 17407 TRIGGER public barcode_types barcode_types_set_updated_at fateen
+5142; 2620 19757 TRIGGER public barcodes barcodes_capture_history fateen
+5145; 2620 19390 TRIGGER public barcodes_history barcodes_history_prevent_mutation fateen
+5143; 2620 19388 TRIGGER public barcodes barcodes_set_updated_at fateen
+5100; 2620 18071 TRIGGER public brand_translations brand_translations_set_updated_at fateen
+5098; 2620 24577 TRIGGER public brands brands_capture_history fateen
+5125; 2620 19128 TRIGGER public brands_history brands_history_prevent_mutation fateen
+5099; 2620 18070 TRIGGER public brands brands_set_updated_at fateen
+5134; 2620 19137 TRIGGER public change_sets change_sets_set_updated_at fateen
+5095; 2620 19747 TRIGGER public companies companies_capture_history fateen
+5124; 2620 19127 TRIGGER public companies_history companies_history_prevent_mutation fateen
+5096; 2620 18068 TRIGGER public companies companies_set_updated_at fateen
+5097; 2620 18069 TRIGGER public company_translations company_translations_set_updated_at fateen
+5072; 2620 17404 TRIGGER public countries countries_set_updated_at fateen
+5080; 2620 17412 TRIGGER public data_sources data_sources_set_updated_at fateen
+5122; 2620 18520 TRIGGER public entity_relationships entity_relationships_set_updated_at fateen
+5123; 2620 19760 TRIGGER public entity_relationships entity_relationships_validate_endpoints fateen
+5137; 2620 19140 TRIGGER public entity_versions entity_versions_set_updated_at fateen
+5091; 2620 17655 TRIGGER public evidence_types evidence_types_set_updated_at fateen
+5114; 2620 18081 TRIGGER public health_flag_translations health_flag_translations_set_updated_at fateen
+5081; 2620 17413 TRIGGER public health_flag_types health_flag_types_set_updated_at fateen
+5112; 2620 19752 TRIGGER public health_flags health_flags_capture_history fateen
+5129; 2620 19132 TRIGGER public health_flags_history health_flags_history_prevent_mutation fateen
+5113; 2620 18080 TRIGGER public health_flags health_flags_set_updated_at fateen
+5076; 2620 17408 TRIGGER public image_types image_types_set_updated_at fateen
+5140; 2620 19756 TRIGGER public images images_capture_history fateen
+5144; 2620 19389 TRIGGER public images_history images_history_prevent_mutation fateen
+5141; 2620 19387 TRIGGER public images images_set_updated_at fateen
+5121; 2620 18519 TRIGGER public ingredient_aliases ingredient_aliases_set_updated_at fateen
+5119; 2620 18517 TRIGGER public ingredient_allergens ingredient_allergens_set_updated_at fateen
+5083; 2620 19755 TRIGGER public ingredient_categories ingredient_categories_capture_history fateen
+5132; 2620 19135 TRIGGER public ingredient_categories_history ingredient_categories_history_prevent_mutation fateen
+5084; 2620 17650 TRIGGER public ingredient_categories ingredient_categories_set_updated_at fateen
+5120; 2620 18518 TRIGGER public ingredient_health_flags ingredient_health_flags_set_updated_at fateen
+5106; 2620 18075 TRIGGER public ingredient_translations ingredient_translations_set_updated_at fateen
+5104; 2620 19750 TRIGGER public ingredients ingredients_capture_history fateen
+5127; 2620 19130 TRIGGER public ingredients_history ingredients_history_prevent_mutation fateen
+5105; 2620 18074 TRIGGER public ingredients ingredients_set_updated_at fateen
+5071; 2620 17403 TRIGGER public languages languages_set_updated_at fateen
+5070; 2620 17414 TRIGGER public lifecycle_statuses lifecycle_statuses_set_updated_at fateen
+5146; 2620 19761 TRIGGER public measurement_bases measurement_bases_set_updated_at fateen
+5110; 2620 18078 TRIGGER public nutrition_type_translations nutrition_type_translations_set_updated_at fateen
+5088; 2620 19753 TRIGGER public nutrition_types nutrition_types_capture_history fateen
+5130; 2620 19133 TRIGGER public nutrition_types_history nutrition_types_history_prevent_mutation fateen
+5089; 2620 17653 TRIGGER public nutrition_types nutrition_types_set_updated_at fateen
+5074; 2620 17406 TRIGGER public package_types package_types_set_updated_at fateen
+5093; 2620 17657 TRIGGER public permission_types permission_types_set_updated_at fateen
+5116; 2620 18514 TRIGGER public product_allergens product_allergens_set_updated_at fateen
+5149; 2620 19759 TRIGGER public product_barcodes product_barcodes_capture_history fateen
+5152; 2620 19765 TRIGGER public product_barcodes_history product_barcodes_history_prevent_mutation fateen
+5150; 2620 19763 TRIGGER public product_barcodes product_barcodes_set_updated_at fateen
+5085; 2620 19754 TRIGGER public product_categories product_categories_capture_history fateen
+5131; 2620 19134 TRIGGER public product_categories_history product_categories_history_prevent_mutation fateen
+5086; 2620 17651 TRIGGER public product_categories product_categories_set_updated_at fateen
+5111; 2620 18079 TRIGGER public product_category_translations product_category_translations_set_updated_at fateen
+5118; 2620 18516 TRIGGER public product_health_flags product_health_flags_set_updated_at fateen
+5147; 2620 19758 TRIGGER public product_images product_images_capture_history fateen
+5151; 2620 19764 TRIGGER public product_images_history product_images_history_prevent_mutation fateen
+5148; 2620 19762 TRIGGER public product_images product_images_set_updated_at fateen
+5115; 2620 18513 TRIGGER public product_ingredients product_ingredients_set_updated_at fateen
+5117; 2620 18515 TRIGGER public product_nutrition_values product_nutrition_values_set_updated_at fateen
+5103; 2620 18073 TRIGGER public product_translations product_translations_set_updated_at fateen
+5101; 2620 19749 TRIGGER public products products_capture_history fateen
+5126; 2620 19129 TRIGGER public products_history products_history_prevent_mutation fateen
+5102; 2620 18072 TRIGGER public products products_set_updated_at fateen
+5082; 2620 17649 TRIGGER public regions regions_set_updated_at fateen
+5090; 2620 17654 TRIGGER public regulatory_authorities regulatory_authorities_set_updated_at fateen
+5077; 2620 17409 TRIGGER public relationship_types relationship_types_set_updated_at fateen
+5092; 2620 17656 TRIGGER public role_types role_types_set_updated_at fateen
+5079; 2620 17411 TRIGGER public source_priorities source_priorities_set_updated_at fateen
+5078; 2620 17410 TRIGGER public source_types source_types_set_updated_at fateen
+5073; 2620 17405 TRIGGER public units units_set_updated_at fateen
+5139; 2620 19386 TRIGGER public verification_statuses verification_statuses_set_updated_at fateen
+5138; 2620 19141 TRIGGER public version_metadata version_metadata_set_updated_at fateen
+4892; 2606 18001 FK CONSTRAINT public allergen_translations allergen_translations_allergen_id_fk fateen
+4893; 2606 18006 FK CONSTRAINT public allergen_translations allergen_translations_language_id_fk fateen
+4863; 2606 17590 FK CONSTRAINT public allergen_types allergen_types_status_id_fk fateen
+4889; 2606 17951 FK CONSTRAINT public allergens allergens_allergen_type_id_fk fateen
+4975; 2606 18874 FK CONSTRAINT public allergens_history allergens_history_allergen_type_id_fk fateen
+4976; 2606 18894 FK CONSTRAINT public allergens_history allergens_history_change_set_id_fk fateen
+4977; 2606 18869 FK CONSTRAINT public allergens_history allergens_history_original_entity_id_fk fateen
+4978; 2606 18879 FK CONSTRAINT public allergens_history allergens_history_previous_version_id_fk fateen
+4979; 2606 18884 FK CONSTRAINT public allergens_history allergens_history_source_id_fk fateen
+4980; 2606 18889 FK CONSTRAINT public allergens_history allergens_history_status_id_fk fateen
+4890; 2606 17926 FK CONSTRAINT public allergens allergens_source_id_fk fateen
+4891; 2606 17896 FK CONSTRAINT public allergens allergens_status_id_fk fateen
+5004; 2606 19014 FK CONSTRAINT public audit_context audit_context_role_id_fk fateen
+4869; 2606 17620 FK CONSTRAINT public audit_event_types audit_event_types_status_id_fk fateen
+5006; 2606 19039 FK CONSTRAINT public audit_events audit_events_audit_log_id_fk fateen
+5007; 2606 19044 FK CONSTRAINT public audit_events audit_events_event_type_id_fk fateen
+5008; 2606 19024 FK CONSTRAINT public audit_log audit_log_change_set_id_fk fateen
+5009; 2606 19029 FK CONSTRAINT public audit_log audit_log_event_type_id_fk fateen
+5010; 2606 19034 FK CONSTRAINT public audit_log audit_log_role_id_fk fateen
+4847; 2606 17350 FK CONSTRAINT public barcode_types barcode_types_status_id_fk fateen
+5019; 2606 19261 FK CONSTRAINT public barcodes barcodes_barcode_type_id_fk fateen
+5031; 2606 19346 FK CONSTRAINT public barcodes_history barcodes_history_barcode_type_id_fk fateen
+5032; 2606 19331 FK CONSTRAINT public barcodes_history barcodes_history_change_set_id_fk fateen
+5033; 2606 19356 FK CONSTRAINT public barcodes_history barcodes_history_issued_country_id_fk fateen
+5034; 2606 19321 FK CONSTRAINT public barcodes_history barcodes_history_original_entity_id_fk fateen
+5035; 2606 19326 FK CONSTRAINT public barcodes_history barcodes_history_previous_version_id_fk fateen
+5036; 2606 19336 FK CONSTRAINT public barcodes_history barcodes_history_source_id_fk fateen
+5037; 2606 19341 FK CONSTRAINT public barcodes_history barcodes_history_status_id_fk fateen
+5038; 2606 19351 FK CONSTRAINT public barcodes_history barcodes_history_verification_status_id_fk fateen
+5020; 2606 19281 FK CONSTRAINT public barcodes barcodes_issued_country_id_fk fateen
+5021; 2606 19271 FK CONSTRAINT public barcodes barcodes_source_id_fk fateen
+5022; 2606 19276 FK CONSTRAINT public barcodes barcodes_status_id_fk fateen
+5023; 2606 19266 FK CONSTRAINT public barcodes barcodes_verification_status_id_fk fateen
+4877; 2606 17971 FK CONSTRAINT public brand_translations brand_translations_brand_id_fk fateen
+4878; 2606 17976 FK CONSTRAINT public brand_translations brand_translations_language_id_fk fateen
+4874; 2606 17936 FK CONSTRAINT public brands brands_company_id_fk fateen
+4957; 2606 18804 FK CONSTRAINT public brands_history brands_history_change_set_id_fk fateen
+4958; 2606 18784 FK CONSTRAINT public brands_history brands_history_company_id_fk fateen
+4959; 2606 18779 FK CONSTRAINT public brands_history brands_history_original_entity_id_fk fateen
+4960; 2606 18789 FK CONSTRAINT public brands_history brands_history_previous_version_id_fk fateen
+4961; 2606 18794 FK CONSTRAINT public brands_history brands_history_source_id_fk fateen
+4962; 2606 18799 FK CONSTRAINT public brands_history brands_history_status_id_fk fateen
+4875; 2606 17911 FK CONSTRAINT public brands brands_source_id_fk fateen
+4876; 2606 17881 FK CONSTRAINT public brands brands_status_id_fk fateen
+5005; 2606 19019 FK CONSTRAINT public change_sets change_sets_audit_context_fk fateen
+4952; 2606 18774 FK CONSTRAINT public companies_history companies_history_change_set_id_fk fateen
+4953; 2606 18754 FK CONSTRAINT public companies_history companies_history_original_entity_id_fk fateen
+4954; 2606 18759 FK CONSTRAINT public companies_history companies_history_previous_version_id_fk fateen
+4955; 2606 18764 FK CONSTRAINT public companies_history companies_history_source_id_fk fateen
+4956; 2606 18769 FK CONSTRAINT public companies_history companies_history_status_id_fk fateen
+4870; 2606 17906 FK CONSTRAINT public companies companies_source_id_fk fateen
+4871; 2606 17876 FK CONSTRAINT public companies companies_status_id_fk fateen
+4872; 2606 17961 FK CONSTRAINT public company_translations company_translations_company_id_fk fateen
+4873; 2606 17966 FK CONSTRAINT public company_translations company_translations_language_id_fk fateen
+4844; 2606 17335 FK CONSTRAINT public countries countries_status_id_fk fateen
+4853; 2606 17325 FK CONSTRAINT public data_sources data_sources_country_id_fk fateen
+4854; 2606 17320 FK CONSTRAINT public data_sources data_sources_priority_id_fk fateen
+4855; 2606 17315 FK CONSTRAINT public data_sources data_sources_source_type_id_fk fateen
+4856; 2606 17375 FK CONSTRAINT public data_sources data_sources_status_id_fk fateen
+4948; 2606 18455 FK CONSTRAINT public entity_relationships entity_relationships_evidence_type_id_fk fateen
+4949; 2606 18445 FK CONSTRAINT public entity_relationships entity_relationships_relationship_type_id_fk fateen
+4950; 2606 18450 FK CONSTRAINT public entity_relationships entity_relationships_source_id_fk fateen
+4951; 2606 18460 FK CONSTRAINT public entity_relationships entity_relationships_status_id_fk fateen
+5011; 2606 19049 FK CONSTRAINT public entity_versions entity_versions_change_set_id_fk fateen
+5012; 2606 19054 FK CONSTRAINT public entity_versions entity_versions_previous_version_id_fk fateen
+4866; 2606 17605 FK CONSTRAINT public evidence_types evidence_types_status_id_fk fateen
+4901; 2606 18031 FK CONSTRAINT public health_flag_translations health_flag_translations_health_flag_id_fk fateen
+4902; 2606 18036 FK CONSTRAINT public health_flag_translations health_flag_translations_language_id_fk fateen
+4857; 2606 17380 FK CONSTRAINT public health_flag_types health_flag_types_status_id_fk fateen
+4898; 2606 17956 FK CONSTRAINT public health_flags health_flags_health_flag_type_id_fk fateen
+4981; 2606 18924 FK CONSTRAINT public health_flags_history health_flags_history_change_set_id_fk fateen
+4982; 2606 18904 FK CONSTRAINT public health_flags_history health_flags_history_health_flag_type_id_fk fateen
+4983; 2606 18899 FK CONSTRAINT public health_flags_history health_flags_history_original_entity_id_fk fateen
+4984; 2606 18909 FK CONSTRAINT public health_flags_history health_flags_history_previous_version_id_fk fateen
+4985; 2606 18914 FK CONSTRAINT public health_flags_history health_flags_history_source_id_fk fateen
+4986; 2606 18919 FK CONSTRAINT public health_flags_history health_flags_history_status_id_fk fateen
+4899; 2606 17931 FK CONSTRAINT public health_flags health_flags_source_id_fk fateen
+4900; 2606 17901 FK CONSTRAINT public health_flags health_flags_status_id_fk fateen
+4848; 2606 17355 FK CONSTRAINT public image_types image_types_status_id_fk fateen
+5024; 2606 19296 FK CONSTRAINT public images_history images_history_change_set_id_fk fateen
+5025; 2606 19311 FK CONSTRAINT public images_history images_history_image_type_id_fk fateen
+5026; 2606 19316 FK CONSTRAINT public images_history images_history_language_id_fk fateen
+5027; 2606 19286 FK CONSTRAINT public images_history images_history_original_entity_id_fk fateen
+5028; 2606 19291 FK CONSTRAINT public images_history images_history_previous_version_id_fk fateen
+5029; 2606 19301 FK CONSTRAINT public images_history images_history_source_id_fk fateen
+5030; 2606 19306 FK CONSTRAINT public images_history images_history_status_id_fk fateen
+5015; 2606 19241 FK CONSTRAINT public images images_image_type_id_fk fateen
+5016; 2606 19251 FK CONSTRAINT public images images_language_id_fk fateen
+5017; 2606 19246 FK CONSTRAINT public images images_source_id_fk fateen
+5018; 2606 19256 FK CONSTRAINT public images images_status_id_fk fateen
+4942; 2606 18435 FK CONSTRAINT public ingredient_aliases ingredient_aliases_evidence_type_id_fk fateen
+4943; 2606 18415 FK CONSTRAINT public ingredient_aliases ingredient_aliases_ingredient_id_fk fateen
+4944; 2606 18420 FK CONSTRAINT public ingredient_aliases ingredient_aliases_language_id_fk fateen
+4945; 2606 18425 FK CONSTRAINT public ingredient_aliases ingredient_aliases_relationship_type_id_fk fateen
+4946; 2606 18430 FK CONSTRAINT public ingredient_aliases ingredient_aliases_source_id_fk fateen
+4947; 2606 18440 FK CONSTRAINT public ingredient_aliases ingredient_aliases_status_id_fk fateen
+4930; 2606 18360 FK CONSTRAINT public ingredient_allergens ingredient_allergens_allergen_id_fk fateen
+4931; 2606 18375 FK CONSTRAINT public ingredient_allergens ingredient_allergens_evidence_type_id_fk fateen
+4932; 2606 18355 FK CONSTRAINT public ingredient_allergens ingredient_allergens_ingredient_id_fk fateen
+4933; 2606 18365 FK CONSTRAINT public ingredient_allergens ingredient_allergens_relationship_type_id_fk fateen
+4934; 2606 18370 FK CONSTRAINT public ingredient_allergens ingredient_allergens_source_id_fk fateen
+4935; 2606 18380 FK CONSTRAINT public ingredient_allergens ingredient_allergens_status_id_fk fateen
+4998; 2606 19009 FK CONSTRAINT public ingredient_categories_history ingredient_categories_history_change_set_id_fk fateen
+4999; 2606 18984 FK CONSTRAINT public ingredient_categories_history ingredient_categories_history_original_entity_id_fk fateen
+5000; 2606 18989 FK CONSTRAINT public ingredient_categories_history ingredient_categories_history_parent_id_fk fateen
+5001; 2606 18994 FK CONSTRAINT public ingredient_categories_history ingredient_categories_history_previous_version_id_fk fateen
+5002; 2606 18999 FK CONSTRAINT public ingredient_categories_history ingredient_categories_history_source_id_fk fateen
+5003; 2606 19004 FK CONSTRAINT public ingredient_categories_history ingredient_categories_history_status_id_fk fateen
+4859; 2606 17625 FK CONSTRAINT public ingredient_categories ingredient_categories_parent_id_fk fateen
+4860; 2606 17580 FK CONSTRAINT public ingredient_categories ingredient_categories_status_id_fk fateen
+4936; 2606 18405 FK CONSTRAINT public ingredient_health_flags ingredient_health_flags_evidence_type_id_fk fateen
+4937; 2606 18390 FK CONSTRAINT public ingredient_health_flags ingredient_health_flags_health_flag_id_fk fateen
+4938; 2606 18385 FK CONSTRAINT public ingredient_health_flags ingredient_health_flags_ingredient_id_fk fateen
+4939; 2606 18395 FK CONSTRAINT public ingredient_health_flags ingredient_health_flags_relationship_type_id_fk fateen
+4940; 2606 18400 FK CONSTRAINT public ingredient_health_flags ingredient_health_flags_source_id_fk fateen
+4941; 2606 18410 FK CONSTRAINT public ingredient_health_flags ingredient_health_flags_status_id_fk fateen
+4887; 2606 17991 FK CONSTRAINT public ingredient_translations ingredient_translations_ingredient_id_fk fateen
+4888; 2606 17996 FK CONSTRAINT public ingredient_translations ingredient_translations_language_id_fk fateen
+4970; 2606 18864 FK CONSTRAINT public ingredients_history ingredients_history_change_set_id_fk fateen
+4971; 2606 18844 FK CONSTRAINT public ingredients_history ingredients_history_original_entity_id_fk fateen
+4972; 2606 18849 FK CONSTRAINT public ingredients_history ingredients_history_previous_version_id_fk fateen
+4973; 2606 18854 FK CONSTRAINT public ingredients_history ingredients_history_source_id_fk fateen
+4974; 2606 18859 FK CONSTRAINT public ingredients_history ingredients_history_status_id_fk fateen
+4885; 2606 17921 FK CONSTRAINT public ingredients ingredients_source_id_fk fateen
+4886; 2606 17891 FK CONSTRAINT public ingredients ingredients_status_id_fk fateen
+4843; 2606 17330 FK CONSTRAINT public languages languages_status_id_fk fateen
+5039; 2606 19558 FK CONSTRAINT public measurement_bases measurement_bases_status_id_fk fateen
+4894; 2606 18016 FK CONSTRAINT public nutrition_type_translations nutrition_type_translations_language_id_fk fateen
+4895; 2606 18011 FK CONSTRAINT public nutrition_type_translations nutrition_type_translations_nutrition_type_id_fk fateen
+4987; 2606 18949 FK CONSTRAINT public nutrition_types_history nutrition_types_history_change_set_id_fk fateen
+4988; 2606 18929 FK CONSTRAINT public nutrition_types_history nutrition_types_history_original_entity_id_fk fateen
+4989; 2606 18934 FK CONSTRAINT public nutrition_types_history nutrition_types_history_previous_version_id_fk fateen
+4990; 2606 18939 FK CONSTRAINT public nutrition_types_history nutrition_types_history_source_id_fk fateen
+4991; 2606 18944 FK CONSTRAINT public nutrition_types_history nutrition_types_history_status_id_fk fateen
+4864; 2606 17595 FK CONSTRAINT public nutrition_types nutrition_types_status_id_fk fateen
+4846; 2606 17345 FK CONSTRAINT public package_types package_types_status_id_fk fateen
+4868; 2606 17615 FK CONSTRAINT public permission_types permission_types_status_id_fk fateen
+4910; 2606 18265 FK CONSTRAINT public product_allergens product_allergens_allergen_id_fk fateen
+4911; 2606 18280 FK CONSTRAINT public product_allergens product_allergens_evidence_type_id_fk fateen
+4912; 2606 18260 FK CONSTRAINT public product_allergens product_allergens_product_id_fk fateen
+4913; 2606 18270 FK CONSTRAINT public product_allergens product_allergens_relationship_type_id_fk fateen
+4914; 2606 18275 FK CONSTRAINT public product_allergens product_allergens_source_id_fk fateen
+4915; 2606 18285 FK CONSTRAINT public product_allergens product_allergens_status_id_fk fateen
+5046; 2606 19598 FK CONSTRAINT public product_barcodes product_barcodes_barcode_id_fk fateen
+5047; 2606 19613 FK CONSTRAINT public product_barcodes product_barcodes_evidence_type_id_fk fateen
+5061; 2606 19688 FK CONSTRAINT public product_barcodes_history product_barcodes_history_barcode_id_fk fateen
+5062; 2606 19678 FK CONSTRAINT public product_barcodes_history product_barcodes_history_change_set_id_fk fateen
+5063; 2606 19703 FK CONSTRAINT public product_barcodes_history product_barcodes_history_evidence_type_id_fk fateen
+5064; 2606 19668 FK CONSTRAINT public product_barcodes_history product_barcodes_history_original_entity_id_fk fateen
+5065; 2606 19673 FK CONSTRAINT public product_barcodes_history product_barcodes_history_previous_version_id_fk fateen
+5066; 2606 19683 FK CONSTRAINT public product_barcodes_history product_barcodes_history_product_id_fk fateen
+5067; 2606 19693 FK CONSTRAINT public product_barcodes_history product_barcodes_history_relationship_type_id_fk fateen
+5068; 2606 19698 FK CONSTRAINT public product_barcodes_history product_barcodes_history_source_id_fk fateen
+5069; 2606 19708 FK CONSTRAINT public product_barcodes_history product_barcodes_history_status_id_fk fateen
+5048; 2606 19593 FK CONSTRAINT public product_barcodes product_barcodes_product_id_fk fateen
+5049; 2606 19603 FK CONSTRAINT public product_barcodes product_barcodes_relationship_type_id_fk fateen
+5050; 2606 19608 FK CONSTRAINT public product_barcodes product_barcodes_source_id_fk fateen
+5051; 2606 19618 FK CONSTRAINT public product_barcodes product_barcodes_status_id_fk fateen
+4992; 2606 18979 FK CONSTRAINT public product_categories_history product_categories_history_change_set_id_fk fateen
+4993; 2606 18954 FK CONSTRAINT public product_categories_history product_categories_history_original_entity_id_fk fateen
+4994; 2606 18959 FK CONSTRAINT public product_categories_history product_categories_history_parent_id_fk fateen
+4995; 2606 18964 FK CONSTRAINT public product_categories_history product_categories_history_previous_version_id_fk fateen
+4996; 2606 18969 FK CONSTRAINT public product_categories_history product_categories_history_source_id_fk fateen
+4997; 2606 18974 FK CONSTRAINT public product_categories_history product_categories_history_status_id_fk fateen
+4861; 2606 17631 FK CONSTRAINT public product_categories product_categories_parent_id_fk fateen
+4862; 2606 17585 FK CONSTRAINT public product_categories product_categories_status_id_fk fateen
+4896; 2606 18026 FK CONSTRAINT public product_category_translations product_category_translations_language_id_fk fateen
+4897; 2606 18021 FK CONSTRAINT public product_category_translations product_category_translations_product_category_id_fk fateen
+4924; 2606 18345 FK CONSTRAINT public product_health_flags product_health_flags_evidence_type_id_fk fateen
+4925; 2606 18330 FK CONSTRAINT public product_health_flags product_health_flags_health_flag_id_fk fateen
+4926; 2606 18325 FK CONSTRAINT public product_health_flags product_health_flags_product_id_fk fateen
+4927; 2606 18335 FK CONSTRAINT public product_health_flags product_health_flags_relationship_type_id_fk fateen
+4928; 2606 18340 FK CONSTRAINT public product_health_flags product_health_flags_source_id_fk fateen
+4929; 2606 18350 FK CONSTRAINT public product_health_flags product_health_flags_status_id_fk fateen
+5040; 2606 19583 FK CONSTRAINT public product_images product_images_evidence_type_id_fk fateen
+5052; 2606 19633 FK CONSTRAINT public product_images_history product_images_history_change_set_id_fk fateen
+5053; 2606 19658 FK CONSTRAINT public product_images_history product_images_history_evidence_type_id_fk fateen
+5054; 2606 19643 FK CONSTRAINT public product_images_history product_images_history_image_id_fk fateen
+5055; 2606 19623 FK CONSTRAINT public product_images_history product_images_history_original_entity_id_fk fateen
+5056; 2606 19628 FK CONSTRAINT public product_images_history product_images_history_previous_version_id_fk fateen
+5057; 2606 19638 FK CONSTRAINT public product_images_history product_images_history_product_id_fk fateen
+5058; 2606 19648 FK CONSTRAINT public product_images_history product_images_history_relationship_type_id_fk fateen
+5059; 2606 19653 FK CONSTRAINT public product_images_history product_images_history_source_id_fk fateen
+5060; 2606 19663 FK CONSTRAINT public product_images_history product_images_history_status_id_fk fateen
+5041; 2606 19568 FK CONSTRAINT public product_images product_images_image_id_fk fateen
+5042; 2606 19563 FK CONSTRAINT public product_images product_images_product_id_fk fateen
+5043; 2606 19573 FK CONSTRAINT public product_images product_images_relationship_type_id_fk fateen
+5044; 2606 19578 FK CONSTRAINT public product_images product_images_source_id_fk fateen
+5045; 2606 19588 FK CONSTRAINT public product_images product_images_status_id_fk fateen
+4903; 2606 18245 FK CONSTRAINT public product_ingredients product_ingredients_evidence_type_id_fk fateen
+4904; 2606 18230 FK CONSTRAINT public product_ingredients product_ingredients_ingredient_id_fk fateen
+4905; 2606 18225 FK CONSTRAINT public product_ingredients product_ingredients_product_id_fk fateen
+4906; 2606 18235 FK CONSTRAINT public product_ingredients product_ingredients_relationship_type_id_fk fateen
+4907; 2606 18240 FK CONSTRAINT public product_ingredients product_ingredients_source_id_fk fateen
+4908; 2606 18255 FK CONSTRAINT public product_ingredients product_ingredients_status_id_fk fateen
+4909; 2606 18250 FK CONSTRAINT public product_ingredients product_ingredients_unit_id_fk fateen
+4916; 2606 18315 FK CONSTRAINT public product_nutrition_values product_nutrition_values_evidence_type_id_fk fateen
+4917; 2606 19553 FK CONSTRAINT public product_nutrition_values product_nutrition_values_measurement_basis_id_fk fateen
+4918; 2606 18295 FK CONSTRAINT public product_nutrition_values product_nutrition_values_nutrition_type_id_fk fateen
+4919; 2606 18290 FK CONSTRAINT public product_nutrition_values product_nutrition_values_product_id_fk fateen
+4920; 2606 18305 FK CONSTRAINT public product_nutrition_values product_nutrition_values_relationship_type_id_fk fateen
+4921; 2606 18310 FK CONSTRAINT public product_nutrition_values product_nutrition_values_source_id_fk fateen
+4922; 2606 18320 FK CONSTRAINT public product_nutrition_values product_nutrition_values_status_id_fk fateen
+4923; 2606 18300 FK CONSTRAINT public product_nutrition_values product_nutrition_values_unit_id_fk fateen
+4883; 2606 17986 FK CONSTRAINT public product_translations product_translations_language_id_fk fateen
+4884; 2606 17981 FK CONSTRAINT public product_translations product_translations_product_id_fk fateen
+4879; 2606 17941 FK CONSTRAINT public products products_brand_id_fk fateen
+4963; 2606 18814 FK CONSTRAINT public products_history products_history_brand_id_fk fateen
+4964; 2606 18839 FK CONSTRAINT public products_history products_history_change_set_id_fk fateen
+4965; 2606 18809 FK CONSTRAINT public products_history products_history_original_entity_id_fk fateen
+4966; 2606 18824 FK CONSTRAINT public products_history products_history_previous_version_id_fk fateen
+4967; 2606 18819 FK CONSTRAINT public products_history products_history_product_category_id_fk fateen
+4968; 2606 18829 FK CONSTRAINT public products_history products_history_source_id_fk fateen
+4969; 2606 18834 FK CONSTRAINT public products_history products_history_status_id_fk fateen
+4880; 2606 17946 FK CONSTRAINT public products products_product_category_id_fk fateen
+4881; 2606 17916 FK CONSTRAINT public products products_source_id_fk fateen
+4882; 2606 17886 FK CONSTRAINT public products products_status_id_fk fateen
+4858; 2606 17575 FK CONSTRAINT public regions regions_status_id_fk fateen
+4865; 2606 17600 FK CONSTRAINT public regulatory_authorities regulatory_authorities_status_id_fk fateen
+4849; 2606 17308 FK CONSTRAINT public relationship_types relationship_types_inverse_type_id_fk fateen
+4850; 2606 17360 FK CONSTRAINT public relationship_types relationship_types_status_id_fk fateen
+4867; 2606 17610 FK CONSTRAINT public role_types role_types_status_id_fk fateen
+4852; 2606 17370 FK CONSTRAINT public source_priorities source_priorities_status_id_fk fateen
+4851; 2606 17365 FK CONSTRAINT public source_types source_types_status_id_fk fateen
+4845; 2606 17340 FK CONSTRAINT public units units_status_id_fk fateen
+5014; 2606 19236 FK CONSTRAINT public verification_statuses verification_statuses_status_id_fk fateen
+5013; 2606 19059 FK CONSTRAINT public version_metadata version_metadata_entity_version_id_fk fateen

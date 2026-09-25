@@ -1,0 +1,59 @@
+-- =============================================================================
+-- Extensions — Fateen foundation extensions
+-- -----------------------------------------------------------------------------
+-- Purpose:       Enable the minimal set of PostgreSQL extensions the Foundation
+--                Layer and its direct successors require. Everything here is
+--                justified in-file; nothing is enabled "just in case".
+-- Work orders:   Foundation Layer, work order #1 (extensions).
+-- Dependencies:  None. This is migration 0001 and runs first.
+-- Migration:     0001_foundation_extensions.sql
+-- Rationale:     Each extension below is required by the approved architecture:
+--                - pgcrypto for content hashing and future credential hashing.
+--                - citext for case-insensitive natural codes.
+--                - pg_trgm for fuzzy name matching and search foundations.
+--                uuid-ossp is deliberately NOT enabled (see note at bottom).
+-- =============================================================================
+
+-- -----------------------------------------------------------------------------
+-- pgcrypto
+-- -----------------------------------------------------------------------------
+-- Why: 1) The production population pipeline must deduplicate and verify imported
+--         records using canonical content hashes. pgcrypto provides digest()
+--         (MD5/SHA-1/SHA-256) and hmac() for that purpose.
+--       2) The future identity/access milestone will store credential hashes via
+--         crypt() and gen_salt().
+--       Note: gen_random_uuid() is available in core PostgreSQL since 13 and is
+--       therefore NOT the justification for this extension.
+-- =============================================================================
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
+
+-- -----------------------------------------------------------------------------
+-- citext
+-- -----------------------------------------------------------------------------
+-- Why:  Natural-code columns (languages.code, countries.code, units.code, ...)
+--       must compare and deduplicate case-insensitively. citext moves that
+--       invariant into the type system instead of relying on expression indexes
+--       or application discipline. Only code/lookup columns use it.
+-- =============================================================================
+CREATE EXTENSION IF NOT EXISTS citext;
+
+-- -----------------------------------------------------------------------------
+-- pg_trgm
+-- -----------------------------------------------------------------------------
+-- Why:  The platform requires high-performance searching and the population
+--       pipeline requires fuzzy matching of names for deduplication and
+--       normalization. pg_trgm provides the trigram similarity operators and
+--       GIN index support that power both. It is enabled now, at zero storage
+--       cost, so the search milestone never requires an on-line extension
+--       install in production.
+-- =============================================================================
+CREATE EXTENSION IF NOT EXISTS pg_trgm;
+
+-- -----------------------------------------------------------------------------
+-- uuid-ossp — deliberately NOT enabled
+-- -----------------------------------------------------------------------------
+-- Why:  uuid-ossp's only relevant function, uuid_generate_v4(), is superseded
+--       by gen_random_uuid() which is built into core PostgreSQL since 13.
+--       Enabling uuid-ossp would add a legacy function set with no benefit,
+--       violating the "enable only what is truly required" rule.
+-- =============================================================================

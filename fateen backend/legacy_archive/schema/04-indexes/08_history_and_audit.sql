@@ -1,0 +1,207 @@
+-- =============================================================================
+-- Indexes: Version History & Audit Infrastructure
+-- -----------------------------------------------------------------------------
+-- Purpose:       Correctness-critical indexes only: every foreign-key column on
+--                the Mission 05 history and audit tables is indexed (PostgreSQL
+--                does not index FK columns automatically). No performance/search
+--                indexes yet.
+-- Work orders:   Mission 05: Version History & Audit Infrastructure (work orders
+--                #001-#008).
+-- Dependencies:  History tables (0020), audit tables (0021), constraints (0022).
+-- Migration:     0023_history_indexes.sql
+-- Rationale:     FK-supporting indexes are required for referential integrity
+--                enforcement and integrity-performance. UNIQUE constraints
+--                (original_entity_id + version_number, correlation_id +
+--                transaction_id, entity_type + entity_id + version_number,
+--                entity_version_id + key) create their own indexes; the columns
+--                they cover are still indexed explicitly to keep the rule "every
+--                FK column indexed" uniform. entity_versions.history_table /
+--                history_row_id and audit entity_type/entity_id are polymorphic
+--                discriminators with no FK and are not indexed (correctness scope
+--                only).
+-- =============================================================================
+CREATE INDEX companies_history_original_entity_id_idx
+    ON companies_history (original_entity_id);
+
+CREATE INDEX companies_history_previous_version_id_idx
+    ON companies_history (previous_version_id);
+
+CREATE INDEX companies_history_source_id_idx
+    ON companies_history (source_id);
+
+CREATE INDEX companies_history_status_id_idx
+    ON companies_history (status_id);
+
+CREATE INDEX companies_history_change_set_id_idx
+    ON companies_history (change_set_id);
+
+CREATE INDEX brands_history_original_entity_id_idx
+    ON brands_history (original_entity_id);
+
+CREATE INDEX brands_history_company_id_idx
+    ON brands_history (company_id);
+
+CREATE INDEX brands_history_previous_version_id_idx
+    ON brands_history (previous_version_id);
+
+CREATE INDEX brands_history_source_id_idx
+    ON brands_history (source_id);
+
+CREATE INDEX brands_history_status_id_idx
+    ON brands_history (status_id);
+
+CREATE INDEX brands_history_change_set_id_idx
+    ON brands_history (change_set_id);
+
+CREATE INDEX products_history_original_entity_id_idx
+    ON products_history (original_entity_id);
+
+CREATE INDEX products_history_brand_id_idx
+    ON products_history (brand_id);
+
+CREATE INDEX products_history_product_category_id_idx
+    ON products_history (product_category_id);
+
+CREATE INDEX products_history_previous_version_id_idx
+    ON products_history (previous_version_id);
+
+CREATE INDEX products_history_source_id_idx
+    ON products_history (source_id);
+
+CREATE INDEX products_history_status_id_idx
+    ON products_history (status_id);
+
+CREATE INDEX products_history_change_set_id_idx
+    ON products_history (change_set_id);
+
+CREATE INDEX ingredients_history_original_entity_id_idx
+    ON ingredients_history (original_entity_id);
+
+CREATE INDEX ingredients_history_previous_version_id_idx
+    ON ingredients_history (previous_version_id);
+
+CREATE INDEX ingredients_history_source_id_idx
+    ON ingredients_history (source_id);
+
+CREATE INDEX ingredients_history_status_id_idx
+    ON ingredients_history (status_id);
+
+CREATE INDEX ingredients_history_change_set_id_idx
+    ON ingredients_history (change_set_id);
+
+CREATE INDEX allergens_history_original_entity_id_idx
+    ON allergens_history (original_entity_id);
+
+CREATE INDEX allergens_history_allergen_type_id_idx
+    ON allergens_history (allergen_type_id);
+
+CREATE INDEX allergens_history_previous_version_id_idx
+    ON allergens_history (previous_version_id);
+
+CREATE INDEX allergens_history_source_id_idx
+    ON allergens_history (source_id);
+
+CREATE INDEX allergens_history_status_id_idx
+    ON allergens_history (status_id);
+
+CREATE INDEX allergens_history_change_set_id_idx
+    ON allergens_history (change_set_id);
+
+CREATE INDEX health_flags_history_original_entity_id_idx
+    ON health_flags_history (original_entity_id);
+
+CREATE INDEX health_flags_history_health_flag_type_id_idx
+    ON health_flags_history (health_flag_type_id);
+
+CREATE INDEX health_flags_history_previous_version_id_idx
+    ON health_flags_history (previous_version_id);
+
+CREATE INDEX health_flags_history_source_id_idx
+    ON health_flags_history (source_id);
+
+CREATE INDEX health_flags_history_status_id_idx
+    ON health_flags_history (status_id);
+
+CREATE INDEX health_flags_history_change_set_id_idx
+    ON health_flags_history (change_set_id);
+
+CREATE INDEX nutrition_types_history_original_entity_id_idx
+    ON nutrition_types_history (original_entity_id);
+
+CREATE INDEX nutrition_types_history_previous_version_id_idx
+    ON nutrition_types_history (previous_version_id);
+
+CREATE INDEX nutrition_types_history_source_id_idx
+    ON nutrition_types_history (source_id);
+
+CREATE INDEX nutrition_types_history_status_id_idx
+    ON nutrition_types_history (status_id);
+
+CREATE INDEX nutrition_types_history_change_set_id_idx
+    ON nutrition_types_history (change_set_id);
+
+CREATE INDEX product_categories_history_original_entity_id_idx
+    ON product_categories_history (original_entity_id);
+
+CREATE INDEX product_categories_history_parent_id_idx
+    ON product_categories_history (parent_id);
+
+CREATE INDEX product_categories_history_previous_version_id_idx
+    ON product_categories_history (previous_version_id);
+
+CREATE INDEX product_categories_history_source_id_idx
+    ON product_categories_history (source_id);
+
+CREATE INDEX product_categories_history_status_id_idx
+    ON product_categories_history (status_id);
+
+CREATE INDEX product_categories_history_change_set_id_idx
+    ON product_categories_history (change_set_id);
+
+CREATE INDEX ingredient_categories_history_original_entity_id_idx
+    ON ingredient_categories_history (original_entity_id);
+
+CREATE INDEX ingredient_categories_history_parent_id_idx
+    ON ingredient_categories_history (parent_id);
+
+CREATE INDEX ingredient_categories_history_previous_version_id_idx
+    ON ingredient_categories_history (previous_version_id);
+
+CREATE INDEX ingredient_categories_history_source_id_idx
+    ON ingredient_categories_history (source_id);
+
+CREATE INDEX ingredient_categories_history_status_id_idx
+    ON ingredient_categories_history (status_id);
+
+CREATE INDEX ingredient_categories_history_change_set_id_idx
+    ON ingredient_categories_history (change_set_id);
+
+CREATE INDEX audit_context_role_id_idx
+    ON audit_context (role_id);
+
+CREATE INDEX change_sets_correlation_id_transaction_id_idx
+    ON change_sets (correlation_id, transaction_id);
+
+CREATE INDEX audit_log_change_set_id_idx
+    ON audit_log (change_set_id);
+
+CREATE INDEX audit_log_event_type_id_idx
+    ON audit_log (event_type_id);
+
+CREATE INDEX audit_log_role_id_idx
+    ON audit_log (role_id);
+
+CREATE INDEX audit_events_audit_log_id_idx
+    ON audit_events (audit_log_id);
+
+CREATE INDEX audit_events_event_type_id_idx
+    ON audit_events (event_type_id);
+
+CREATE INDEX entity_versions_change_set_id_idx
+    ON entity_versions (change_set_id);
+
+CREATE INDEX entity_versions_previous_version_id_idx
+    ON entity_versions (previous_version_id);
+
+CREATE INDEX version_metadata_entity_version_id_idx
+    ON version_metadata (entity_version_id);

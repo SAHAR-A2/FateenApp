@@ -1,0 +1,202 @@
+-- =============================================================================
+-- Constraints: Canonical Media & Barcode Domain
+-- -----------------------------------------------------------------------------
+-- Purpose:       Referential integrity for the Mission 07 media and barcode
+--                tables: vocabulary links (image_type_id, barcode_type_id,
+--                verification_status_id), provenance (source_id), jurisdiction
+--                (issued_country_id), language scope (language_id), lifecycle
+--                (status_id), canonical entity links (original_entity_id),
+--                version chaining (previous_version_id self-references), and
+--                change grouping (change_set_id). No cascade anywhere.
+-- Work orders:   Mission 07: Canonical Media & Barcode Domain.
+-- Dependencies:  Lookup tables (0003), canonical entities (0012), change_sets
+--                (0021), verification_statuses/images/barcodes (0025), history
+--                tables (0026). Runs after all tables exist.
+-- Migration:     0027_media_and_barcode_constraints.sql
+-- Rationale:     Cross-table integrity is applied here, after every referenced
+--                table is committed (see sql_conventions.md). A referenced
+--                entity, vocabulary or version row cannot be removed while any
+--                dependent media/barcode/history row uses it (ON DELETE/UPDATE
+--                RESTRICT, ADR-006). History original_entity_id resolves to the
+--                owning canonical entity; previous_version_id resolves to the
+--                same history table.
+-- =============================================================================
+-- verification_statuses
+ALTER TABLE verification_statuses
+    ADD CONSTRAINT verification_statuses_status_id_fk
+        FOREIGN KEY (status_id)
+        REFERENCES lifecycle_statuses (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+-- images
+ALTER TABLE images
+    ADD CONSTRAINT images_image_type_id_fk
+        FOREIGN KEY (image_type_id)
+        REFERENCES image_types (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE images
+    ADD CONSTRAINT images_source_id_fk
+        FOREIGN KEY (source_id)
+        REFERENCES data_sources (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE images
+    ADD CONSTRAINT images_language_id_fk
+        FOREIGN KEY (language_id)
+        REFERENCES languages (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE images
+    ADD CONSTRAINT images_status_id_fk
+        FOREIGN KEY (status_id)
+        REFERENCES lifecycle_statuses (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+-- barcodes
+ALTER TABLE barcodes
+    ADD CONSTRAINT barcodes_barcode_type_id_fk
+        FOREIGN KEY (barcode_type_id)
+        REFERENCES barcode_types (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE barcodes
+    ADD CONSTRAINT barcodes_verification_status_id_fk
+        FOREIGN KEY (verification_status_id)
+        REFERENCES verification_statuses (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE barcodes
+    ADD CONSTRAINT barcodes_source_id_fk
+        FOREIGN KEY (source_id)
+        REFERENCES data_sources (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE barcodes
+    ADD CONSTRAINT barcodes_status_id_fk
+        FOREIGN KEY (status_id)
+        REFERENCES lifecycle_statuses (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE barcodes
+    ADD CONSTRAINT barcodes_issued_country_id_fk
+        FOREIGN KEY (issued_country_id)
+        REFERENCES countries (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+-- images_history
+ALTER TABLE images_history
+    ADD CONSTRAINT images_history_original_entity_id_fk
+        FOREIGN KEY (original_entity_id)
+        REFERENCES images (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE images_history
+    ADD CONSTRAINT images_history_previous_version_id_fk
+        FOREIGN KEY (previous_version_id)
+        REFERENCES images_history (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE images_history
+    ADD CONSTRAINT images_history_change_set_id_fk
+        FOREIGN KEY (change_set_id)
+        REFERENCES change_sets (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE images_history
+    ADD CONSTRAINT images_history_source_id_fk
+        FOREIGN KEY (source_id)
+        REFERENCES data_sources (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE images_history
+    ADD CONSTRAINT images_history_status_id_fk
+        FOREIGN KEY (status_id)
+        REFERENCES lifecycle_statuses (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE images_history
+    ADD CONSTRAINT images_history_image_type_id_fk
+        FOREIGN KEY (image_type_id)
+        REFERENCES image_types (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE images_history
+    ADD CONSTRAINT images_history_language_id_fk
+        FOREIGN KEY (language_id)
+        REFERENCES languages (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+-- barcodes_history
+ALTER TABLE barcodes_history
+    ADD CONSTRAINT barcodes_history_original_entity_id_fk
+        FOREIGN KEY (original_entity_id)
+        REFERENCES barcodes (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE barcodes_history
+    ADD CONSTRAINT barcodes_history_previous_version_id_fk
+        FOREIGN KEY (previous_version_id)
+        REFERENCES barcodes_history (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE barcodes_history
+    ADD CONSTRAINT barcodes_history_change_set_id_fk
+        FOREIGN KEY (change_set_id)
+        REFERENCES change_sets (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE barcodes_history
+    ADD CONSTRAINT barcodes_history_source_id_fk
+        FOREIGN KEY (source_id)
+        REFERENCES data_sources (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE barcodes_history
+    ADD CONSTRAINT barcodes_history_status_id_fk
+        FOREIGN KEY (status_id)
+        REFERENCES lifecycle_statuses (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE barcodes_history
+    ADD CONSTRAINT barcodes_history_barcode_type_id_fk
+        FOREIGN KEY (barcode_type_id)
+        REFERENCES barcode_types (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE barcodes_history
+    ADD CONSTRAINT barcodes_history_verification_status_id_fk
+        FOREIGN KEY (verification_status_id)
+        REFERENCES verification_statuses (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE barcodes_history
+    ADD CONSTRAINT barcodes_history_issued_country_id_fk
+        FOREIGN KEY (issued_country_id)
+        REFERENCES countries (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;

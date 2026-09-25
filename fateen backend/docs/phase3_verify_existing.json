@@ -1,0 +1,27 @@
+{
+  "phase": "PHASE_3_VERIFY_EXISTING",
+  "expected": 1220,
+  "found_active": 1220,
+  "missing": 0,
+  "missing_barcodes": [],
+  "multi_product_barcodes": {},
+  "lifecycle_distribution": {
+    "ACTIVE": 1220
+  },
+  "null_name_count": 174,
+  "null_status_count": 0,
+  "null_source_count": 1220,
+  "null_brand_count": 1220,
+  "orphans_no_pb": [],
+  "orphan_count": 0,
+  "overlap_safe_to_write": 0,
+  "barcode_type_id_dist": {
+    "dd4b4e39-c36a-42ab-9d26-293f7ab4397f": 1220
+  },
+  "verification_status_dist": {
+    "18ca5db5-32b8-4662-ac0d-be0b15cf0ba1": 1220
+  },
+  "barcode_status_dist": {
+    "1": 1220
+  }
+}

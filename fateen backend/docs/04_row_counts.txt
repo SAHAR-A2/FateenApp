@@ -1,0 +1,30 @@
+TABLE ROW COUNTS (from pg_stat_user_tables)
+============================================
+Table                                    | Inserts | Live Rows
+-----------------------------------------|---------|----------
+product_barcodes_history                 |   118   |    51
+product_ingredients                      |    20   |    13
+companies_history                        |    10   |    10
+product_nutrition_values                 |     9   |     9
+condition_nutrition_rules                |     8   |     8
+product_barcodes                         |     7   |     7
+barcodes                                 |     7   |     7
+barcodes_history                         |     7   |     7
+product_allergens                        |     7   |     7
+halal_evidence                           |     7   |     7
+health_conditions                        |     7   |     7
+scan_jobs                                |     8   |     8
+unit_conversions                         |     6   |     6
+measurement_bases                        |     4   |     4
+product_health_evaluations               |     4   |     4
+discovery_candidates                     |     6   |     0 (all discarded)
+companies                                |    10   |     0 (10 live via UPDATE)
+brands                                   |     0   |     0
+products                                 |     0   |     0
+data_sources                             |     1   |     1
+relationship_types                       |     1   |     1
+source_priorities                        |     1   |     1
+schema_migrations                        |     1   |     1
+
+Note: companies shows 0 inserts / 10 updates because the history trigger 
+captured inserts as history. The 10 companies exist as UPDATE rows.

@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "kind": "synthetic_vocabulary_fixture",
+    "synthetic": true,
+    "schema_version": 1,
+    "note": "SYNTHETIC VOCABULARY FIXTURE. The canonical ingredient / allergen / health-flag rows below are invented for offline pipeline testing of the normalization layer (unifying raw ingredient names, deriving allergens and sugar/salt/chronic-disease flags). This data is NOT real governed production vocabulary and must never be presented as verified public data.",
+    "created": "2026-08-13"
+  },
+  "ingredients": [
+    { "id": 1, "name": "Oats", "internal_code": "oats" },
+    { "id": 2, "name": "Glucose syrup", "internal_code": "glucose_syrup" },
+    { "id": 3, "name": "Palm oil", "internal_code": "palm_oil" },
+    { "id": 4, "name": "Sugar", "internal_code": "sugar" },
+    { "id": 5, "name": "Salt", "internal_code": "salt" },
+    { "id": 6, "name": "Cocoa mass", "internal_code": "cocoa_mass" },
+    { "id": 7, "name": "Soy lecithin", "internal_code": "soy_lecithin" },
+    { "id": 8, "name": "Vanilla", "internal_code": "vanilla" },
+    { "id": 9, "name": "Potatoes", "internal_code": "potatoes" },
+    { "id": 10, "name": "Sunflower oil", "internal_code": "sunflower_oil" },
+    { "id": 11, "name": "Carbonated water", "internal_code": "carbonated_water" },
+    { "id": 12, "name": "Caramel colour", "internal_code": "caramel_colour" },
+    { "id": 13, "name": "Phosphoric acid", "internal_code": "phosphoric_acid" },
+    { "id": 14, "name": "Peanuts", "internal_code": "peanuts" },
+    { "id": 15, "name": "Wheat flour", "internal_code": "wheat_flour" },
+    { "id": 16, "name": "Vegetable oil", "internal_code": "vegetable_oil" }
+  ],
+  "aliases": [
+    { "ingredient_id": 1, "alias": "Rolled oats" },
+    { "ingredient_id": 1, "alias": "Whole grain oats" },
+    { "ingredient_id": 1, "alias": "شوفان" },
+    { "ingredient_id": 2, "alias": "invert sugar syrup" },
+    { "ingredient_id": 4, "alias": "سكر" },
+    { "ingredient_id": 5, "alias": "ملح" },
+    { "ingredient_id": 5, "alias": "sea salt" },
+    { "ingredient_id": 14, "alias": "Roasted peanuts" },
+    { "ingredient_id": 16, "alias": "زيت نباتي" }
+  ],
+  "allergens": [
+    { "id": 1, "internal_code": "gluten", "name": "Gluten" },
+    { "id": 2, "internal_code": "soy", "name": "Soy" },
+    { "id": 3, "internal_code": "peanuts", "name": "Peanuts" }
+  ],
+  "ingredient_allergens": [
+    { "ingredient_id": 7, "allergen_id": 2 },
+    { "ingredient_id": 14, "allergen_id": 3 },
+    { "ingredient_id": 15, "allergen_id": 1 }
+  ],
+  "health_flags": [
+    { "id": 1, "internal_code": "high_sugar", "name": "High sugar" },
+    { "id": 2, "internal_code": "high_salt", "name": "High salt" },
+    { "id": 3, "internal_code": "chronic_diabetes_risk", "name": "Chronic diabetes risk" },
+    { "id": 4, "internal_code": "chronic_cardiovascular_risk", "name": "Chronic cardiovascular risk" }
+  ],
+  "ingredient_health_flags": [
+    { "ingredient_id": 2, "health_flag_id": 1 },
+    { "ingredient_id": 2, "health_flag_id": 3 },
+    { "ingredient_id": 4, "health_flag_id": 1 },
+    { "ingredient_id": 4, "health_flag_id": 3 },
+    { "ingredient_id": 5, "health_flag_id": 2 },
+    { "ingredient_id": 5, "health_flag_id": 4 }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+ "phase": "PHASE_6_CLOUD_INTROSPECTION",
+ "verdict": "READ_ONLY_NO_WRITES",
+ "identity": {
+  "current_database": "postgres",
+  "current_user": "fateen_app",
+  "server_version": "17.6",
+  "extensions": [
+   "citext",
+   "pg_stat_statements",
+   "pg_trgm",
+   "pgcrypto",
+   "plpgsql",
+   "supabase_vault",
+   "uuid-ossp"
+  ]
+ },
+ "migrations": [
+  "0001_foundation_extensions.sql",
+  "0002_foundation_enums.sql",
+  "0003_foundation_lookup_tables.sql",
+  "0004_foundation_lookup_constraints.sql",
+  "0005_foundation_lookup_indexes.sql",
+  "0006_foundation_functions_and_triggers.sql",
+  "0007_seed_lifecycle_statuses.sql",
+  "0008_foundation_reference_tables.sql",
+  "0009_foundation_reference_constraints.sql",
+  "0010_foundation_reference_indexes.sql",
+  "0011_foundation_reference_triggers.sql",
+  "0012_core_entity_tables.sql",
+  "0013_core_entity_constraints.sql",
+  "0014_core_entity_indexes.sql",
+  "0015_core_entity_triggers.sql",
+  "0016_relationship_tables.sql",
+  "0017_relationship_constraints.sql",
+  "0018_relationship_indexes.sql",
+  "0019_relationship_triggers.sql",
+  "002_collector_tables",
+  "0020_history_tables.sql",
+  "0021_audit_tables.sql",
+  "0022_history_constraints.sql",
+  "0023_history_indexes.sql",
+  "0024_history_triggers.sql",
+  "0025_media_and_barcode_tables.sql",
+  "0026_media_and_barcode_history_tables.sql",
+  "0027_media_and_barcode_constraints.sql",
+  "0028_media_and_barcode_indexes.sql",
+  "0029_media_and_barcode_triggers.sql",
+  "0030_search_tables.sql",
+  "0031_search_indexes.sql",
+  "0032_ecr_product_media_tables.sql",
+  "0033_ecr_product_media_history_tables.sql",
+  "0034_ecr_constraints.sql",
+  "0035_ecr_indexes.sql",
+  "0036_ecr_functions.sql",
+  "0037_ecr_triggers.sql",
+  "0038_ecr_fix_capture_history.sql",
+  "0039_ecr_fix_history_original_entity_fk.sql",
+  "0040_security_hardening.sql",
+  "0041",
+  "0042_pilot_source_priorities_seed",
+  "0043_pilot_provider_failure_statuses",
+  "0044_open_food_facts_source",
+  "0045_open_food_facts_reference_ingredients",
+  "0046_off_nutrition_reference_salt",
+  "0048_off_pilot_reference_ingredients",
+  "0049_off_pilot_reference_ingredients",
+  "0050_off_pilot_reference_ingredients",
+  "0051_off_pilot_reference_ingredients.sql"
+ ],
+ "table_counts": {
+  "products": {
+   "total": 1331,
+   "live": 1331
+  },
+  "barcodes": {
+   "total": 1329,
+   "live": 1329
+  },
+  "product_barcodes": {
+   "total": 1329,
+   "live": 1329
+  },
+  "ingredients": {
+   "total": 289,
+   "live": 289
+  },
+  "allergens": {
+   "total": 11,
+   "live": 11
+  },
+  "product_ingredients": {
+   "total": 818,
+   "live": 818
+  },
+  "product_allergens": {
+   "total": 56,
+   "live": 56
+  },
+  "product_nutrition_values": {
+   "total": 2226,
+   "live": 2226
+  },
+  "nutrition_types": {
+   "total": 10,
+   "live": 10
+  },
+  "brands": {
+   "total": 13,
+   "live": 13
+  },
+  "companies": {
+   "total": 113,
+   "live": 13
+  },
+  "barcode_types": {
+   "total": 5,
+   "live": 5
+  },
+  "verification_statuses": {
+   "total": 4,
+   "live": 4
+  },
+  "relationship_types": {
+   "total": 7,
+   "live": 7
+  },
+  "lifecycle_statuses": {
+   "total": 3,
+   "live": 3
+  },
+  "data_sources": {
+   "total": 3,
+   "live": 3
+  },
+  "evidence_types": {
+   "total": 4,
+   "live": 4
+  },
+  "source_types": {
+   "total": 5,
+   "live": 5
+  },
+  "measurement_bases": {
+   "total": 4,
+   "live": 4
+  },
+  "discovery_candidates": {
+   "total": 341,
+   "live": 53
+  }
+ },
+ "valid_product": {
+  "products_live": 1331,
+  "valid_product": 1155,
+  "with_name": 1157
+ },
+ "ref_lifecycle_statuses": [
+  "ACTIVE",
+  "ARCHIVED",
+  "DEPRECATED"
+ ],
+ "ref_barcode_types": [
+  "EAN13",
+  "EAN8",
+  "GTIN",
+  "UPC_A",
+  "UPC_E"
+ ],
+ "ref_verification_statuses": [
+  "PENDING",
+  "REJECTED",
+  "UNVERIFIED",
+  "VERIFIED"
+ ],
+ "ref_relationship_types": [
+  "CONTAINS_ALLERGEN",
+  "CONTAINS_INGREDIENT",
+  "MAY_CONTAIN_ALLERGEN",
+  "MAY_CONTAIN_INGREDIENT",
+  "MEASURED_VALUE",
+  "PACK_SIZE_VARIANT",
+  "PRIMARY_BARCODE"
+ ],
+ "ref_data_sources": [
+  "COLLECTOR",
+  "FATEEN_TEST",
+  "OPEN_FOOD_FACTS"
+ ],
+ "ref_evidence_types": [
+  "DATABASE",
+  "LABEL",
+  "MANUFACTURER",
+  "OFFICIAL_SOURCE"
+ ],
+ "ref_source_types": [
+  "DATABASE",
+  "IMPORT",
+  "MANUFACTURER",
+  "REGULATORY",
+  "USER_SUBMITTED"
+ ],
+ "fk_constraints": {
+  "products": [
+   "products_brand_id_fk",
+   "products_product_category_id_fk",
+   "products_source_id_fk",
+   "products_status_id_fk"
+  ],
+  "barcodes": [
+   "barcodes_barcode_type_id_fk",
+   "barcodes_issued_country_id_fk",
+   "barcodes_source_id_fk",
+   "barcodes_status_id_fk",
+   "barcodes_verification_status_id_fk"
+  ],
+  "product_barcodes": [
+   "product_barcodes_barcode_id_fk",
+   "product_barcodes_evidence_type_id_fk",
+   "product_barcodes_product_id_fk",
+   "product_barcodes_relationship_type_id_fk",
+   "product_barcodes_source_id_fk",
+   "product_barcodes_status_id_fk"
+  ],
+  "brands": [
+   "brands_company_id_fk",
+   "brands_source_id_fk",
+   "brands_status_id_fk"
+  ],
+  "product_ingredients": [
+   "product_ingredients_evidence_type_id_fk",
+   "product_ingredients_ingredient_id_fk",
+   "product_ingredients_product_id_fk",
+   "product_ingredients_relationship_type_id_fk",
+   "product_ingredients_source_id_fk",
+   "product_ingredients_status_id_fk",
+   "product_ingredients_unit_id_fk"
+  ],
+  "product_allergens": [
+   "product_allergens_allergen_id_fk",
+   "product_allergens_evidence_type_id_fk",
+   "product_allergens_product_id_fk",
+   "product_allergens_relationship_type_id_fk",
+   "product_allergens_source_id_fk",
+   "product_allergens_status_id_fk"
+  ],
+  "product_nutrition_values": [
+   "product_nutrition_values_evidence_type_id_fk",
+   "product_nutrition_values_measurement_basis_id_fk",
+   "product_nutrition_values_nutrition_type_id_fk",
+   "product_nutrition_values_product_id_fk",
+   "product_nutrition_values_relationship_type_id_fk",
+   "product_nutrition_values_source_id_fk",
+   "product_nutrition_values_status_id_fk",
+   "product_nutrition_values_unit_id_fk"
+  ]
+ }
+}

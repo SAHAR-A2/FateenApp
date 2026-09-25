@@ -1,0 +1,63 @@
+{
+  "phase": "phase12a",
+  "phase12a_status": "CONFIGURATION_REVIEW_REQUIRED",
+  "current_role": {
+    "current_user": "fateen_app",
+    "session_user": "fateen_app",
+    "current_database": "postgres",
+    "current_schema": "public"
+  },
+  "write_privileges": "NONE",
+  "write_tables_required": [
+    "products",
+    "barcodes",
+    "product_barcodes",
+    "product_ingredients",
+    "product_allergens",
+    "product_nutrition_values"
+  ],
+  "conditional_write_tables": ["brands"],
+  "reference_lookup_tables": [
+    "ingredients",
+    "allergens",
+    "nutrition_types",
+    "units",
+    "measurement_bases"
+  ],
+  "existing_approved_writer": {
+    "designated_role": "fateen_app",
+    "designated_in": "app/core/config.py role model (fateen=superuser, fateen_admin=DDL/migrations, fateen_app=runtime)",
+    "runtime_forbidden_roles": ["fateen", "postgres"],
+    "current_database_configuration": "fateen_app is SELECT-only: GRANT SELECT on all tables, plus RLS policy named fateen_app_read_only (cmd=SELECT, roles=[fateen_app], using=true) on all write tables; fateen_app.rolbypassrls=false; no migration grants write to fateen_app",
+    "alternative_roles_present": {
+      "service_role": "exists, bypassrls=true, non-login (JWT-only via Supabase), not referenced by the project runtime",
+      "postgres": "exists, login, write-capable, but forbidden as runtime role by app/core/config.py",
+      "fateen_admin": "absent in this database"
+    }
+  },
+  "rls_involved": true,
+  "data_change_from_failed_attempt": {
+    "products": 0,
+    "barcodes": 0,
+    "product_barcodes": 0,
+    "product_ingredients": 0,
+    "product_allergens": 0,
+    "product_nutrition_values": 0
+  },
+  "pre_write_active_counts": {
+    "products": 1331,
+    "barcodes": 1329,
+    "product_barcodes": 1329,
+    "product_ingredients": 818,
+    "product_allergens": 56,
+    "product_nutrition_values": 2226
+  },
+  "frozen_set_intact": {
+    "count": 764,
+    "write_set_sha256": "9e517978d3b7b80db79f3fac59f016a0ac2fecbbbc475528035e4fe538dd45af",
+    "matches_driver_step2_record": true
+  },
+  "review_928_written": 0,
+  "review_barcodes_found_in_db": [],
+  "conclusion": "The project-designated runtime writer (fateen_app) is deliberately configured read-only in this database (GRANT SELECT + RLS policies named fateen_app_read_only). No approved production write path is currently usable. Phase 12 can resume ONLY after database permission/RLS configuration is deliberately changed outside this phase."
+}

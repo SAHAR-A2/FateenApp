@@ -1,0 +1,109 @@
+-- =============================================================================
+-- Constraints: Foundation Reference Domain tables
+-- -----------------------------------------------------------------------------
+-- Purpose:       Cross-table integrity for the 10 Mission 02 reference tables:
+--                every status_id references the shared lifecycle_statuses
+--                registry (ADR-008), and the two category taxonomies enforce
+--                their parent_id self-reference with a distinct-row rule.
+-- Work orders:   Mission 02: Foundation Reference Domain (work orders #001-#008).
+--                Architecture Authority directive #007.
+-- Dependencies:  Tables from 0003 (lifecycle_statuses) and 0008 (the 10
+--                reference tables). Runs after all tables exist.
+-- Migration:     0009_foundation_reference_constraints.sql
+-- Rationale:     Cross-table integrity is applied here, after every referenced
+--                table is committed (see sql_conventions.md). A category cannot
+--                be its own parent, and a lifecycle status cannot be removed
+--                while any reference row uses it (no cascade anywhere).
+-- =============================================================================
+ALTER TABLE regions
+    ADD CONSTRAINT regions_status_id_fk
+        FOREIGN KEY (status_id)
+        REFERENCES lifecycle_statuses (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE ingredient_categories
+    ADD CONSTRAINT ingredient_categories_status_id_fk
+        FOREIGN KEY (status_id)
+        REFERENCES lifecycle_statuses (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE product_categories
+    ADD CONSTRAINT product_categories_status_id_fk
+        FOREIGN KEY (status_id)
+        REFERENCES lifecycle_statuses (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE allergen_types
+    ADD CONSTRAINT allergen_types_status_id_fk
+        FOREIGN KEY (status_id)
+        REFERENCES lifecycle_statuses (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE nutrition_types
+    ADD CONSTRAINT nutrition_types_status_id_fk
+        FOREIGN KEY (status_id)
+        REFERENCES lifecycle_statuses (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE regulatory_authorities
+    ADD CONSTRAINT regulatory_authorities_status_id_fk
+        FOREIGN KEY (status_id)
+        REFERENCES lifecycle_statuses (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE evidence_types
+    ADD CONSTRAINT evidence_types_status_id_fk
+        FOREIGN KEY (status_id)
+        REFERENCES lifecycle_statuses (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE role_types
+    ADD CONSTRAINT role_types_status_id_fk
+        FOREIGN KEY (status_id)
+        REFERENCES lifecycle_statuses (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE permission_types
+    ADD CONSTRAINT permission_types_status_id_fk
+        FOREIGN KEY (status_id)
+        REFERENCES lifecycle_statuses (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE audit_event_types
+    ADD CONSTRAINT audit_event_types_status_id_fk
+        FOREIGN KEY (status_id)
+        REFERENCES lifecycle_statuses (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+-- Self-referential taxonomy links. A category must not be its own parent.
+ALTER TABLE ingredient_categories
+    ADD CONSTRAINT ingredient_categories_parent_id_fk
+        FOREIGN KEY (parent_id)
+        REFERENCES ingredient_categories (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE ingredient_categories
+    ADD CONSTRAINT ingredient_categories_parent_not_self_check
+        CHECK (parent_id IS NULL OR parent_id <> id);
+
+ALTER TABLE product_categories
+    ADD CONSTRAINT product_categories_parent_id_fk
+        FOREIGN KEY (parent_id)
+        REFERENCES product_categories (id)
+        ON DELETE RESTRICT
+        ON UPDATE RESTRICT;
+
+ALTER TABLE product_categories
+    ADD CONSTRAINT product_categories_parent_not_self_check
+        CHECK (parent_id IS NULL OR parent_id <> id);

@@ -1,0 +1,46 @@
+MIGRATION HISTORY (40 total)
+============================
+Version                                    | Checksum                         | Applied At
+-------------------------------------------|----------------------------------|---------------------------
+0001_foundation_extensions.sql             | 25cc78dc2c82da967b3ed1338b0f1087 | 2026-08-10 11:16:57
+0002_foundation_enums.sql                  | e0c797db5c912ed5613dc762cca3063f | 2026-08-10 11:16:58
+0003_foundation_lookup_tables.sql          | c3de325fcd3928738cf22210298543ea | 2026-08-10 11:16:59
+0004_foundation_lookup_constraints.sql     | 78004c298fbc2729f7318244c9dfde48 | 2026-08-10 11:16:59
+0005_foundation_lookup_indexes.sql         | f8c1138c6c246460b82657d1b3ee85de | 2026-08-10 11:17:00
+0006_foundation_functions_and_triggers.sql | 148d20aa8b4202f8c9f9260f2af78d59 | 2026-08-10 11:17:00
+0007_seed_lifecycle_statuses.sql           | d62d81be6dff947f2ba004122c0d5443 | 2026-08-10 11:17:01
+0008_foundation_reference_tables.sql       | 93b1a804ef858bea08dc74490b8a13ce | 2026-08-10 11:17:01
+0009_foundation_reference_constraints.sql  | 49aa2095a830f9a4eaca123bf13f9634 | 2026-08-10 11:17:02
+0010_foundation_reference_indexes.sql      | dfb66d28c9adec07a4fbe6dd53427af4 | 2026-08-10 11:17:02
+0011_foundation_reference_triggers.sql     | 663584c192306127b511e17a12d77ffd | 2026-08-10 11:17:03
+0012_core_entity_tables.sql                | 99aea0d3a591f7e3e724bc3d7a248cb1 | 2026-08-10 11:17:03
+0013_core_entity_constraints.sql           | 11fd9da61ed144808b5e31b9cb9935d7 | 2026-08-10 11:17:04
+0014_core_entity_indexes.sql               | 3458b293eb2477466345009c5d82483a | 2026-08-10 11:17:04
+0015_core_entity_triggers.sql              | b7ac049beaf5f3a9d86c2a6a86806b82 | 2026-08-10 11:17:05
+0016_relationship_tables.sql               | ddde14275144f4dbe7cdc08e4aae50ac | 2026-08-10 11:17:05
+0017_relationship_constraints.sql          | 17e8e5fa1a307c5e58eb738c4ab99c5b | 2026-08-10 11:17:06
+0018_relationship_indexes.sql              | c3b56e6fbb62d42837c8e221a9376193 | 2026-08-10 11:17:06
+0019_relationship_triggers.sql             | 6fdea2f270528758f6185d9fc04cd976 | 2026-08-10 11:17:07
+0020_history_tables.sql                    | a21be62cd97eaf97c32de37491c08fe0 | 2026-08-10 11:17:08
+0021_audit_tables.sql                      | 5f9fe5b1549ef2434f779b13feab31af | 2026-08-10 11:17:08
+0022_history_constraints.sql               | 7ec56ec2f0c35af0e43be93b6e862094 | 2026-08-10 11:17:09
+0023_history_indexes.sql                   | e815102c5daf807a6ddf30beb7d2c4dd | 2026-08-10 11:17:09
+0024_history_triggers.sql                  | 02f4b13d07001996e024aefb0a1c829e | 2026-08-10 11:17:10
+0025_media_and_barcode_tables.sql          | eca1b773266de2e9e7db84e91fbfcd2c | 2026-08-10 11:17:10
+0026_media_and_barcode_history_tables.sql  | c11fd64de3f6d35bafb32de03ae645d9 | 2026-08-10 11:17:11
+0027_media_and_barcode_constraints.sql     | 299a23749caa51c0b33ecf087a1cdb04 | 2026-08-10 11:17:11
+0028_media_and_barcode_indexes.sql         | 8acd991a77706b423f331ae338fbfe8e | 2026-08-10 11:17:12
+0029_media_and_barcode_triggers.sql        | 64d165367af8572a07bdab67eb3be3c1 | 2026-08-10 11:17:13
+002_collector_tables                       | fateen-collector-v1              | 2026-08-18 01:38:14
+0030_search_tables.sql                     | 709b5bb9245af87e0cdef7c40859f639 | 2026-08-10 11:17:13
+0031_search_indexes.sql                    | 518529bfce1cc341d1e5f7e475aa7028 | 2026-08-10 11:17:14
+0032_ecr_product_media_tables.sql          | e55839faadedb0f4bb5d8f2423def7a0 | 2026-08-10 11:17:14
+0033_ecr_product_media_history_tables.sql  | 66e4f296e4ced002dfe2a11205231390 | 2026-08-10 11:17:15
+0034_ecr_constraints.sql                   | 8d07dafba7c34f7869a1e5384d33c1f7 | 2026-08-10 11:17:16
+0035_ecr_indexes.sql                       | 4e2af1e1fe6239c84ee3d64b7b784130 | 2026-08-10 11:17:16
+0036_ecr_functions.sql                     | e097206ebc621a92a59a0a2d915e056e | 2026-08-10 11:17:17
+0037_ecr_triggers.sql                      | 7ef1e8e7eb34969ec07d963930af5983 | 2026-08-10 11:17:17
+0038_ecr_fix_capture_history.sql           | 1a2103a5ca1a5d8afa8e342689762596 | 2026-08-10 11:17:18
+0039_ecr_fix_history_original_entity_fk.sql| 665f2ffe22fa523551ed67ee07c7aec4 | 2026-08-10 11:17:18
+
+NOTE: Migration 002_collector_tables was applied out of order (between 0029 and 0030)
