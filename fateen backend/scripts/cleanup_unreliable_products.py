@@ -3,9 +3,11 @@
 
 Usage (from the backend root):
     python scripts/cleanup_unreliable_products.py [--database-url URL]            # preview only
-    python scripts/cleanup_unreliable_products.py --apply --expect N [--database-url URL]
+    python scripts/cleanup_unreliable_products.py --apply --expect N --database-url URL
 
-The URL defaults to CLOUD_DATABASE_URL, then DATABASE_URL.
+The preview's URL defaults to CLOUD_DATABASE_URL, then DATABASE_URL. --apply
+takes the URL only from --database-url, so an environment variable left
+over from another task can never pick the database that gets written.
 
 A product is selected when any of these holds (definitions shared with
 scripts/db_audit.py):
@@ -150,8 +152,11 @@ def main(argv: list[str] | None = None) -> int:
         raise SystemExit("No database URL: pass --database-url or set CLOUD_DATABASE_URL")
     if args.apply and args.expect is None:
         raise SystemExit("--apply needs --expect N, the number of entries the preview showed")
+    if args.apply and not args.database_url:
+        raise SystemExit("--apply needs an explicit --database-url")
 
     with psycopg.connect(url, row_factory=dict_row) as conn:
+        print(f"Database: {conn.info.user}@{conn.info.host}/{conn.info.dbname}\n")
         if not args.apply:
             conn.execute("SET TRANSACTION READ ONLY")
         selection = collect(conn, args.include_no_barcode)

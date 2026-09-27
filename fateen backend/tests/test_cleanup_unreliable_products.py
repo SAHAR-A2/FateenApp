@@ -74,3 +74,9 @@ def test_apply_refuses_when_the_count_changed(tmp_path):
         assert conn.execute(
             "SELECT deleted_at FROM public.products WHERE internal_code = 'TEST_MILK_001'"
         ).fetchone()["deleted_at"] is None
+
+
+def test_apply_never_takes_the_url_from_the_environment(monkeypatch):
+    monkeypatch.setenv("CLOUD_DATABASE_URL", "postgresql://nobody@invalid.example/none")
+    with pytest.raises(SystemExit, match="explicit --database-url"):
+        cleanup.main(["--apply", "--expect", "1"])
