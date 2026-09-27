@@ -120,6 +120,7 @@ def test_recorded_cloud_ledger_snapshot(migrations):
         "003_pilot_constraints.sql",
         "0053_restore_fateen_app_history_write_path.sql",
         "0054_product_completeness_view.sql",
+        "0055_allergens_and_health_rules.sql",
     ]
     assert p.unknown == [
         "0040_security_hardening.sql",

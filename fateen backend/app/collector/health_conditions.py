@@ -112,17 +112,18 @@ def get_health_conditions() -> list[dict]:
 
 
 def get_condition_rules(condition_id: str) -> list[dict]:
-    """Get all active rules for a specific health condition."""
+    """Get all active thresholds for a health condition (migration 0055;
+    the older condition_nutrition_rules table is no longer read)."""
     try:
         with get_connection() as conn:
             rows = conn.execute(
                 """
                 SELECT id, condition_id, nutrition_type_code, operator,
-                       threshold_value, unit_code, severity, description,
-                       is_active, created_at
-                FROM public.condition_nutrition_rules
+                       threshold_value, unit_code, measurement_basis_code,
+                       severity, description, source, is_active, created_at
+                FROM public.condition_nutrient_thresholds
                 WHERE condition_id = %s AND is_active = TRUE
-                ORDER BY nutrition_type_code, threshold_value
+                ORDER BY nutrition_type_code, measurement_basis_code
                 """,
                 (condition_id,),
             ).fetchall()
@@ -170,6 +171,111 @@ def _get_product_nutrition(product_id: str) -> dict[str, list[dict]]:
         return {}
 
 
+# Rules are written per 100 g (food) or per 100 ml (drink). A per-serving or
+# per-package value is not comparable with them.
+_COMPARABLE_BASES = ("PER_100G", "PER_100ML")
+# Regulation (EU) No 1169/2011 Annex I: salt = sodium x 2.5.
+_SALT_PER_SODIUM = 2.5
+
+
+def _with_sodium_from_salt(nutrition: dict[str, list[dict]]) -> dict[str, list[dict]]:
+    """Add a SODIUM value derived from SALT for each basis that has salt but
+    no sodium, so a sodium rule is not reported as missing data."""
+    sodium_bases = {v.get("measurement_basis") for v in nutrition.get("SODIUM", [])}
+    derived = [
+        {**v, "nutrition_type_code": "SODIUM",
+         "amount_value": _convert_to_unit(v["amount_value"], v.get("unit_code", "G"), "G") / _SALT_PER_SODIUM,
+         "unit_code": "G", "derived_from": "SALT"}
+        for v in nutrition.get("SALT", [])
+        if v.get("measurement_basis") not in sodium_bases
+    ]
+    if not derived:
+        return nutrition
+    return {**nutrition, "SODIUM": nutrition.get("SODIUM", []) + derived}
+
+
+def evaluate_rules(rules: list[dict], nutrition: dict[str, list[dict]]) -> tuple[str, list[dict]]:
+    """Worst result of `rules` over a product's nutrition, with evidence.
+
+    Only per-100 g / per-100 ml values are compared. A rule with a
+    measurement_basis_code applies only when the product has values on that
+    basis, so a drink (per 100 ml) is judged by the drink thresholds and is
+    not reported as missing the food ones. A rule without a basis (legacy)
+    applies to either. A product with no comparable value at all gets
+    INSUFFICIENT_DATA from every rule.
+    """
+    nutrition = _with_sodium_from_salt({
+        code: [v for v in values if v.get("measurement_basis") in _COMPARABLE_BASES]
+        for code, values in nutrition.items()
+    })
+    product_bases = {v["measurement_basis"] for values in nutrition.values() for v in values}
+
+    evidence_items = []
+    overall_worst = HealthEvaluation.SAFE.value
+    for rule in rules:
+        ntype = rule["nutrition_type_code"]
+        operator = rule["operator"]
+        threshold = rule["threshold_value"]
+        severity = rule["severity"]
+        rule_id = str(rule["id"])
+        rule_basis = rule.get("measurement_basis_code")
+
+        if operator not in VALID_OPERATORS:
+            logger.warning("Invalid operator in rule %s: %s", rule_id, operator)
+            continue
+        if rule_basis and product_bases and rule_basis not in product_bases:
+            continue  # a food rule for a drink, or the reverse
+
+        nutrition_values = [
+            v for v in nutrition.get(ntype, [])
+            if not rule_basis or v["measurement_basis"] == rule_basis
+        ]
+        if not nutrition_values:
+            evidence_items.append({
+                "rule_id": rule_id,
+                "nutrition_type": ntype,
+                "operator": operator,
+                "threshold": threshold,
+                "severity": severity,
+                "triggered": False,
+                "result": HealthEvaluation.INSUFFICIENT_DATA.value,
+                "description": rule.get("description"),
+                "actual_value": None,
+            })
+            if overall_worst == HealthEvaluation.SAFE.value:
+                overall_worst = HealthEvaluation.INSUFFICIENT_DATA.value
+            continue
+
+        for nv in nutrition_values:
+            actual = nv["amount_value"]
+            nv_unit = nv.get("unit_code", "G")
+            actual_converted = _convert_to_unit(actual, nv_unit, rule.get("unit_code", "G"))
+            triggered = _apply_operator(actual_converted, operator, threshold)
+            result = _determine_evaluation(severity, triggered)
+            evidence_items.append({
+                "rule_id": rule_id,
+                "nutrition_type": ntype,
+                "operator": operator,
+                "threshold": threshold,
+                "severity": severity,
+                "triggered": triggered,
+                "result": result,
+                "description": rule.get("description"),
+                "actual_value": actual,
+                "unit": nv_unit,
+                "measurement_basis": nv["measurement_basis"],
+            })
+            if result == HealthEvaluation.UNSAFE.value:
+                overall_worst = HealthEvaluation.UNSAFE.value
+            elif result == HealthEvaluation.WARNING.value and overall_worst != HealthEvaluation.UNSAFE.value:
+                overall_worst = HealthEvaluation.WARNING.value
+            elif result == HealthEvaluation.CAUTION.value and overall_worst in (
+                HealthEvaluation.SAFE.value, HealthEvaluation.INSUFFICIENT_DATA.value,
+            ):
+                overall_worst = HealthEvaluation.CAUTION.value
+    return overall_worst, evidence_items
+
+
 def evaluate_single_condition(product_id: str, condition_code: str) -> Optional[dict]:
     """Evaluate a product against a single health condition by code.
 
@@ -208,71 +314,7 @@ def evaluate_single_condition(product_id: str, condition_code: str) -> Optional[
             "rule_count": 0,
         }
 
-    nutrition = _get_product_nutrition(product_id)
-
-    evidence_items = []
-    overall_worst = HealthEvaluation.SAFE.value
-
-    for rule in rules:
-        ntype = rule["nutrition_type_code"]
-        operator = rule["operator"]
-        threshold = rule["threshold_value"]
-        severity = rule["severity"]
-        rule_id = str(rule["id"])
-
-        if operator not in VALID_OPERATORS:
-            logger.warning("Invalid operator in rule %s: %s", rule_id, operator)
-            continue
-
-        nutrition_values = nutrition.get(ntype, [])
-
-        if not nutrition_values:
-            evidence_items.append({
-                "rule_id": rule_id,
-                "nutrition_type": ntype,
-                "operator": operator,
-                "threshold": threshold,
-                "severity": severity,
-                "triggered": False,
-                "result": HealthEvaluation.INSUFFICIENT_DATA.value,
-                "description": rule.get("description"),
-                "actual_value": None,
-            })
-            if overall_worst != HealthEvaluation.UNSAFE.value:
-                overall_worst = HealthEvaluation.INSUFFICIENT_DATA.value
-            continue
-
-        for nv in nutrition_values:
-            actual = nv["amount_value"]
-            nv_unit = nv.get("unit_code", "G")
-            rule_unit = rule.get("unit_code", "G")
-            actual_converted = _convert_to_unit(actual, nv_unit, rule_unit)
-            triggered = _apply_operator(actual_converted, operator, threshold)
-            result = _determine_evaluation(severity, triggered)
-
-            evidence_items.append({
-                "rule_id": rule_id,
-                "nutrition_type": ntype,
-                "operator": operator,
-                "threshold": threshold,
-                "severity": severity,
-                "triggered": triggered,
-                "result": result,
-                "description": rule.get("description"),
-                "actual_value": actual,
-                "unit": nv_unit,
-            })
-
-            if result == HealthEvaluation.UNSAFE.value:
-                overall_worst = HealthEvaluation.UNSAFE.value
-            elif result == HealthEvaluation.WARNING.value and overall_worst not in (
-                HealthEvaluation.UNSAFE.value,
-            ):
-                overall_worst = HealthEvaluation.WARNING.value
-            elif result == HealthEvaluation.CAUTION.value and overall_worst in (
-                HealthEvaluation.SAFE.value, HealthEvaluation.INSUFFICIENT_DATA.value,
-            ):
-                overall_worst = HealthEvaluation.CAUTION.value
+    overall_worst, evidence_items = evaluate_rules(rules, _get_product_nutrition(product_id))
 
     return {
         "condition_id": condition_id,
@@ -313,72 +355,7 @@ def evaluate_product_health(product_id: str) -> list[dict]:
                 evaluation_result = HealthEvaluation.UNKNOWN.value
                 evidence_items = []
             else:
-                evidence_items = []
-                overall_worst = HealthEvaluation.SAFE.value
-
-                for rule in rules:
-                    ntype = rule["nutrition_type_code"]
-                    operator = rule["operator"]
-                    threshold = rule["threshold_value"]
-                    severity = rule["severity"]
-                    rule_id = str(rule["id"])
-
-                    if operator not in VALID_OPERATORS:
-                        logger.warning("Invalid operator in rule %s: %s", rule_id, operator)
-                        continue
-
-                    nutrition_values = nutrition.get(ntype, [])
-
-                    if not nutrition_values:
-                        evidence_items.append({
-                            "rule_id": rule_id,
-                            "nutrition_type": ntype,
-                            "operator": operator,
-                            "threshold": threshold,
-                            "severity": severity,
-                            "triggered": False,
-                            "result": HealthEvaluation.INSUFFICIENT_DATA.value,
-                            "description": rule.get("description"),
-                            "actual_value": None,
-                        })
-                        if overall_worst != HealthEvaluation.UNSAFE.value:
-                            overall_worst = HealthEvaluation.INSUFFICIENT_DATA.value
-                        continue
-
-                    for nv in nutrition_values:
-                        actual = nv["amount_value"]
-                        nv_unit = nv.get("unit_code", "G")
-                        rule_unit = rule.get("unit_code", "G")
-                        actual_converted = _convert_to_unit(actual, nv_unit, rule_unit)
-                        triggered = _apply_operator(actual_converted, operator, threshold)
-                        result = _determine_evaluation(severity, triggered)
-
-                        evidence_items.append({
-                            "rule_id": rule_id,
-                            "nutrition_type": ntype,
-                            "operator": operator,
-                            "threshold": threshold,
-                            "severity": severity,
-                            "triggered": triggered,
-                            "result": result,
-                            "description": rule.get("description"),
-                            "actual_value": actual,
-                            "unit": nv_unit,
-                        })
-
-                        if result == HealthEvaluation.UNSAFE.value:
-                            overall_worst = HealthEvaluation.UNSAFE.value
-                        elif result == HealthEvaluation.WARNING.value and overall_worst not in (
-                            HealthEvaluation.UNSAFE.value,
-                        ):
-                            overall_worst = HealthEvaluation.WARNING.value
-                        elif result == HealthEvaluation.CAUTION.value and overall_worst in (
-                            HealthEvaluation.SAFE.value,
-                            HealthEvaluation.INSUFFICIENT_DATA.value,
-                        ):
-                            overall_worst = HealthEvaluation.CAUTION.value
-
-                evaluation_result = overall_worst
+                evaluation_result, evidence_items = evaluate_rules(rules, nutrition)
 
             eval_id = str(uuid.uuid4())
             try:
