@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:device_preview/device_preview.dart';
@@ -25,7 +26,9 @@ void main() async {
 
   runApp(
     DevicePreview(
-      enabled: true,
+      // Developer tool only: a release build must render the app itself,
+      // not the app inside a simulated phone frame.
+      enabled: !kReleaseMode,
       defaultDevice: Devices.ios.iPhone13,
       builder: (context) => const FateenApp(),
     ),

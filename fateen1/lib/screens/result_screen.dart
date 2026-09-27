@@ -10,7 +10,8 @@ import '../services/auth_service.dart';
 import '../services/firestore_service.dart';
 import '../services/fateen_api_service.dart';
 import '../services/favorites_service.dart';
-import '../models/compatibility_result_model.dart';
+import '../services/product_check_service.dart';
+import '../widgets/product_details_panel.dart';
 
 class ResultScreen extends StatefulWidget {
   const ResultScreen({super.key});
@@ -94,7 +95,8 @@ class _ResultScreenState extends State<ResultScreen> {
     setState(() => _isLoadingAlternatives = true);
     try {
       final userId = AuthService().getCurrentUserId();
-      final user = await FirestoreService().getUserProfile(userId!);
+      if (userId == null) return;
+      final user = await FirestoreService().getUserProfile(userId);
       if (user == null) return;
 
       // The FATEEN backend finds candidates and confirms each one SAFE
@@ -105,46 +107,42 @@ class _ResultScreenState extends State<ResultScreen> {
         user: user,
       );
 
-      if (mounted) {
-        setState(() {
-          _alternatives = safeAlternatives;
-          _isLoadingAlternatives = false;
-        });
-      }
+      if (mounted) setState(() => _alternatives = safeAlternatives);
     } catch (_) {
+      // The section then shows "no confirmed alternative"; never a guess.
+    } finally {
       if (mounted) setState(() => _isLoadingAlternatives = false);
     }
   }
 
   Future<void> _toggleFavorite(Product product) async {
     final userId = AuthService().getCurrentUserId();
+    if (userId == null) return;
     final isCurrentlyFavorite = _favoriteBarcodes.contains(product.barcode);
     try {
       if (isCurrentlyFavorite) {
-        await FavoritesService().removeFromFavorites(userId!, product.barcode);
-        setState(() => _favoriteBarcodes.remove(product.barcode));
+        await FavoritesService().removeFromFavorites(userId, product.barcode);
       } else {
-        await FavoritesService().addToFavorites(userId!, product.barcode);
-        setState(() => _favoriteBarcodes.add(product.barcode));
+        await FavoritesService().addToFavorites(userId, product.barcode);
       }
-    } catch (_) {}
+      if (!mounted) return;
+      setState(() {
+        if (isCurrentlyFavorite) {
+          _favoriteBarcodes.remove(product.barcode);
+        } else {
+          _favoriteBarcodes.add(product.barcode);
+        }
+      });
+    } catch (_) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('تعذّر تحديث المفضلة، حاول مرة أخرى')),
+      );
+    }
   }
 
-  Future<void> _openAlternative(Product product) async {
-    try {
-      final userId = AuthService().getCurrentUserId();
-      final user = await FirestoreService().getUserProfile(userId!);
-      final result = await FateenApiService()
-          .getCompatibility(barcode: product.barcode, user: user!);
-      if (!mounted) return;
-      Navigator.pushReplacementNamed(context, '/result', arguments: {
-        'status': result.status.uiKey,
-        'message': result.reason,
-        'productName': product.name,
-        'barcode': product.barcode,
-      });
-    } catch (_) {}
-  }
+  Future<void> _openAlternative(Product product) =>
+      checkAndOpenResult(context, product.barcode, replace: true);
 
   @override
   Widget build(BuildContext context) {
@@ -152,6 +150,8 @@ class _ResultScreenState extends State<ResultScreen> {
     final data = args is Map ? args : const {};
     final String status = data['status']?.toString() ?? 'unknown';
     final String? message = data['message']?.toString();
+    final Product? product = data['product'] is Product ? data['product'] as Product : null;
+    final String? productName = data['productName']?.toString();
     final result = _getResultData(status, message);
     final bool showAlternatives = status == 'danger' || status == 'warning';
 
@@ -183,8 +183,12 @@ class _ResultScreenState extends State<ResultScreen> {
                         curve: Curves.easeOutBack,
                         builder: (context, scale, child) =>
                             Transform.scale(scale: scale, child: child),
-                        child: _ResultCard(result: result),
+                        child: _ResultCard(result: result, productName: productName),
                       ),
+                      if (product != null) ...[
+                        const SizedBox(height: AppSpacing.lg),
+                        ProductDetailsPanel(product: product),
+                      ],
                       if (showAlternatives) ...[
                         const SizedBox(height: AppSpacing.xl),
                         _AlternativesSection(
@@ -210,8 +214,9 @@ class _ResultScreenState extends State<ResultScreen> {
 }
 
 class _ResultCard extends StatelessWidget {
-  const _ResultCard({required this.result});
+  const _ResultCard({required this.result, this.productName});
   final _ResultData result;
+  final String? productName;
 
   @override
   Widget build(BuildContext context) {
@@ -236,6 +241,17 @@ class _ResultCard extends StatelessWidget {
           ),
           const SizedBox(height: AppSpacing.md),
           Text(result.title, style: AppTextStyles.resultTitle),
+          if (productName != null && productName!.isNotEmpty) ...[
+            const SizedBox(height: AppSpacing.xs),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),
+              child: Text(
+                productName!,
+                textAlign: TextAlign.center,
+                style: AppTextStyles.bodyMedium.copyWith(color: AppColors.textSecondary),
+              ),
+            ),
+          ],
           const SizedBox(height: AppSpacing.smMd),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: AppSpacing.lg),

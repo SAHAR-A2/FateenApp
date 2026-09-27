@@ -128,7 +128,9 @@ class ApiClient {
     if (response.statusCode >= 400) {
       String message = 'حدث خطأ في خادم فطين (${response.statusCode})';
       try {
-        final decoded = jsonDecode(response.body);
+        // bodyBytes, not body: FastAPI sends application/json without a
+        // charset, and package:http would decode that as latin1.
+        final decoded = jsonDecode(utf8.decode(response.bodyBytes));
         if (decoded is Map && decoded['detail'] is String) {
           message = decoded['detail'] as String;
         }

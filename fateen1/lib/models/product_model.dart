@@ -33,11 +33,18 @@ class FateenNutritionValue {
   final String? unit;
   final double confidenceLevel;
 
+  /// What the amount refers to, e.g. PER_100G or PER_SERVING. Null when the
+  /// source did not state it.
+  final String? measurementBasis;
+  final String? evidenceType;
+
   FateenNutritionValue({
     required this.nutritionType,
     required this.amountValue,
     this.unit,
     required this.confidenceLevel,
+    this.measurementBasis,
+    this.evidenceType,
   });
 
   factory FateenNutritionValue.fromJson(Map<String, dynamic> json) {
@@ -46,6 +53,8 @@ class FateenNutritionValue {
       amountValue: (json['amount_value'] as num?)?.toDouble() ?? 0.0,
       unit: json['unit'],
       confidenceLevel: (json['confidence_level'] as num?)?.toDouble() ?? 0.0,
+      measurementBasis: json['measurement_basis'],
+      evidenceType: json['evidence_type'],
     );
   }
 }
