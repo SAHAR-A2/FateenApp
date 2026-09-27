@@ -9,6 +9,7 @@ import '../core/theme/app_text_styles.dart';
 import '../widgets/bottom_nav_bar.dart';
 import '../widgets/circle_icon_button.dart';
 import '../widgets/scan_action_button.dart';
+import '../logic/gtin.dart';
 import '../services/product_check_service.dart';
 
 /// Product barcodes FATEEN can look up (retail EAN/UPC families).
@@ -295,9 +296,12 @@ class _ManualBarcodeDialogState extends State<_ManualBarcodeDialog> {
 
   void _submit() {
     final value = _controller.text.trim();
-    // EAN-8 / UPC-E are 8 digits, GTIN-14 is 14.
-    if (!RegExp(r'^\d{8,14}$').hasMatch(value)) {
-      setState(() => _error = 'أدخل من 8 إلى 14 رقمًا');
+    if (![8, 12, 13, 14].contains(value.length)) {
+      setState(() => _error = 'الباركود يتكون من 8 أو 12 أو 13 أو 14 رقمًا');
+      return;
+    }
+    if (!hasValidGtinCheckDigit(value)) {
+      setState(() => _error = 'رقم الباركود غير صحيح، تحقق من الأرقام');
       return;
     }
     Navigator.pop(context, value);
@@ -314,7 +318,7 @@ class _ManualBarcodeDialogState extends State<_ManualBarcodeDialog> {
         inputFormatters: [FilteringTextInputFormatter.digitsOnly],
         maxLength: 14,
         decoration: InputDecoration(
-          hintText: 'مثال: 6281007031580',
+          hintText: 'مثال: 6281007031585',
           errorText: _error,
         ),
         onSubmitted: (_) => _submit(),

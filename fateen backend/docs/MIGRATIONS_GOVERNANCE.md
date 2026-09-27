@@ -93,8 +93,11 @@ To close the gap:
 3. Commit the files together with that status output.
 
 The same applies to the Cloud reference data: units, nutrition types,
-ingredient grammar and data sources. It should be exported from Cloud into a
-versioned seed so that a fresh environment can be rebuilt. The test fixtures
+ingredient grammar and data sources. Export it read-only with
+`scripts/export_reference_seed.py --database-url <cloud> --out
+seed/reference_data.sql` and commit the result. A fresh environment is then
+rebuilt as: baseline, seed, `migrate.py apply`
+(`tests/test_reference_seed.py` proves this round trip). The test fixtures
 in `tests/fixtures/` are not that seed.
 
 ## Local vs Cloud PostgreSQL versions

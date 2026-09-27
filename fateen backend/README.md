@@ -49,6 +49,17 @@ Read `docs/MIGRATIONS_GOVERNANCE.md` before running `apply` against Cloud.
 Some migrations applied to Cloud are not in this repository yet, and the
 runner refuses to apply until they are.
 
+## Data-quality tools (read-only)
+
+```bash
+python scripts/db_audit.py --database-url URL        # invalid barcodes, impossible or all-zero nutrition, ...
+python scripts/export_reference_seed.py --database-url URL --out seed/reference_data.sql
+```
+
+Both scripts run in a `READ ONLY` transaction, so they are safe against
+Cloud. The exported seed holds lookup and vocabulary tables only and can
+rebuild a fresh environment: baseline, then the seed, then `migrate.py apply`.
+
 ## Safety rules the code enforces
 
 - Compatibility never reports SAFE without evidence. An unmapped or
