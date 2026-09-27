@@ -78,6 +78,11 @@ they are committed to `migrations/` byte for byte:
   the OFF source, the salt/ingredient reference rows (0044-0051) and, without
   `0052`, the `fateen_app` write grants.
 
+Migrations added in this repository after that snapshot:
+
+- `0054_product_completeness_view.sql`: additive, read-only review-queue
+  view. It is safe to apply once the gap below is closed.
+
 To close the gap:
 
 1. Copy each missing file from `fateen_release_audit/migrations/` without

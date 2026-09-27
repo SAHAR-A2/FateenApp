@@ -105,6 +105,7 @@ def test_recorded_cloud_ledger_snapshot(migrations):
     assert [m.version for m in p.pending] == [
         "003_pilot_constraints.sql",
         "0053_restore_fateen_app_history_write_path.sql",
+        "0054_product_completeness_view.sql",
     ]
     assert p.unknown == [
         "0040_security_hardening.sql",

@@ -21,6 +21,7 @@ from app.api.ingestion import router as ingestion_router
 from app.api.enrichment import router as enrichment_router
 from app.api.companies import router as companies_router
 from app.api.scan import router as scan_router
+from app.api.review import router as review_router
 
 
 def _setup_logging():
@@ -123,6 +124,7 @@ app = FastAPI(
         {"name": "Database", "description": "Database summary and diagnostics"},
         {"name": "Companies", "description": "Company registry management"},
         {"name": "Scan", "description": "Product discovery and scan orchestration"},
+        {"name": "Review", "description": "Products kept with missing fields, for review"},
     ],
 )
 
@@ -206,6 +208,7 @@ app.include_router(ingestion_router)
 app.include_router(enrichment_router)
 app.include_router(companies_router)
 app.include_router(scan_router)
+app.include_router(review_router)
 
 
 @app.get(
