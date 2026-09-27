@@ -219,9 +219,13 @@ class TestB4ProductionGuard:
         )
         assert s.agent_ingest_api_key == "strong_key_123"
 
-    def test_development_allows_empty_config(self):
+    def test_development_allows_empty_config(self, monkeypatch):
         from app.core.config import Settings
+        # Isolate from the process environment and any local .env: other
+        # test modules export AGENT_INGEST_API_KEY at import time.
+        monkeypatch.delenv("AGENT_INGEST_API_KEY", raising=False)
         s = Settings(
+            _env_file=None,
             database_url="postgresql://x@localhost/db",
             app_env="development",
         )

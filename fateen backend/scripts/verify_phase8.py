@@ -225,8 +225,8 @@ for tf in test_files:
 print("\n=== Step 9: Migration Baseline ===")
 
 check("Baseline migration exists", os.path.isfile("migrations/0000_recovered_baseline.sql"))
-check("Collector migration 001 exists", os.path.isfile("migrations/001_collector_tables.sql"))
-check("Collector migration 002 exists", os.path.isfile("migrations/002_collector_tables.sql"))
+check("Collector migration 001 exists", os.path.isfile("legacy_archive/migrations/archive/001_collector_tables.sql"))
+check("Collector migration 002 exists", os.path.isfile("legacy_archive/migrations/archive/002_collector_tables.sql"))
 
 try:
     baseline = open("migrations/0000_recovered_baseline.sql").read()

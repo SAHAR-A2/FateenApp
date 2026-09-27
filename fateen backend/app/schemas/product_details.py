@@ -35,6 +35,9 @@ class NutritionDetails(BaseModel):
     relationship_type: str
     confidence_level: float = Field(ge=0, le=1)
     evidence_type: Optional[str] = None
+    # Basis the amount refers to (e.g. PER_100G, PER_SERVING). Without it
+    # two values for the same nutrient are not comparable.
+    measurement_basis: Optional[str] = None
 
 
 class ProductDetailsResponse(BaseModel):

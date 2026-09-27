@@ -9,6 +9,7 @@ SAMPLE_PRODUCT = {
     "confidence_level": 0.95,
     "product_category_id": 1,
     "lifecycle_status": "ACTIVE",
+    "image_url": None,
 }
 
 SAMPLE_INGREDIENTS = [
@@ -125,6 +126,6 @@ class TestProductDetails:
         data = response.json()
         expected_top_keys = {
             "internal_code", "name", "description", "confidence_level",
-            "lifecycle_status", "ingredients", "allergens", "health_flags", "nutrition",
+            "lifecycle_status", "image_url", "ingredients", "allergens", "health_flags", "nutrition",
         }
         assert set(data.keys()) == expected_top_keys
