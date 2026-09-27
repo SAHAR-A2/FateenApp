@@ -1,0 +1,4 @@
+# migrate.py compares the MD5 of each file's exact bytes with the Cloud
+# ledger, which holds LF checksums. Keep LF on every OS (Git for Windows
+# would otherwise check out CRLF and every migration would read MODIFIED).
+*.sql text eol=lf

@@ -129,7 +129,8 @@ def main(argv: list[str] | None = None) -> int:
         ),
     }
 
-    dirty = "yes" if _git("status", "--porcelain", "--", ".") else "no"
+    # The report folder itself is untracked; it is not a code change.
+    dirty = "yes" if _git("status", "--porcelain", "--untracked-files=no", "--", ".") else "no"
     meta = [
         f"started_utc: {started.strftime('%Y-%m-%dT%H:%M:%SZ')}",
         f"git_branch: {_git('rev-parse', '--abbrev-ref', 'HEAD')}",

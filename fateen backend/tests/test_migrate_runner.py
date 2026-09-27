@@ -34,6 +34,20 @@ def test_repository_migrations_are_ordered_and_unique(migrations):
     assert len(set(m.order for m in migrations)) == len(migrations)
 
 
+def test_migration_files_are_lf(migrations):
+    # The Cloud ledger holds MD5s of LF files (0053 matches only as LF).
+    # A CRLF checkout, e.g. Git for Windows without migrations/.gitattributes,
+    # would make every applied migration read MODIFIED.
+    crlf = [m.version for m in migrations if b"\r" in m.path.read_bytes()]
+    assert not crlf, f"CRLF line endings in {crlf}; check migrations/.gitattributes"
+
+
+def test_cloud_ledger_checksum_for_0053(migrations):
+    # Read from Cloud public.schema_migrations on 2026-09-27.
+    m = next(m for m in migrations if m.version.startswith("0053_"))
+    assert m.checksum == "0005816bb69bd7d0dcec7a25a8caac3b"
+
+
 def test_checksum_matches_legacy_ledger_format():
     # Recorded for 0001 in docs/12_migrations.txt by the legacy migrate.ps1.
     legacy = migrate.Migration(

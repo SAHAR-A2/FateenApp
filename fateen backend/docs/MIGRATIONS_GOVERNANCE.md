@@ -51,7 +51,7 @@ which reports:
 |----------------------|---------------------|
 | `0001_...` - `0039_...`, `002_collector_tables` | Yes: legacy chain, covered by `0000_recovered_baseline.sql` |
 | `0040_security_hardening.sql` | **No** |
-| `0041` | **No** (recorded without a name) |
+| `0041` | **No** (its ledger checksum column holds the name `phase3_evidence_records`) |
 | `0042_pilot_source_priorities_seed`, `0043_pilot_provider_failure_statuses` | Yes (self-registered) |
 | `0044_open_food_facts_source` | **No** |
 | `0045_open_food_facts_reference_ingredients` | **No** |
@@ -59,6 +59,46 @@ which reports:
 | `0048_off_pilot_reference_ingredients` ... `0050_...` | **No** |
 | `0051_off_pilot_reference_ingredients.sql` | **No** |
 | `0052` (fateen_app write grants, Phase 12; applied after the snapshot) | **No**. `0053` cites it |
+
+### Live check, 2026-09-27
+
+`scripts/cloud_readonly_report.py` ran against Cloud (as `postgres`,
+PostgreSQL 17.6, every connection read-only) at commit `c8f99f5`. The ledger
+now has 53 rows. `status` reported `DRIFT`, as expected:
+
+- `APPLIED`: `0000` (through the legacy chain), `0042`, `0043`.
+- `PENDING`: `003_pilot_constraints.sql` (see below) and `0054`.
+- `NOT IN REPO`: the ten versions listed in the table above.
+- `0053` read `MODIFIED` only because Git for Windows had checked the file
+  out with CRLF line endings. As LF its MD5 equals the ledger's, so the
+  applied file and the repository file are identical.
+  `migrations/.gitattributes` now pins LF, and `test_migration_files_are_lf`
+  fails on a CRLF checkout.
+
+Cloud ledger checksums for the missing files. A file copied into
+`migrations/` must have exactly this MD5 (`status` checks it); the
+`fateen-pilot-*` labels cannot be verified:
+
+| Ledger version | Ledger checksum |
+|----------------|-----------------|
+| `0040_security_hardening.sql` | `6113aec56c407133ff607a1cff4cea40` |
+| `0041` | `phase3_evidence_records` (a name, not an MD5) |
+| `0044_open_food_facts_source` | `fateen-pilot-0044-v1` |
+| `0045_open_food_facts_reference_ingredients` | `fateen-pilot-0045-v1` |
+| `0046_off_nutrition_reference_salt` | `fateen-pilot-0046-v1` |
+| `0048_off_pilot_reference_ingredients` | `37f0138f42f7585f7d4e9262d0ae1214` |
+| `0049_off_pilot_reference_ingredients` | `5ec6f38db96b12f90aa7f773b3f2c484` |
+| `0050_off_pilot_reference_ingredients` | `961384afc0a640a399994c53f4307bd9` |
+| `0051_off_pilot_reference_ingredients.sql` | `2170032cd67c23a2c2f3e35ab5717a85` |
+| `0052_restore_fateen_app_write_path.sql` | `7ea40c01a189180ea79dc525459b2828` |
+| `0053_restore_fateen_app_history_write_path.sql` | `0005816bb69bd7d0dcec7a25a8caac3b` (matches this repository) |
+
+The data audit of the same run found, all left in place for review:
+16 active barcodes with an invalid GS1 check digit (7 on test products),
+6 products whose nutrition values are all 0, and 9 live products without a
+barcode (7 Nadec seed products and 2 test rows, `PRIV_TEST_001` and
+`test-app-role-001`). No impossible nutrition values and no barcode shared
+by several products.
 
 Two points follow from the snapshot:
 
