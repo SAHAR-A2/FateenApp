@@ -88,7 +88,8 @@ To close the gap:
 1. Copy each missing file from `fateen_release_audit/migrations/` without
    changing a byte.
 2. Run `python scripts/migrate.py status` against Cloud with a read-only or
-   owner URL. Every repository file should show `APPLIED`, with no
+   owner URL (`scripts/cloud_readonly_report.py` runs it together with the
+   audit and the seed export). Every repository file should show `APPLIED`, with no
    `NOT IN REPO` or `MODIFIED` rows.
 3. Commit the files together with that status output.
 

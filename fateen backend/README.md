@@ -56,6 +56,18 @@ python scripts/db_audit.py --database-url URL        # invalid barcodes, impossi
 python scripts/export_reference_seed.py --database-url URL --out seed/reference_data.sql
 ```
 
+To run every read-only Cloud check at once (status, audit, seed export) and
+save the results in one folder:
+
+```bash
+CLOUD_DATABASE_URL=... python scripts/cloud_readonly_report.py
+```
+
+It switches every connection to `default_transaction_read_only`, so
+PostgreSQL rejects any write. Cloud sessions of Claude Code cannot open a
+PostgreSQL connection (their network allows HTTPS only), so run it from a
+machine that can reach the database.
+
 Both scripts run in a `READ ONLY` transaction, so they are safe against
 Cloud. The exported seed holds lookup and vocabulary tables only and can
 rebuild a fresh environment: baseline, then the seed, then `migrate.py apply`.
