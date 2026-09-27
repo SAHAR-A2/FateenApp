@@ -121,19 +121,28 @@ def evaluate_compatibility(
     matched_allergens: list[MatchedAllergen] = []
     health_condition_results: list[HealthConditionResult] = []
 
-    has_any_enrichment = bool(
-        details["ingredients"] or details["allergens"] or details["nutrition"]
-    )
+    has_allergen_basis = bool(details["ingredients"] or details["allergens"])
+    has_any_enrichment = has_allergen_basis or bool(details["nutrition"])
 
     if not has_any_enrichment:
         verdict.consider(
             STATUS_INSUFFICIENT_DATA,
             "لا تتوفر بيانات كافية عن مكونات هذا المنتج بعد",
         )
-    else:
-        product_allergens_by_code = {
-            a["internal_code"]: a for a in details["allergens"]
-        }
+    elif request.allergies and not has_allergen_basis:
+        # Nutrition alone says nothing about allergens: without an
+        # ingredient list or allergen evidence, "no match" is not "safe".
+        verdict.consider(
+            STATUS_INSUFFICIENT_DATA,
+            "لا تتوفر قائمة مكونات أو بيانات مسببات حساسية لهذا المنتج للتحقق من حساسيتك",
+        )
+    if has_allergen_basis:
+        product_allergens_by_code = {}
+        for a in details["allergens"]:
+            # A CONTAINS row outranks a MAY_CONTAIN row for the same allergen.
+            current = product_allergens_by_code.get(a["internal_code"])
+            if current is None or current.get("relationship_type") == "MAY_CONTAIN_ALLERGEN":
+                product_allergens_by_code[a["internal_code"]] = a
 
         for allergy in request.allergies:
             resolution = resolve_allergen_code(allergy.tag)
@@ -175,9 +184,13 @@ def evaluate_compatibility(
                     evidence_type=hit.get("evidence_type"),
                 )
             )
+            if hit.get("relationship_type") == "MAY_CONTAIN_ALLERGEN":
+                allergen_reason = f"قد يحتوي هذا المنتج على آثار من مسبب حساسية ({hit['name']})"
+            else:
+                allergen_reason = f"يحتوي هذا المنتج على مسبب حساسية ({hit['name']})"
             verdict.consider(
                 allergen_status,
-                f"يحتوي هذا المنتج على مسبب حساسية ({hit['name']})",
+                allergen_reason,
                 confidence=hit["confidence_level"],
             )
 

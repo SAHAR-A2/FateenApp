@@ -203,3 +203,76 @@ class TestCompatibilityNotFound:
         )
         assert response.status_code == 404
         assert response.json()["detail"] == "Product barcode not found"
+
+
+class TestCompatibilityAllergenEvidence:
+    @patch("app.services.compatibility_service.get_product_details_by_barcode")
+    def test_nutrition_only_product_is_not_safe_for_allergic_user(
+            self, mock_details, authenticated_client
+    ):
+        """Nutrition values say nothing about allergens; never report SAFE."""
+        mock_details.return_value = {
+            **SAMPLE_DETAILS,
+            "ingredients": [],
+            "allergens": [],
+            "nutrition": [{
+                "nutrition_type": "ENERGY", "amount_value": 500.0, "unit": "KCAL",
+                "relationship_type": "MEASURED_VALUE", "confidence_level": 0.5,
+                "evidence_type": "DATABASE", "measurement_basis": "PER_100G",
+            }],
+        }
+        response = authenticated_client.post(
+            ENDPOINT,
+            json={"allergies": [{"tag": "en:peanuts", "severity": "شديد"}], "diseases": []},
+        )
+        assert response.json()["status"] == "INSUFFICIENT_DATA"
+
+    @patch("app.services.compatibility_service.get_product_details_by_barcode")
+    def test_nutrition_only_product_without_allergies_is_safe(
+            self, mock_details, authenticated_client
+    ):
+        mock_details.return_value = {
+            **SAMPLE_DETAILS,
+            "ingredients": [],
+            "allergens": [],
+            "nutrition": [{
+                "nutrition_type": "ENERGY", "amount_value": 500.0, "unit": "KCAL",
+                "relationship_type": "MEASURED_VALUE", "confidence_level": 0.5,
+                "evidence_type": "DATABASE", "measurement_basis": "PER_100G",
+            }],
+        }
+        response = authenticated_client.post(
+            ENDPOINT, json={"allergies": [], "diseases": []},
+        )
+        assert response.json()["status"] == "SAFE"
+
+    @patch("app.services.compatibility_service.get_product_details_by_barcode")
+    def test_may_contain_is_flagged_with_trace_wording(self, mock_details, authenticated_client):
+        mock_details.return_value = {
+            **SAMPLE_DETAILS,
+            "allergens": [{
+                "internal_code": "PEANUT", "name": "Peanut",
+                "relationship_type": "MAY_CONTAIN_ALLERGEN",
+                "confidence_level": 0.7, "evidence_type": "LABEL",
+            }],
+        }
+        data = authenticated_client.post(
+            ENDPOINT,
+            json={"allergies": [{"tag": "en:peanuts", "severity": "شديد"}], "diseases": []},
+        ).json()
+        assert data["status"] == "DANGER"
+        assert "قد يحتوي" in data["reason"]
+
+    @patch("app.services.compatibility_service.get_product_details_by_barcode")
+    def test_contains_outranks_may_contain_for_same_allergen(
+            self, mock_details, authenticated_client
+    ):
+        contains = SAMPLE_DETAILS["allergens"][0]
+        may_contain = {**contains, "relationship_type": "MAY_CONTAIN_ALLERGEN"}
+        mock_details.return_value = {**SAMPLE_DETAILS, "allergens": [contains, may_contain]}
+        data = authenticated_client.post(
+            ENDPOINT,
+            json={"allergies": [{"tag": "en:peanuts", "severity": "شديد"}], "diseases": []},
+        ).json()
+        assert data["status"] == "DANGER"
+        assert data["reason"].startswith("يحتوي")

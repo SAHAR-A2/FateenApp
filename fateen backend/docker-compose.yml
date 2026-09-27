@@ -13,7 +13,7 @@ services:
   api:
     build: .
     ports:
-      - "8000:8000"
+      - "8000:8080"  # the image listens on $PORT (default 8080)
     environment:
       DATABASE_URL: postgresql://fateen:fateen@db:5432/fateen
       AGENT_DRY_RUN: "true"
