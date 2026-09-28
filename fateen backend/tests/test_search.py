@@ -64,3 +64,13 @@ class TestProductSearch:
         response = client.get("/api/v1/products/search?q=milk")
         assert response.status_code == 200
         assert response.json()["results"][0]["barcode"] is None
+
+
+def test_results_are_ordered_by_where_the_first_word_matches():
+    from app.repositories.product_repository import _rank_patterns
+
+    starts, words = _rank_patterns("حليب طازج")
+    assert "حليب %" in starts and "الحليب %" in starts   # "حليب طازج ..." first
+    assert "% حليب %" in words                          # then "المراعي حليب ..."
+    assert "milk %" in starts                           # the English alias too
+    assert not any(p.endswith("حليب%") for p in starts)  # whole words, not "Milkybar"

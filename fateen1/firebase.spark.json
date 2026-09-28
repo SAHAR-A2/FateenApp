@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "build/web",
+    "ignore": ["firebase.json", "firebase.spark.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [{ "source": "**", "destination": "/index.html" }]
+  },
+  "firestore": {
+    "rules": "firestore.rules"
+  }
+}

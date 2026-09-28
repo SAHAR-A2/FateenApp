@@ -68,6 +68,19 @@ def _search_patterns(query: str) -> list[list[str]]:
     return groups
 
 
+def _rank_patterns(query: str) -> tuple[list[str], list[str]]:
+    """ILIKE patterns for ordering search results by the first query word:
+    a name that starts with it, then a name containing it as a word."""
+    groups = _search_patterns(query)
+    if not groups:
+        return [], []
+    values = [pattern[1:-1] for pattern in groups[0]]
+    values += [f"ال{v}" for v in values if not v.isascii() and not v.startswith("ال")]
+    starts = [p for v in values for p in (v, f"{v} %")]
+    words = [p for v in values for p in (f"% {v}", f"% {v} %")]
+    return starts, words
+
+
 def _fetchall_with_retry(sql: str, params: tuple) -> list[dict]:
     """Reset stale cloud DB sockets, then retry one failed read."""
     for attempt in range(2):
@@ -147,6 +160,7 @@ def search_products(query: str, limit: int = 25, language: str = "ar") -> list[d
         )""")
         params.extend([patterns] * 7)
     filters_sql = " AND ".join(word_filters) or "TRUE"
+    starts, words = _rank_patterns(query)
 
     sql = f"""
     SELECT
@@ -217,15 +231,28 @@ def search_products(query: str, limit: int = 25, language: str = "ar") -> list[d
             AND (pi.effective_to IS NULL OR pi.effective_to > NOW())
       )
       AND {filters_sql}
-    ORDER BY p.name
+    ORDER BY
+        CASE
+            WHEN p.name ILIKE ANY(%s::text[]) OR EXISTS (
+                SELECT 1 FROM public.product_translations t
+                WHERE t.product_id = p.id AND t.deleted_at IS NULL AND t.name ILIKE ANY(%s::text[])
+            ) THEN 0
+            WHEN p.name ILIKE ANY(%s::text[]) OR EXISTS (
+                SELECT 1 FROM public.product_translations t
+                WHERE t.product_id = p.id AND t.deleted_at IS NULL AND t.name ILIKE ANY(%s::text[])
+            ) THEN 1
+            ELSE 2
+        END,
+        length(p.name),
+        p.name
     LIMIT %s
     """
 
-    return _fetchall_with_retry(sql, (language, *params, limit))
+    return _fetchall_with_retry(sql, (language, *params, starts, starts, words, words, limit))
 
 
 def get_alternative_candidates_by_category(
-    category_id, exclude_internal_code: str, limit: int = 15
+    category_id, exclude_internal_code: str, limit: int = 500
 ) -> list[dict]:
     """Candidate retrieval for the alternatives feature: other active
     products in the same product_category_id. This only decides which
@@ -236,7 +263,19 @@ def get_alternative_candidates_by_category(
     SELECT
         p.internal_code,
         p.name,
-        {_REPRESENTATIVE_BARCODE_SUBQUERY}
+        (SELECT pt.name FROM public.product_translations pt JOIN public.languages lang ON lang.id = pt.language_id
+         WHERE pt.product_id = p.id AND lang.code = 'en' AND pt.deleted_at IS NULL LIMIT 1) AS name_en,
+        {_REPRESENTATIVE_BARCODE_SUBQUERY},
+        (
+            SELECT i.storage_uri
+            FROM public.product_images pi
+            JOIN public.images i ON i.id = pi.image_id
+            WHERE pi.product_id = p.id AND pi.deleted_at IS NULL AND i.deleted_at IS NULL
+              AND (pi.effective_from IS NULL OR pi.effective_from <= NOW())
+              AND (pi.effective_to IS NULL OR pi.effective_to > NOW())
+            ORDER BY pi.confidence_level DESC, pi.created_at DESC
+            LIMIT 1
+        ) AS image_url
     FROM public.products p
     WHERE p.deleted_at IS NULL
       AND p.product_category_id = %s

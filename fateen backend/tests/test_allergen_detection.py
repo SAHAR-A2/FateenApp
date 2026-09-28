@@ -55,3 +55,23 @@ def test_off_tags_and_merge_keep_contains_over_may_contain():
 def test_statement_plausibility(text, ok):
     from app.catalog.allergen_detection import is_plausible_statement
     assert is_plausible_statement(text) is ok
+
+
+@pytest.mark.parametrize("names,expected", [
+    (("حليب طازج كامل الدسم", "Fresh Milk Full Fat"), {"MILK"}),
+    (("جبن موزاريلا", "Mozzarella cheese"), {"MILK"}),
+    (("زبدة الفول السوداني", "Peanut Butter"), {"PEANUT"}),        # peanut butter is not dairy
+    (("مشروب اللوز", "Almond milk"), {"TREE_NUTS"}),               # almond milk is not dairy
+    (("سعودية مشروب الصويا", "Saudia soy drink"), {"SOY"}),
+    (("حليب جوز الهند", "Coconut milk"), set()),
+    (("سمن نباتي نقي", "Pure vegetable ghee"), set()),
+    (("ناتشرلاند معكرونة بالحنطة السوداء", "Buckwheat pasta"), set()),   # buckwheat is not wheat
+    (("خبز مسطح خالٍ من الجلوتين", "Gluten free flat bread"), set()),
+    (("Peanut-Free Snack",), set()),
+    (("ندى حليب خالي من اللاكتوز", "Lactose free milk"), {"MILK"}),       # still milk
+    (("تونة لحم فاتح", "Light meat tuna"), {"FISH"}),
+    (("خبز توست أبيض", "Sliced White Bread"), set()),                    # a name alone does not say wheat
+])
+def test_allergens_named_by_the_product(names, expected):
+    from app.catalog.allergen_detection import detect_in_name
+    assert detect_in_name(*names) == expected

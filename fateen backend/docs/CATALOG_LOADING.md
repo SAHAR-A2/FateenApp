@@ -64,11 +64,46 @@ evidence: a product with a statement and no peanut row has been read and
 contains no peanut word. A product with neither statement nor allergen rows
 stays INSUFFICIENT_DATA for an allergic user.
 
+The product's own name is positive evidence too (`detect_in_name`): "Fresh
+Milk", "جبن موزاريلا" or "Peanut Butter" contain milk, milk and peanut even
+when the source's ingredient list is missing or incomplete (one whole milk's
+only statement was "Vitamins, sodium fluoride added"). Plant products
+("almond milk", "peanut butter", "vegetable ghee", buckwheat) and free-from
+claims ("gluten free", "خالي من اللاكتوز") are not read as the allergen. A name
+never proves an allergen is absent.
+
 ## Existing products
 
 A barcode already in FateenDB is only completed: a missing translation,
 photo, category, ingredient statement, allergen or nutrition set is added.
-Stored values are never changed.
+Stored values are never changed, with one exception: categories reviewed by
+hand in `seed/catalog/reviewed_categories.json` correct a stored category
+when the loader is run with `--correct-categories`:
+
+```
+python scripts/load_catalog.py seed/catalog/manifest_2026-09-28.json \
+    --correct-categories seed/catalog/reviewed_categories.json            # preview
+python scripts/load_catalog.py seed/catalog/manifest_2026-09-28.json \
+    --correct-categories seed/catalog/reviewed_categories.json --apply --database-url URL
+```
+
+The 2026-09-28 review moved 73 products whose category came from a flavour
+or a word in the name (cheese-flavoured crisps and peanut butter under
+dairy, tuna under beverages) to the right one. Alternatives are drawn from
+the same category, so a wrong category means wrong alternatives.
+
+## Checking the runtime account
+
+Before deploying the API, run as the account the server will use:
+
+```
+python scripts/check_runtime_access.py --database-url RUNTIME_URL
+```
+
+It is read-only. It fails if a table the API reads is not granted to that
+account or is hidden by row level security (migration 0057 grants the
+read access), and it runs the real search, details, allergy, diabetes,
+blood-pressure and alternatives code on catalog products.
 
 ## Prerequisites
 

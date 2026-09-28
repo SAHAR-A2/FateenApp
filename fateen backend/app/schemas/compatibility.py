@@ -57,6 +57,7 @@ class ProductSummary(BaseModel):
     barcode: str
     lifecycle_status: str
     confidence_level: float = Field(ge=0, le=1)
+    image_url: Optional[str] = None
 
 
 class MatchedAllergen(BaseModel):

@@ -381,3 +381,37 @@ class TestIngredientStatementEvidence:
         response = authenticated_client.post(
             ENDPOINT, json={"allergies": [{"tag": "en:peanuts", "severity": "شديد"}], "diseases": []})
         assert response.json()["status"] == "INSUFFICIENT_DATA"
+
+
+class TestAllergenNamedByTheProduct:
+    """A product's name is positive evidence of what it is made of, even when
+    the source's ingredient list is missing or incomplete (seen: a whole milk
+    whose only statement was "Vitamins, sodium fluoride added")."""
+
+    MILK_DETAILS = {
+        **SAMPLE_DETAILS,
+        "name": "سعودية حليب كامل الدسم",
+        "name_ar": "سعودية حليب كامل الدسم",
+        "name_en": "Saudia whole milk",
+        "ingredients": [],
+        "allergens": [],
+        "ingredient_statements": {"en": "Vitamins, sodium fluoride added"},
+    }
+
+    @patch("app.services.allergen_mapping.live_allergen_codes", return_value=frozenset({"MILK", "PEANUT"}))
+    @patch("app.services.compatibility_service.get_product_details_by_barcode")
+    def test_milk_named_product_is_danger_for_milk_allergy(self, mock_details, _codes, authenticated_client):
+        mock_details.return_value = self.MILK_DETAILS
+        response = authenticated_client.post(
+            ENDPOINT, json={"allergies": [{"tag": "en:milk", "severity": "شديد"}], "diseases": []})
+        body = response.json()
+        assert body["status"] == "DANGER"
+        assert body["matched_allergens"][0]["evidence_type"] == "PRODUCT_NAME"
+
+    @patch("app.services.allergen_mapping.live_allergen_codes", return_value=frozenset({"MILK", "PEANUT"}))
+    @patch("app.services.compatibility_service.get_product_details_by_barcode")
+    def test_name_without_data_is_not_evidence_of_absence(self, mock_details, _codes, authenticated_client):
+        mock_details.return_value = {**self.MILK_DETAILS, "ingredient_statements": {}, "nutrition": []}
+        response = authenticated_client.post(
+            ENDPOINT, json={"allergies": [{"tag": "en:peanuts", "severity": "شديد"}], "diseases": []})
+        assert response.json()["status"] == "INSUFFICIENT_DATA"

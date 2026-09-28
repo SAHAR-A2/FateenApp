@@ -129,3 +129,38 @@ class TestAlternatives:
         data = response.json()
         assert data["alternatives"] == []
         assert data["candidates_considered"] == 0
+
+
+def test_related_candidates_rank_first_and_unrelated_ones_are_dropped():
+    from app.services.alternatives_service import rank_by_similarity
+
+    candidates = [
+        {"name": "آيس كريم الفانيليا", "name_en": "Vanilla ice cream"},
+        {"name": "بسكويت دايجستف خالي من السكر", "name_en": "Sugar free digestive biscuits"},
+        {"name": "بسكويت الشاي", "name_en": "Tea biscuits"},
+        {"name": "بسكويت دايجستف بالشوكولاتة", "name_en": "Digestive milk chocolate"},
+    ]
+    ranked = rank_by_similarity(("ماكفيتيز دايجستف بسكويت", "McVitie's Digestives"), candidates)
+    names = [c["name_en"] for c in ranked]
+    assert names[0] in ("Sugar free digestive biscuits", "Digestive milk chocolate")
+    assert "Vanilla ice cream" not in names
+
+
+def test_unrelated_category_keeps_category_order():
+    from app.services.alternatives_service import rank_by_similarity
+
+    candidates = [{"name": "أ", "name_en": "Apple"}, {"name": "ب", "name_en": "Pear"}]
+    assert rank_by_similarity(("تمر", "Dates"), candidates) == candidates
+
+
+@patch(
+    "app.services.alternatives_service.get_alternative_candidates_by_category",
+    return_value=[{"internal_code": "SNACK_PEANUT_FREE", "name": "Peanut-Free Snack",
+                   "barcode": "6281000000090", "image_url": "https://images.example/snack.jpg"}],
+)
+@patch("app.services.compatibility_service.get_product_details_by_barcode", side_effect=_fake_details)
+@patch("app.services.alternatives_service.get_product_details_by_barcode", side_effect=_fake_details)
+def test_alternative_carries_its_image(_a, _b, _c, authenticated_client):
+    data = authenticated_client.post(
+        ENDPOINT, json={"allergies": [{"tag": "en:peanuts", "severity": "شديد"}], "diseases": []}).json()
+    assert data["alternatives"][0]["product"]["image_url"] == "https://images.example/snack.jpg"

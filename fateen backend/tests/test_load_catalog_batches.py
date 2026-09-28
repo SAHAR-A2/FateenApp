@@ -30,11 +30,11 @@ def test_preview_in_batches_survives_a_dropped_connection(tmp_path, monkeypatch)
     manifest.write_text(json.dumps([_entry("6281007031585"), _entry("6281007053662"), _entry("123")]))
     real, calls = loader._run_batch, []
 
-    def flaky(conn, refs, batch):
+    def flaky(conn, refs, batch, corrections=None):
         calls.append(len(batch))
         if len(calls) == 1:
             raise psycopg.OperationalError("the connection is lost")
-        return real(conn, refs, batch)
+        return real(conn, refs, batch, corrections)
 
     monkeypatch.setattr(loader, "_run_batch", flaky)
     monkeypatch.setattr(loader.time, "sleep", lambda s: None)

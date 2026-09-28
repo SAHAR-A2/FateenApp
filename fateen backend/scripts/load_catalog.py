@@ -27,6 +27,9 @@ Rules:
   * An existing barcode is only completed: a missing translation, image,
     category, ingredient statement, allergen or nutrition set is added.
     Nothing already stored is changed; a differing value is reported.
+    The one exception is --correct-categories FILE (barcode -> category,
+    reviewed by hand): a listed product whose stored category differs is
+    moved to the reviewed one.
   * Each product is written in its own savepoint, so one bad entry is
     reported and skipped without losing the others.
   * Allergens found in an ingredient statement (app.catalog.allergen_detection)
@@ -182,7 +185,7 @@ def _brand_id(conn, refs: Refs, entry: dict, source_id):
     ).fetchone()["id"]
 
 
-def load_entry(conn, refs: Refs, entry: dict) -> dict:
+def load_entry(conn, refs: Refs, entry: dict, corrected_category: str | None = None) -> dict:
     """Write one entry. Returns {"action": "created"|"completed"|"unchanged", "added": [...]}."""
     source_id = refs.sources[entry["source"].upper()]
     evidence_id = refs.evidence.get("MANUFACTURER" if entry["source"].upper() == "ALMARAI_WEBSITE" else "DATABASE")
@@ -228,6 +231,10 @@ def load_entry(conn, refs: Refs, entry: dict) -> dict:
             conn.execute("UPDATE public.products SET product_category_id = %s WHERE id = %s",
                          (refs.categories[entry["category"].upper()], product_id))
             added.append("category")
+        elif corrected_category and found["product_category_id"] != refs.categories[corrected_category.upper()]:
+            conn.execute("UPDATE public.products SET product_category_id = %s WHERE id = %s",
+                         (refs.categories[corrected_category.upper()], product_id))
+            added.append("category corrected")
 
     for lang in ("ar", "en"):
         name = (entry.get(f"name_{lang}") or "").strip()
@@ -363,7 +370,7 @@ def _reconnect(url: str, tries: int = 8):
     raise SystemExit("Could not reconnect to the database. Check the network and run the same command again.")
 
 
-def _run_batch(conn, refs: Refs, batch: list[dict]) -> list[dict]:
+def _run_batch(conn, refs: Refs, batch: list[dict], corrections: dict | None = None) -> list[dict]:
     results = []
     for entry in batch:
         problems = validate(entry, refs)
@@ -372,7 +379,7 @@ def _run_batch(conn, refs: Refs, batch: list[dict]) -> list[dict]:
             continue
         try:
             with conn.transaction():
-                result = load_entry(conn, refs, entry)
+                result = load_entry(conn, refs, entry, (corrections or {}).get(str(entry["barcode"])))
         except psycopg.OperationalError:
             raise  # the connection is gone: retry the whole batch
         except psycopg.Error as exc:
@@ -388,6 +395,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--apply", action="store_true", help="commit (default: preview, rolled back)")
     parser.add_argument("--batch", type=int, default=25, help="entries per transaction (default 25)")
     parser.add_argument("--report", help="per-product JSON report (default: <manifest>.report.json)")
+    parser.add_argument("--correct-categories", metavar="FILE",
+                        help="barcode -> category reviewed by hand; moves listed products whose stored category differs")
     args = parser.parse_args(argv)
 
     if args.apply and not args.database_url:
@@ -397,6 +406,8 @@ def main(argv: list[str] | None = None) -> int:
         raise SystemExit("No database URL: pass --database-url or set CLOUD_DATABASE_URL")
     entries = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
     report_path = Path(args.report or f"{args.manifest}.report.json")
+    corrections = (json.loads(Path(args.correct_categories).read_text(encoding="utf-8"))
+                   if args.correct_categories else None)
 
     # Each batch is its own transaction: committed with --apply, rolled back
     # in a preview. A dropped connection is reopened and the batch retried;
@@ -416,7 +427,7 @@ def main(argv: list[str] | None = None) -> int:
                     # transaction a savepoint; a preview forces it to roll
                     # back, so nothing of the batch is ever committed.
                     with conn.transaction(force_rollback=not args.apply):
-                        results = _run_batch(conn, refs, batch)
+                        results = _run_batch(conn, refs, batch, corrections)
                     break
                 except psycopg.OperationalError as exc:
                     if attempt == 3:

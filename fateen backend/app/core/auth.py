@@ -10,8 +10,8 @@ configuration:
 
   - `_get_firebase_app()` reads `GOOGLE_APPLICATION_CREDENTIALS` when a
     key file is explicitly configured; otherwise `FIREBASE_PROJECT_ID`
-    enables Application Default Credentials (the recommended Cloud Run
-    service identity flow).
+    alone is enough: tokens are checked against Google's public keys with
+    an anonymous credential, on Cloud Run or any other host.
   - If neither is configured, `_get_firebase_app()` returns None,
     `verify_firebase_token()` then always returns None, and
     `require_authenticated_user` raises 401 for every request, including
@@ -67,11 +67,16 @@ def _get_firebase_app():
     try:
         import firebase_admin
         from firebase_admin import credentials
+        from google.auth.credentials import AnonymousCredentials
 
+        # Verifying an ID token only needs Google's public signing keys, not
+        # a Google credential, so without a key file an anonymous credential
+        # is used. That works on Cloud Run and on hosts outside Google Cloud
+        # (e.g. Render), where Application Default Credentials do not exist.
         cred = (
             credentials.Certificate(credential_path)
             if credential_path
-            else credentials.ApplicationDefault()
+            else AnonymousCredentials()
         )
         options = {"projectId": project_id} if project_id else None
         _firebase_app = firebase_admin.initialize_app(cred, options=options)
