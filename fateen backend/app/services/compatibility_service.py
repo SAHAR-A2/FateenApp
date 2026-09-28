@@ -22,6 +22,7 @@ from typing import Optional
 
 from app.services.product_details_service import get_product_details_by_barcode
 from app.services.allergen_mapping import resolve_allergen_codes
+from app.catalog.allergen_detection import detect_in_name
 from app.collector import health_conditions as health_conditions_engine
 from app.schemas.compatibility import (
     CompatibilityRequest,
@@ -119,6 +120,14 @@ def _matches_condition_name(condition: dict, disease_name: str) -> bool:
     )
 
 
+_ALLERGEN_NAMES = {
+    "CELERY": "Celery", "EGG": "Egg", "FISH": "Fish", "GLUTEN": "Gluten", "LUPIN": "Lupin",
+    "MILK": "Milk", "MOLLUSCS": "Molluscs", "MUSTARD": "Mustard", "PEANUT": "Peanut",
+    "SESAME": "Sesame", "SHELLFISH": "Shellfish", "SOY": "Soy", "SULPHITES": "Sulphites",
+    "TREE_NUTS": "Tree Nuts", "WHEAT": "Wheat",
+}
+
+
 def evaluate_compatibility(
     barcode: str, request: CompatibilityRequest
 ) -> Optional[CompatibilityResponse]:
@@ -163,13 +172,28 @@ def evaluate_compatibility(
             STATUS_INSUFFICIENT_DATA,
             "لا تتوفر قائمة مكونات أو بيانات مسببات حساسية لهذا المنتج للتحقق من حساسيتك",
         )
-    if has_allergen_basis:
-        product_allergens_by_code = {}
-        for a in details["allergens"]:
-            # A CONTAINS row outranks a MAY_CONTAIN row for the same allergen.
-            current = product_allergens_by_code.get(a["internal_code"])
-            if current is None or current.get("relationship_type") == "MAY_CONTAIN_ALLERGEN":
-                product_allergens_by_code[a["internal_code"]] = a
+    product_allergens_by_code = {}
+    for a in details["allergens"]:
+        # A CONTAINS row outranks a MAY_CONTAIN row for the same allergen.
+        current = product_allergens_by_code.get(a["internal_code"])
+        if current is None or current.get("relationship_type") == "MAY_CONTAIN_ALLERGEN":
+            product_allergens_by_code[a["internal_code"]] = a
+    # What the product is called is evidence of what it is made of: "Fresh
+    # Milk" contains milk even when the source's ingredient list is missing
+    # or incomplete. Positive evidence only -- a name never proves absence,
+    # so it does not count as an allergen basis above.
+    for code in detect_in_name(details.get("name"), details.get("name_ar"), details.get("name_en")):
+        current = product_allergens_by_code.get(code)
+        if current is None or current.get("relationship_type") == "MAY_CONTAIN_ALLERGEN":
+            product_allergens_by_code[code] = {
+                "internal_code": code,
+                "name": _ALLERGEN_NAMES.get(code, code),
+                "relationship_type": "CONTAINS_ALLERGEN",
+                "confidence_level": details["confidence_level"],
+                "evidence_type": "PRODUCT_NAME",
+            }
+
+    if product_allergens_by_code or has_allergen_basis:
 
         for allergy in request.allergies:
             resolution = resolve_allergen_codes(allergy.tag)

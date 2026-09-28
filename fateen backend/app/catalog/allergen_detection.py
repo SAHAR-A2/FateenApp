@@ -68,7 +68,8 @@ _NOT_ALLERGENS = re.compile(
     r"(cocoa butter|shea butter|beurre de cacao|زبدة الكاكاو|زبدة كاكاو|"
     r"coconut milk|coconut cream|lait de coco|حليب جوز الهند|كريمة جوز الهند|"
     r"coconut|noix de coco|جوز الهند|nutmeg|noix de muscade|جوزة الطيب|جوز الطيب|"
-    r"butternut|cream of tartar|crème de tartre|كريم تارتار)",
+    r"butternut|cream of tartar|crème de tartre|كريم تارتار|"
+    r"buckwheat|sarrasin|الحنطة السوداء|حنطة سوداء)",
     re.I,
 )
 
@@ -103,6 +104,32 @@ def detect(statement: str) -> dict[str, str]:
     result = {code: "MAY_CONTAIN" for code in _found(tail)}
     result.update({code: "CONTAINS" for code in _found(main)})
     return result
+
+
+# In a product NAME these phrases name a plant product: "almond milk" is
+# almonds, not milk; "peanut butter" is peanuts, not butter.
+_NAME_PLANT_PHRASES = re.compile(
+    r"\b(almond|oat|soy|soya|rice|cashew|hazelnut|peanut|nut|sesame|seed|apple|shea|cocoa)s?\s+(milk|drink|butter|cream)s?\b"
+    r"|(?:مشروب|حليب|زبدة|زبده)\s+(?:ال)?(لوز|شوفان|صويا|أرز|ارز|كاجو|بندق|فول السوداني|فول سوداني|مكسرات|سمسم|كاكاو)"
+    r"|vegetable ghee|سمن نباتي",
+    re.I,
+)
+# A name's "gluten-free" / "peanut free" / "خالي من اللاكتوز" claim is not
+# an ingredient. (Misspelt "cocunut milk" is coconut milk.)
+_NAME_FREE_FROM = re.compile(
+    r"\b\w+[\s-]*free\b|\b(?:free from|without|sans|no)\s+\w+|\bcocunut milk\b"
+    r"|(?:خال[يٍ]?|خالية)\s+من\s+\S+|بدون\s+\S+",
+    re.I,
+)
+
+
+def detect_in_name(*names: str) -> set[str]:
+    """Allergens a product's name says it is made of ("Fresh Milk", "جبن
+    موزاريلا", "Peanut Butter"). Positive evidence only: a name that names
+    no allergen says nothing about the ingredients."""
+    text = _NAME_FREE_FROM.sub(" ", " | ".join(n for n in names if n))
+    text = _NAME_PLANT_PHRASES.sub(lambda m: " " + (m.group(1) or m.group(3) or "") + " ", text)
+    return _found(text)
 
 
 # Open Food Facts allergen tags -> internal_code(s).
