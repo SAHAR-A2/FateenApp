@@ -67,6 +67,7 @@ class TestProductDetails:
             MagicMock(fetchall=lambda: SAMPLE_ALLERGENS),
             MagicMock(fetchall=lambda: SAMPLE_HEALTH_FLAGS),
             MagicMock(fetchall=lambda: SAMPLE_NUTRITION),
+            MagicMock(fetchone=lambda: {"present": False}),  # no 0056 statements table
         ]
 
         response = client.get("/api/v1/products/details/barcode/6281000000066")
@@ -101,6 +102,7 @@ class TestProductDetails:
             MagicMock(fetchall=lambda: []),
             MagicMock(fetchall=lambda: []),
             MagicMock(fetchall=lambda: []),
+            MagicMock(fetchone=lambda: {"present": False}),
         ]
 
         response = client.get("/api/v1/products/details/barcode/6281000000066")
@@ -120,12 +122,13 @@ class TestProductDetails:
             MagicMock(fetchall=lambda: SAMPLE_ALLERGENS),
             MagicMock(fetchall=lambda: SAMPLE_HEALTH_FLAGS),
             MagicMock(fetchall=lambda: SAMPLE_NUTRITION),
+            MagicMock(fetchone=lambda: {"present": False}),  # no 0056 statements table
         ]
 
         response = client.get("/api/v1/products/details/barcode/6281000000066")
         data = response.json()
         expected_top_keys = {
             "internal_code", "name", "description", "confidence_level",
-            "lifecycle_status", "image_url", "ingredients", "allergens", "health_flags", "nutrition",
+            "lifecycle_status", "image_url", "ingredients", "allergens", "health_flags", "nutrition", "ingredient_statements",
         }
         assert set(data.keys()) == expected_top_keys

@@ -359,3 +359,25 @@ class TestCompatibilityAllergenEvidence:
         ).json()
         assert data["status"] == "DANGER"
         assert data["reason"].startswith("يحتوي")
+
+
+class TestIngredientStatementEvidence:
+    @patch("app.services.allergen_mapping.live_allergen_codes", return_value=frozenset({"PEANUT"}))
+    @patch("app.services.compatibility_service.get_product_details_by_barcode")
+    def test_statement_without_the_allergen_is_evidence(self, mock_details, mock_codes, authenticated_client):
+        # The loader stores the allergens found in a statement, so a statement
+        # with no PEANUT row means peanut was not found in it.
+        mock_details.return_value = {**SAMPLE_DETAILS, "ingredients": [], "allergens": [],
+                                     "ingredient_statements": {"ar": "ماء، سكر"}}
+        response = authenticated_client.post(
+            ENDPOINT, json={"allergies": [{"tag": "en:peanuts", "severity": "شديد"}], "diseases": []})
+        assert response.json()["status"] == "SAFE"
+
+    @patch("app.services.compatibility_service.get_product_details_by_barcode")
+    def test_no_statement_and_no_allergens_is_still_insufficient(self, mock_details, authenticated_client):
+        mock_details.return_value = {**SAMPLE_DETAILS, "ingredients": [], "allergens": [],
+                                     "nutrition": [{"nutrition_type": "SUGAR", "amount_value": 1, "unit": "G",
+                                                    "confidence_level": 0.5}]}
+        response = authenticated_client.post(
+            ENDPOINT, json={"allergies": [{"tag": "en:peanuts", "severity": "شديد"}], "diseases": []})
+        assert response.json()["status"] == "INSUFFICIENT_DATA"

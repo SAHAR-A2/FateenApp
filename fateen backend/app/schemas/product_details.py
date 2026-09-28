@@ -51,3 +51,5 @@ class ProductDetailsResponse(BaseModel):
     allergens: list[AllergenDetails]
     health_flags: list[HealthFlagDetails]
     nutrition: list[NutritionDetails]
+    # Ingredient list as printed on the pack, keyed by language ("ar", "en").
+    ingredient_statements: dict[str, str] = {}

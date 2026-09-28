@@ -143,7 +143,12 @@ def evaluate_compatibility(
     matched_allergens: list[MatchedAllergen] = []
     health_condition_results: list[HealthConditionResult] = []
 
-    has_allergen_basis = bool(details["ingredients"] or details["allergens"])
+    # An ingredient statement counts as evidence: the catalog loader derives
+    # the product's allergen rows from it (app.catalog.allergen_detection),
+    # so a statement with no allergen rows means none of the 14 was found.
+    has_allergen_basis = bool(
+        details["ingredients"] or details["allergens"] or details.get("ingredient_statements")
+    )
     has_any_enrichment = has_allergen_basis or bool(details["nutrition"])
 
     if not has_any_enrichment:

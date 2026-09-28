@@ -159,6 +159,24 @@ def get_product_details_by_barcode(barcode: str):
             nutrition_query, (product_id,)
         ).fetchall()
 
+        # The ingredient list as printed on the pack (migration 0056). A
+        # database without that migration simply has none.
+        ingredient_statements = {}
+        if conn.execute(
+            "SELECT to_regclass('public.product_ingredient_statements') IS NOT NULL AS present"
+        ).fetchone()["present"]:
+            ingredient_statements = {
+                r["language_code"]: r["statement"]
+                for r in conn.execute(
+                    """
+                    SELECT language_code, statement
+                    FROM public.product_ingredient_statements
+                    WHERE product_id = %s AND deleted_at IS NULL
+                    """,
+                    (product_id,),
+                ).fetchall()
+            }
+
     return {
         "id": product["id"],
         "internal_code": product["internal_code"],
@@ -172,4 +190,5 @@ def get_product_details_by_barcode(barcode: str):
         "allergens": allergens,
         "health_flags": health_flags,
         "nutrition": nutrition,
+        "ingredient_statements": ingredient_statements,
     }
