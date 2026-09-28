@@ -1,0 +1,4684 @@
+[
+ {
+  "barcode": "0012000002588",
+  "name": "Mirinda Orange",
+  "problems": [
+   "not tagged as sold in Saudi Arabia",
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100ml-energy-value-in-kcal-does-not-match-value-in-kj",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0012000002656",
+  "name": "SEVEN-UP 7up",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100ml-energy-value-in-kj-does-not-match-value-computed-from-other-nutrients"
+  ]
+ },
+ {
+  "barcode": "0012000002946",
+  "name": "Pepsi",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-sugars-plus-starch-greater-than-carbohydrates",
+   "sugars above carbohydrate",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0012000004070",
+  "name": "Pepsi",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-sugars-plus-starch-greater-than-carbohydrates, en:nutrition-packaging-as-sold-100g-energy-value-in-kj-does-not-match-value-computed-from-other-nutrients",
+   "sugars above carbohydrate",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0016000207523",
+  "name": "Betty Crocker bbzb I'm",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0016000438408",
+  "name": "Betty Crocker MILK CHOCOLATE",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0041143299081",
+  "name": "Sun-Maid California Pitted Prunes Dried Plums",
+  "problems": [
+   "not tagged as sold in Saudi Arabia",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0041167092255",
+  "name": "Dry mouth moisturizing gum",
+  "problems": [
+   "10 kcal per 100 g is too little for confectionery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "0046100007389",
+  "name": "Sargento Sharp Cheddar Reduced Fat Natural Cheddar Cheese Sticks",
+  "problems": [
+   "not tagged as sold in Saudi Arabia",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0085696609102",
+  "name": "MORI-NU TOFU",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0190298000063",
+  "name": "Orignal flavor hot sauce",
+  "problems": [
+   "OFF data-quality errors: en:energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0190298000087",
+  "name": "Red rooster hot sause",
+  "problems": [
+   "OFF data-quality errors: en:energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0617950600541",
+  "name": "Alalali Pizza Sauce",
+  "problems": [
+   "OFF data-quality errors: en:energy-value-in-kcal-greater-than-in-kj, en:energy-value-in-kcal-does-not-match-value-in-kj, en:energy-value-in-kj-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0620514000701",
+  "name": "National Mixed Pickle in Oil",
+  "problems": [
+   "233 kcal per 100 g is too little for an oil; values look per serving"
+  ]
+ },
+ {
+  "barcode": "0620514001036",
+  "name": "National Chat Masala",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kj-does-not-match-value-computed-from-other-nutrients, en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0628011283078",
+  "name": "HOLOS organic overnight muesli maple + almonds",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628011283085",
+  "name": "HOLOS organic overnight muesli",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628011462046",
+  "name": "Madame labriski chocolate lover",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628055142096",
+  "name": "Beekeeper's Naturals Bee Pollen",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN",
+   "missing saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0628055507444",
+  "name": "Made With Local Lemon Square",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628055751991",
+  "name": "Daryl’s Performance Pro Whey",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628055775058",
+  "name": "FitBite Cassava Chips - Chili Lime",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628055843856",
+  "name": "Oatbox Vanilla bar",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628069510072",
+  "name": "Revive Raspberry & mango",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628069511031",
+  "name": "Revive Superfoods High Protein Berry Smoothie",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628069900187",
+  "name": "Adonis Garlic Sauce",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628110219091",
+  "name": "Sproos Super hot chocolate",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628110294555",
+  "name": "Milles Et Une Noiz Tartinade noisette choco datte",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628110947208",
+  "name": "Evie Sunrise smoothie",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628110947215",
+  "name": "evive Mango Kiwi Lemon",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628154379546",
+  "name": "Post Blueberry Flax Granola",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628176089607",
+  "name": "Firebarns Sauce bbq",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628176496603",
+  "name": "Acid League Oat Milk Ranch",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628235192897",
+  "name": "Lively Nature Plantain Chips",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628250224382",
+  "name": "Coco Bites Energy power bites",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628250431124",
+  "name": "Naak Ultra energy",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628308083015",
+  "name": "Good Leaf Four Season Mix",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN",
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-serving-energy-value-in-kj-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0628384400119",
+  "name": "Oak Manor Whole spelt flour",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628451166467",
+  "name": "Matteo’s Coffee syrups",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628456831087",
+  "name": "Mikes Saucisse cuite émiettée",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628504712504",
+  "name": "Raw nutritional VEGAN PRO",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628553010811",
+  "name": "Pc White sliced miche",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628634929100",
+  "name": "YOUNITED All-In Superfood",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN",
+   "OFF data-quality errors: en:energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0628678203181",
+  "name": "GOOD | PROTEIN All-in-one Superfood Shake",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628678440395",
+  "name": "Go! beanz Roasted Edamame",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628678617582",
+  "name": "Farm Girl Chocolate Puffs",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628678678064",
+  "name": "Heal foods Cauliflower fries",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628678800014",
+  "name": "Boulettes sauce oignons doux",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628693634151",
+  "name": "PURAVIDA ROOT VEGETABLES",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628693634175",
+  "name": "PURAVIDA FIRE ROASTED VEGETABLE PRIMAVERA",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628693634311",
+  "name": "Pura Vida Fire Roasted Togarashi Green Beans",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628693732222",
+  "name": "Superfoods+ Superfoods GREENS powder",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628831001005",
+  "name": "Natreve",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN",
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0628831555553",
+  "name": "Natreve MooLess",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628834182077",
+  "name": "Charlotte's Crustoffs",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN",
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0628912262103",
+  "name": "Superstore - 2 pack GRASS FED LEAN GROUND BEEF",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628915224399",
+  "name": "Great Value Crème glacé",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628915380842",
+  "name": "Fresh Market Pecan Butter Tarts",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628915787252",
+  "name": "Great Value extra fort cheddar cheese",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628915825114",
+  "name": "Your Fresh Market Rotisserie Chicken",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628915825695",
+  "name": "Great Value Lanières de poitrine de poulet au barbecue sucré",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN"
+  ]
+ },
+ {
+  "barcode": "0628917412725",
+  "name": "Great Value Maple Flavoured Bacon",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN",
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0628942158995",
+  "name": "Flings Toaster Pastries",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN",
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-serving-energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0628942631771",
+  "name": "Fitcook La Pitoune",
+  "problems": [
+   "UPC 0628/0629 is North American, not a Saudi EAN",
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0633152001139",
+  "name": "Curry powder",
+  "problems": [
+   "24 kcal per 100 g is too little for a dry powder or spice; values look per serving"
+  ]
+ },
+ {
+  "barcode": "0709993306129",
+  "name": "Wheat Sticks",
+  "problems": [
+   "110 kcal per 100 g is too little for cereals; values look per serving"
+  ]
+ },
+ {
+  "barcode": "0709993309090",
+  "name": "Natureland Bundacao",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0709993335068",
+  "name": "Olive paste",
+  "problems": [
+   "125 kcal per 100 g is too little for an oil; values look per serving"
+  ]
+ },
+ {
+  "barcode": "0733739017116",
+  "name": "Black cumin seed oil",
+  "problems": [
+   "10 kcal per 100 g is too little for an oil; values look per serving"
+  ]
+ },
+ {
+  "barcode": "0740985229217",
+  "name": "Fish oil",
+  "problems": [
+   "10 kcal per 100 g is too little for an oil; values look per serving"
+  ]
+ },
+ {
+  "barcode": "0764460248845",
+  "name": "Oscracker",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0776992032113",
+  "name": "Farfasha",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-value-total-over-105",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0840093113009",
+  "name": "Nature's Truth Hemp oil",
+  "problems": [
+   "10 kcal per 100 g is too little for an oil; values look per serving"
+  ]
+ },
+ {
+  "barcode": "0850018464819",
+  "name": "Spouted aldmond butter",
+  "problems": [
+   "OFF data-quality errors: en:energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0893470001208",
+  "name": "Andean Dream Organic Spaghetti",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "0898220020775",
+  "name": "Lemon pepper",
+  "problems": [
+   "0 kcal per 100 g is too little for a dry powder or spice; values look per serving"
+  ]
+ },
+ {
+  "barcode": "3017620429484",
+  "name": "Nutella",
+  "problems": [
+   "not tagged as sold in Saudi Arabia",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "3168930162612",
+  "name": "Lay’s stax barbecue",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-energy-value-in-kj-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "4000323032005",
+  "name": "KUNST BOX",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "4003490090595",
+  "name": "Bonny café latte",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-greater-than-in-kj, en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "energy 581.0 kcal inconsistent with macros (58)",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "4007933222710",
+  "name": "delba Eiweißbrot",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "5000159001274",
+  "name": "Galaxy Minstrels",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "5021554989912",
+  "name": "Clearspring Azuki Beans",
+  "problems": [
+   "79 kcal per 100 g is too little for cereals; values look per serving"
+  ]
+ },
+ {
+  "barcode": "5027952012986",
+  "name": "ST. PIERRE 4 Seeded Brioche Burger Buns",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-salt-does-not-match-sodium",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "5055963100866",
+  "name": "Essential root",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "5203912390886",
+  "name": "Bugles original flavor",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-greater-than-in-kj, en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-energy-value-in-kj-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "5204653003349",
+  "name": "Tsanos kalamata",
+  "problems": [
+   "493 kcal per 100 g is too little for an oil; values look per serving"
+  ]
+ },
+ {
+  "barcode": "5285000390626",
+  "name": "Indomie instant noodles vegetable flavor",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-energy-value-in-kj-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "5410301829104",
+  "name": "Sucre de canne",
+  "problems": [
+   "15 kcal per 100 g is too little for sugar; values look per serving"
+  ]
+ },
+ {
+  "barcode": "5449000043399",
+  "name": "Coca cola Cocacola light",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "5711953005275",
+  "name": "STARBUCKS CARAMEL MACHIATO",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6084012090420",
+  "name": "Kraft Processed Cheddar Cheese",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "energy 470.0 kcal inconsistent with macros (225)",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6217555012349",
+  "name": "Corn chips",
+  "problems": [
+   "77.5 kcal per 100 g is too little for snacks; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6251001210217",
+  "name": "Fine Piss",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6260235356486",
+  "name": "Taksa cucumber pickle",
+  "problems": [
+   "OFF data-quality errors: en:energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6271002221111",
+  "name": "Kdd Apple Juice 180ml",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-energy-value-in-kj-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6271100040881",
+  "name": "Assorted mixed nuts",
+  "problems": [
+   "145 kcal per 100 g is too little for snacks; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281004256332",
+  "name": "Love Yamama Cocoa & Hazelnut Spread",
+  "problems": [
+   "OFF data-quality errors: en:energy-value-in-kcal-greater-than-in-kj, en:energy-value-in-kcal-does-not-match-value-in-kj, en:energy-value-in-kj-does-not-match-value-computed-from-other-nutrients"
+  ]
+ },
+ {
+  "barcode": "6281007004107",
+  "name": "Jambo Rool",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007021258",
+  "name": "لبنة",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007024495",
+  "name": "Almarai Pure Butter Ghee",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007026031",
+  "name": "Almarai Labneh 2.75kg",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007026208",
+  "name": "Almarai Almira Sukkari Dates",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007026222",
+  "name": "Almarai Almira Khalas Dates",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007026420",
+  "name": "Almarai Cheddar cheese slice",
+  "problems": [
+   "missing sugars_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007026819",
+  "name": "Almarai Feta cheese",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007027618",
+  "name": "Almarai Mozzarella cheese",
+  "problems": [
+   "missing carbohydrates_100g, sugars_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007028189",
+  "name": "المراعي",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007028288",
+  "name": "Almarai Al Marai Low fat milk",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007031196",
+  "name": "Almarai cooking cream 250ml",
+  "problems": [
+   "missing salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007031776",
+  "name": "Almarai Cooking Cream",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007032520",
+  "name": "حليب بالشوكلاته المراعي",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-sugars-plus-starch-greater-than-carbohydrates, en:nutrition-packaging-as-sold-100g-saturated-fat-greater-than-fat",
+   "saturated fat above total fat",
+   "sugars above carbohydrate"
+  ]
+ },
+ {
+  "barcode": "6281007032551",
+  "name": "حليب المراعي",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007033114",
+  "name": "Almarai OLive oil",
+  "problems": [
+   "OFF data-quality errors: en:ingredients-single-ingredient-from-category-does-not-match-actual-ingredients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007033190",
+  "name": "Almarai Al marai natural butter 100g",
+  "problems": [
+   "missing sugars_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007034012",
+  "name": "زبادي المراعي شام",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-sugars-plus-starch-greater-than-carbohydrates",
+   "sugars above carbohydrate"
+  ]
+ },
+ {
+  "barcode": "6281007034043",
+  "name": "المراعي حليب",
+  "problems": [
+   "missing sugars_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007034272",
+  "name": "al marai cheese block",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007034791",
+  "name": "Almarai Pizza Puff",
+  "problems": [
+   "OFF data-quality errors: en:energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007035019",
+  "name": "فيتال المراعي",
+  "problems": [
+   "missing salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007035026",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281007035071",
+  "name": "ALMARAI NATURAL BUTTER",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007036023",
+  "name": "Almarai Luisine cream cheese sandwitch",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-salt-does-not-match-sodium",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007036092",
+  "name": "المراعي حليب بالمانجو",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007036214",
+  "name": "Almarai cheddar cheese",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007037112",
+  "name": "Almarai Cream Cheese bread section",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007038607",
+  "name": "Almarai Instant Milk Powder",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007038621",
+  "name": "Almarai Milk Powder 400g",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007038928",
+  "name": "Almarai strawberry flavored milk",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-sugars-plus-starch-greater-than-carbohydrates, en:nutrition-packaging-as-sold-100g-energy-value-in-kj-does-not-match-value-computed-from-other-nutrients",
+   "sugars above carbohydrate",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007039918",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281007039994",
+  "name": "Almarai Sandwich rolls milk",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007040518",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281007040532",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281007040655",
+  "name": "زبادي المراعي",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-energy-value-in-kj-does-not-match-value-computed-from-other-nutrients"
+  ]
+ },
+ {
+  "barcode": "6281007042178",
+  "name": "feta cheese",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007042413",
+  "name": "Almarai Cheddar cheese 200g",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007042499",
+  "name": "جبنة المراعي زجاج",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007042857",
+  "name": "Almarai SANDWICH ROLLS BROWN",
+  "problems": [
+   "136 kcal per 100 g is too little for bakery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281007044127",
+  "name": "Almarai VANILLA Cup cake",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007044134",
+  "name": "Almarai Caramel Cup cake",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007044578",
+  "name": "Nuralac ready to drink",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007044592",
+  "name": "Almarai Nuralac plus",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007045728",
+  "name": "al marai cream cheese",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007045872",
+  "name": "Almarai Cupcake CARAMEL",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007046015",
+  "name": "Almarai 32 Triangles",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007046336",
+  "name": "Almarai low fat milk",
+  "problems": [
+   "OFF data-quality errors: en:energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "missing saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007046428",
+  "name": "Almarai Tripple Cheese Puff",
+  "problems": [
+   "name reviewed as unclear"
+  ]
+ },
+ {
+  "barcode": "6281007046725",
+  "name": "Almarai condensed milk",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007046770",
+  "name": "Almarai EVAP milk",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007048910",
+  "name": "Almarai Baked Rolls Chili",
+  "problems": [
+   "121 kcal per 100 g is too little for bakery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281007050159",
+  "name": "L’usine brown Bread",
+  "problems": [
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007050166",
+  "name": "L'usine Sliced Bread Multigrain",
+  "problems": [
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007050173",
+  "name": "L'usine Sliced bread milk",
+  "problems": [
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007050999",
+  "name": "Almarai Farm‘s select",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007051095",
+  "name": "Almarai Farm’s select",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007051736",
+  "name": "Almarai Fresh milk",
+  "problems": [
+   "OFF data-quality errors: en:energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "energy 24.0 kcal inconsistent with macros (139)",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007052931",
+  "name": "Almarai Milk",
+  "problems": [
+   "OFF data-quality errors: en:energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "energy 8.0 kcal inconsistent with macros (172)",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007053099",
+  "name": "Almarai Pure Butter Ghee",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007053549",
+  "name": "Almarai Mixed fruit 200",
+  "problems": [
+   "missing saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007053556",
+  "name": "المراعي عصير فواكه مشكله",
+  "problems": [
+   "missing salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007053662",
+  "name": "Almarai lemon 200ml",
+  "problems": [
+   "missing saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007053723",
+  "name": "عصير المراعي توت",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007054621",
+  "name": "زبدة المراعي",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007054980",
+  "name": "Almarai Orange juice",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-serving-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-serving-energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "energy 0.042 kcal inconsistent with macros (43)",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007054997",
+  "name": "Almarai Mixed fruits",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007055017",
+  "name": "عصير تفاح",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-serving-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-serving-energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "energy 0.0461111111111111 kcal inconsistent with macros (44)"
+  ]
+ },
+ {
+  "barcode": "6281007055307",
+  "name": "Almarai Reconstituted Pineapple orange & grape juice",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007055420",
+  "name": "Almarai Orange Juice",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007055444",
+  "name": "Almarai No added sugar",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007055468",
+  "name": "Almarai Apple Juice",
+  "problems": [
+   "missing proteins_100g, sugars_100g, fat_100g, saturated-fat_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007055888",
+  "name": "Almarai Mango and grape nectar",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007056717",
+  "name": "ALYOUM Chicken Fresh Chicken Thigh Fillet",
+  "problems": [
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007057158",
+  "name": "Alyoum Gizzards chicken",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007057578",
+  "name": "Almarai Mixed fruit berries",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007057721",
+  "name": "Almarai cheddar cheese full fat",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007057882",
+  "name": "Alyoum Chicken leg",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007058117",
+  "name": "Almarai Bake rolls",
+  "problems": [
+   "121 kcal per 100 g is too little for bakery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281007058124",
+  "name": "Bake rolls Zaataar",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007058537",
+  "name": "المراعي الرمان",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007059039",
+  "name": "Almarai Smoothie",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007059183",
+  "name": "LUSINE TRIPLE CHOCOLATE MUFFIN",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007059213",
+  "name": "Almarai mini croissant",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007059220",
+  "name": "7Up طبقتين",
+  "problems": [
+   "name reviewed as unclear"
+  ]
+ },
+ {
+  "barcode": "6281007059244",
+  "name": "Almarai Cheese slices low fat",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007059343",
+  "name": "Almarai Alamari - Whipping Cream",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007059558",
+  "name": "سمن الزبدة النقي (المراعي)",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007059831",
+  "name": "Almarai swiss roll vanilla",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007059848",
+  "name": "Swiss Roll with Vanilla Filling",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007060974",
+  "name": "Amarai kashkaval Chesse full fat",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007061032",
+  "name": "Almarai Lusine Biscuit cream BttrCrssant",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007061384",
+  "name": "Almarai Bake rolls",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007061551",
+  "name": "Almarai - Farm’s Select Beetroot-Orange-Apple juice",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007061605",
+  "name": "Almarai Vital",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007061667",
+  "name": "Almarai 7up",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007061834",
+  "name": "7Up ميني کروسان",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007061841",
+  "name": "Coffee",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007061858",
+  "name": "قهوة الموكا السويسرية مع الشوكولاته",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007061896",
+  "name": "Almarai L'usine date cake",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007061919",
+  "name": "Almarai Lusine saffron cake cartun",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007062671",
+  "name": "Marai Haleb chocolate",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007062923",
+  "name": "Almarai Fresh Milk",
+  "problems": [
+   "missing saturated-fat_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007062978",
+  "name": "Almarai Plain Protein Yoghurt Low Fat",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj",
+   "energy 134.0 kcal inconsistent with macros (92)"
+  ]
+ },
+ {
+  "barcode": "6281007063067",
+  "name": "Almarai Fresh Yoghurt",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-sugars-plus-starch-greater-than-carbohydrates, en:nutrition-packaging-as-sold-100g-saturated-fat-greater-than-fat",
+   "saturated fat above total fat",
+   "sugars above carbohydrate"
+  ]
+ },
+ {
+  "barcode": "6281007063388",
+  "name": "Almarai Whipping cream mix",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007063401",
+  "name": "Almarai Whipping Cream Mix",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007063609",
+  "name": "7up بیک رولزحراق",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007063661",
+  "name": "Almarai Bake rolls tomato ketchup",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007063944",
+  "name": "Almarai Almira Sukkari Dates",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007063951",
+  "name": "Almarai Almira Sagai Dates",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007063975",
+  "name": "Almarai Almira Sukkari Dates",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007063982",
+  "name": "Almarai Almjra sagai dates",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007064187",
+  "name": "حلیب مبخر تلمراعی",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007065283",
+  "name": "cake kice",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007065641",
+  "name": "Marai Citrus mix",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007065740",
+  "name": "Almarai Halloumi Cheese Full Fat",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007065832",
+  "name": "Almarai Grill cheese low fat 200g",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007065863",
+  "name": "Seama By Almarai Smoke Roasted Norwegian Salmon",
+  "problems": [
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007066037",
+  "name": "Almarai juice orNfe",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007066051",
+  "name": "Almarai mango juice",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007066402",
+  "name": "Nuralac suregrow Vanilla",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007066570",
+  "name": "Almarai Protein Milk Coffee Fat Free",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007066792",
+  "name": "المراعي جبنه ساندوتش",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007066822",
+  "name": "المراعي جبنه ساندوتش",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007066969",
+  "name": "Almarai Bake Rolls",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007067171",
+  "name": "Almarai Vanilla Strawberry Ice Cream",
+  "problems": [
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007067256",
+  "name": "Almarai Salted caramel ice cream",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007067294",
+  "name": "Almarai Cookies Sandwich",
+  "problems": [
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007067355",
+  "name": "Almarai Mini Bites",
+  "problems": [
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007067591",
+  "name": "المراعي جبن",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g"
+  ]
+ },
+ {
+  "barcode": "6281007067829",
+  "name": "Almarai Creamy taste",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007067843",
+  "name": "Alyoum Chicken spicy flavour",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007068055",
+  "name": "Almarai ice tea leaf lemon and elderflower",
+  "problems": [
+   "missing saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007068536",
+  "name": "Almarai grill cheese lite 2x200",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007070065",
+  "name": "المراعي لبن",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007070089",
+  "name": "Almarai Curry flavor",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007070232",
+  "name": "Almarai mutabal",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007070577",
+  "name": "Almarai Al marai marvello cheese herbs 200g",
+  "problems": [
+   "missing sugars_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007070584",
+  "name": "Lusine Flaky butter puff",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007070768",
+  "name": "المراعي عصير توت",
+  "problems": [
+   "missing proteins_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007070805",
+  "name": "عصير مانجو المراعي",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007070829",
+  "name": "Mixed fruit guava",
+  "problems": [
+   "missing proteins_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007071123",
+  "name": "Alyoum Chicken mixed parts",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007071147",
+  "name": "cake chocolate",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007071154",
+  "name": "cake chocolate",
+  "problems": [
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007071352",
+  "name": "Almarai chocolate swiss roll",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007118132",
+  "name": "المراعي لبن قليل الدسم",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-sugars-plus-starch-greater-than-carbohydrates, en:nutrition-packaging-as-sold-100g-saturated-fat-greater-than-fat",
+   "saturated fat above total fat",
+   "sugars above carbohydrate"
+  ]
+ },
+ {
+  "barcode": "6281007120807",
+  "name": "حليب المراعي",
+  "problems": [
+   "missing salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007120906",
+  "name": "Almarai Fresh Milk - Low Fat",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-sugars-plus-starch-greater-than-carbohydrates, en:nutrition-packaging-as-sold-100g-saturated-fat-greater-than-fat",
+   "saturated fat above total fat",
+   "sugars above carbohydrate"
+  ]
+ },
+ {
+  "barcode": "6281007167826",
+  "name": "Al Marai Almarai cheddar cheese full fat",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007168205",
+  "name": "Al Marai Almarai cheddar cheese full fat",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007168403",
+  "name": "Almarai cheddar cheese full fat",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007169004",
+  "name": "Almarai Burger Cheese Slices",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281007173605",
+  "name": "Almarai Mozzarella cheese",
+  "problems": [
+   "87 kcal per 100 g is too little for cheese; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281007770408",
+  "name": "لبن المراعي",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281007806831",
+  "name": "Almarai orange & carrot juice",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281014134026",
+  "name": "Goody Whole Golden Corn",
+  "problems": [
+   "77 kcal per 100 g is too little for cereals; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281014300001",
+  "name": "Treva light meat tuna flakes in vegetable oil",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-saturated-fat-greater-than-fat, en:nutrition-packaging-as-sold-100g-energy-value-in-kj-does-not-match-value-computed-from-other-nutrients",
+   "saturated fat above total fat",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281014402149",
+  "name": "Avemari lisce pasta 214",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281014620208",
+  "name": "Goody original tenderina tuna in sunflower oil",
+  "problems": [
+   "209 kcal per 100 g is too little for an oil; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281014800471",
+  "name": "goody tendarine sunflower",
+  "problems": [
+   "missing sugars_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281016203423",
+  "name": "Al Batal Maamoul - Classic",
+  "problems": [
+   "100 kcal per 100 g is too little for snacks; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281016503547",
+  "name": "Albatal dubbi sweet tomato flavor",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-greater-than-in-kj, en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-energy-value-in-kj-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281016731711",
+  "name": "Al Batal Natural Potato Chips salt",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-energy-value-in-kj-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281016800813",
+  "name": "Corn snacks dino",
+  "problems": [
+   "OFF data-quality errors: en:energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281018145844",
+  "name": "Nada Beetroot Juice",
+  "problems": [
+   "missing saturated-fat_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281018146988",
+  "name": "nada GREEK YOGHURT Low Fat Plain",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients"
+  ]
+ },
+ {
+  "barcode": "6281020173026",
+  "name": "Luna iced coffee caramel",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-greater-than-in-kj, en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "energy 461.0 kcal inconsistent with macros (66)",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281022102925",
+  "name": "Danette Cookie and cream yougurt",
+  "problems": [
+   "135 kcal per 100 g is too little for bakery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281022118247",
+  "name": "Activia peach and apricot full fat",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281022174014",
+  "name": "Dunkin latte original",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-greater-than-in-kj, en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-value-over-105-fat",
+   "more than 100 g per 100 g",
+   "energy 811.0 kcal inconsistent with macros (2469)",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281033219032",
+  "name": "Vanilla cake bar",
+  "problems": [
+   "89 kcal per 100 g is too little for bakery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281033371006",
+  "name": "Cupcake vanilla",
+  "problems": [
+   "90 kcal per 100 g is too little for bakery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281036170101",
+  "name": "Tasali",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281039571219",
+  "name": "Saudia Sandwich Vanilla",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-serving-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-serving-energy-value-in-kj-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281041004712",
+  "name": "Halwani bros al nakhla plain",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281055000298",
+  "name": "Hanaa Whole Grain Oats",
+  "problems": [
+   "missing sugars_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281055002957",
+  "name": "Oat Biscuits",
+  "problems": [
+   "45 kcal per 100 g is too little for bakery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281057015054",
+  "name": "Nadec",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281057030026",
+  "name": "Nadec fresh yogurt full fat",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281063100133",
+  "name": "freshly Peep chickpeas",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281063450290",
+  "name": "White chocolate concentrate",
+  "problems": [
+   "20 kcal per 100 g is too little for confectionery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281063771050",
+  "name": "Freshly Yellow mustard",
+  "problems": [
+   "0 kcal per 100 g; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281063771401",
+  "name": "Freshly Crushed Red Pepper",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281071113118",
+  "name": "Marami salted",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-value-total-over-105",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281071114160",
+  "name": "Marami wavy potato chips salt and vinegar",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-energy-value-in-kj-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281091006902",
+  "name": "Orlanda",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100002666",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100021209",
+  "name": "Baider Hot sauce",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100021223",
+  "name": "🍅 ketchup",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100021988",
+  "name": "حمص حب ( بيدر)",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100022022",
+  "name": "Baidar Mixed Pickles",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100022114",
+  "name": "Baider pickled Hot pepper",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100022534",
+  "name": "دبس الرمان بيدر",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100022688",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100025092",
+  "name": "Baidar Spag sauce",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100025412",
+  "name": "شطة حارة ( TALA)",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100025757",
+  "name": "Baider Mayonnaise",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100026600",
+  "name": "Baidar chickpeas",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100026730",
+  "name": "Baidar foul medames",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100026839",
+  "name": "baidar light solid Tuna",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100029038",
+  "name": "Morel Pieces Stems Mushrooms",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100031017",
+  "name": "Rana hot sauce",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100031086",
+  "name": "Rona Green Hot Salsa",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100031093",
+  "name": "Rana Red pepper olive oil",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100031116",
+  "name": "Rana Extra Hot Sauce",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100031956",
+  "name": "Rona tomato paste",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100032014",
+  "name": "SAUDI",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100033011",
+  "name": "كتشب الطماطم ( Rana)",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100034063",
+  "name": null,
+  "problems": [
+   "not found",
+   "not tagged as sold in Saudi Arabia",
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100035282",
+  "name": "Lulu Rona Light Meat Tuna",
+  "problems": [
+   "missing sugars_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100035299",
+  "name": "Rana Tuna",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100035404",
+  "name": "Rana mild cheddar cheese sauce",
+  "problems": [
+   "missing proteins_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100037019",
+  "name": "Rana ketchup",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100038108",
+  "name": "Rana mixed pickles",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100039013",
+  "name": "Rana grape Leaves",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100039112",
+  "name": "Rana stuffed Vine leaves",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100040200",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100041283",
+  "name": "Gold branch Olive oil",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100043997",
+  "name": "Al journal olive oil",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100044017",
+  "name": "Olive Oil",
+  "problems": [
+   "OFF data-quality errors: en:nutri-score-grade-from-category-does-not-match-calculated-grade"
+  ]
+ },
+ {
+  "barcode": "6281100061502",
+  "name": "Water 2lt",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100063001",
+  "name": "Safa Water",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100066552",
+  "name": "Safa Makkah Water",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100069034",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100081036",
+  "name": "lusine SLICED BREAD WHITE",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-saturated-fat-greater-than-fat",
+   "saturated fat above total fat",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100082026",
+  "name": "Herfy Plain burger buns",
+  "problems": [
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100086116",
+  "name": "Lusine",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100090014",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100091295",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100111191",
+  "name": "شطة جلوريا صغير",
+  "problems": [
+   "all values 0"
+  ]
+ },
+ {
+  "barcode": "6281100111337",
+  "name": "خضار مشكل",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100111351",
+  "name": "GLORIA WHOLE PEELED TOMATOES Read",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100112372",
+  "name": "جلوريا حمص",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100171355",
+  "name": "Fuchasia Wheat rusk",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100171690",
+  "name": "Brown Sliced Bread",
+  "problems": [
+   "70 kcal per 100 g is too little for bakery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281100171768",
+  "name": "Fuchsia Rusk",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100171980",
+  "name": "Fuchsia bread crumbs",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100173908",
+  "name": "Fuchaia Sesame shabura sticks",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100174158",
+  "name": "Fuchsia fruit cake 🍰",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100174677",
+  "name": "Fuchsia Maamoul",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100175568",
+  "name": "Fuchsia pop 🌽",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100180111",
+  "name": "Golden chicken 1100",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100182245",
+  "name": "Golden Chicken Shish Taouk",
+  "problems": [
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100185260",
+  "name": "Golden Chicken Premium Chicken Strips",
+  "problems": [
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100200024",
+  "name": "Alaila White Indian Basmati Rice",
+  "problems": [
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100200215",
+  "name": "Punjabi Al Muhaidib White basmati rice",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100201397",
+  "name": "Alwalimah Kabsa Mix",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100201403",
+  "name": "Alwalimah Biryani Mix",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100201410",
+  "name": "Alwalimah Biryani Mix",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100201595",
+  "name": "Alwalimah Bukhari Mix",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100201625",
+  "name": "Alwalimah mandi Mix",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100201809",
+  "name": "Alwalimah Biryani Mix green color",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100201830",
+  "name": "Alwalimah Biryani Mix",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100205852",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100233053",
+  "name": "Delta Saj Bread",
+  "problems": [
+   "missing sugars_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100301226",
+  "name": "Borgat filled sticks multi flavour",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100301240",
+  "name": "Borgat gummy",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100301257",
+  "name": "Birgat Gummy ringlets",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100301288",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100301882",
+  "name": "Borgat mini sticks multi flavour",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100301912",
+  "name": "Borgat Sour buzz",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100301936",
+  "name": "Borgart Bogarts gummy Cakes",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100301967",
+  "name": "Borgart gummy cars",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100303893",
+  "name": "Bourgat Sour Buzz",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100303916",
+  "name": "Borgat Crazy Blueberry",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100304449",
+  "name": "Borgat Sour buzz mini belts strawberry",
+  "problems": [
+   "missing saturated-fat_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100304463",
+  "name": "Sour Power Mini Sticks",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100304593",
+  "name": "Cadenza",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100304609",
+  "name": "Haweek Candenza milk chocolate",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100306139",
+  "name": "حلاوة برقات",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100306177",
+  "name": "حلوى الخطمي",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100306214",
+  "name": "حلوى الخطمي كبير",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100307303",
+  "name": "Wafer mini cubes",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100307334",
+  "name": "Wafers mini cubs",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100307365",
+  "name": "Wafers mini cubes",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100320012",
+  "name": "Tono concentrated Mix Fruits",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100350149",
+  "name": "Ülker Ulker Chocosandwich",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100350637",
+  "name": "carrefour ulker chocosandwich",
+  "problems": [
+   "missing proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100353539",
+  "name": "بسكوت الكر",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100353683",
+  "name": "Ulker Chocolate Roll Sandwich",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100354222",
+  "name": "Bondic",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100356738",
+  "name": "McVities Digestive cream chocolate",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100356769",
+  "name": "Godiva Creamy Caramel Chocolate Bar",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100356950",
+  "name": "Biskrem Caramel Touch",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100357179",
+  "name": "GIDIVA Godiva",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100357278",
+  "name": "Ülker Ulker",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100357285",
+  "name": "الوزيريه",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100357322",
+  "name": "Rico",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100357513",
+  "name": "Ulker Mero Marshmallow",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100357568",
+  "name": "Halley",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100357599",
+  "name": "Ulker Dark Choco sandwich",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100357711",
+  "name": "الوزيريه",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100357834",
+  "name": "Ulker dark chocolate",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100358107",
+  "name": "Ülker Finger Biscuits",
+  "problems": [
+   "all values 0",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100358558",
+  "name": "Ulker DELUXE strawberry",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100358756",
+  "name": "Ulker Deluxe Vanilla Wafer Cream",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100360476",
+  "name": "خبز البطاطس ( يومي)",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100360858",
+  "name": "Cup cake",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100361046",
+  "name": "BURGER BUN SESAME SEEDS",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100361053",
+  "name": "خبز توست صغير",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100361077",
+  "name": "Choco wafer",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100361114",
+  "name": "Yaumirusk with black seeds",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100361244",
+  "name": "Cup cake",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100361404",
+  "name": "Yaumi Chocolate cake",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100361480",
+  "name": "Blueberry slice cake",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100361589",
+  "name": "Al rasheed Maamoul",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100362067",
+  "name": "خبز توست فاخر ( يومي)",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100362074",
+  "name": "Super seeds bread",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100362289",
+  "name": "Yummy apple puff",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100362326",
+  "name": "Yaumi Cup cake",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100362449",
+  "name": "Maamoul",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100362548",
+  "name": "Yamy 10.5in Tortilla",
+  "problems": [
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100362616",
+  "name": "Cup cake",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100362760",
+  "name": "Tortilla wraps",
+  "problems": [
+   "130 kcal per 100 g is too little for bakery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281100378129",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100390220",
+  "name": "ALRN GRAPE APPLE COCKTAIL 🍹",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100390923",
+  "name": "Milk 1",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100396758",
+  "name": "Grape Mango Cocktail",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100398752",
+  "name": "alora drink cocktail",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100398769",
+  "name": "Alora",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100400318",
+  "name": "Raghd Fatigue Makhsus With Oats",
+  "problems": [
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100403777",
+  "name": "Raghd Small Kileja",
+  "problems": [
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100410058",
+  "name": "رز ابو كاس",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100453055",
+  "name": "Bakemate Crepe Mix",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100453352",
+  "name": "Bakemate Pancake Mix",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100454113",
+  "name": "Bakemate dry instant yeast",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100480037",
+  "name": "مياه العيوم",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100480136",
+  "name": "Aloyoun Eau",
+  "problems": [
+   "all values 0",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100500179",
+  "name": "Forsana",
+  "problems": [
+   "missing proteins_100g, sugars_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100502456",
+  "name": "Forsana Sandwiches cheese 170",
+  "problems": [
+   "59 kcal per 100 g is too little for cheese; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281100510093",
+  "name": "Original Orange&Carrot 1L",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100510116",
+  "name": "Original Mixed Fruit",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100510154",
+  "name": "Original Mango",
+  "problems": [
+   "missing saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100510307",
+  "name": "Original Orange Drink",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100510321",
+  "name": "Original mix fruit",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100512554",
+  "name": "Klasse strawberry flavor",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100512561",
+  "name": "Klasse",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100512974",
+  "name": "Original Ice Coffee",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100513070",
+  "name": "Orange nectar",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100514800",
+  "name": "Original Chuck orange",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100514824",
+  "name": "Original Peach Drink",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100515180",
+  "name": "Splash berry cocktail",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100515432",
+  "name": "اورجينال بشكل عام نفس التاريخ",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100515449",
+  "name": "Original Guava 400ml",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100515531",
+  "name": "Original Apple",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100515548",
+  "name": "OriginalPineapple 400ml",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100516071",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100518044",
+  "name": "splash spark kiwi & watermelon ctail",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100518082",
+  "name": "splash spark apple ctail",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100519065",
+  "name": "KLASSE STRAWBERRY",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100519614",
+  "name": "Original apple juice",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100519621",
+  "name": "Original PINEAPPLE JUICE 1.4L",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100519638",
+  "name": "Original Orange carrot with fruit mix",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100519690",
+  "name": "ORIGINAL APPLE JUICE",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100519713",
+  "name": "ORIGINAL COCKTAIL ORANGE AND CARROT",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100519720",
+  "name": "Original Orange Juice",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100519751",
+  "name": "Original Mango Nectar with fruit mix",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100519850",
+  "name": "Original Mixed fruits",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100519867",
+  "name": "مغشوش",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100521785",
+  "name": "KLASSE MALT BEVERAGE",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100578994",
+  "name": "Klasse Pomegrante",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100585039",
+  "name": "Nestlé Nestle water",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100585091",
+  "name": "Nestle Purelife Bottled Drinking Water",
+  "problems": [
+   "all values 0",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100585114",
+  "name": "Nestlé pure life",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100585190",
+  "name": "Nestlé pure life",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100610083",
+  "name": "نشاء الذرة",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100610168",
+  "name": "Riyadh food self raising flour",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100610427",
+  "name": "Riyadh Food Bicarbonate of Soda",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100610557",
+  "name": "Riyadh food Crème Caramel",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100610656",
+  "name": "Whipped topping",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100610700",
+  "name": "Zidnee Chery jelly 85g",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100610854",
+  "name": "Pineapple jelly dessert",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100610915",
+  "name": "Cake mix",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100611844",
+  "name": "Zidnee white oats quick cooking",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100615118",
+  "name": "باكنج باودر ( مسحوق التخمير)",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100615187",
+  "name": "فانيلا",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100616115",
+  "name": "Pato Cocoa Powder",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100642442",
+  "name": "Sehtak water",
+  "problems": [
+   "all values 0"
+  ]
+ },
+ {
+  "barcode": "6281100642459",
+  "name": "صحتك",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100680031",
+  "name": "Al Taie Cream Analogue",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100680093",
+  "name": "Al Taie EVAP Milk Analogue",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100680277",
+  "name": "Al Taie Milk Powder",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100680536",
+  "name": "Al-Taie Premium Tuna For Sandwich in Sunflower Oil",
+  "problems": [
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100680680",
+  "name": "Al Taie EVAP milk Analogue",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100680819",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100680932",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100681137",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100681236",
+  "name": "AlTAIE Al taie red kidney beans",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100681465",
+  "name": "Peanut butter creamy",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100681588",
+  "name": "PEANUT BUTTER Creamy",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100681649",
+  "name": "AlTaie Sweetened condensed milk",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100681670",
+  "name": "طماطم مقشرة مع العصير (الباخرة)",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100681779",
+  "name": "Al taie chopped tomatoes",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kj-does-not-match-value-computed-from-other-nutrients, en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "energy 22.0 kcal inconsistent with macros (229)",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100710066",
+  "name": "water",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100710479",
+  "name": "Pure Aqua",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100720133",
+  "name": "Chocolate Triangular Wafer ويفر مثلث",
+  "problems": [
+   "missing salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100720195",
+  "name": "Trixy biscuits",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100720614",
+  "name": "فلك فلاك",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100720690",
+  "name": "Ükler Ulker Tempo Dark",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100720706",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100720768",
+  "name": "Ülker Ulker",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100720782",
+  "name": "Ulker Albeni Finger",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100721079",
+  "name": "Rico Wafer Hazelnut",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100770015",
+  "name": "Quality -Strawberry Water Ice cream",
+  "problems": [
+   "missing proteins_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100770138",
+  "name": "Kwality Majestic Nuts",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100770176",
+  "name": "Saudi lce Cream kwality chocobar",
+  "problems": [
+   "missing sugars_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100770213",
+  "name": "Kwality ice cream",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100770251",
+  "name": "Kwality Mango ice cream stick",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100770275",
+  "name": "Kwality Raspberry water ice",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "energy 1.6666666666667 kcal inconsistent with macros (93)",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100770398",
+  "name": "Kwality safron Kulfi",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100770411",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100770473",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100770510",
+  "name": "Kwality Vanilla cine",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100771197",
+  "name": "Pistachio ice cream",
+  "problems": [
+   "OFF data-quality errors: en:energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100772088",
+  "name": "Kwality ice cream",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100772385",
+  "name": "Kwality Strawberry ripple",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100772392",
+  "name": "Kwality toffee ripple",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100773535",
+  "name": "WATER ICE RASPBERRY",
+  "problems": [
+   "OFF data-quality errors: en:energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "energy 1.0 kcal inconsistent with macros (80)",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100773559",
+  "name": "Kwality Ice cream vaniglia almond",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100773566",
+  "name": "fregento bar trip choco",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100773573",
+  "name": "ICE CREAM",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100773580",
+  "name": "Kwality Swirl choc.",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100773757",
+  "name": "Kwality Blackberry Ripple",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100773771",
+  "name": "Kwality Paistachio",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100773788",
+  "name": "kwality ice cream cookies and cream",
+  "problems": [
+   "OFF data-quality errors: en:energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "energy 1.0 kcal inconsistent with macros (206)",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100773795",
+  "name": "KWALITY RASPBERRY",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100773849",
+  "name": "Kwality Strawberry",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100774945",
+  "name": "Fregento Canned Tuna",
+  "problems": [
+   "missing saturated-fat_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100780014",
+  "name": "Hana Water",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100780052",
+  "name": "مياه هنا",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g"
+  ]
+ },
+ {
+  "barcode": "6281100780120",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100850090",
+  "name": "Zorro Cheese Flavour",
+  "problems": [
+   "missing salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100870036",
+  "name": "Raid multi insect killer",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100870210",
+  "name": "Raid liquid mosquito killer",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100873730",
+  "name": null,
+  "problems": [
+   "not found",
+   "not tagged as sold in Saudi Arabia",
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100875116",
+  "name": "Glade ocean escape Air freshener",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100877035",
+  "name": "Baygon Roaches and ants killer",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100971634",
+  "name": "F f",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100971641",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6281100971658",
+  "name": "Chips Fresh fash",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281100971672",
+  "name": "Fish Fash",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281102740054",
+  "name": "Plain Croissant",
+  "problems": [
+   "missing sugars_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281105680104",
+  "name": "معمول ماما تمر",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-value-total-over-105"
+  ]
+ },
+ {
+  "barcode": "6281106510899",
+  "name": "Peanuts",
+  "problems": [
+   "108 kcal per 100 g is too little for snacks; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281123036013",
+  "name": "nahool vanilla cake",
+  "problems": [
+   "120 kcal per 100 g is too little for bakery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281123053201",
+  "name": "Vanilla Party Cakes",
+  "problems": [
+   "100 kcal per 100 g is too little for bakery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281174033696",
+  "name": "Oats crackers thyme",
+  "problems": [
+   "109 kcal per 100 g is too little for bakery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281183000047",
+  "name": "Almarai Lusine Croissant 5+1",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281183000214",
+  "name": "Almarai CAKE BAR Strawberry Filling",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281183000269",
+  "name": "Cake Bar with Vanilla Filling",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281183000276",
+  "name": "SWISS ROLL Strawberry Filling",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281183000399",
+  "name": "🔵 blue 7",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281183001082",
+  "name": "Mini croissant",
+  "problems": [
+   "48 kcal per 100 g is too little for bakery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6281183001211",
+  "name": "Almarai Cake Bar Cocoa Filling",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281183001488",
+  "name": "Cake bar",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281183001518",
+  "name": "Swiss roll blue",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281183001648",
+  "name": "Almarai SWISS ROLL Cocoa Filling",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281183001655",
+  "name": "Lusine swiss roll red small",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6281183001846",
+  "name": null,
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no name"
+  ]
+ },
+ {
+  "barcode": "6287002230077",
+  "name": "رامـــه RAMAH",
+  "problems": [
+   "name reviewed as unclear"
+  ]
+ },
+ {
+  "barcode": "6287003470823",
+  "name": "Samnrai",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6287004590339",
+  "name": "Ideal healthy bakery",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6287007010230",
+  "name": "Yogurt",
+  "problems": [
+   "OFF data-quality errors: en:energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6287022520035",
+  "name": "Vivi",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6287025900254",
+  "name": "OSKA",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6287032070018",
+  "name": "black Spark soft drink",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-computed-from-other-nutrients",
+   "energy 4.0 kcal inconsistent with macros (47)",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6291003304293",
+  "name": "Sunflower oil",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6291023142905",
+  "name": "Sweet N’ Low Sugar-free Cherry Jelly",
+  "problems": [
+   "missing energy-kcal_100g, proteins_100g, carbohydrates_100g, sugars_100g, fat_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6291100605262",
+  "name": "Vanilla pound cake",
+  "problems": [
+   "82 kcal per 100 g is too little for bakery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6291105691222",
+  "name": "Original",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6291105692229",
+  "name": "Betty Crocker Family Cake Marble",
+  "problems": [
+   "102 kcal per 100 g is too little for bakery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6291105692748",
+  "name": "Old El Paso Tortilla chips cheddar cheese & jalapeño",
+  "problems": [
+   "98 kcal per 100 g is too little for cheese; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6291105692991",
+  "name": "Nature Valley Bfast Biscuits",
+  "problems": [
+   "125 kcal per 100 g is too little for bakery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "6294003592295",
+  "name": "Fitness",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6294017101117",
+  "name": "tola",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6294017121573",
+  "name": "Maggi chicken soup with corn",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-energy-value-in-kj-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6297000747705",
+  "name": "Barbican malt beverage apple flavor",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-sugars-plus-starch-greater-than-carbohydrates",
+   "sugars above carbohydrate",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "6297001003008",
+  "name": "Potato Stick",
+  "problems": [
+   "139 kcal per 100 g is too little for snacks; values look per serving"
+  ]
+ },
+ {
+  "barcode": "7310521056718",
+  "name": "Stava Med Brago Bokstavskex",
+  "problems": [
+   "110 kcal per 100 g is too little for bakery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "7891118010769",
+  "name": "arcor flics",
+  "problems": [
+   "10 kcal per 100 g is too little for confectionery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "7891151029421",
+  "name": "Gomutcho",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "8057432900042",
+  "name": "Filippone rosemary",
+  "problems": [
+   "OFF data-quality errors: en:ingredients-single-ingredient-from-category-does-not-match-actual-ingredients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "8410522001034",
+  "name": "Cobolifa Sliced Green Olives",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-salt-does-not-match-sodium",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "8410522001065",
+  "name": "Coopoliva Slice olive",
+  "problems": [
+   "148.6 kcal per 100 g is too little for an oil; values look per serving"
+  ]
+ },
+ {
+  "barcode": "8410522001133",
+  "name": "Sliced black olives",
+  "problems": [
+   "148 kcal per 100 g is too little for an oil; values look per serving"
+  ]
+ },
+ {
+  "barcode": "8420701103176",
+  "name": "Rafael Salgado Refined Olive Pomace Oil blended with Extra Virgin Olive Oil",
+  "problems": [
+   "OFF data-quality errors: en:ingredients-single-ingredient-from-category-does-not-match-actual-ingredients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "8435382499494",
+  "name": "lussory wine",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "8710898312766",
+  "name": "Hone kleja",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "8715661018616",
+  "name": "Ravelli Chocolatier Chocolade Molens",
+  "problems": [
+   "not tagged as sold in Saudi Arabia",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "8716200675024",
+  "name": "Rainbow milk can",
+  "problems": [
+   "missing sugars_100g, saturated-fat_100g, salt_100g",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "8887290527231",
+  "name": "Kracks",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "8901440217909",
+  "name": "Crushed chilli",
+  "problems": [
+   "42 kcal per 100 g is too little for a dry powder or spice; values look per serving"
+  ]
+ },
+ {
+  "barcode": "8908003133089",
+  "name": "SAT ISABGOL",
+  "problems": [
+   "1 kcal per 100 g is too little for a dry powder or spice; values look per serving"
+  ]
+ },
+ {
+  "barcode": "8908009918413",
+  "name": "Herbalance",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "8992696526013",
+  "name": "rtd Nescafe mocha",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-value-over-105-proteins, en:nutrition-packaging-as-sold-100g-value-over-1000-proteins, en:nutrition-packaging-as-sold-100g-value-total-over-105",
+   "more than 100 g per 100 g",
+   "energy 65.0 kcal inconsistent with macros (6774)",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "9006900014360",
+  "name": null,
+  "problems": [
+   "no name"
+  ]
+ },
+ {
+  "barcode": "9009301000376",
+  "name": "Puck 20000063 Original slices processed cheese analogue",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100g-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100g-sugars-plus-starch-greater-than-carbohydrates, en:nutrition-packaging-as-sold-100g-salt-does-not-match-sodium",
+   "sugars above carbohydrate",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "9100005824630",
+  "name": "Huile d'olive",
+  "problems": [
+   "120 kcal per 100 g is too little for an oil; values look per serving"
+  ]
+ },
+ {
+  "barcode": "9300602357801",
+  "name": "Always Fresh Parmesan Stuffed Olives",
+  "problems": [
+   "143.5 kcal per 100 g is too little for an oil; values look per serving"
+  ]
+ },
+ {
+  "barcode": "9421904188143",
+  "name": "MĀNUKA HONEY LOZENGES",
+  "problems": [
+   "12 kcal per 100 g is too little for confectionery; values look per serving"
+  ]
+ },
+ {
+  "barcode": "9555022306964",
+  "name": "Ramuan",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "9555582200016",
+  "name": "Kewpie Mayonnaise Japanese Style",
+  "problems": [
+   "OFF data-quality errors: en:nutrition-packaging-as-sold-100ml-energy-value-in-kcal-greater-than-in-kj, en:nutrition-packaging-as-sold-100ml-energy-value-in-kcal-does-not-match-value-in-kj, en:nutrition-packaging-as-sold-100ml-energy-value-in-kj-does-not-match-value-computed-from-other-nutrients",
+   "no Arabic name"
+  ]
+ },
+ {
+  "barcode": "9556439881228",
+  "name": "Lexus",
+  "problems": [
+   "name reviewed as unclear",
+   "no Arabic name"
+  ]
+ }
+]
