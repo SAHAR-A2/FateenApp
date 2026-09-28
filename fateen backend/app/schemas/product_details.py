@@ -43,6 +43,8 @@ class NutritionDetails(BaseModel):
 class ProductDetailsResponse(BaseModel):
     internal_code: str
     name: str
+    name_ar: Optional[str] = None
+    name_en: Optional[str] = None
     description: Optional[str] = None
     confidence_level: float = Field(ge=0, le=1)
     lifecycle_status: str

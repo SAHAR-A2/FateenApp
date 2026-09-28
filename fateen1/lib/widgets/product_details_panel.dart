@@ -92,7 +92,9 @@ class ProductDetailsPanel extends StatelessWidget {
           title: 'المكونات',
           icon: Icons.list_alt_rounded,
           child: product.ingredients.isEmpty
-              ? const _Missing('لا تتوفر قائمة المكونات لهذا المنتج')
+              ? (_statement(product) == null
+                  ? const _Missing('لا تتوفر قائمة المكونات لهذا المنتج')
+                  : Text(_statement(product)!, style: AppTextStyles.body))
               : Wrap(
                   spacing: AppSpacing.xs,
                   runSpacing: AppSpacing.xs,
@@ -123,6 +125,13 @@ class ProductDetailsPanel extends StatelessWidget {
       ],
     );
   }
+}
+
+/// The printed ingredient list, Arabic first.
+String? _statement(Product product) {
+  final s = product.ingredientStatements;
+  final text = s['ar'] ?? s['en'];
+  return (text == null || text.trim().isEmpty) ? null : text.trim();
 }
 
 class _Section extends StatelessWidget {

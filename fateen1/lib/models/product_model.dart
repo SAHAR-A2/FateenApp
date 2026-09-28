@@ -93,6 +93,10 @@ class Product {
   final List<FateenRelationship> healthFlags;
   final List<FateenNutritionValue> nutrition;
 
+  /// The ingredient list as printed on the pack, keyed by language code
+  /// ("ar", "en"). Shown when the structured [ingredients] list is empty.
+  final Map<String, String> ingredientStatements;
+
   // --- Open Food Facts shape (legacy, deprecated, kept for transition) --
   final String name;
 
@@ -126,6 +130,7 @@ class Product {
     this.allergens = const [],
     this.healthFlags = const [],
     this.nutrition = const [],
+    this.ingredientStatements = const {},
     required this.name,
     this.imageUrl = '',
     this.ingredientsText = '',
@@ -163,6 +168,9 @@ class Product {
       nutrition: ((json['nutrition'] as List?) ?? [])
           .map((e) => FateenNutritionValue.fromJson(e as Map<String, dynamic>))
           .toList(),
+      ingredientStatements:
+          ((json['ingredient_statements'] as Map?) ?? const {})
+              .map((k, v) => MapEntry(k.toString(), v.toString())),
     );
   }
 

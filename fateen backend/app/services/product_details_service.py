@@ -12,6 +12,22 @@ def get_product_details_by_barcode(barcode: str):
         p.product_category_id,
         ls.code AS lifecycle_status,
         (
+            SELECT pt.name FROM public.product_translations pt
+            JOIN public.languages l ON l.id = pt.language_id
+            WHERE pt.product_id = p.id AND l.code = 'ar'
+              AND pt.deleted_at IS NULL AND pt.translation_status <> 'rejected'
+            ORDER BY (pt.translation_status = 'approved') DESC
+            LIMIT 1
+        ) AS name_ar,
+        (
+            SELECT pt.name FROM public.product_translations pt
+            JOIN public.languages l ON l.id = pt.language_id
+            WHERE pt.product_id = p.id AND l.code = 'en'
+              AND pt.deleted_at IS NULL AND pt.translation_status <> 'rejected'
+            ORDER BY (pt.translation_status = 'approved') DESC
+            LIMIT 1
+        ) AS name_en,
+        (
             SELECT i.storage_uri
             FROM public.product_images pi
             JOIN public.images i ON i.id = pi.image_id
@@ -181,6 +197,8 @@ def get_product_details_by_barcode(barcode: str):
         "id": product["id"],
         "internal_code": product["internal_code"],
         "name": product["name"],
+        "name_ar": product.get("name_ar"),
+        "name_en": product.get("name_en"),
         "description": product["description"],
         "confidence_level": product["confidence_level"],
         "product_category_id": product["product_category_id"],

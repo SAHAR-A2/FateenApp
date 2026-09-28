@@ -45,6 +45,18 @@ void main() {
     expect(find.text('لا تتوفر القيم الغذائية لهذا المنتج'), findsOneWidget);
   });
 
+  testWidgets('shows the printed ingredient list, Arabic first', (tester) async {
+    final json = Map<String, dynamic>.from(detailsJson)
+      ..['ingredients'] = []
+      ..['ingredient_statements'] = {'en': 'Water, sugar', 'ar': 'ماء، سكر'};
+    await tester.pumpWidget(
+        _host(Product.fromFateenDetailsJson(json, barcode: '6281000000066')));
+
+    expect(find.text('ماء، سكر'), findsOneWidget);
+    expect(find.text('Water, sugar'), findsNothing);
+    expect(find.text('لا تتوفر قائمة المكونات لهذا المنتج'), findsNothing);
+  });
+
   test('formats amounts without noise', () {
     expect(ProductDetailsPanel.formatAmount(61), '61');
     expect(ProductDetailsPanel.formatAmount(4.8), '4.8');

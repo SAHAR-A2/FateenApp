@@ -129,6 +129,6 @@ class TestProductDetails:
         data = response.json()
         expected_top_keys = {
             "internal_code", "name", "description", "confidence_level",
-            "lifecycle_status", "image_url", "ingredients", "allergens", "health_flags", "nutrition", "ingredient_statements",
+            "lifecycle_status", "image_url", "ingredients", "allergens", "health_flags", "nutrition", "ingredient_statements", "name_ar", "name_en",
         }
         assert set(data.keys()) == expected_top_keys
