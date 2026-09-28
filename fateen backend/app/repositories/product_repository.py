@@ -178,19 +178,27 @@ def search_products(query: str, limit: int = 25, language: str = "ar") -> list[d
       -- Do not present partial catalogue rows as verified products. Arabic
       -- and English labels, an active barcode, and an active product image
       -- are minimum display requirements for the consumer search result.
+      -- One label may be a translation awaiting review (the catalog loader
+      -- translates a name the source gives in one language only); the
+      -- other must be approved.
       AND EXISTS (
           SELECT 1 FROM public.product_translations ar
           JOIN public.languages lar ON lar.id = ar.language_id
           WHERE ar.product_id = p.id AND lar.code = 'ar'
             AND ar.deleted_at IS NULL AND lar.deleted_at IS NULL
-            AND ar.translation_status = 'approved'
+            AND ar.translation_status IN ('approved', 'pending_review')
       )
       AND EXISTS (
           SELECT 1 FROM public.product_translations en
           JOIN public.languages len ON len.id = en.language_id
           WHERE en.product_id = p.id AND len.code = 'en'
             AND en.deleted_at IS NULL AND len.deleted_at IS NULL
-            AND en.translation_status = 'approved'
+            AND en.translation_status IN ('approved', 'pending_review')
+      )
+      AND EXISTS (
+          SELECT 1 FROM public.product_translations ok
+          WHERE ok.product_id = p.id AND ok.deleted_at IS NULL
+            AND ok.translation_status = 'approved'
       )
       AND EXISTS (
           SELECT 1 FROM public.product_barcodes pb

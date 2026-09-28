@@ -7,6 +7,8 @@ import '../widgets/product_list_title.dart';
 import '../services/auth_service.dart';
 import '../services/favorites_service.dart';
 import '../services/fateen_api_service.dart';
+import '../services/api_client.dart';
+import '../services/product_check_service.dart';
 import '../models/product_model.dart';
 
 class FavoritesScreen extends StatefulWidget {
@@ -31,39 +33,43 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
 
     try {
       final userId = AuthService().getCurrentUserId();
-      final barcodes = await FavoritesService().getFavorites(userId!);
+      if (userId == null) return;
+      final barcodes = await FavoritesService().getFavorites(userId);
 
+      // Fetched in parallel; a favourite that is no longer in FateenDB is
+      // skipped rather than failing the whole list.
       final apiService = FateenApiService();
-      final List<Product> products = [];
-      for (String barcode in barcodes) {
-        final product = await apiService.getProductByBarcode(barcode);
-        if (product != null) products.add(product);
-      }
+      final products = await Future.wait(barcodes.map((barcode) async {
+        try {
+          return await apiService.getProductByBarcode(barcode);
+        } on FateenApiException {
+          return null;
+        }
+      }));
 
       if (mounted) {
-        setState(() {
-          _favoriteProducts = products;
-          _isLoading = false;
-        });
+        setState(() => _favoriteProducts = products.whereType<Product>().toList());
       }
-    } catch (errorMessage) {
+    } catch (_) {
       if (!mounted) return;
-      setState(() => _isLoading = false);
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(errorMessage.toString())),
+        const SnackBar(content: Text('تعذّر تحميل المفضلة، حاول مرة أخرى')),
       );
+    } finally {
+      if (mounted) setState(() => _isLoading = false);
     }
   }
 
   Future<void> _removeFavorite(Product product) async {
+    final userId = AuthService().getCurrentUserId();
+    if (userId == null) return;
     try {
-      final userId = AuthService().getCurrentUserId();
-      await FavoritesService().removeFromFavorites(userId!, product.barcode);
-      setState(() => _favoriteProducts.remove(product));
-    } catch (errorMessage) {
+      await FavoritesService().removeFromFavorites(userId, product.barcode);
+      if (mounted) setState(() => _favoriteProducts.remove(product));
+    } catch (_) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(errorMessage.toString())),
+        const SnackBar(content: Text('تعذّر تحديث المفضلة، حاول مرة أخرى')),
       );
     }
   }
@@ -111,7 +117,8 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                                 imagePath: product.imageUrl,
                                 selected: false,
                                 isFavorite: true,
-                                onTap: () {},
+                                onTap: () => checkAndOpenResult(
+                                    context, product.barcode),
                                 onFavoriteTap: () => _removeFavorite(product),
                               );
                             },

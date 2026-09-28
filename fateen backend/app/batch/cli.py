@@ -10,7 +10,7 @@ Subcommands:
                        credential-gated via the SAME SfdaAuthenticationRequired
                        before any network call)
   migration-proposal   STEP H unapplied migration proposal document
-  report               writes Temp\\opencode\\sfda_scaling_readiness_report.txt
+  report               writes the readiness report (default: <temp>/fateen/, override with --out)
 
 Safety contract (same as every FATEEN write-capable entry point): the
 effective dry-run decision always flows through
@@ -79,7 +79,8 @@ def main(argv=None):
     p_mig.add_argument("--out", help="optional text output path")
 
     # report -----------------------------------------------------------------
-    sub.add_parser("report", help="write Temp\\opencode\\sfda_scaling_readiness_report.txt")
+    p_report = sub.add_parser("report", help="write the SFDA scaling readiness report")
+    p_report.add_argument("--out", help="report path (default: <system temp>/fateen/...)")
 
     args = parser.parse_args(argv)
     command = args.command
@@ -363,11 +364,15 @@ def _cmd_migration_proposal(args) -> int:
 def _cmd_report(args) -> int:
     from app.batch import readiness_report
 
-    out = readiness_report.write_readiness_report()
+    report = readiness_report.build_readiness_report()
+    out = readiness_report.write_readiness_report(
+        out_path=Path(args.out) if args.out else readiness_report.DEFAULT_REPORT_PATH,
+        report=report,
+    )
     print(f"readiness report written: {out}")
-    print("SFDA_LIVE = BLOCKED_AUTH")
-    print("SFDA_PIPELINE_READY_FOR_SCALING = PASS")
-    return 0
+    print(f"SFDA_LIVE = {report['sfda_live']}")
+    print(f"SFDA_PIPELINE_READY_FOR_SCALING = {report['sfda_pipeline_ready_for_scaling']}")
+    return 0 if report["sfda_pipeline_ready_for_scaling"] == "PASS" else 1
 
 
 if __name__ == "__main__":

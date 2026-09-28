@@ -1,0 +1,25 @@
+# Secrets and local environment files — never commit.
+.env
+.env.*
+*.env
+!.env.example
+*.pem
+*.key
+*.p12
+service-account*.json
+
+# Archives and local tooling
+*.zip
+.tools/
+
+# Runtime artifacts (SFDA batch runs, checkpoints, quarantine sinks)
+.sfda_*/
+
+# Logs
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

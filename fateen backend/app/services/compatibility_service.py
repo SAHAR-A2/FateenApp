@@ -21,7 +21,7 @@ import logging
 from typing import Optional
 
 from app.services.product_details_service import get_product_details_by_barcode
-from app.services.allergen_mapping import resolve_allergen_code
+from app.services.allergen_mapping import resolve_allergen_codes
 from app.collector import health_conditions as health_conditions_engine
 from app.schemas.compatibility import (
     CompatibilityRequest,
@@ -89,11 +89,33 @@ class _Verdict:
                 self.confidence = confidence
 
 
+# The Flutter app stores and sends the Arabic labels of
+# lib/data/disease_options.dart. Each maps to a health_conditions.code. A
+# label with no condition row (low blood pressure has no nutrition rule)
+# stays UNKNOWN rather than being guessed.
+_DISEASE_NAME_TO_CODE = {
+    "سكري": "DIABETES",
+    "السكري": "DIABETES",
+    "ارتفاع الضغط": "HYPERTENSION",
+    "ارتفاع ضغط الدم": "HYPERTENSION",
+    "انخفاض الضغط": "LOW_BLOOD_PRESSURE",
+    "كوليسترول": "HIGH_CHOLESTEROL",
+    "الكوليسترول": "HIGH_CHOLESTEROL",
+    "ارتفاع الكوليسترول": "HIGH_CHOLESTEROL",
+    "high cholesterol": "HIGH_CHOLESTEROL",
+    "cholesterol": "HIGH_CHOLESTEROL",
+}
+
+
 def _matches_condition_name(condition: dict, disease_name: str) -> bool:
     target = (disease_name or "").strip().lower()
+    code = (condition.get("code") or "").strip().lower()
+    if not code:
+        return False
     return (
         (condition.get("name") or "").strip().lower() == target
-        or (condition.get("code") or "").strip().lower() == target
+        or code == target
+        or _DISEASE_NAME_TO_CODE.get(target, "").lower() == code
     )
 
 
@@ -121,22 +143,36 @@ def evaluate_compatibility(
     matched_allergens: list[MatchedAllergen] = []
     health_condition_results: list[HealthConditionResult] = []
 
-    has_any_enrichment = bool(
-        details["ingredients"] or details["allergens"] or details["nutrition"]
+    # An ingredient statement counts as evidence: the catalog loader derives
+    # the product's allergen rows from it (app.catalog.allergen_detection),
+    # so a statement with no allergen rows means none of the 14 was found.
+    has_allergen_basis = bool(
+        details["ingredients"] or details["allergens"] or details.get("ingredient_statements")
     )
+    has_any_enrichment = has_allergen_basis or bool(details["nutrition"])
 
     if not has_any_enrichment:
         verdict.consider(
             STATUS_INSUFFICIENT_DATA,
             "لا تتوفر بيانات كافية عن مكونات هذا المنتج بعد",
         )
-    else:
-        product_allergens_by_code = {
-            a["internal_code"]: a for a in details["allergens"]
-        }
+    elif request.allergies and not has_allergen_basis:
+        # Nutrition alone says nothing about allergens: without an
+        # ingredient list or allergen evidence, "no match" is not "safe".
+        verdict.consider(
+            STATUS_INSUFFICIENT_DATA,
+            "لا تتوفر قائمة مكونات أو بيانات مسببات حساسية لهذا المنتج للتحقق من حساسيتك",
+        )
+    if has_allergen_basis:
+        product_allergens_by_code = {}
+        for a in details["allergens"]:
+            # A CONTAINS row outranks a MAY_CONTAIN row for the same allergen.
+            current = product_allergens_by_code.get(a["internal_code"])
+            if current is None or current.get("relationship_type") == "MAY_CONTAIN_ALLERGEN":
+                product_allergens_by_code[a["internal_code"]] = a
 
         for allergy in request.allergies:
-            resolution = resolve_allergen_code(allergy.tag)
+            resolution = resolve_allergen_codes(allergy.tag)
 
             if resolution is None:
                 verdict.consider(
@@ -145,7 +181,7 @@ def evaluate_compatibility(
                 )
                 continue
 
-            code, verified = resolution
+            codes, verified = resolution
             if not verified:
                 verdict.consider(
                     STATUS_UNKNOWN,
@@ -153,7 +189,12 @@ def evaluate_compatibility(
                 )
                 continue
 
-            hit = product_allergens_by_code.get(code)
+            # A CONTAINS row for any of the codes outranks a MAY_CONTAIN row.
+            hits = [product_allergens_by_code[c] for c in codes if c in product_allergens_by_code]
+            hit = next(
+                (h for h in hits if h.get("relationship_type") != "MAY_CONTAIN_ALLERGEN"),
+                hits[0] if hits else None,
+            )
             if hit is None:
                 # No evidence linking this specific allergen to this
                 # product. Not treated as proof of absence, but does not
@@ -161,6 +202,7 @@ def evaluate_compatibility(
                 # report's discussion of "no evidence" vs "evidence of
                 # absence" vs "insufficient evidence".
                 continue
+            code = hit["internal_code"]
 
             severity_label = (allergy.severity or "").strip()
             allergen_status = (
@@ -175,9 +217,13 @@ def evaluate_compatibility(
                     evidence_type=hit.get("evidence_type"),
                 )
             )
+            if hit.get("relationship_type") == "MAY_CONTAIN_ALLERGEN":
+                allergen_reason = f"قد يحتوي هذا المنتج على آثار من مسبب حساسية ({hit['name']})"
+            else:
+                allergen_reason = f"يحتوي هذا المنتج على مسبب حساسية ({hit['name']})"
             verdict.consider(
                 allergen_status,
-                f"يحتوي هذا المنتج على مسبب حساسية ({hit['name']})",
+                allergen_reason,
                 confidence=hit["confidence_level"],
             )
 

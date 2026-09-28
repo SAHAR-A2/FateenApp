@@ -17,3 +17,10 @@ reports/
 *.md
 !.env.example
 .pytest_cache
+# Local run output and data the server does not read
+seed/
+docs/
+cloud_report_*/
+cleanup_backup_*.json
+*.report.json
+.sfda_*/

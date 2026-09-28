@@ -1,5 +1,7 @@
 from unittest.mock import patch
 
+import pytest
+
 
 # Mirrors the verified baseline:
 # GET /api/v1/products/details/barcode/6281000000073 -> Fateen Test Snack,
@@ -65,19 +67,60 @@ class TestCompatibilityAllergens:
         )
         assert response.json()["status"] == "WARNING"
 
+    @patch("app.services.allergen_mapping.live_allergen_codes", return_value=frozenset({"PEANUT", "MILK"}))
     @patch("app.services.compatibility_service.get_product_details_by_barcode")
-    def test_unverified_allergen_mapping_is_unknown_not_safe(
-            self, mock_details, authenticated_client
+    def test_allergen_code_missing_from_database_is_unknown_not_safe(
+            self, mock_details, mock_codes, authenticated_client
     ):
-        # 'en:milk' maps to an as-yet-unverified internal_code -- must never
-        # silently resolve to SAFE just because the mapping is unconfirmed.
+        # 'en:gluten' needs GLUTEN and WHEAT rows. On a database without
+        # them (0055 not applied) the answer must be UNKNOWN, never SAFE.
         mock_details.return_value = SAMPLE_DETAILS
 
         response = authenticated_client.post(
             ENDPOINT,
-            json={"allergies": [{"tag": "en:milk", "severity": "شديد"}], "diseases": []},
+            json={"allergies": [{"tag": "en:gluten", "severity": "شديد"}], "diseases": []},
         )
         assert response.json()["status"] == "UNKNOWN"
+
+    @pytest.mark.parametrize("user_tag,product_code", [
+        ("en:wheat", "GLUTEN"),   # OFF records wheat under en:gluten
+        ("en:gluten", "WHEAT"),
+        ("en:crustaceans", "SHELLFISH"),
+    ])
+    @patch("app.services.allergen_mapping.live_allergen_codes",
+           return_value=frozenset({"PEANUT", "WHEAT", "GLUTEN", "SHELLFISH"}))
+    @patch("app.services.compatibility_service.get_product_details_by_barcode")
+    def test_related_allergen_codes_match(
+            self, mock_details, mock_codes, user_tag, product_code, authenticated_client
+    ):
+        mock_details.return_value = {
+            **SAMPLE_DETAILS,
+            "allergens": [{**SAMPLE_DETAILS["allergens"][0], "internal_code": product_code, "name": product_code}],
+        }
+        response = authenticated_client.post(
+            ENDPOINT,
+            json={"allergies": [{"tag": user_tag, "severity": "شديد"}], "diseases": []},
+        )
+        data = response.json()
+        assert data["status"] == "DANGER"
+        assert data["matched_allergens"][0]["internal_code"] == product_code
+
+    @patch("app.services.allergen_mapping.live_allergen_codes", return_value=frozenset({"PEANUT"}))
+    @patch("app.services.compatibility_service.get_product_details_by_barcode")
+    def test_contains_outranks_may_contain_across_codes(
+            self, mock_details, mock_codes, authenticated_client
+    ):
+        mock_details.return_value = {
+            **SAMPLE_DETAILS,
+            "allergens": [
+                {**SAMPLE_DETAILS["allergens"][0], "relationship_type": "MAY_CONTAIN_ALLERGEN"},
+            ],
+        }
+        response = authenticated_client.post(
+            ENDPOINT,
+            json={"allergies": [{"tag": "en:peanuts", "severity": "شديد"}], "diseases": []},
+        )
+        assert "آثار" in response.json()["reason"]
 
     @patch("app.services.compatibility_service.get_product_details_by_barcode")
     def test_unmapped_tag_is_unknown(self, mock_details, authenticated_client):
@@ -112,6 +155,46 @@ class TestCompatibilityHealthConditions:
         data = response.json()
         assert data["status"] == "UNKNOWN"
         assert data["health_conditions"][0]["evaluation_result"] == "UNKNOWN"
+
+
+    @pytest.mark.parametrize("app_label,code", [
+        ("سكري", "DIABETES"),
+        ("ارتفاع الضغط", "HYPERTENSION"),
+        ("كوليسترول", "HIGH_CHOLESTEROL"),
+    ])
+    @patch("app.services.compatibility_service.get_product_details_by_barcode")
+    @patch("app.collector.health_conditions.evaluate_single_condition")
+    @patch("app.collector.health_conditions.get_health_conditions")
+    def test_app_arabic_disease_labels_reach_their_condition(
+            self, mock_conditions, mock_evaluate, mock_details, app_label, code, authenticated_client
+    ):
+        # lib/data/disease_options.dart sends these Arabic labels.
+        mock_details.return_value = SAMPLE_DETAILS
+        mock_conditions.return_value = [{"id": "c1", "name": code.title(), "code": code}]
+        mock_evaluate.return_value = {
+            "condition_code": code, "condition_name": code.title(),
+            "evaluation_result": "WARNING", "evidence": [],
+        }
+        response = authenticated_client.post(
+            ENDPOINT,
+            json={"allergies": [], "diseases": [{"name": app_label, "severity": "متوسط"}]},
+        )
+        data = response.json()
+        mock_evaluate.assert_called_once_with(SAMPLE_DETAILS["id"], code)
+        assert data["status"] == "WARNING"
+
+    @patch("app.services.compatibility_service.get_product_details_by_barcode")
+    @patch("app.collector.health_conditions.get_health_conditions",
+           return_value=[{"id": "c1", "name": "Diabetes", "code": "DIABETES"}])
+    def test_low_blood_pressure_has_no_rule_and_stays_unknown(
+            self, mock_conditions, mock_details, authenticated_client
+    ):
+        mock_details.return_value = SAMPLE_DETAILS
+        response = authenticated_client.post(
+            ENDPOINT,
+            json={"allergies": [], "diseases": [{"name": "انخفاض الضغط", "severity": "متوسط"}]},
+        )
+        assert response.json()["status"] == "UNKNOWN"
 
 
 class TestCompatibilityDataSufficiency:
@@ -203,3 +286,98 @@ class TestCompatibilityNotFound:
         )
         assert response.status_code == 404
         assert response.json()["detail"] == "Product barcode not found"
+
+
+class TestCompatibilityAllergenEvidence:
+    @patch("app.services.compatibility_service.get_product_details_by_barcode")
+    def test_nutrition_only_product_is_not_safe_for_allergic_user(
+            self, mock_details, authenticated_client
+    ):
+        """Nutrition values say nothing about allergens; never report SAFE."""
+        mock_details.return_value = {
+            **SAMPLE_DETAILS,
+            "ingredients": [],
+            "allergens": [],
+            "nutrition": [{
+                "nutrition_type": "ENERGY", "amount_value": 500.0, "unit": "KCAL",
+                "relationship_type": "MEASURED_VALUE", "confidence_level": 0.5,
+                "evidence_type": "DATABASE", "measurement_basis": "PER_100G",
+            }],
+        }
+        response = authenticated_client.post(
+            ENDPOINT,
+            json={"allergies": [{"tag": "en:peanuts", "severity": "شديد"}], "diseases": []},
+        )
+        assert response.json()["status"] == "INSUFFICIENT_DATA"
+
+    @patch("app.services.compatibility_service.get_product_details_by_barcode")
+    def test_nutrition_only_product_without_allergies_is_safe(
+            self, mock_details, authenticated_client
+    ):
+        mock_details.return_value = {
+            **SAMPLE_DETAILS,
+            "ingredients": [],
+            "allergens": [],
+            "nutrition": [{
+                "nutrition_type": "ENERGY", "amount_value": 500.0, "unit": "KCAL",
+                "relationship_type": "MEASURED_VALUE", "confidence_level": 0.5,
+                "evidence_type": "DATABASE", "measurement_basis": "PER_100G",
+            }],
+        }
+        response = authenticated_client.post(
+            ENDPOINT, json={"allergies": [], "diseases": []},
+        )
+        assert response.json()["status"] == "SAFE"
+
+    @patch("app.services.compatibility_service.get_product_details_by_barcode")
+    def test_may_contain_is_flagged_with_trace_wording(self, mock_details, authenticated_client):
+        mock_details.return_value = {
+            **SAMPLE_DETAILS,
+            "allergens": [{
+                "internal_code": "PEANUT", "name": "Peanut",
+                "relationship_type": "MAY_CONTAIN_ALLERGEN",
+                "confidence_level": 0.7, "evidence_type": "LABEL",
+            }],
+        }
+        data = authenticated_client.post(
+            ENDPOINT,
+            json={"allergies": [{"tag": "en:peanuts", "severity": "شديد"}], "diseases": []},
+        ).json()
+        assert data["status"] == "DANGER"
+        assert "قد يحتوي" in data["reason"]
+
+    @patch("app.services.compatibility_service.get_product_details_by_barcode")
+    def test_contains_outranks_may_contain_for_same_allergen(
+            self, mock_details, authenticated_client
+    ):
+        contains = SAMPLE_DETAILS["allergens"][0]
+        may_contain = {**contains, "relationship_type": "MAY_CONTAIN_ALLERGEN"}
+        mock_details.return_value = {**SAMPLE_DETAILS, "allergens": [contains, may_contain]}
+        data = authenticated_client.post(
+            ENDPOINT,
+            json={"allergies": [{"tag": "en:peanuts", "severity": "شديد"}], "diseases": []},
+        ).json()
+        assert data["status"] == "DANGER"
+        assert data["reason"].startswith("يحتوي")
+
+
+class TestIngredientStatementEvidence:
+    @patch("app.services.allergen_mapping.live_allergen_codes", return_value=frozenset({"PEANUT"}))
+    @patch("app.services.compatibility_service.get_product_details_by_barcode")
+    def test_statement_without_the_allergen_is_evidence(self, mock_details, mock_codes, authenticated_client):
+        # The loader stores the allergens found in a statement, so a statement
+        # with no PEANUT row means peanut was not found in it.
+        mock_details.return_value = {**SAMPLE_DETAILS, "ingredients": [], "allergens": [],
+                                     "ingredient_statements": {"ar": "ماء، سكر"}}
+        response = authenticated_client.post(
+            ENDPOINT, json={"allergies": [{"tag": "en:peanuts", "severity": "شديد"}], "diseases": []})
+        assert response.json()["status"] == "SAFE"
+
+    @patch("app.services.compatibility_service.get_product_details_by_barcode")
+    def test_no_statement_and_no_allergens_is_still_insufficient(self, mock_details, authenticated_client):
+        mock_details.return_value = {**SAMPLE_DETAILS, "ingredients": [], "allergens": [],
+                                     "nutrition": [{"nutrition_type": "SUGAR", "amount_value": 1, "unit": "G",
+                                                    "confidence_level": 0.5}]}
+        response = authenticated_client.post(
+            ENDPOINT, json={"allergies": [{"tag": "en:peanuts", "severity": "شديد"}], "diseases": []})
+        assert response.json()["status"] == "INSUFFICIENT_DATA"

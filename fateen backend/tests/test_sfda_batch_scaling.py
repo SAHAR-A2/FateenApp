@@ -320,24 +320,27 @@ class TestCliSmoke:
     def test_cli_run_live_blocks_without_credential(self, capsys):
         from app.batch.preflight import check_credentials
 
-        if check_credentials()["credential_configured"] == "NO":
-            from app.batch.cli import main
+        if check_credentials()["credential_configured"] != "NO":
+            pytest.skip("credential configured in this env; live CLI would run")
 
-            rc = main([
-                "run", "--write", "--count", "1", "--batch-size", "1",
-            ])
-            assert rc == 1
-            assert "credential" in (capsys.readouterr().err + capsys.readouterr().out).lower()
-        pytest.skip("credential configured in this env; live CLI would run")
+        from app.batch.cli import main
+
+        rc = main([
+            "run", "--write", "--count", "1", "--batch-size", "1",
+        ])
+        assert rc == 1
+        captured = capsys.readouterr()
+        assert "credential" in (captured.err + captured.out).lower()
 
     def test_cli_report(self, tmp_path, capsys):
         from app.batch.cli import main
 
-        rc = main(["report"])
+        report_path = tmp_path / "sfda_scaling_readiness_report.txt"
+        rc = main(["report", "--out", str(report_path)])
         assert rc == 0
         out = capsys.readouterr().out
-        assert "sfda_scaling_readiness_report.txt" in out
-        report_path = Path(r"C:\Users\sahar\AppData\Local\Temp\opencode\sfda_scaling_readiness_report.txt")
+        assert str(report_path) in out
+        assert "SFDA_PIPELINE_READY_FOR_SCALING = PASS" in out
         assert report_path.exists()
 
 

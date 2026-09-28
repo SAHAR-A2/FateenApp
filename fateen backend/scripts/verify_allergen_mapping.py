@@ -1,9 +1,8 @@
 """Verify app.services.allergen_mapping against the real FateenDB.
 
-Every allergen mapping entry other than 'en:peanuts' -> 'PEANUT' is
-currently an UNVERIFIED best guess. This script checks whether each
-mapped internal_code actually exists in public.allergens, and prints its
-real name for a human to compare against the intended allergen.
+Checks that every internal_code a tag maps to exists in public.allergens
+and prints its real name for a human to compare against the intended
+allergen. At runtime a mapping with a missing code resolves as UNKNOWN.
 
 Run this against your local/dev database (with DATABASE_URL configured as
 usual) before flipping any 'verified' flag to True in allergen_mapping.py:
@@ -25,29 +24,30 @@ def main() -> int:
 
     with get_connection() as conn:
         for tag, mapping in sorted(mappings.items()):
-            row = conn.execute(
-                """
-                SELECT internal_code, name
-                FROM public.allergens
-                WHERE internal_code = %s
-                  AND deleted_at IS NULL
-                """,
-                (mapping.internal_code,),
-            ).fetchone()
+            for code in mapping.internal_codes:
+                row = conn.execute(
+                    """
+                    SELECT internal_code, name
+                    FROM public.allergens
+                    WHERE internal_code = %s
+                      AND deleted_at IS NULL
+                    """,
+                    (code,),
+                ).fetchone()
 
-            if row is None:
-                missing += 1
-                found = "MISSING"
-                db_name = "-"
-            else:
-                found = "FOUND"
-                db_name = row["name"]
+                if row is None:
+                    missing += 1
+                    found = "MISSING"
+                    db_name = "-"
+                else:
+                    found = "FOUND"
+                    db_name = row["name"]
 
-            flag = "verified=True " if mapping.verified else "verified=False"
-            print(
-                f"{tag:42s} -> {mapping.internal_code:16s} "
-                f"[{found:7s}] ({flag}) db_name={db_name}"
-            )
+                flag = "verified=True " if mapping.verified else "verified=False"
+                print(
+                    f"{tag:42s} -> {code:16s} "
+                    f"[{found:7s}] ({flag}) db_name={db_name}"
+                )
 
     print()
     if missing:

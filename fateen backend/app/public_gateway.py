@@ -3,14 +3,19 @@
 Run this module instead of ``app.main:app`` for the deployed public API.
 Internal ingestion, scan,
 company-management, vision, dashboard, and documentation routes return 404.
+
+This wraps ``app.main.app`` instead of registering middleware on it, so
+importing this module never changes the behaviour of ``app.main.app``
+itself (tests and internal tooling keep the full surface).
 """
 
 import re
 
 from fastapi.responses import JSONResponse
-from starlette.requests import Request
+from starlette.datastructures import MutableHeaders
+from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
-from app.main import app
+from app.main import app as _full_app
 
 
 _ROUTES = (
@@ -29,17 +34,35 @@ _ROUTES = (
 )
 
 
-@app.middleware("http")
-async def limit_public_routes(request: Request, call_next):
-    method = request.method.upper()
-    path = request.url.path
-    allowed = any(
-        route.fullmatch(path) and method in (methods if method != "OPTIONS" else ("GET", "POST"))
-        for methods, route in _ROUTES
+def is_public(method: str, path: str) -> bool:
+    # OPTIONS is the CORS preflight for any public route; everything else
+    # must match the route's own method exactly.
+    method = method.upper()
+    return any(
+        route.fullmatch(path) and method in (route_method, "OPTIONS")
+        for route_method, route in _ROUTES
     )
-    if not allowed:
-        return JSONResponse({"detail": "Not found"}, status_code=404)
 
-    response = await call_next(request)
-    response.headers["Cache-Control"] = "no-store"
-    return response
+
+class PublicSurface:
+    def __init__(self, inner: ASGIApp):
+        self.inner = inner
+
+    async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
+        if scope["type"] != "http":
+            await self.inner(scope, receive, send)
+            return
+
+        if not is_public(scope["method"], scope["path"]):
+            await JSONResponse({"detail": "Not found"}, status_code=404)(scope, receive, send)
+            return
+
+        async def send_no_store(message: Message) -> None:
+            if message["type"] == "http.response.start":
+                MutableHeaders(scope=message)["Cache-Control"] = "no-store"
+            await send(message)
+
+        await self.inner(scope, receive, send_no_store)
+
+
+app = PublicSurface(_full_app)

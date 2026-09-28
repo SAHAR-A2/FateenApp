@@ -81,7 +81,8 @@ def ingest(input_data: IngestionInput, dry_run: bool = True) -> IngestionResult:
                 if applied:
                     # Structured trace of provenance for this write. We do
                     # NOT write this to public.evidence_records: that table
-                    # (added in migrations/001_collector_tables.sql) FKs
+                    # (defined only in the never-applied
+                    # legacy_archive/migrations/archive/001_collector_tables.sql) FKs
                     # source_config_id -> public.source_configs(id), a
                     # different, unrelated table from public.data_sources
                     # (the one resolved_source_id above actually comes

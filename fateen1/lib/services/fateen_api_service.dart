@@ -17,7 +17,8 @@ class FateenApiService {
   Future<Product?> getProductByBarcode(String barcode) async {
     try {
       final json =
-          await _client.get('/api/v1/products/details/barcode/$barcode');
+          await _client.get(
+          '/api/v1/products/details/barcode/${Uri.encodeComponent(barcode)}');
       return Product.fromFateenDetailsJson(
         json as Map<String, dynamic>,
         barcode: barcode,
@@ -60,7 +61,7 @@ class FateenApiService {
           .toList(),
     };
     final json = await _client.post(
-      '/api/v1/products/barcode/$barcode/compatibility',
+      '/api/v1/products/barcode/${Uri.encodeComponent(barcode)}/compatibility',
       body: body,
     );
     return CompatibilityResult.fromBackendJson(json as Map<String, dynamic>);
@@ -84,7 +85,7 @@ class FateenApiService {
           .toList(),
     };
     final json = await _client.post(
-      '/api/v1/products/barcode/$barcode/alternatives',
+      '/api/v1/products/barcode/${Uri.encodeComponent(barcode)}/alternatives',
       body: body,
     );
     final alternatives = (json as Map<String, dynamic>)['alternatives'] as List;

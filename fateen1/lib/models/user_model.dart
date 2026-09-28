@@ -22,10 +22,12 @@ class UserAllergy {
 
   factory UserAllergy.fromJson(Map<String, dynamic> json) {
     return UserAllergy(
-      tag: json['tag'],
-      symptom: json['symptom'],
-      toleranceDose: json['toleranceDose'],
-      severity: json['severity'],
+      tag: json['tag'] ?? '',
+      symptom: json['symptom'] ?? '',
+      toleranceDose: json['toleranceDose'] ?? '',
+      // Missing severity stays empty: the backend then treats a match as
+      // severe (only an explicit mild label downgrades it).
+      severity: json['severity'] ?? '',
     );
   }
 }
@@ -52,10 +54,10 @@ class UserDisease {
 
   factory UserDisease.fromJson(Map<String, dynamic> json) {
     return UserDisease(
-      name: json['name'],
-      takesMedication: json['takesMedication'],
-      controlStatus: json['controlStatus'],
-      severity: json['severity'],
+      name: json['name'] ?? '',
+      takesMedication: json['takesMedication'] ?? '',
+      controlStatus: json['controlStatus'] ?? '',
+      severity: json['severity'] ?? '',
     );
   }
 }
@@ -84,13 +86,13 @@ class AppUser {
 
   factory AppUser.fromJson(Map<String, dynamic> json) {
     return AppUser(
-      id: json['id'],
-      username: json['username'],
-      allergies: (json['allergies'] as List)
-          .map((item) => UserAllergy.fromJson(item))
+      id: json['id'] ?? '',
+      username: json['username'] ?? '',
+      allergies: ((json['allergies'] as List?) ?? const [])
+          .map((item) => UserAllergy.fromJson(Map<String, dynamic>.from(item as Map)))
           .toList(),
-      diseases: (json['diseases'] as List)
-          .map((item) => UserDisease.fromJson(item))
+      diseases: ((json['diseases'] as List?) ?? const [])
+          .map((item) => UserDisease.fromJson(Map<String, dynamic>.from(item as Map)))
           .toList(),
     );
   }

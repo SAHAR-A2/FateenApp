@@ -1,17 +1,18 @@
 """Readiness report assembler for the SFDA scaling handoff.
 
-Produces `Temp/opencode/sfda_scaling_readiness_report.txt` plus a structured
-dict. All numbers come from live modular checks (certification, gates, gap
-analysis, proposal) plus an honest DB baseline (products / barcodes /
-product_ingredients / SFDA source / quarantine), read live when reachable and
-falling back to the last verified baseline constants otherwise.
+Writes a text report (default: <system temp>/fateen/sfda_scaling_readiness_report.txt)
+plus a structured dict. Numbers come from the modular checks (certification,
+gates, gap analysis, proposal) and a DB baseline that is read live when a
+connection is given; otherwise the last verified snapshot is used and
+labelled as such.
 
-Guaranteed final status, no matter what:
-    SFDA_LIVE = BLOCKED_AUTH
-    SFDA_PIPELINE_READY_FOR_SCALING = PASS
+The final status lines are computed from those checks, not asserted:
+    SFDA_LIVE                        NO_CREDENTIAL | CREDENTIAL_PRESENT_NOT_VERIFIED
+    SFDA_PIPELINE_READY_FOR_SCALING  PASS only if certification and all gates pass
 """
 import json
 import logging
+import tempfile
 from pathlib import Path
 from typing import Optional
 
@@ -42,12 +43,17 @@ _FALLBACK_BASELINE = {
 CORPUS = corpus_from_text(FIRS_FIXTURE_1["ingredientsAr"])
 
 
+def _fallback_baseline(reason: str) -> dict:
+    return {**_FALLBACK_BASELINE, "source": f"fallback snapshot 2026-09-07 ({reason})"}
+
+
 def _db_baseline(conn) -> dict:
     """Live, read-only baseline when a connection is available."""
     if conn is None:
-        return dict(_FALLBACK_BASELINE)
+        return _fallback_baseline("no database connection")
     try:
         return {
+            "source": "live database",
             "products": conn.execute(
                 "SELECT count(*) FROM public.products WHERE deleted_at IS NULL"
             ).fetchone()[0],
@@ -67,7 +73,7 @@ def _db_baseline(conn) -> dict:
     except Exception:
         # The quarantine table is a proposal; absence of a baseline never
         # blocks the report.
-        return dict(_FALLBACK_BASELINE)
+        return _fallback_baseline("live query failed")
 
 
 def build_readiness_report(
@@ -86,10 +92,19 @@ def build_readiness_report(
     credentials = check_credentials()
     baseline = _db_baseline(conn)
 
+    # Derived, never asserted: offline certification AND every scaling gate
+    # must pass. Live access is not probed here, so without a credential it
+    # is reported as missing and with one as unverified by this report.
+    ready = certification["verdict"] == "PASS" and gates["verdict"] == "PASS"
+    live = (
+        "NO_CREDENTIAL"
+        if credentials["credential_configured"] == "NO"
+        else "CREDENTIAL_PRESENT_NOT_VERIFIED"
+    )
     return {
         "generated_at": utcnow(),
-        "sfda_live": "BLOCKED_AUTH",
-        "sfda_pipeline_ready_for_scaling": "PASS",
+        "sfda_live": live,
+        "sfda_pipeline_ready_for_scaling": "PASS" if ready else "FAIL",
         "credentials": credentials,
         "baseline": baseline,
         "gap": gap,
@@ -133,12 +148,17 @@ def _exact_command(baseline: dict) -> str:
     return "\n".join(heads)
 
 
+DEFAULT_REPORT_PATH = Path(tempfile.gettempdir()) / "fateen" / "sfda_scaling_readiness_report.txt"
+
+
 def write_readiness_report(
-    out_path: Path = Path(r"C:\Users\sahar\AppData\Local\Temp\opencode\sfda_scaling_readiness_report.txt"),
+    out_path: Path = DEFAULT_REPORT_PATH,
     conn=None,
     checkpoint_dir: str | Path = ".sfda_report",
+    report: Optional[dict] = None,
 ) -> Path:
-    report = build_readiness_report(conn=conn, checkpoint_dir=checkpoint_dir)
+    if report is None:
+        report = build_readiness_report(conn=conn, checkpoint_dir=checkpoint_dir)
     Path(out_path).parent.mkdir(parents=True, exist_ok=True)
     Path(out_path).write_text(_as_text(report), encoding="utf-8")
     logger.info("readiness report written: %s", out_path)
@@ -240,7 +260,7 @@ def _as_text(report: dict) -> str:
     add("")
     add("11) ESTIMATED 10 -> 100 -> 250 -> 500 -> ~1,000 PATH (capability-ready)")
     add("-" * 40)
-    add("   The orchestrator already certified each target offline (gate PASS). With a credential,")
+    add(f"   Offline certification: {cert['verdict']}; scaling gates: {gates['verdict']}. With a credential,")
     add("   replace the dry-run source with live fetch; elapsed time is bounded by the 1 rps rate")
     add("   limit (~1 min / 100 products incl. retries on top). Inserted/quarantined counts depend on")
     add("   real live ingredient resolution - they are NOT estimated here by design (no fabricated data).")
@@ -250,8 +270,8 @@ def _as_text(report: dict) -> str:
     add("")
     add("FINAL STATUS")
     add("-" * 40)
-    add("   SFDA_LIVE = BLOCKED_AUTH")
-    add("   SFDA_PIPELINE_READY_FOR_SCALING = PASS")
+    add(f"   SFDA_LIVE = {report['sfda_live']}")
+    add(f"   SFDA_PIPELINE_READY_FOR_SCALING = {report['sfda_pipeline_ready_for_scaling']}")
     add("   next action: provide SFDA_ACCESS_TOKEN or SFDA_API_KEY via env/.env; the path above runs.")
     add("")
     return "\n".join(L)

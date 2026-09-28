@@ -1,0 +1,3848 @@
+[
+ {
+  "path": "almarai/cheeses-and-foods/butter/salted-natural-butter",
+  "name_en": "Salted Natural Butter",
+  "name_ar": "زبدة طبيعية مملحة",
+  "sizes": [
+   [
+    200.0,
+    "g"
+   ],
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/butter/unsalted-natural-butter",
+  "name_en": "Unsalted Natural Butter",
+  "name_ar": "زبدة طبيعية غير مملحة",
+  "sizes": [
+   [
+    1.0,
+    "kg"
+   ],
+   [
+    10.0,
+    "g"
+   ],
+   [
+    60.0,
+    "g"
+   ],
+   [
+    100.0,
+    "g"
+   ],
+   [
+    125.0,
+    "g"
+   ],
+   [
+    200.0,
+    "g"
+   ],
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/butter/unsalted-spreadable-natural-butter",
+  "name_en": "Unsalted Spreadable Natural Butter",
+  "name_ar": "زبدة الدهن الطبيعية غير مملحة",
+  "sizes": [
+   [
+    250.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/cheddar-block/full-fat-cheddar-block",
+  "name_en": "Full Fat Cheddar Block Cheese",
+  "name_ar": "قالب شيدر كامل الدسم",
+  "sizes": [
+   [
+    454.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/cheddar-block/low-fat-cheddar-block",
+  "name_en": "Low Fat Cheddar Cheese Block",
+  "name_ar": "قالب شيدر قليل الدسم",
+  "sizes": [
+   [
+    454.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/cheese-slices/almarai-marvello-cheese-slices-cheddar",
+  "name_en": "Marvello Cheese Slices – CHEDDAR",
+  "name_ar": "شرائح جبن مارفيلو – شيدر",
+  "sizes": [
+   [
+    150.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/cheese-slices/almarai-marvello-cheese-slices-edam",
+  "name_en": "Marvello Cheese Slices – EDAM",
+  "name_ar": "شرائح جبن مارفيلو –   إدام",
+  "sizes": [
+   [
+    150.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/cheese-slices/almarai-marvello-cheese-slices-gouda",
+  "name_en": "Marvello Cheese Slices – GOUDA",
+  "name_ar": "شرائح جبن مارفيلو – جودا",
+  "sizes": [
+   [
+    150.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/cheese-slices/almarai-marvello-cheese-slices-maasdam",
+  "name_en": "Marvello Cheese Slices – MAASDAM",
+  "name_ar": "شرائح جبن مارفيلو –  ماسدام",
+  "sizes": [
+   [
+    150.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/cheese-slices/cheddar-cheese-slices",
+  "name_en": "Cheddar Cheese Slices",
+  "name_ar": "جبنة شرائح الشيدر",
+  "sizes": [
+   [
+    200.0,
+    "g"
+   ],
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/cheese-slices/cheddar-cheese-slices-fat-free",
+  "name_en": "Cheddar Cheese Slices Fat Free",
+  "name_ar": "جبنة شرائح الشيدر خالية الدسم",
+  "sizes": [
+   [
+    200.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/cheese-slices/cheddar-cheese-slices-low-fat",
+  "name_en": "Cheddar Cheese Slices Low Fat",
+  "name_ar": "جبنة شرائح الشيدر قليلة الدسم",
+  "sizes": [
+   [
+    200.0,
+    "g"
+   ],
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/cheese-slices/cheese-slices-burger",
+  "name_en": "Cheese Slices Burger",
+  "name_ar": "جبنة شرائح البرجر",
+  "sizes": [
+   [
+    200.0,
+    "g"
+   ],
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no photo"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/cheese-slices/cheese-slices-sandwich",
+  "name_en": "Cheese Slices Sandwich",
+  "name_ar": "جبنة شرائح الساندويتش",
+  "sizes": [
+   [
+    200.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/condensed-milk/sweetened-condensed-milk",
+  "name_en": "Sweetened Condensed Milk",
+  "name_ar": "حليب مكثف محلى",
+  "sizes": [
+   [
+    397.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/cooking-cream/cooking-cream",
+  "name_en": "Full Fat Cooking Cream",
+  "name_ar": "كريمة الطبخ",
+  "sizes": [
+   [
+    1.0,
+    "l"
+   ],
+   [
+    250.0,
+    "ml"
+   ],
+   [
+    500.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/cooking-cream/cooking-cream-low-fat",
+  "name_en": "Cooking Cream Low Fat",
+  "name_ar": "كريمة الطبخ دسم أقل",
+  "sizes": [
+   [
+    500.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/cream-cheese-spread/cheddar-cheese-spread",
+  "name_en": "Cheddar Cheese Spread",
+  "name_ar": "جبنة تشيدر قابلة للدهن",
+  "sizes": [
+   [
+    120.0,
+    "g"
+   ],
+   [
+    200.0,
+    "g"
+   ],
+   [
+    500.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ],
+   [
+    1100.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/cream-cheese-spread/cream-cheese-spread",
+  "name_en": "Cream Cheese Spread",
+  "name_ar": "جبنة كريمة قابلة للدهن",
+  "sizes": [
+   [
+    120.0,
+    "g"
+   ],
+   [
+    200.0,
+    "g"
+   ],
+   [
+    500.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ],
+   [
+    1100.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/feta/feta-cheese-full-fat",
+  "name_en": "Feta Cheese Full Fat",
+  "name_ar": "جبنة فيتا كاملة الدسم",
+  "sizes": [
+   [
+    200.0,
+    "g"
+   ],
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/feta/feta-cheese-low-fat",
+  "name_en": "Feta Cheese Low Fat",
+  "name_ar": "جبنة الفيتا قليلة الدسم",
+  "sizes": [
+   [
+    200.0,
+    "g"
+   ],
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/feta/feta-cheese-tub",
+  "name_en": "Feta Cheese Tub",
+  "name_ar": "جبنة فيتا كاملة الدسم",
+  "sizes": [
+   [
+    200.0,
+    "g"
+   ],
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/feta/trofos-greek-feta",
+  "name_en": "Trofos Greek Feta",
+  "name_ar": "جبنة فيتا تروفوس",
+  "sizes": [
+   [
+    2.0,
+    "kg"
+   ],
+   [
+    200.0,
+    "g"
+   ],
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/halloumi/halloumi-cheese-full-fat",
+  "name_en": "Halloumi Cheese Full Fat",
+  "name_ar": "جبنة حلومي كاملة الدسم",
+  "sizes": [
+   [
+    225.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/halloumi/halloumi-cheese-low-fat",
+  "name_en": "Halloumi Cheese Low Fat",
+  "name_ar": "جبنة حلومي قليلة الدسم",
+  "sizes": [
+   [
+    225.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/honey/black-forest-honey",
+  "name_en": "Black Forest Honey",
+  "name_ar": "عسل الغابة السوداء",
+  "sizes": [
+   [
+    250.0,
+    "g"
+   ],
+   [
+    500.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/honey/natural-honey",
+  "name_en": "Natural Honey",
+  "name_ar": "العسل الطبيعي",
+  "sizes": [
+   [
+    120.0,
+    "g"
+   ],
+   [
+    250.0,
+    "g"
+   ],
+   [
+    360.0,
+    "g"
+   ],
+   [
+    500.0,
+    "g"
+   ],
+   [
+    950.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/mozzarella/shredded-mozzarella-full-fat",
+  "name_en": "Shredded Mozzarella Full Fat",
+  "name_ar": "جبنة موزاريلا مبشورة كاملة الدسم",
+  "sizes": [
+   [
+    200.0,
+    "g"
+   ],
+   [
+    500.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/mozzarella/shredded-mozzarella-lite",
+  "name_en": "Shredded Mozzarella Cheese Lite",
+  "name_ar": "جبن موزاريلا لايت مبشور",
+  "sizes": [
+   [
+    200.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/square-cheese-portions/cheese-square-portions",
+  "name_en": "Cheese Square Portions",
+  "name_ar": "جبنة المربعات بالقشطة",
+  "sizes": [
+   [
+    108.0,
+    "g"
+   ],
+   [
+    200.0,
+    "g"
+   ],
+   [
+    216.0,
+    "g"
+   ],
+   [
+    432.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/sterilized-cream/gaimar",
+  "name_en": "Gaimar",
+  "name_ar": "قيمر",
+  "sizes": [
+   [
+    125.0,
+    "g"
+   ],
+   [
+    250.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/sterilized-cream/long-life-cream",
+  "name_en": "Long Life Cream",
+  "name_ar": "قشطة طويلة الأجل",
+  "sizes": [
+   [
+    170.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/tin-cheese/processed-cheddar-cheese-full-fat",
+  "name_en": "Processed Cheddar Cheese Full Fat",
+  "name_ar": "جبنة شيدر مطبوخة كاملة الدسم",
+  "sizes": [
+   [
+    56.0,
+    "g"
+   ],
+   [
+    113.0,
+    "g"
+   ],
+   [
+    200.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/tin-cheese/processed-cheddar-cheese-low-fat",
+  "name_en": "Processed Cheddar Cheese Low Fat",
+  "name_ar": "جبنة شيدر مطبوخة قليلة الدسم",
+  "sizes": [
+   [
+    56.0,
+    "g"
+   ],
+   [
+    113.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/cheeses-and-foods/triangle-cheese/triangle-cheese",
+  "name_en": "Triangle Cheese",
+  "name_ar": "جبنة مثلثات 16 قطعة",
+  "sizes": [
+   [
+    120.0,
+    "g"
+   ],
+   [
+    240.0,
+    "g"
+   ],
+   [
+    360.0,
+    "g"
+   ],
+   [
+    480.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/dips/foul-with-hummus/foul-with-hummus",
+  "name_en": "Foul With Hummus",
+  "name_ar": "فول مع الحمص",
+  "sizes": [
+   [
+    250.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/dips/gishta/fresh-full-fat-gishta",
+  "name_en": "Fresh Full Fat Gishta",
+  "name_ar": "قشطة طازجة كاملة الدسم",
+  "sizes": [
+   [
+    100.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/dips/gishta/fresh-lite-gishta",
+  "name_en": "Fresh Lite Gishta",
+  "name_ar": "قشطة طازجة قليلة الدسم",
+  "sizes": [
+   [
+    100.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/dips/hummus/hummus-with-lemon-twist",
+  "name_en": "Hummus with Lemon Twist",
+  "name_ar": "حمص بعصرة الليمون",
+  "sizes": [
+   [
+    250.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/dips/labneh/full-fat-labneh",
+  "name_en": "Full Fat Labneh",
+  "name_ar": "لبنة طازجة كاملة الدسم",
+  "sizes": [
+   [
+    200.0,
+    "g"
+   ],
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/dips/labneh/lite-labneh",
+  "name_en": "Lite Labneh",
+  "name_ar": "لبنة قليلة الدسم",
+  "sizes": [
+   [
+    200.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/dips/labneh/premium-labneh",
+  "name_en": "Premium Labneh",
+  "name_ar": "لبنة فاخرة كاملة الدسم",
+  "sizes": [
+   [
+    180.0,
+    "g"
+   ],
+   [
+    400.0,
+    "g"
+   ],
+   [
+    700.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/dips/sour-cream/sour-cream",
+  "name_en": "Sour Cream",
+  "name_ar": "كريمة حامضة",
+  "sizes": [
+   [
+    200.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/dips/tahini/tahini",
+  "name_en": "Tahini",
+  "name_ar": "طحينة",
+  "sizes": [
+   [
+    250.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/ice-cream/cone/triple-chocolate-ice-cream",
+  "name_en": "Triple Chocolate Ice Cream",
+  "name_ar": "ايس كريم الشوكولاتة الثلاثية",
+  "sizes": [
+   [
+    120.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/ice-cream/cone/vanilla-chocolate-ice-cream",
+  "name_en": "Vanilla Chocolate Ice Cream",
+  "name_ar": "ايس كريم فانيليا و شوكولاتة",
+  "sizes": [
+   [
+    120.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/ice-cream/cone/vanilla-strawberry-ice-cream-cone",
+  "name_en": "Vanilla Strawberry Ice Cream",
+  "name_ar": "ايس كريم فانيليا و فراولة",
+  "sizes": [
+   [
+    120.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/ice-cream/mini-bites/mini-bites-baklawa-pistachio",
+  "name_en": "Mini Bites Baklawa Pistachio",
+  "name_ar": "ميني بايتس بقلاوة بالفستق",
+  "sizes": [
+   [
+    128.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/ice-cream/mini-bites/mini-bites-caramel",
+  "name_en": "Mini Bites Caramel",
+  "name_ar": "ميني بايتس كراميل",
+  "sizes": [
+   [
+    128.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/ice-cream/mini-cones/mini-vanilla-cones",
+  "name_en": "Mini Vanilla  Cones",
+  "name_ar": "ميني كونز فانيليا",
+  "sizes": [
+   [
+    196.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/ice-cream/sandwiches/double-sandwich-ice-cream",
+  "name_en": "Double Ice Cream Sandwich",
+  "name_ar": "ايس كريم دبل ساندويتش",
+  "sizes": [
+   [
+    100.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/ice-cream/stick/vanilla-caramel-ice-cream",
+  "name_en": "Vanilla Caramel Ice Cream",
+  "name_ar": "ايس كريم فانيليا و كراميل",
+  "sizes": [
+   [
+    90.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/ice-cream/stick/vanilla-strawberry-ice-cream-sticks",
+  "name_en": "Vanilla Strawberry Ice Cream",
+  "name_ar": "ايس كريم فانيليا و فراولة",
+  "sizes": [
+   [
+    90.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/ice-cream/tub/chocolate-ice-cream-tub",
+  "name_en": "Chocolate Ice Cream",
+  "name_ar": "ايس كريم شوكولاتة",
+  "sizes": [
+   [
+    900.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/ice-cream/tub/vanilla-ice-cream-tub",
+  "name_en": "Vanilla Ice Cream",
+  "name_ar": "ايس كريم فانيليا",
+  "sizes": [
+   [
+    900.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/ice-cream/tub/vanilla-strawberry-ice-cream-tub",
+  "name_en": "Vanilla Strawberry Ice Cream",
+  "name_ar": "ايس كريم فانيليا و فراولة",
+  "sizes": [
+   [
+    900.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/juices/apple-juices/mixed-apple",
+  "name_en": "Mixed Apple",
+  "name_ar": "عصير كوكتيل التفاح",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/juices/kids-juices/mixed-fruit-juice-drink",
+  "name_en": "Mixed Fruit Juice Drink",
+  "name_ar": "عصير فواكه مشكلة",
+  "sizes": [
+   [
+    180.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/juices/kids-juices/orange-juice-drink",
+  "name_en": "Orange Juice Drink",
+  "name_ar": "شراب عصير البرتقال",
+  "sizes": [
+   [
+    180.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/juices/long-life-juices/apple-juice",
+  "name_en": "Apple Juice",
+  "name_ar": "عصير تفاح",
+  "sizes": [
+   [
+    140.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/juices/long-life-juices/mixed-fruit-nectar",
+  "name_en": "Mixed Fruit Nectar",
+  "name_ar": "نكتار الفواكه المشكلة",
+  "sizes": [
+   [
+    140.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/juices/long-life-juices/orange-mixed-fruit-nectar",
+  "name_en": "Mixed Fruit Orange Nectar",
+  "name_ar": "نكتار الفواكه المشكلة والبرتقال",
+  "sizes": [
+   [
+    140.0,
+    "ml"
+   ],
+   [
+    180.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/juices/mango-juices/mango-with-grape",
+  "name_en": "Mango with Grape Juice",
+  "name_ar": "عصير المانجو والعنب",
+  "sizes": [
+   [
+    1.0,
+    "l"
+   ],
+   [
+    1.4,
+    "l"
+   ],
+   [
+    200.0,
+    "ml"
+   ],
+   [
+    300.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/juices/mixed-fruits/mixed-berry",
+  "name_en": "Mixed Berry Juice",
+  "name_ar": "عصير التوت المشكّل",
+  "sizes": [
+   [
+    1.4,
+    "l"
+   ],
+   [
+    200.0,
+    "ml"
+   ],
+   [
+    300.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/juices/orange-juices/orange",
+  "name_en": "Orange",
+  "name_ar": "عصير البرتقال",
+  "sizes": [
+   [
+    1.0,
+    "l"
+   ],
+   [
+    1.4,
+    "l"
+   ],
+   [
+    200.0,
+    "ml"
+   ],
+   [
+    300.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/juices/orange-juices/orange-mix",
+  "name_en": "Orange Mixed Fruit Juice",
+  "name_ar": "عصير البرتقال المشكل",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/juices/pomegranate-juices/pomegranate-mixed-fruit",
+  "name_en": "Pomegranate Mixed Fruit",
+  "name_ar": "عصير الرمان و الفواكه المشكلة",
+  "sizes": [
+   [
+    1.4,
+    "l"
+   ],
+   [
+    200.0,
+    "ml"
+   ],
+   [
+    300.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/evaporated-milk/evaporated-milk-full-fat",
+  "name_en": "Evaporated Milk Full Fat",
+  "name_ar": "حليب مبخّر كامل الدسم",
+  "sizes": [
+   [
+    170.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/evaporated-milk/evaporated-milk-low-fat",
+  "name_en": "Evaporated Milk Low Fat",
+  "name_ar": "حليب مبخر قليل الدسم",
+  "sizes": [
+   [
+    170.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/flavored-long-life-milk/double-chocolate-flavored-long-life-milk",
+  "name_en": "Double Chocolate Flavored Long Life Milk",
+  "name_ar": "حليب طويل الأجل المنكّه بدبل الشوكولاته",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/flavored-long-life-milk/mango-flavored-long-life-milk",
+  "name_en": "Mango Flavored Long Life Milk",
+  "name_ar": "حليب طويل الأجل بنكهة المانجو",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/flavored-long-life-milk/nijoom-strawberry-flavored-long-life-milk",
+  "name_en": "Strawberry Flavored Long Life Milk",
+  "name_ar": "حليب طويل الأجل بنكهة الفراولة",
+  "sizes": [
+   [
+    150.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/flavored-long-life-milk/strawberry-flavored-long-life-milk",
+  "name_en": "Strawberry Flavored Long Life Milk",
+  "name_ar": "حليب طويل الأجل بنكهة الفراولة",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/fresh-flavored-laban/mango-fresh-flavored-laban",
+  "name_en": "Mango Fresh Flavored Laban",
+  "name_ar": "لبن طازج بنكهة المانجو",
+  "sizes": [
+   [
+    180.0,
+    "ml"
+   ],
+   [
+    340.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/fresh-flavored-laban/strawberry-fresh-flavored-laban",
+  "name_en": "Strawberry Fresh Flavored Laban",
+  "name_ar": "لبن طازج بنكهة الفرولة",
+  "sizes": [
+   [
+    180.0,
+    "ml"
+   ],
+   [
+    340.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/fresh-flavored-milk/date-fresh-flavored-milk",
+  "name_en": "Date Fresh Flavored Milk",
+  "name_ar": "حليب طازج بنكهة التمر",
+  "sizes": [
+   [
+    225.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/fresh-flavored-milk/mango-fresh-flavored-milk",
+  "name_en": "Mango Fresh Flavored Milk",
+  "name_ar": "حليب طازج بنكهة المانجو",
+  "sizes": [
+   [
+    225.0,
+    "ml"
+   ],
+   [
+    360.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/fresh-flavored-milk/salted-caramel-flavored-milk",
+  "name_en": "Salted Caramel Flavored Milk",
+  "name_ar": "حليب بنكهة الكراميل المملح",
+  "sizes": [
+   [
+    225.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/fresh-laban/fresh-laban-full-fat",
+  "name_en": "Almarai Fresh Laban Full Fat",
+  "name_ar": "لبن طازج كامل الدسم",
+  "sizes": [
+   [
+    1.0,
+    "l"
+   ],
+   [
+    1.4,
+    "l"
+   ],
+   [
+    2.0,
+    "l"
+   ],
+   [
+    2.85,
+    "l"
+   ],
+   [
+    500.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/fresh-laban/fresh-laban-full-fat-with-added-vitamins",
+  "name_en": "Fresh Laban Full Fat",
+  "name_ar": "لبن طازج كامل الدسم",
+  "sizes": [
+   [
+    180.0,
+    "ml"
+   ],
+   [
+    360.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/fresh-laban/fresh-laban-low-fat",
+  "name_en": "Fresh Laban Low Fat",
+  "name_ar": "لبن طازج قليل الدسم",
+  "sizes": [
+   [
+    1.0,
+    "l"
+   ],
+   [
+    2.0,
+    "l"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/fresh-laban/fresh-laban-low-fat-with-added-vitamins",
+  "name_en": "Fresh Laban Low Fat",
+  "name_ar": "لبن طازج قليل الدسم",
+  "sizes": [
+   [
+    180.0,
+    "ml"
+   ],
+   [
+    360.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/fresh-laban/laban-ayran",
+  "name_en": "Laban Ayran",
+  "name_ar": "لبن عيران",
+  "sizes": [
+   [
+    1.4,
+    "l"
+   ],
+   [
+    225.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/fresh-milk/fresh-milk-fat-free",
+  "name_en": "Fresh Milk Fat Free",
+  "name_ar": "حليب طازج خالي الدسم",
+  "sizes": [
+   [
+    1.0,
+    "l"
+   ],
+   [
+    2.0,
+    "l"
+   ]
+  ],
+  "problems": [
+   "no photo"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/fresh-milk/fresh-milk-full-fat-with-added-vitamins",
+  "name_en": "Fresh Milk Full Fat with Added Vitamins",
+  "name_ar": "حليب طازج كامل الدسم",
+  "sizes": [
+   [
+    180.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/fresh-milk/fresh-milk-low-fat-with-added-vitamins",
+  "name_en": "Fresh Milk Low Fat with Added Vitamins",
+  "name_ar": "حليب طازج قليل الدسم",
+  "sizes": [
+   [
+    180.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/lactofree/lactofree-milk",
+  "name_en": "Lactofree Milk",
+  "name_ar": "حليب خالي من اللاكتوز",
+  "sizes": [
+   [
+    1.0,
+    "l"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/long-life-milk/long-life-milk-fat-free",
+  "name_en": "Long Life Milk Fat Free",
+  "name_ar": "حليب طويل الأجل خالي من الدسم",
+  "sizes": [
+   [
+    1.0,
+    "l"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/long-life-milk/long-life-milk-full-fat",
+  "name_en": "Long Life Milk Full Fat",
+  "name_ar": "حليب طويل الأجل كامل الدسم",
+  "sizes": [
+   [
+    1.0,
+    "l"
+   ],
+   [
+    6.0,
+    "l"
+   ],
+   [
+    12.0,
+    "l"
+   ],
+   [
+    200.0,
+    "ml"
+   ],
+   [
+    500.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/long-life-milk/long-life-milk-low-fat",
+  "name_en": "Long Life Milk Low Fat",
+  "name_ar": "حليب طويل الأجل قليل الدسم",
+  "sizes": [
+   [
+    1.0,
+    "l"
+   ],
+   [
+    200.0,
+    "ml"
+   ],
+   [
+    250.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/long-life-milk/nijoom-long-life-milk-full-fat-with-added-vitamins",
+  "name_en": "Long Life Full Fat milk",
+  "name_ar": "حليب طويل الأجل كامل الدسم",
+  "sizes": [
+   [
+    150.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/milk-powder/full-cream-milk-powder",
+  "name_en": "Full Cream Milk Powder",
+  "name_ar": "حليب مجفف كامل الدسم",
+  "sizes": [
+   [
+    1.8,
+    "kg"
+   ],
+   [
+    2.25,
+    "kg"
+   ],
+   [
+    2.5,
+    "kg"
+   ],
+   [
+    400.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/protein-milk/muscle-milk-plain",
+  "name_en": "Muscle Milk Plain",
+  "name_ar": "حليب Muscle سادة",
+  "sizes": [
+   [
+    400.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/liquid-dairy/protein-milk/protein-milk-strawberry-banana",
+  "name_en": "Protein Milk Strawberry Banana",
+  "name_ar": "حليب البروتين بنكهة الفراولة والموز",
+  "sizes": [
+   [
+    400.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/yoghurts/desserts/custard-chocolate",
+  "name_en": "Custard Chocolate",
+  "name_ar": "كاسترد شوكولاتة",
+  "sizes": [
+   [
+    85.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/yoghurts/desserts/mango-flavored-fresh-yoghurt",
+  "name_en": "Mango Flavored Fresh Yoghurt",
+  "name_ar": "زبادي بنكهة المانجو",
+  "sizes": [
+   [
+    150.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/yoghurts/desserts/strawberry-flavored-fresh-yoghurt",
+  "name_en": "Strawberry Flavored Fresh Yoghurt",
+  "name_ar": "زبادي بنكهة الفراولة",
+  "sizes": [
+   [
+    150.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/yoghurts/desserts/strawberry-flavored-fresh-yoghurt-set",
+  "name_en": "Strawberry Flavored Fresh Yoghurt Set",
+  "name_ar": "كأس زبادي بالفراولة",
+  "sizes": [
+   [
+    100.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/yoghurts/desserts/vetal-black-cherry-layered-yoghurt",
+  "name_en": "Vetal Black Cherry Layered Yoghurt",
+  "name_ar": "زبادي بطبقة الكرز الأسود",
+  "sizes": [
+   [
+    140.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/yoghurts/desserts/vetal-strawberry-layered-yoghurt",
+  "name_en": "Vetal Strawberry Layered Yoghurt",
+  "name_ar": "زبادي فيتال بنكهة الفراولة",
+  "sizes": [
+   [
+    140.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/yoghurts/zabadi/blueberry-greek-style-yoghurt",
+  "name_en": "Blueberry Greek Style Yoghurt",
+  "name_ar": "زبادي اليوناني بنكهة التوت",
+  "sizes": [
+   [
+    150.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/yoghurts/zabadi/fat-free-zabadi",
+  "name_en": "Fat Free Zabadi",
+  "name_ar": "زبادي خالي الدسم",
+  "sizes": [
+   [
+    170.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/yoghurts/zabadi/full-fat-zabadi",
+  "name_en": "Full Fat Zabadi",
+  "name_ar": "زبادي كامل الدسم",
+  "sizes": [
+   [
+    1.0,
+    "kg"
+   ],
+   [
+    2.0,
+    "kg"
+   ],
+   [
+    170.0,
+    "g"
+   ],
+   [
+    500.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/yoghurts/zabadi/low-fat-zabadi",
+  "name_en": "Low Fat Zabadi",
+  "name_ar": "زبادي قليل الدسم",
+  "sizes": [
+   [
+    1.0,
+    "kg"
+   ],
+   [
+    170.0,
+    "g"
+   ],
+   [
+    500.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/yoghurts/zabadi/mango-greek-style-yoghurt",
+  "name_en": "Mango Greek Style Yoghurt",
+  "name_ar": "زبادي يوناني بنكهة المانجو",
+  "sizes": [
+   [
+    150.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/yoghurts/zabadi/plain-greek-style-yoghurt",
+  "name_en": "Plain Greek Style Yoghurt",
+  "name_ar": "زبادي يوناني سادة",
+  "sizes": [
+   [
+    150.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almarai/yoghurts/zabadi/sour-cream-zabadi",
+  "name_en": "Fresh Sour Yoghurt",
+  "name_ar": "زبادي الشام طازج",
+  "sizes": [
+   [
+    170.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no photo"
+  ]
+ },
+ {
+  "path": "almarai/yoghurts/zabadi/strawberry-greek-style-yoghurt",
+  "name_en": "Strawberry Greek Style Yoghurt",
+  "name_ar": "زبادي يوناني بنكهة الفراولة",
+  "sizes": [
+   [
+    150.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almira/dates/dates/majdool-dates",
+  "name_en": "Majdool Dates",
+  "name_ar": "تمر مجدول",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "almira/dates/dates/sagai-dates",
+  "name_en": "Sagai Dates",
+  "name_ar": "تمر صقعي فريد من الميرة",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no photo"
+  ]
+ },
+ {
+  "path": "almira/dates/dates/sukkari-dates",
+  "name_en": "Sukkari Dates",
+  "name_ar": "تمر سكري",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no photo"
+  ]
+ },
+ {
+  "path": "almira/dates/pressed-dates/sukkari-pressed-dates",
+  "name_en": "Pressed Sukkari Dates",
+  "name_ar": "تمر سكري مكنوز",
+  "sizes": [
+   [
+    1.0,
+    "kg"
+   ],
+   [
+    35.0,
+    "g"
+   ],
+   [
+    700.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/fresh-portions/alyoum-fresh-chicken-drumsticks",
+  "name_en": "Fresh Chicken Drumsticks",
+  "name_ar": "افخاذ دجاج طازجة",
+  "sizes": [
+   [
+    450.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/fresh-portions/alyoum-fresh-chicken-thighs",
+  "name_en": "Fresh Chicken Thighs",
+  "name_ar": "افخاذ دجاج كاملة طازجة",
+  "sizes": [
+   [
+    450.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/fresh-portions/alyoum-fresh-chicken-whole-legs",
+  "name_en": "Fresh Chicken Whole Legs",
+  "name_ar": "سيقان دجاج طازجة",
+  "sizes": [
+   [
+    900.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/fresh-portions/alyoum-fresh-chicken-wings",
+  "name_en": "Fresh Chicken Wings",
+  "name_ar": "أجنحة دجاج طازجة",
+  "sizes": [
+   [
+    450.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/fresh-portions/alyoum-fresh-hearts",
+  "name_en": "Fresh Hearts",
+  "name_ar": "قلوب الدجاج الطازج",
+  "sizes": [
+   [
+    300.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/fresh-portions/alyoum-fresh-livers",
+  "name_en": "Fresh Chicken Livers",
+  "name_ar": "كبد الدجاج الطازج",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/fresh-portions/alyoum-fresh-whole-chicken",
+  "name_en": "Fresh Whole Chicken",
+  "name_ar": "دجاجة كاملة",
+  "sizes": [
+   [
+    1000.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/fresh-portions/fresh-chicken-breast-cubes",
+  "name_en": "Fresh Chicken Breast Cubes",
+  "name_ar": "صدور دجاج الطازج - مكعبات",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/fresh-portions/fresh-chicken-breast-fillet",
+  "name_en": "Fresh Chicken Breast Fillet",
+  "name_ar": "فيليه صدور دجاج طازج",
+  "sizes": [
+   [
+    450.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/fresh-portions/fresh-chicken-minced",
+  "name_en": "Fresh Chicken Minced",
+  "name_ar": "دجاج طازج مفروم",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/fresh-whole-chicken/alyoum-fresh-whole-chicken-bag-pack",
+  "name_en": "Fresh Whole Chicken Bag Pack",
+  "name_ar": "دجاجة طازجة كاملة عبوة الكيس",
+  "sizes": [
+   [
+    700.0,
+    "g"
+   ],
+   [
+    800.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ],
+   [
+    1000.0,
+    "g"
+   ],
+   [
+    1100.0,
+    "g"
+   ],
+   [
+    1200.0,
+    "g"
+   ],
+   [
+    1300.0,
+    "g"
+   ],
+   [
+    1400.0,
+    "g"
+   ],
+   [
+    1500.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/fresh-whole-chicken/fresh-whole-chicken-multipack-tray",
+  "name_en": "Fresh Whole Chicken Multipack Tray",
+  "name_ar": "دجاج كامل طازج عبوة مزدوجة",
+  "sizes": [
+   [
+    1200.0,
+    "g"
+   ],
+   [
+    1400.0,
+    "g"
+   ],
+   [
+    1600.0,
+    "g"
+   ],
+   [
+    1800.0,
+    "g"
+   ],
+   [
+    2000.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/fresh-whole-chicken/fresh-whole-chicken-sealed-tray",
+  "name_en": "Fresh Whole Chicken Sealed Tray",
+  "name_ar": "دجاجة طازجة كاملة",
+  "sizes": [
+   [
+    700.0,
+    "g"
+   ],
+   [
+    800.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ],
+   [
+    1000.0,
+    "g"
+   ],
+   [
+    1100.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/fresh-whole-chicken/fresh-whole-chicken-tray-pack",
+  "name_en": "Fresh Whole Chicken Tray Pack",
+  "name_ar": "دجاجة كاملة طازجة",
+  "sizes": [
+   [
+    1200.0,
+    "g"
+   ],
+   [
+    1300.0,
+    "g"
+   ],
+   [
+    1400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/ready-to-cook-chicken/chicken-shawerma",
+  "name_en": "Chicken Shawerma",
+  "name_ar": "شاورما الدجاج",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/ready-to-cook-chicken/marinated-whole-chicken-biryani",
+  "name_en": "Marinated Whole Chicken Biryani",
+  "name_ar": "دجاجة كاملة متبّلة بنكهة البرياني",
+  "sizes": [
+   [
+    750.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/ready-to-cook-chicken/marinated-whole-chicken-curry",
+  "name_en": "Marinated Whole Chicken Curry",
+  "name_ar": "دجاجة كاملة متبّلة بنكهة الكاري",
+  "sizes": [
+   [
+    800.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/ready-to-cook-chicken/marinated-whole-chicken-kabsa",
+  "name_en": "Marinated Whole Chicken Kabsa Flavor",
+  "name_ar": "دجاجة كاملة متبّلة بنكهة الكبسة",
+  "sizes": [
+   [
+    800.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/ready-to-cook-chicken/marinated-whole-chicken-mandi",
+  "name_en": "Marinated Whole Chicken Mandi",
+  "name_ar": "دجاجة كاملة متبّلة بنكهة المندي",
+  "sizes": [
+   [
+    750.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "alyoum/poultry/ready-to-cook-chicken/marinated-whole-chicken-spicy",
+  "name_en": "Marinated Whole Chicken Spicy",
+  "name_ar": "دجاجة كاملة متبّلة بالنكهة الحارة",
+  "sizes": [
+   [
+    750.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "bashayer/frozen/chicken-bites/breaded-chicken-bites",
+  "name_en": "Breaded Chicken Bites",
+  "name_ar": "بايتس الدجاج",
+  "sizes": [
+   [
+    750.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "bashayer/frozen/chicken-burgers/breaded-chicken-burger-jumbo",
+  "name_en": "Breaded Chicken Burger - Jumbo",
+  "name_ar": "برجر دجاج بالبقسماط - جامبو",
+  "sizes": [
+   [
+    1.0,
+    "kg"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "bashayer/frozen/chicken-burgers/breaded-chicken-burger-original",
+  "name_en": "Breaded Chicken Burger - Original",
+  "name_ar": "برجر دجاج بالبقسماط - الاصلي",
+  "sizes": [
+   [
+    560.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "bashayer/frozen/chicken-nuggets/breaded-chicken-nuggets-original",
+  "name_en": "Breaded Chicken Nuggets - Original",
+  "name_ar": "ناجت دجاج بالبقسماط",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "bashayer/frozen/chicken-nuggets/chicken-nuggets",
+  "name_en": "Chicken Nuggets",
+  "name_ar": "ناجت الدجاج",
+  "sizes": [
+   [
+    750.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "bashayer/frozen/chicken-popcorn/breaded-popcorn-chicken",
+  "name_en": "Breaded  Popcorn Chicken",
+  "name_ar": "بوب كورن الدجاج",
+  "sizes": [
+   [
+    750.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "bashayer/frozen/chicken-strips/breaded-chicken-spicy-strips",
+  "name_en": "Breaded Chicken Spicy Strips",
+  "name_ar": "شرائح الدجاج - حارة",
+  "sizes": [
+   [
+    750.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "bashayer/frozen/chicken-strips/breaded-chicken-strips",
+  "name_en": "Breaded Chicken Strips",
+  "name_ar": "شرائح الدجاج",
+  "sizes": [
+   [
+    750.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "evolac/infant-medical-nutrition/growing-up-milk-formula/evolac-plus-stage-3",
+  "name_en": "Evolac Plus Stage 3",
+  "name_ar": "إيفولاك بلص المرحلة الثالثة",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ],
+   [
+    1700.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "evolac/infant-medical-nutrition/growing-up-milk-formula/evolac-stage-1",
+  "name_en": "Evolac stage 1",
+  "name_ar": "إيفولاك المرحلة الأولى",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "evolac/infant-medical-nutrition/growing-up-milk-formula/evolac-stage-2",
+  "name_en": "Evolac stage 2",
+  "name_ar": "إيفولاك المرحلة الثانية",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "evolac/infant-medical-nutrition/nutritional-supplement/evosure",
+  "name_en": "EvoSure",
+  "name_ar": "إيفوشور",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "evolac/infant-medical-nutrition/specialties/evolac-a-r",
+  "name_en": "Evolac A.R.",
+  "name_ar": "إيفولاك إيه. آر.",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "evolac/infant-medical-nutrition/specialties/evolac-comfort",
+  "name_en": "Evolac Comfort",
+  "name_ar": "إيفولاك كمفورت",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "evolac/infant-medical-nutrition/specialties/evolac-lacto-free-ad",
+  "name_en": "Evolac Lacto-Free AD",
+  "name_ar": "إيفولاك الخالي من اللاكتوز - أيه دي",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "evolac/infant-medical-nutrition/specialties/evolac-premature",
+  "name_en": "Evolac Premature",
+  "name_ar": "تركيبة إيفولاك للخدّج",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "farms-select/juices/farms-select-juices/super-beetroot",
+  "name_en": "Super Beetroot",
+  "name_ar": "عصير سوبر شمندر",
+  "sizes": [
+   [
+    1.0,
+    "l"
+   ],
+   [
+    250.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "farms-select/juices/farms-select-juices/super-grapes-berries",
+  "name_en": "Super Grapes and Berries",
+  "name_ar": "سوبر عنب - توت",
+  "sizes": [
+   [
+    1.0,
+    "l"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "farms-select/juices/farms-select-juices/super-orange",
+  "name_en": "Super Orange",
+  "name_ar": "سوبر برتقال",
+  "sizes": [
+   [
+    1.0,
+    "l"
+   ],
+   [
+    250.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "farms-select/juices/farms-select-juices/super-pineapple",
+  "name_en": "Super Pineapple",
+  "name_ar": "عصير سوبر اناناس",
+  "sizes": [
+   [
+    1.0,
+    "l"
+   ],
+   [
+    250.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "farms-select/juices/farms-select-juices/super-pomegranate",
+  "name_en": "Super Pomegranate",
+  "name_ar": "سوبر رمان",
+  "sizes": [
+   [
+    1.0,
+    "l"
+   ],
+   [
+    250.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "ice-leaf/beverages/ice-tea/green-tea-moroccan-mint",
+  "name_en": "Green Tea & Mint",
+  "name_ar": "شاي أخضر و نعناع",
+  "sizes": [
+   [
+    315.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "ice-leaf/beverages/ice-tea/peach-hibiscus",
+  "name_en": "Peach & Hibiscus",
+  "name_ar": "خوخ و كركديه",
+  "sizes": [
+   [
+    315.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/bread/sliced-bread-bran",
+  "name_en": "Sliced Bread Bran",
+  "name_ar": "خبز توست نخالة",
+  "sizes": [
+   [
+    615.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/bread/sliced-bread-brioche",
+  "name_en": "Sliced Brioche Bread",
+  "name_ar": "خبز توست بريوش",
+  "sizes": [
+   [
+    320.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/burger-buns-and-sandwich-roll/brioche-burger-buns",
+  "name_en": "Brioche Burger Buns",
+  "name_ar": "خبر البرجر بريوش",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/burger-buns-and-sandwich-roll/brioche-sandwich-rolls",
+  "name_en": "Brioche Sandwich Rolls",
+  "name_ar": "ساندويتش رول بريوش",
+  "sizes": [
+   [
+    300.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/burger-buns-and-sandwich-roll/brown-sandwich-rolls",
+  "name_en": "Brown Sandwich Rolls",
+  "name_ar": "ساندويتش رول برّ",
+  "sizes": [
+   [
+    200.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/burger-buns-and-sandwich-roll/plain-burger-buns",
+  "name_en": "Plain Burger Buns",
+  "name_ar": "خبز البرجر سادة",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/burger-buns-and-sandwich-roll/potato-burger-buns",
+  "name_en": "Potato Burger Buns",
+  "name_ar": "خبز البرجر بالبطاطس",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/burger-buns-and-sandwich-roll/sandwich-rolls",
+  "name_en": "Sandwich Rolls",
+  "name_ar": "ساندويتش رول",
+  "sizes": [
+   [
+    200.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/burger-buns-and-sandwich-roll/sandwich-rolls-milk",
+  "name_en": "Milk Sandwich Rolls",
+  "name_ar": "ساندويتش رول بالحليب",
+  "sizes": [
+   [
+    200.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/burger-buns-and-sandwich-roll/seasame-seeds-burger-buns",
+  "name_en": "Seasame Seeds Burger Buns",
+  "name_ar": "خبز البرجر بالسمسم",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/croissant/biscuit-cream-butter-croissant",
+  "name_en": "Biscuit Cream Butter Croissant",
+  "name_ar": "كرواسان الزبدة بكريمة البسكويت",
+  "sizes": [
+   [
+    83.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/croissant/butter-croissant",
+  "name_en": "Butter Croissant",
+  "name_ar": "كرواسان بالزبدة",
+  "sizes": [
+   [
+    85.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/croissant/cheese-croissant",
+  "name_en": "Cheese Croissant",
+  "name_ar": "كرواسان بالجبنة",
+  "sizes": [
+   [
+    60.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/croissant/plain-croissant",
+  "name_en": "Plain Croissant",
+  "name_ar": "كرواسان سادة",
+  "sizes": [
+   [
+    50.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/croissant/zaatar-croissant",
+  "name_en": "Zaatar Croissant",
+  "name_ar": "كرواسان الزعتر",
+  "sizes": [
+   [
+    60.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/cup-cakes/chocolate-cupcake",
+  "name_en": "Chocolate Cupcake",
+  "name_ar": "كب كيك الشوكولاتة",
+  "sizes": [
+   [
+    60.0,
+    "g"
+   ],
+   [
+    540.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/cup-cakes/chocolate-cupcake-with-chocolate-filling",
+  "name_en": "Chocolate Cupcake with Chocolate filling",
+  "name_ar": "كب كيك الشوكلاتة بحشوة الشوكلاتة",
+  "sizes": [
+   [
+    64.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/cup-cakes/strawberry-cupcake",
+  "name_en": "Strawberry Cupcake",
+  "name_ar": "كب كيك الفراولة",
+  "sizes": [
+   [
+    60.0,
+    "g"
+   ],
+   [
+    540.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/cup-cakes/vanilla-cupcake",
+  "name_en": "Vanilla Cupcake",
+  "name_ar": "كب كيك الفانيلا",
+  "sizes": [
+   [
+    60.0,
+    "g"
+   ],
+   [
+    540.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no photo"
+  ]
+ },
+ {
+  "path": "lusine/bakery/muffins/triple-chocolate-muffin",
+  "name_en": "Triple Chocolate Muffin",
+  "name_ar": "مفن الشوكلاتة",
+  "sizes": [
+   [
+    360.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no photo"
+  ]
+ },
+ {
+  "path": "lusine/bakery/puffs/apple-puff",
+  "name_en": "Apple Puff",
+  "name_ar": "فطيرة التفاح",
+  "sizes": [
+   [
+    70.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/puffs/cheese-and-zaatar-puff",
+  "name_en": "Cheese & Zaatar Puff",
+  "name_ar": "فطيرة الجبنة والزعتر",
+  "sizes": [
+   [
+    70.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/puffs/cheese-puff",
+  "name_en": "Cheese Puff",
+  "name_ar": "فطيرة الجبنة",
+  "sizes": [
+   [
+    70.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/puffs/cherry-puff",
+  "name_en": "Cherry Puff",
+  "name_ar": "فطيرة الكرز",
+  "sizes": [
+   [
+    80.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/puffs/chocolate-puff",
+  "name_en": "Chocolate Puff",
+  "name_ar": "فطيرة الشوكولاتة",
+  "sizes": [
+   [
+    70.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/puffs/feta-cheese-puff",
+  "name_en": "Feta Cheese Puff",
+  "name_ar": "فطيرة جبنة فيتا",
+  "sizes": [
+   [
+    80.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/puffs/pizza-margherita",
+  "name_en": "Pizza Margherita",
+  "name_ar": "بيتزا مارغريتا",
+  "sizes": [
+   [
+    80.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/puffs/pizza-puff",
+  "name_en": "Pizza Puff",
+  "name_ar": "فطيرة البيتزا",
+  "sizes": [
+   [
+    90.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/puffs/strawberry-puff",
+  "name_en": "Strawberry Puff",
+  "name_ar": "فطيرة فراولة",
+  "sizes": [
+   [
+    80.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/puffs/triple-cheese-puff",
+  "name_en": "Triple Cheese Puff",
+  "name_ar": "فطيرة الأجبان الثلاثة",
+  "sizes": [
+   [
+    100.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/sandwiches/cream-cheese-sandwich",
+  "name_en": "Cream Cheese Sandwich",
+  "name_ar": "ساندويتش بجبنة الكريمة",
+  "sizes": [
+   [
+    112.5,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/tortilla-wraps/tortilla-wrap-multigrain",
+  "name_en": "Multigrain Tortilla Wraps",
+  "name_ar": "خبز التورتيلا بالحبوب",
+  "sizes": [
+   [
+    240.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/tortilla-wraps/tortilla-wrap-plain",
+  "name_en": "Plain Tortilla Wraps",
+  "name_ar": "خبز التورتيلا سادة",
+  "sizes": [
+   [
+    240.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "lusine/bakery/tortilla-wraps/tortilla-wrap-wholewheat",
+  "name_en": "Whole Wheat Tortilla Wraps",
+  "name_ar": "خبز التورتيلا القمح الكامل",
+  "sizes": [
+   [
+    240.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "nura/infant-medical-nutrition/growing-up-milk-formula/nuralac-plus-stage-3",
+  "name_en": "Nuralac Plus Stage 3",
+  "name_ar": "نيورالاك المرحلة الثالثة غني بالبريبايوتكس",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ],
+   [
+    1700.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "nura/infant-medical-nutrition/growing-up-milk-formula/nuralac-plus-stage-3-rtd",
+  "name_en": "Nuralac Plus Stage 3",
+  "name_ar": "نيورالاك المرحلة الثالثة",
+  "sizes": [
+   [
+    250.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "nura/infant-medical-nutrition/growing-up-milk-formula/nuralac-plus-stage-4",
+  "name_en": "Nuralac Plus Stage 4",
+  "name_ar": "نيورالاك بلس المرحلة الرابعة",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "nura/infant-medical-nutrition/growing-up-milk-formula/nuralac-stage-1",
+  "name_en": "Nuralac Stage 1 - Newborns",
+  "name_ar": "نيورالاك المرحلة الأولى تركيبة غذائية لحديثي الولادة",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "nura/infant-medical-nutrition/growing-up-milk-formula/nuralac-stage-1-rtf",
+  "name_en": "Nuralac Stage 1 RTF",
+  "name_ar": "نيورالاك جاهز للشرب لحديثي الولادة",
+  "sizes": [
+   [
+    70.0,
+    "ml"
+   ],
+   [
+    105.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "nura/infant-medical-nutrition/growing-up-milk-formula/nuralac-stage-2",
+  "name_en": "Nuralac Stage 2",
+  "name_ar": "نيورالاك المرحلة الثانية",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ],
+   [
+    900.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "nura/infant-medical-nutrition/growing-up-milk-formula/nuralac-stage-2-rtd",
+  "name_en": "Nuralac Stage 2 RTD",
+  "name_ar": "نيورالاك المرحلة الثانية حليب جاهز للشرب",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "nura/infant-medical-nutrition/infants/nuralac-infanticare-pof",
+  "name_en": "Nuralac InfantiCare RTD",
+  "name_ar": "نيورالاك إنفانتي كير مكمل غذائي للرضع",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "nura/infant-medical-nutrition/infants/nuralac-infanticare-powder",
+  "name_en": "Nuralac InfantiCare Powder",
+  "name_ar": "نيورالاك إنفانتي كير مكمل غذائي بودرة",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "nura/infant-medical-nutrition/infants/nuralac-infanticare-rtf",
+  "name_en": "Nuralac InfantiCare RTF",
+  "name_ar": "نيورالاك إنفانتي كير غذاء للرضع جاهز",
+  "sizes": [
+   [
+    105.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "nura/infant-medical-nutrition/nutritional-supplement/nuralac-plus-suregrow-rtd",
+  "name_en": "Nuralac Plus Suregrow RTD",
+  "name_ar": "شورجرو بلس",
+  "sizes": [
+   [
+    250.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "nura/infant-medical-nutrition/nutritional-supplement/nuralac-plus-suregrow-supp",
+  "name_en": "Nuralac Plus Suregrow Supplement",
+  "name_ar": "نيورالاك شورجرو بلص",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "nura/infant-medical-nutrition/specialties/nuralac-a-r",
+  "name_en": "Nuralac A.R",
+  "name_ar": "نيورالاك إيه. آر - لتنظيم حالات القلس",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ],
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "nura/infant-medical-nutrition/specialties/nuralac-h8",
+  "name_en": "Nuralac H8",
+  "name_ar": "نيورالاك إتش 8",
+  "sizes": [
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "nura/infant-medical-nutrition/specialties/nuralac-lacto-free",
+  "name_en": "Nuralac Lacto Free",
+  "name_ar": "نيورالاك حليب خالي من اللاكتوز",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ],
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "nura/infant-medical-nutrition/specialties/nuralac-premature",
+  "name_en": "Nuralac Premature",
+  "name_ar": "نيورالاك تركيبة للأطفال الخدّج",
+  "sizes": [
+   [
+    70.0,
+    "ml"
+   ],
+   [
+    400.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "nura/infant-medical-nutrition/specialties/nuralac-special-care",
+  "name_en": "Nuralac Special Care",
+  "name_ar": "نيورالاك تركيبة خاصة لإدارة النظام الغذائي للرضع",
+  "sizes": [
+   [
+    70.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seama/seafood/cooked-salmon/cooked-norwegian-salmon",
+  "name_en": "Cooked Norwegian Salmon",
+  "name_ar": "سلمون نرويجي مطبوخ",
+  "sizes": [
+   [
+    250.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seama/seafood/cooked-salmon/cooked-norwegian-seasoned-salmon",
+  "name_en": "Cooked Norwegian Seasoned Salmon",
+  "name_ar": "سلمون نرويجي مطبوخ و مبهر",
+  "sizes": [
+   [
+    250.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seama/seafood/smoked-salmon/smoked-norwegian-salmon",
+  "name_en": "Smoked Norwegian Salmon",
+  "name_ar": "سمك سلمون مدخن",
+  "sizes": [
+   [
+    100.0,
+    "g"
+   ],
+   [
+    200.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seama/seafood/smoked-salmon/smoked-norwegian-seasoned-salmon",
+  "name_en": "Smoked Norwegian Seasoned Salmon",
+  "name_ar": "سمك سلمون مدخن ومبهر من سيما",
+  "sizes": [
+   [
+    100.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seven-days/bakery/cake-bars/chocolate-cake-bar",
+  "name_en": "Chocolate Cake Bar",
+  "name_ar": "كيك بار الشوكولاتة​",
+  "sizes": [
+   [
+    25.0,
+    "g"
+   ],
+   [
+    300.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seven-days/bakery/cake-bars/enrobed-cake-bar-with-milk-filling",
+  "name_en": "Enrobed Cake Bar with Milk Filling",
+  "name_ar": "كيك بار الشوكولاتة بحشوة الحليب",
+  "sizes": [
+   [
+    40.0,
+    "g"
+   ],
+   [
+    200.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seven-days/bakery/croissant/chocolate-croissant",
+  "name_en": "Chocolate Croissant",
+  "name_ar": "كروسان الشوكولاتة",
+  "sizes": [
+   [
+    55.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seven-days/bakery/croissant/chocolate-mini-croissant",
+  "name_en": "Chocolate Mini Croissant",
+  "name_ar": "ميني كروسان الشوكولاتة",
+  "sizes": [
+   [
+    44.0,
+    "g"
+   ],
+   [
+    99.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seven-days/bakery/croissant/double-layered-chocolate-croissant-with-caramel-filling",
+  "name_en": "Double Layered Chocolate Croissant with Caramel Filling",
+  "name_ar": "كروسان طبقتين الشوكولاتة بحشوة الكاراميل",
+  "sizes": [
+   [
+    90.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seven-days/bakery/croissant/double-layered-croissant-with-vanilla-filling",
+  "name_en": "Double Layered Croissant with Vanilla Filling",
+  "name_ar": "كروسان طبقتين الفراولة بحشوة الفانيلا",
+  "sizes": [
+   [
+    90.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seven-days/bakery/croissant/double-layered-mini-croissant-vanilla",
+  "name_en": "Double Layered Mini Croissant Vanilla",
+  "name_ar": "ميني كروسان الفانيلا بطبقتين",
+  "sizes": [
+   [
+    90.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seven-days/bakery/croissant/strawberry-croissant",
+  "name_en": "Strawberry Croissant",
+  "name_ar": "كروسان الفراولة",
+  "sizes": [
+   [
+    55.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seven-days/bakery/croissant/vanilla-croissant",
+  "name_en": "Vanilla Croissant",
+  "name_ar": "كروسان الفانيلا",
+  "sizes": [
+   [
+    55.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seven-days/bakery/swiss-roll/double-vanilla-swiss-roll",
+  "name_en": "Mini Vanilla Swiss Roll with Vanilla Filling",
+  "name_ar": "ميني سويس رول الفانيليا بحشوة الفانيليا",
+  "sizes": [
+   [
+    20.0,
+    "g"
+   ],
+   [
+    240.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seven-days/bakery/swiss-roll/jumbo-chocolate-swiss-roll",
+  "name_en": "Jumbo Chocolate Swiss Roll with Chocolate Filling",
+  "name_ar": "جامبو سويس رول الشوكولاتة بحشوة الشوكولاتة",
+  "sizes": [
+   [
+    55.0,
+    "g"
+   ],
+   [
+    330.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seven-days/bakery/swiss-roll/jumbo-vanilla-swiss-roll",
+  "name_en": "Jumbo Chocolate Swiss Roll with Vanilla Filling",
+  "name_ar": "جامبو سويس رول الشوكولاتة بحشوة الفانيليا",
+  "sizes": [
+   [
+    55.0,
+    "g"
+   ],
+   [
+    330.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seven-days/bakery/swiss-roll/mini-chocolate-swiss-roll",
+  "name_en": "Mini Chocolate Swiss Roll with Chocolate Filling",
+  "name_ar": "ميني سويس رول الشوكولاتة بحشوة الشوكولاتة",
+  "sizes": [
+   [
+    20.0,
+    "g"
+   ],
+   [
+    240.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seven-days/bakery/swiss-roll/mini-strawberry-swiss-roll",
+  "name_en": "Mini Vanilla Swiss Roll with Strawberry Filling",
+  "name_ar": "ميني سويس رول الفانيليا بحشوة الفراولة",
+  "sizes": [
+   [
+    20.0,
+    "g"
+   ],
+   [
+    240.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "seven-days/bakery/swiss-roll/mini-vanilla-swiss-roll",
+  "name_en": "Mini Chocolate Swiss Roll with Vanilla Filling",
+  "name_ar": "ميني سويس رول الشوكولاتة بحشوة الفانيليا",
+  "sizes": [
+   [
+    20.0,
+    "g"
+   ],
+   [
+    240.0,
+    "g"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "suregrow/infant-medical-nutrition/pediatric/suregrow-junior",
+  "name_en": "Suregrow Junior",
+  "name_ar": "شورجرو جونيور مكمل غذائي",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "suregrow/infant-medical-nutrition/pediatric/suregrow-junior-fiber",
+  "name_en": "SureGrow Junior Fiber",
+  "name_ar": "شورجرو جونير فايبر",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "suregrow/infant-medical-nutrition/pediatric/suregrow-junior-hi-calorie",
+  "name_en": "SureGrow Junior Hi Calorie",
+  "name_ar": "شورجرو جونير هاي كالوري",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "suregrow/infant-medical-nutrition/pediatric/suregrow-junior-hi-calorie-fiber",
+  "name_en": "SureGrow Junior Hi Calorie Fiber",
+  "name_ar": "شورجرو جونير هاي كالوري فايبر",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "surenutri/infant-medical-nutrition/adults/surenutri-diabetic",
+  "name_en": "Surenutri Diabetic",
+  "name_ar": "شورنيتري ديباتيك",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "surenutri/infant-medical-nutrition/adults/surenutri-hi-calorie",
+  "name_en": "SureNutri Hi Calorie",
+  "name_ar": "شورنيوتري هاي كالوري",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "surenutri/infant-medical-nutrition/adults/surenutri-high-calorie-fiber",
+  "name_en": "SureNutri Hi Calorie Fiber",
+  "name_ar": "شورنيوتري هاي كالوري بالألياف",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "surenutri/infant-medical-nutrition/adults/surenutri-oral-supplement",
+  "name_en": "SureNutri Oral Supplement",
+  "name_ar": "شورنيتري",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "surenutri/infant-medical-nutrition/adults/surenutri-oral-supplement-fiber",
+  "name_en": "SureNutri Oral Supplement Fiber​",
+  "name_ar": "شورنيتري الغني بالألياف",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ },
+ {
+  "path": "surenutri/infant-medical-nutrition/adults/surenutri-pulmonary",
+  "name_en": "SureNutri Pulmonary",
+  "name_ar": "شورنيتري بالمونري",
+  "sizes": [
+   [
+    200.0,
+    "ml"
+   ]
+  ],
+  "problems": [
+   "no barcode matched this page alone"
+  ]
+ }
+]

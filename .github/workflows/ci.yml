@@ -1,0 +1,75 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: fateen backend
+
+    services:
+      postgres:
+        # Same major version as the Supabase database the baseline was dumped from.
+        image: postgres:17
+        env:
+          POSTGRES_USER: fateen_test
+          POSTGRES_PASSWORD: fateen_test
+          POSTGRES_DB: fateen
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      DATABASE_URL: postgresql://fateen_test:fateen_test@localhost:5432/fateen
+      APP_ENV: development
+      AGENT_DRY_RUN: "true"
+      AGENT_INGEST_API_KEY: ""
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: fateen backend/requirements.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Build test database (baseline, fixtures, migrations)
+        run: scripts/bootstrap_test_db.sh "$DATABASE_URL"
+
+      - name: Test suite
+        run: python -m pytest -q
+
+  flutter:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: fateen1
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - run: flutter pub get
+      - run: flutter analyze
+      - run: flutter test
