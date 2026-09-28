@@ -4,6 +4,7 @@
 Usage (from the backend root):
     python scripts/migrate.py status  [--database-url URL]
     python scripts/migrate.py apply   [--database-url URL] [--to VERSION] [--dry-run]
+                                      [--accept-not-in-repo VERSION ...] [--skip VERSION ...]
 
 The database URL defaults to MIGRATION_DATABASE_URL, then DATABASE_URL. Use a
 role that owns the schema (not the fateen_app runtime role).
@@ -22,7 +23,11 @@ Rules this tool enforces:
   * `apply` refuses to run while the ledger holds versions that are not in
     this repository (for example migrations applied from another checkout).
     Import those files first, so the repository stays the single source of
-    truth for the schema.
+    truth for the schema. When that is not possible yet, every such version
+    can be acknowledged by name with --accept-not-in-repo; the list must
+    match the ledger exactly, so a new unknown version still stops it.
+  * --skip VERSION leaves a pending migration unapplied (for example one
+    superseded on that database by a later file). It stays PENDING.
   * 0000_recovered_baseline.sql is a pg_dump of the schema produced by the
     legacy chain 0001-0039 plus 002_collector_tables. A database whose ledger
     already carries that whole chain is treated as having the baseline; the
@@ -202,7 +207,13 @@ def _prepare_sql(text: str, server_version: int) -> str:
     return text
 
 
-def apply(url: str, target: str | None, dry_run: bool) -> int:
+def apply(
+    url: str,
+    target: str | None,
+    dry_run: bool,
+    accept_not_in_repo: tuple[str, ...] = (),
+    skip: tuple[str, ...] = (),
+) -> int:
     migrations = discover()
     if target and target not in {m.version for m in migrations}:
         raise SystemExit(f"--to {target}: no such migration file")
@@ -211,14 +222,29 @@ def apply(url: str, target: str | None, dry_run: bool) -> int:
         # database gets it with the first migration (see LEDGER_DDL below).
         ledger = read_ledger(conn) or {}
         p = plan(migrations, ledger)
-        if p.mismatched or p.unknown or p.legacy_missing:
+        unknown_ok = set(p.unknown) == set(accept_not_in_repo)
+        if p.mismatched or p.legacy_missing or not unknown_ok:
             print_status(migrations, ledger)
+            if not unknown_ok and accept_not_in_repo:
+                print(
+                    "--accept-not-in-repo must list exactly the NOT IN REPO versions above.",
+                    file=sys.stderr,
+                )
             print("Refusing to apply: resolve the drift above first.", file=sys.stderr)
             return 1
         server_version = conn.info.server_version
 
+    pending_versions = {m.version for m in p.pending}
+    bad_skip = sorted(set(skip) - pending_versions)
+    if bad_skip:
+        raise SystemExit(f"--skip {bad_skip}: not a pending migration")
+    for version in accept_not_in_repo:
+        print(f"  ACCEPTED  {version}  (applied here, file not in this repository)")
     todo = []
     for m in p.pending:
+        if m.version in skip:
+            print(f"  SKIPPED   {m.version}")
+            continue
         todo.append(m)
         if m.version == target:
             break
@@ -260,13 +286,17 @@ def main(argv: list[str] | None = None) -> int:
         if name == "apply":
             sp.add_argument("--to", dest="target", help="stop after this migration file name")
             sp.add_argument("--dry-run", action="store_true")
+            sp.add_argument("--accept-not-in-repo", nargs="+", default=[], metavar="VERSION",
+                            help="acknowledge ledger versions whose files are not in migrations/")
+            sp.add_argument("--skip", nargs="+", default=[], metavar="VERSION",
+                            help="leave these pending migrations unapplied")
     args = parser.parse_args(argv)
     url = database_url(args.database_url)
 
     if args.command == "status":
         with psycopg.connect(url, autocommit=True, row_factory=dict_row) as conn:
             return print_status(discover(), read_ledger(conn))
-    return apply(url, args.target, args.dry_run)
+    return apply(url, args.target, args.dry_run, tuple(args.accept_not_in_repo), tuple(args.skip))
 
 
 if __name__ == "__main__":

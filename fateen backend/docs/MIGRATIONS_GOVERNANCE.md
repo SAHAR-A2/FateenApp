@@ -118,10 +118,31 @@ they are committed to `migrations/` byte for byte:
   the OFF source, the salt/ingredient reference rows (0044-0051) and, without
   `0052`, the `fateen_app` write grants.
 
+Until the missing files are imported, new migrations can still be applied
+to Cloud by naming every missing version, and by skipping `003`, which
+0043 superseded there:
+
+```bash
+python scripts/migrate.py apply --database-url <cloud> \
+    --accept-not-in-repo 0040_security_hardening.sql 0041 0044_open_food_facts_source \
+        0045_open_food_facts_reference_ingredients 0046_off_nutrition_reference_salt \
+        0048_off_pilot_reference_ingredients 0049_off_pilot_reference_ingredients \
+        0050_off_pilot_reference_ingredients 0051_off_pilot_reference_ingredients.sql \
+        0052_restore_fateen_app_write_path.sql \
+    --skip 003_pilot_constraints.sql
+```
+
+The acknowledged list must match the ledger exactly, so a version applied
+later from another checkout still stops `apply`. `MODIFIED` files still
+stop it.
+
 Migrations added in this repository after that snapshot:
 
 - `0054_product_completeness_view.sql`: additive, read-only review-queue
-  view. It is safe to apply once the gap below is closed.
+  view.
+- `0055_allergens_and_health_rules.sql`: the five missing EU allergens,
+  HIGH_CHOLESTEROL, and cited nutrition thresholds in the new
+  `condition_nutrient_thresholds` table. Idempotent.
 
 To close the gap:
 
