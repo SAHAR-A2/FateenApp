@@ -24,3 +24,4 @@ cloud_report_*/
 cleanup_backup_*.json
 *.report.json
 .sfda_*/
+legacy_archive/

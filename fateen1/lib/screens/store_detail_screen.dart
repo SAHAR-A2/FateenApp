@@ -152,6 +152,7 @@ class _StoreProductTile extends StatelessWidget {
                         width: 76,
                         height: 76,
                         fit: BoxFit.cover,
+                        webHtmlElementStrategy: WebHtmlElementStrategy.fallback,
                         errorBuilder: (_, __, ___) =>
                             const Icon(Icons.broken_image_outlined))),
             const SizedBox(width: AppSpacing.smMd),
