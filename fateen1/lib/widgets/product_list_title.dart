@@ -42,6 +42,9 @@ class ProductListTile extends StatelessWidget {
         width: 58,
         height: 50,
         fit: BoxFit.cover,
+        // On the web, a photo host that sends no CORS header (almarai.com)
+        // cannot be read by the canvas renderer; show it as an <img> instead.
+        webHtmlElementStrategy: WebHtmlElementStrategy.fallback,
         errorBuilder: (context, error, stackTrace) => placeholder,
         loadingBuilder: (context, child, progress) {
           if (progress == null) return child;
