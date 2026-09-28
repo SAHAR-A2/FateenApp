@@ -4627,7 +4627,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Organic traditions CHOCOLATE LATTE",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "BEVERAGES",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/062/773/300/1366/front_fr.9.400.jpg",
    "sha256": "041ce8783e5d03521addb50f99e6aeac5d258c94a1b5ec3978364a17766e22e4",
@@ -5073,7 +5073,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Hammond’s HAMMOND'S MILK CHOCOLATE MINI WAFFLE",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "CONFECTIONERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/069/135/590/5128/front_en.3.400.jpg",
    "sha256": "cbb060071fc11167b7bc4d8c6804fe61ae453a6425e69872fcee90b9660cdc64",
@@ -6155,7 +6155,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Granola and yogurt",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "CEREALS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/078/011/691/1093/front_fr.3.400.jpg",
    "sha256": "e7eafff19f88100453de5bcf7239264bd1e9fd11277379e8f3a3364a52465073",
@@ -6518,7 +6518,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Iwon Organics Protein Puffs, Cheddar Cheese",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/085/464/600/6328/front_en.10.400.jpg",
    "sha256": "44b249730de6e8553a45be1b7689d7e0d3ceef2ff9439f56678bf80ea4d16890",
@@ -7799,7 +7799,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Organic black chia seeds",
   "name_en_status": "approved",
-  "category": "SNACKS",
+  "category": "CEREALS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/280/000/373/5330/front_fr.3.400.jpg",
    "sha256": "1a02067bc1791c0b89608bbc537a49259630442ea3fd8c53850420c4777f1d4e",
@@ -11352,7 +11352,7 @@
   "name_ar_status": "pending_review",
   "name_en": "McVitie's Hobnobs OAT Biscuits Mill Chocolate Gluten Free",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/500/039/605/2381/front_fr.3.400.jpg",
    "sha256": "b0f8ec395dcbe3d31ed71743dd50606509e0a781c48ec9b2a1b3b30cdf010da9",
@@ -12337,7 +12337,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Tesco Sweet Pickle",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "SAUCES",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/505/200/359/6689/front_en.5.400.jpg",
    "sha256": "693df432df5367835dd9f63e2e66f91ac8ff182aee3fba8663b6f88bb14dac44",
@@ -12489,7 +12489,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Applied Nutrition Critical Whey Advanced Protein Salted Caramel",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "OTHER",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/505/655/520/2494/front_en.3.400.jpg",
    "sha256": "84b6af2e651f330049e642877bb8f543b4f1f77b7e91b3391803320b9e8da365",
@@ -12785,7 +12785,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Savoursmiths Wagyu beef honey mustard",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/506/065/722/0485/front_en.6.400.jpg",
    "sha256": "9c078be24d2e4a1e7a57cd34ee10dac5e197fb346b1e75c127d70d0d3dcadd5f",
@@ -12860,7 +12860,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Maize hoops coated Honey",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "CEREALS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/506/068/976/0041/front_fr.3.400.jpg",
    "sha256": "c3d3ae02c9943e48f4621047fb5aa822cd75ab1a9000ab2fb77360e1eeb37c61",
@@ -13018,7 +13018,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Nutry Nuts Protein Peanut Butter Cup",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "CONFECTIONERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/506/070/860/0075/front_en.3.400.jpg",
    "sha256": "0803c739c1c155ee1ce8bf3230c2833184c4299934fa6b681f65d0798c2cf23d",
@@ -13099,7 +13099,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Nutry nuts peanut butter cups",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "CONFECTIONERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/506/070/860/0112/front_en.3.400.jpg",
    "sha256": "4b122243d614753fd32768f38a2593fef003d68d90f9eb1d68f8c822df83bab2",
@@ -13403,7 +13403,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Pillsbury Dark Chocolate Cake Mix",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/520/391/239/0299/front_en.4.400.jpg",
    "sha256": "95e638a072614d674def82c941dc115ba3b2658bbbab7abf22b7a6e4ccfb0287",
@@ -16484,7 +16484,7 @@
   "name_ar_status": "pending_review",
   "name_en": "MFI Corn Puffs With Tomato & Cheese Flavour",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/608/400/100/0072/front_fr.3.400.jpg",
    "sha256": "34bf41bedcc518dc7c7e91571be4ec07ee0d81d479236daffdf97724a893c30c",
@@ -16559,7 +16559,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Cheese and onion potato chips",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/608/401/058/0039/front_fr.3.400.jpg",
    "sha256": "b83fb1ce50fad34992e5acabc59c58dbdcc02d7772edc6b717e629b01d53c836",
@@ -16865,7 +16865,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Fluffy pancake sandwich caramel",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/608/401/214/3065/front_fr.3.400.jpg",
    "sha256": "688005bd7d0ffad5a5cc29dca93de6e6371272ab22c1075ca5968d4413a2ac4d",
@@ -20774,7 +20774,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Almarai Cheese & Zaatar Puff",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/100/703/2254/front_en.15.400.jpg",
    "sha256": "48aff9ebf33ed662ee79091031e9b7625174e17300ee53bbd344ca058518c77c",
@@ -22337,7 +22337,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Almarai Triple chocolate muffin",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/100/704/8248/front_fr.3.400.jpg",
    "sha256": "3d45483ebeb07084e4204ae30d995d9567f95f646c055d6c09e7f536eb944f32",
@@ -22651,7 +22651,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Almarai Cream cheese sandwitch zaatar",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/100/705/2887/front_fr.3.400.jpg",
    "sha256": "c92cd4674ffbbdc060b7c6b40b01291c1815a3c58a49e1d3fe17dcb6da34e447",
@@ -22876,7 +22876,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Almarai Cream cheese sandwich Bran",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/100/705/3754/front_fr.3.400.jpg",
    "sha256": "1914f2ef69640ca3b276831ebef7dd5af85b9c30279b88eb6e3851c58e527f00",
@@ -23638,7 +23638,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Almarai L'usine chocolate brownie",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/100/706/0202/front_en.3.400.jpg",
    "sha256": "04fae16ce301821f826d8c018ef665760e112c725020f1616727a314e2012425",
@@ -23719,7 +23719,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Almarai brioch",
   "name_en_status": "approved",
-  "category": "OTHER",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/100/706/1292/front_en.7.400.jpg",
    "sha256": "be24f36bd9d17a5e02bebbbac0180eb6a2fd74f8c163f69eb584c600dc6bc0c3",
@@ -25271,7 +25271,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Afia Pure corn oil",
   "name_en_status": "approved",
-  "category": "CEREALS",
+  "category": "SAUCES",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/101/111/1457/front_fr.10.400.jpg",
    "sha256": "801a62255c1452046df9d2896bd7d27a4271b9cd942780b176db7df7732bb4bb",
@@ -25346,7 +25346,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Afia Pure Corn Oil",
   "name_en_status": "approved",
-  "category": "CEREALS",
+  "category": "SAUCES",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/101/111/1877/front_fr.3.400.jpg",
    "sha256": "894a45a5178eea4ce31ca95e0fedf22a12a0c4ebb52ba7af7cc31b218a4dd2e3",
@@ -25738,7 +25738,7 @@
   "name_ar_status": "pending_review",
   "name_en": "PEANUT BUTTER",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "SAUCES",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/101/411/0143/front_fr.3.400.jpg",
    "sha256": "02757a3d3d7edc4dbfbe4fd2783545e82d4dee15dd47c0ac44fc46f73e33e644",
@@ -25957,7 +25957,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Tenderina tuna brine water",
   "name_en_status": "approved",
-  "category": "BEVERAGES",
+  "category": "SEAFOOD",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/101/430/2227/front_fr.3.400.jpg",
    "sha256": "a5abfc69c7e194d525af9747745e8bd8551e3e302d4c7ffcedcf9314942fe55d",
@@ -26113,7 +26113,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Goody Rosee pasta sauce",
   "name_en_status": "approved",
-  "category": "CEREALS",
+  "category": "SAUCES",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/101/430/2593/front_fr.9.400.jpg",
    "sha256": "9ab1bb4b5514ab7a0134feddb3ded7e8779145889cb5d7987a38e40f1d288839",
@@ -26942,7 +26942,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Cheese Balls",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/101/601/3008/front_fr.7.400.jpg",
    "sha256": "e99ce03bc05469dad74b97367651509d4b606c63abbae9404014ea09ad714bc8",
@@ -30577,7 +30577,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Americana Butter cookies",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/103/341/4116/front_fr.18.400.jpg",
    "sha256": "47f5c3755026a5f853f30c1540fab6e63899a2bd562d15664e02625afb0cf19c",
@@ -31633,7 +31633,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Lay's lays sweet chili and sour cream",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/103/602/3094/front_fr.3.400.jpg",
    "sha256": "2d91bdf15c414eb2eb15c7732699621f23f856ec51135fb4f49e09cc8233b7c5",
@@ -32083,7 +32083,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Lay’s french cheese",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/103/611/3504/front_fr.12.400.jpg",
    "sha256": "b6435a2bd84e961f0d50d9804bc7e55aba51ac46c45842f81663c029698af582",
@@ -32227,7 +32227,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Lay’s french cheese",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/103/611/5508/front_fr.11.400.jpg",
    "sha256": "963d2cb916a324a48cc43f512781cf5d80c8880aae223a689f2a296ba871ce68",
@@ -32590,7 +32590,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Pepsi TASALI Ketchup",
   "name_en_status": "approved",
-  "category": "BEVERAGES",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/103/617/7155/front_fr.22.400.jpg",
    "sha256": "4183cb0f830f45494cd9c92eee4c1b56aedd738e94d8f64c74563c7b57caf62d",
@@ -32740,7 +32740,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Cheetos Twisted Cheese",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/103/624/7506/front_fr.3.400.jpg",
    "sha256": "ecee783c552f522acd5b2c621b6f8ac8c6b8137911ceda82aea5b9ab34e661d8",
@@ -32815,7 +32815,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Sun Bites Cheeze And Herb",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/103/628/7205/front_fr.9.400.jpg",
    "sha256": "aed80aaa0d879f917e6c658a4cabd1d630881ce75c6795dfd4d77e48b8299b31",
@@ -33902,7 +33902,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Cheese Rings",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/103/982/1116/front_fr.5.400.jpg",
    "sha256": "840b694a654207f4944b8ae02ba708ed284361150d48437fbae6722a99d8ac30",
@@ -33977,7 +33977,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Crispy letters ketchup",
   "name_en_status": "approved",
-  "category": "SAUCES",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/103/982/1512/front_en.9.400.jpg",
    "sha256": "d8077b710bedd8614645ee495cdfcaaed7aff5f29a18a4b68bda7ace9ff551fe",
@@ -34052,7 +34052,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Crispy Letters Ketchup",
   "name_en_status": "approved",
-  "category": "SAUCES",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/103/982/5213/front_fr.3.400.jpg",
    "sha256": "c4bcd098a10fe83610f6bf015d52cc2d4359e84df2429b9d82fae5fa700815a7",
@@ -34283,7 +34283,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Sesame butter",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "SAUCES",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/104/102/2716/front_fr.3.400.jpg",
    "sha256": "39de499cc2491a813750a487eff1450c92f3a2962c0c043c19b6303eef346799",
@@ -35118,7 +35118,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Hanaa Chopped Tomatoes In Tomato Juice With Basil & Oregano",
   "name_en_status": "approved",
-  "category": "BEVERAGES",
+  "category": "CANNED_FOOD",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/105/500/0793/front_en.7.400.jpg",
    "sha256": "da512c0463028ee73b6ed918437794104dd7d3b63fbd6ad5e2c7261f0f475a0b",
@@ -36989,7 +36989,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Peep Peanut Butter Creamy",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "SAUCES",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/106/377/2033/front_en.8.400.jpg",
    "sha256": "bd960a844aee07eba961908650fb4f2e3a78326b269b00b6721c3a9241e7b748",
@@ -37380,7 +37380,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Freshly pancake syrup with buttery taste",
   "name_en_status": "approved",
-  "category": "BEVERAGES",
+  "category": "SAUCES",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/106/388/2701/front_fr.3.400.jpg",
    "sha256": "addd73b5f230a617d0f5bd0f6267f36f71f982a21974178d7c44481713664927",
@@ -38067,7 +38067,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Sunbullah Sweet Corn 400g",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "CANNED_FOOD",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/107/315/0425/front_en.12.400.jpg",
    "sha256": "4af6ee9d92b56794bfa633b20fb2f2765c201e53150fbf259da2a1f35287f6fc",
@@ -38448,7 +38448,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Sunbulah Whole wheat bran",
   "name_en_status": "approved",
-  "category": "BAKERY",
+  "category": "CEREALS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/107/351/0496/front_fr.8.400.jpg",
    "sha256": "b13b546804d61ebb06e7afd6272204fe51a5216a100bdfd9517f5bd1de1c72a1",
@@ -40578,7 +40578,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Forsan Mozarella",
   "name_en_status": "approved",
-  "category": "OTHER",
+  "category": "DAIRY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/110/050/0155/front_en.3.400.jpg",
    "sha256": "5bc4f5442285734ceb5b1ce3b3414ba5a1c9ed48c0d24fe64d7f34abe6a289d4",
@@ -41196,7 +41196,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Kwality Blueberry Scarlet",
   "name_en_status": "approved",
-  "category": "OTHER",
+  "category": "CONFECTIONERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/110/077/2415/front_en.7.400.jpg",
    "sha256": "5317d610795ec0a310cb66271239f764513849c0a13a63b8f2751345457801dd",
@@ -42264,7 +42264,7 @@
   "name_ar_status": "pending_review",
   "name_en": "KAKO Cheese pie",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/110/274/0078/front_fr.10.400.jpg",
    "sha256": "d4bf54902989a74f23bf78b4bc340ee5d9a55cb08c8115d01ea44f5d1c836713",
@@ -42495,7 +42495,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Sweet crackers",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/110/530/1320/front_fr.3.400.jpg",
    "sha256": "d4501f34ddb989eb999ded1b6bcde49562ef513e4b02a768c68eefe46e92c8dc",
@@ -43259,7 +43259,7 @@
   "name_ar_status": "approved",
   "name_en": "Bedo Chocolate Chunk Cookies",
   "name_en_status": "pending_review",
-  "category": "CONFECTIONERY",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/110/580/0953/front_fr.3.400.jpg",
    "sha256": "f506729095099f3c951012629f6d559fbd1064ba6413ddba869777bd6bb26832",
@@ -44023,7 +44023,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Light meat tuna in water",
   "name_en_status": "approved",
-  "category": "BEVERAGES",
+  "category": "SEAFOOD",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/117/400/9028/front_fr.3.400.jpg",
    "sha256": "d89c6a9a2882d158920b861e8694cb15a4bc6b366698546d9f7804650225e6d3",
@@ -44324,7 +44324,7 @@
   "name_ar_status": "pending_review",
   "name_en": "swiss roll strbrry",
   "name_en_status": "approved",
-  "category": "OTHER",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/118/300/0283/front_en.6.400.jpg",
    "sha256": "fb047283bdddb9e0c67fb84a2438b3cd929affeb36a0afafc5d686c5ff758832",
@@ -44399,7 +44399,7 @@
   "name_ar_status": "pending_review",
   "name_en": "swiss roll vanilla blue",
   "name_en_status": "approved",
-  "category": "OTHER",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/118/300/0306/front_en.3.400.jpg",
    "sha256": "e79e096cb0546e6ee0818f9e23367e8cb9d966d018fcd96f70f908bde1f52c06",
@@ -44474,7 +44474,7 @@
   "name_ar_status": "pending_review",
   "name_en": "swiss roll red",
   "name_en_status": "approved",
-  "category": "OTHER",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/118/300/1549/front_en.3.400.jpg",
    "sha256": "2078ff8d052c6422114255ebd685aaa77a6517776db71047923f3af0db68c90a",
@@ -46515,7 +46515,7 @@
   "name_ar_status": "approved",
   "name_en": "Cheese Pies",
   "name_en_status": "pending_review",
-  "category": "DAIRY",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/701/426/0109/front_en.4.400.jpg",
    "sha256": "62e07a4ba30c95ce8617dc0d589c566a35f4544a9d76bc169c172e9760eb1545",
@@ -47210,7 +47210,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Pure vegetable ghee",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "SAUCES",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/702/486/0054/front_fr.3.400.jpg",
    "sha256": "3f491c939beb3731cbbc99b0da92d9a34a62b2e94af29bb195957a92dac0a155",
@@ -47366,7 +47366,7 @@
   "name_ar_status": "pending_review",
   "name_en": "D-BAR Peanuts Chocolate Protein Bar",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/628/703/459/0057/front_es.3.400.jpg",
    "sha256": "740f82172b3c7bd1387d4e7bb53b57bb6048549fad5b5fd55971687a86496af4",
@@ -48116,7 +48116,7 @@
   "name_ar_status": "pending_review",
   "name_en": "NOOR Cheddar Cheese Flavor Original Sauce",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "SAUCES",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/629/100/316/1469/front_fr.3.400.jpg",
    "sha256": "f03b0ca08b6c8d4a5a65e7a1231480370701520ecf2130e0cc8ab8216caecbb9",
@@ -48508,7 +48508,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Chocolate Chip cookie",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/629/110/060/1813/front_en.10.400.jpg",
    "sha256": "274a90a53fff6ca9ec43060400712b816639f3408b4b2467b4566e2834533b3c",
@@ -48903,7 +48903,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Pillsbury fudge brownie",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "BAKERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/629/110/569/0881/front_en.3.400.jpg",
    "sha256": "267c8df7d9a79ceda85bb48c69af68e068251fd6ee0514695b8e535335ccd920",
@@ -49059,7 +49059,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Bugles nacho cheese flavor",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/629/110/569/4469/front_en.3.400.jpg",
    "sha256": "53cefc80fce7a202c6e0c22cd127f870ef0ea62710b80372cc870aec0328c703",
@@ -49433,7 +49433,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Kind raspberry whole grain bar",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/629/400/183/3086/front_fr.3.400.jpg",
    "sha256": "742ac4532045144ac31e965c4721f289aa9c2e9f14d19da7ee41e5b305ffc1a4",
@@ -50051,7 +50051,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Hershey's Kisses milk chocolate with almonds",
   "name_en_status": "approved",
-  "category": "SNACKS",
+  "category": "CONFECTIONERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/694/283/671/3010/front_fr.3.400.jpg",
    "sha256": "069e60ab74905eb2c0653b1d845dc30c4a15c15261e2869cca5ba900b98684c0",
@@ -50126,7 +50126,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Hershey's Milk chocolate chips",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "CONFECTIONERY",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/694/283/672/2494/front_fr.3.400.jpg",
    "sha256": "4d853f91a9d25faa7a77c3e3e388e3741ea140d626cafcd73a48670ae326d9dd",
@@ -50660,7 +50660,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Nestle Cerelac NutriBiscuit Original",
   "name_en_status": "approved",
-  "category": "BAKERY",
+  "category": "BABY_FOOD",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/761/303/564/8302/front_fr.3.400.jpg",
    "sha256": "1f4d6d93c4f94d644b331c0aacfc25546e300353224dd5865db5a01a281d7239",
@@ -50885,7 +50885,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Fitness granola chocolate",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "CEREALS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/761/328/709/9761/front_fr.3.400.jpg",
    "sha256": "d6a87c8c5dc5f76c405df56134910903770bd8d9812fd6270d5a94fcf8aca18e",
@@ -51918,7 +51918,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Sadia Chicken Pop Corn",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "MEAT",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/789/151/557/7643/front_en.3.400.jpg",
    "sha256": "0aabc248245700b7c0180a1cc5084aa7113e7ff9ae13aeedc90c2b5a84cb3b3a",
@@ -52629,7 +52629,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Rio Mare Tuna in sauce with peas",
   "name_en_status": "approved",
-  "category": "SAUCES",
+  "category": "SEAFOOD",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/800/403/035/6368/front_fr.4.400.jpg",
    "sha256": "0765e365fe1198ddfcfd23ee91e541947a18cf8a7a4d0dc81e122e04d75ec349",
@@ -53462,7 +53462,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Nature valley crunchy singles oats and dark chocolate",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/841/007/660/1872/front_en.3.400.jpg",
    "sha256": "cd73827774ce12927630e2aa71ee3f9500158d7dd7415e90eaf05ce7e7f8ce50",
@@ -55107,7 +55107,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Chungjungwon Daesang Chung Jung One Sweet Potato Snack",
   "name_en_status": "approved",
-  "category": "VEGETABLES",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/880/105/200/4068/front_en.3.400.jpg",
    "sha256": "7083249d2996880c318d9598ac00abea1e8ce513c6cc2a0a311f4a1e3bb160c2",
@@ -55488,7 +55488,7 @@
   "name_ar_status": "approved",
   "name_en": "Harvest Snaps French Cheese",
   "name_en_status": "pending_review",
-  "category": "DAIRY",
+  "category": "SNACKS",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/885/101/600/6225/front_ar.4.400.jpg",
    "sha256": "ee0c014d9fa4147f5229f58339187c9a5125c38090d72b558b60f582e82c6921",
@@ -56088,7 +56088,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Eastern Estern Cocunut milk 400 ml",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "CANNED_FOOD",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/890/285/000/0013/front_en.4.400.jpg",
    "sha256": "2a3564e25b74438fc0213a58679e6a8851be9b46fa79bd3966f6bc5906d12613",
@@ -57301,7 +57301,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Nut butter",
   "name_en_status": "approved",
-  "category": "DAIRY",
+  "category": "SAUCES",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/931/262/803/0064/front_fr.3.400.jpg",
    "sha256": "6a5e183454ea2fb60754249d2bce88663ca959990c54ae1bec437e144409d0ee",
@@ -57376,7 +57376,7 @@
   "name_ar_status": "pending_review",
   "name_en": "Mothernest Multivitamin + omega 3 orange & lemon flavour",
   "name_en_status": "approved",
-  "category": "CONFECTIONERY",
+  "category": "OTHER",
   "image": {
    "url": "https://images.openfoodfacts.org/images/products/932/715/500/5690/front_en.3.400.jpg",
    "sha256": "ff8b83f4e65e40d3cf0ebd26dad63cca1f326dcb73dd1e16e19b3dc414524363",

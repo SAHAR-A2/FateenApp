@@ -120,3 +120,13 @@ def test_products_sharing_a_photo_reuse_the_image(tx, refs):
     assert "image" in loader.load_entry(tx, refs, other)["added"]
     assert tx.execute("SELECT count(*) AS n FROM public.images WHERE content_hash = %s",
                       ("a" * 64,)).fetchone()["n"] == 1
+
+
+@pytest.mark.integration
+def test_reviewed_category_corrects_a_stored_one(tx, refs):
+    loader.load_entry(tx, refs, {**copy.deepcopy(ENTRY), "category": "DAIRY"})
+    assert loader.load_entry(tx, refs, ENTRY)["action"] == "unchanged"  # not without a review
+    result = loader.load_entry(tx, refs, ENTRY, corrected_category="BAKERY")
+    assert result["added"] == ["category corrected"]
+    assert _product(tx, ENTRY["barcode"])["product_category_id"] == refs.categories["BAKERY"]
+    assert loader.load_entry(tx, refs, ENTRY, corrected_category="BAKERY")["action"] == "unchanged"
