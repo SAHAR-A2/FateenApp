@@ -192,6 +192,26 @@ def is_drink(p: dict) -> bool:
         and not tags & {"en:beverage-preparations", "en:powdered-milks", "en:instant-beverages"}
 
 
+_LIQUID_NAME = re.compile(
+    r"\b(milk|laban|juice|jus|nectar|drink|water|soda|cola|lemonade|smoothie|ayran|beer|mocktail|"
+    r"drinking)\b|حليب|لبن|عصير|نكتار|مشروب|مياه|ماء|عيران|للشرب",
+    re.I,
+)
+_NOT_LIQUID = re.compile(
+    r"\b(powder|powdered|mix|bar|bars|chocolate|cheese|cookies?|biscuits?|cake|bread|puffs|candy|"
+    r"condensed|evaporated|tea|coffee|cereal|flakes)\b|مجفف|بودرة|مسحوق|بسكويت|شوكولات|جبن|خبز|شاي|قهوة|مكثف|مبخر",
+    re.I,
+)
+
+
+def looks_liquid(name: str, category_code: str) -> bool:
+    """A drink whose record states no volume ("Nada protein strawberry
+    milk", "Ginger Beer"): judged per 100 ml, by the drink thresholds."""
+    if _NOT_LIQUID.search(name):
+        return False
+    return category_code == "BEVERAGES" or bool(_LIQUID_NAME.search(name))
+
+
 def category(p: dict) -> str:
     tags = set(p.get("categories_hierarchy") or []) | set(p.get("categories_tags") or [])
     for code, wanted in CATEGORY_TAGS:
@@ -335,8 +355,9 @@ def build(records_dir: Path, translations: dict, cache: Path,
             rejected.append({"barcode": code, "name": name_en or name_ar, "problems": problems})
             continue
 
-        basis = "PER_100ML" if is_drink(p) else "PER_100G"
         category_code = (categories or {}).get(code) or category({**p, "product_name_en": name_en})
+        liquid = is_drink(p) or looks_liquid(f"{name_en or ''} {name_ar or ''}", category_code)
+        basis = "PER_100ML" if liquid else "PER_100G"
         problems = density_problems(f"{name_en or ''} {name_ar or ''}", category_code, energy_kcal(n), basis)
         if problems:
             rejected.append({"barcode": code, "name": name_en or name_ar, "problems": problems})

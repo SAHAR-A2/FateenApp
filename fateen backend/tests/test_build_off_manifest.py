@@ -151,3 +151,16 @@ def test_energy_density_floors(name, category_code, kcal, rejected):
 
 def test_density_is_not_judged_for_drinks():
     assert off.density_problems("Sugar syrup", "BEVERAGES", 1, "PER_100ML") == []
+
+
+@pytest.mark.parametrize("name,category_code,liquid", [
+    ("Fitch & Leedes Ginger Beer", "BEVERAGES", True),
+    ("nada Protein Strawberry milk", "DAIRY", True),
+    ("ندى زبادي يوناني للشرب", "DAIRY", True),
+    ("Almarai Milk Powder", "DAIRY", False),
+    ("Matcha green tea", "BEVERAGES", False),            # leaves or powder, not the drink
+    ("Almarai Halloumi Cheese", "DAIRY", False),
+    ("McVitie's Digestive Milk Chocolate", "BAKERY", False),
+])
+def test_liquids_without_a_stated_volume(name, category_code, liquid):
+    assert off.looks_liquid(name, category_code) is liquid
