@@ -51,7 +51,7 @@ from psycopg.rows import dict_row
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
-from app.catalog.allergen_detection import detect, merge  # noqa: E402
+from app.catalog.allergen_detection import detect, is_plausible_statement, merge  # noqa: E402
 from app.core.gtin import has_valid_check_digit  # noqa: E402
 
 _BARCODE_TYPE = {8: "EAN8", 12: "UPC_A", 13: "EAN13", 14: "GTIN"}
@@ -240,7 +240,11 @@ def load_entry(conn, refs: Refs, entry: dict) -> dict:
 
     image = entry.get("image")
     if image and not existing["has_image"]:
-        image_id = conn.execute(
+        # Sizes of one product share a photo, and images.content_hash is
+        # unique: reuse the stored image.
+        same = conn.execute("SELECT id FROM public.images WHERE content_hash = %s AND deleted_at IS NULL",
+                            (image["sha256"],)).fetchone()
+        image_id = same["id"] if same else conn.execute(
             """INSERT INTO public.images (image_type_id, source_id, storage_uri, content_hash, mime_type,
                                           file_size, status_id, metadata)
                VALUES (%s, %s, %s, %s, %s, %s, %s, %s) RETURNING id""",
@@ -258,7 +262,8 @@ def load_entry(conn, refs: Refs, entry: dict) -> dict:
         added.append("image")
 
     for lang, statement in (entry.get("ingredients") or {}).items():
-        if lang in ("ar", "en") and statement and statement.strip() and lang not in existing["statements"]:
+        if (lang in ("ar", "en") and is_plausible_statement(statement or "")
+                and lang not in existing["statements"]):
             conn.execute(
                 """INSERT INTO public.product_ingredient_statements (product_id, language_code, statement,
                                                                      source_id, source_url)
@@ -271,7 +276,7 @@ def load_entry(conn, refs: Refs, entry: dict) -> dict:
     # allergens found in it are always stored with it, whatever the manifest
     # says.
     allergens = merge(entry.get("allergens") or {},
-                      *(detect(t) for t in (entry.get("ingredients") or {}).values() if t))
+                      *(detect(t) for t in (entry.get("ingredients") or {}).values() if is_plausible_statement(t or "")))
     # Only allergens not yet recorded for the product are added; existing
     # rows are never changed.
     new_allergens = {c: r for c, r in allergens.items() if c.upper() not in existing["allergens"]}

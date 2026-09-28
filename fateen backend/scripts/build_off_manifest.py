@@ -6,6 +6,11 @@ Usage (from the backend root):
         --out manifest_off.json [--rejected rejected_off.json] [--images-cache DIR]
 
 RECORDS_DIR holds one /api/v2/product/{code} JSON response per file.
+--names NAMES.json optionally maps barcode -> {"ar", "en", "ar_status",
+"en_status"} for names reviewed by hand (a garbled source name corrected,
+a missing English name added) or null to reject a product whose names
+contradict each other. A name given without a status is pending_review.
+
 --categories CATEGORIES.json optionally maps barcode -> product_categories.code
 for products reviewed by hand; it wins over the automatic classification.
 
@@ -38,7 +43,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
-from app.catalog.allergen_detection import detect, from_off_tags, merge  # noqa: E402
+from app.catalog.allergen_detection import detect, from_off_tags, is_plausible_statement, merge  # noqa: E402
 from app.core.gtin import has_valid_check_digit  # noqa: E402
 
 _AR = re.compile(r"[؀-ۿ]")
@@ -148,6 +153,36 @@ def nutrition_problems(n: dict) -> list[str]:
     return problems
 
 
+# Minimum energy density a product of this kind can have. Values below it
+# are almost always stated per piece or per spoon but labelled per 100 g,
+# which would make a candy look sugar-free to the diabetes check.
+_DENSITY_FLOORS = [  # (name pattern, minimum kcal per 100 g, what it is)
+    (r"\b(oil|huile)\b|زيت", 700, "an oil"),
+    (r"\b(sugar|sucre)\b|سكر(?! ?[يى])", 250, "sugar"),
+    (r"\b(powder|crushed|ground|spices?|seasoning|lemon pepper|husk|isabgol)\b|بهارات|مسحوق|مطحون|توابل", 100,
+     "a dry powder or spice"),
+    (r"\b(cheese|fromage)\b|جبن", 100, "cheese"),
+]
+_CATEGORY_FLOORS = {"BAKERY": 150, "SNACKS": 150, "CEREALS": 150, "CONFECTIONERY": 60}
+_LIGHT_WORDS = re.compile(r"\b(ice|pops?|sorbet|jelly|free|zero|light|lite|diet|water|broth|stock|sauce|"
+                          r"prepared|drink)\b|مثلجات|آيس|خالي|دايت|لايت|صلصة|مرق", re.I)
+
+
+def density_problems(name: str, category_code: str, kcal: float | None, basis: str) -> list[str]:
+    if kcal is None or basis != "PER_100G":
+        return []
+    light = bool(_LIGHT_WORDS.search(name))
+    for pattern, floor, what in _DENSITY_FLOORS:
+        if re.search(pattern, name, re.I) and not light and kcal < floor:
+            return [f"{kcal:g} kcal per 100 g is too little for {what}; values look per serving"]
+    floor = _CATEGORY_FLOORS.get(category_code)
+    if floor and not light and kcal < floor:
+        return [f"{kcal:g} kcal per 100 g is too little for {category_code.lower()}; values look per serving"]
+    if kcal < 5 and not light and category_code not in ("BEVERAGES",):
+        return [f"{kcal:g} kcal per 100 g; values look per serving"]
+    return []
+
+
 def is_drink(p: dict) -> bool:
     q = (p.get("quantity") or "").lower()
     if re.search(r"\d\s*(ml|cl|l|litre|liter|لتر|مل)\b", q):
@@ -169,6 +204,21 @@ def category(p: dict) -> str:
     return "OTHER"
 
 
+# Notes contributors type into names and brands: prices, shelf life,
+# "imported".
+_NAME_NOISE = re.compile(
+    r"(السعر\s*[\d.٠-٩]+\s*(ريال)?|\b\d+\s*(sr|sar)\b|\b\d+\s*days\b|\b\d+\s*yrs?\s*prod\b|\bimp\b)",
+    re.I,
+)
+
+
+def clean_name(name: str | None) -> str | None:
+    if not name:
+        return name
+    cleaned = re.sub(r"\s{2,}", " ", _NAME_NOISE.sub(" ", name)).strip(" -,،")
+    return cleaned or None
+
+
 def _with_brand(name: str | None, p: dict) -> str | None:
     """Prefix the first brand when the name does not mention it ("Shells" ->
     "Barilla Shells"), so a short name still identifies the product."""
@@ -176,20 +226,28 @@ def _with_brand(name: str | None, p: dict) -> str | None:
         return name
     brands = p.get("brands") or ""
     brand = (brands[0] if isinstance(brands, list) and brands else str(brands)).split(",")[0].strip()
+    brand = clean_name(brand) or ""
+    if _AR.search(brand):
+        brand = ""  # an Arabic brand does not belong in the English name
     if brand and brand.lower() not in name.lower() and len(brand) <= 30:
         return f"{brand} {name}"
     return name
 
 
 def names(p: dict) -> tuple[str | None, str | None]:
-    ar = next((v.strip() for v in (p.get("product_name_ar"), p.get("product_name"))
+    ar = next((clean_name(v) for v in (p.get("product_name_ar"), p.get("product_name"))
                if v and _AR.search(v)), None)
-    en = next((v.strip() for v in (p.get("product_name_en"), p.get("product_name"))
-               if v and not _AR.search(v) and _LATIN.search(v)), None)
+    en = next((clean_name(v) for v in (p.get("product_name_en"), p.get("product_name"))
+               if v and not _AR.search(clean_name(v) or "") and _LATIN.search(v)), None)
     return ar, _with_brand(en, p)
 
 
 def statements(p: dict) -> dict[str, str]:
+    """Ingredient lists in Arabic and English that look like real lists."""
+    return {k: v for k, v in _raw_statements(p).items() if is_plausible_statement(v)}
+
+
+def _raw_statements(p: dict) -> dict[str, str]:
     out = {}
     for key in ("ingredients_text_ar", "ingredients_text"):
         v = (p.get(key) or "").strip()
@@ -230,7 +288,7 @@ def fetch_image(url: str, cache: Path) -> dict | None:
 
 
 def build(records_dir: Path, translations: dict, cache: Path,
-          categories: dict | None = None) -> tuple[list, list]:
+          categories: dict | None = None, reviewed_names: dict | None = None) -> tuple[list, list]:
     entries, rejected = [], []
     for f in sorted(records_dir.glob("*.json")):
         record = json.loads(f.read_bytes())
@@ -252,11 +310,17 @@ def build(records_dir: Path, translations: dict, cache: Path,
         n = p.get("nutriments") or {}
         problems += nutrition_problems(n)
         name_ar, name_en = names(p)
-        ar_status = "approved"
-        if code in translations and translations[code] is None:
+        ar_status = en_status = "approved"
+        reviewed = (reviewed_names or {}).get(code, {})
+        if code in translations and translations[code] is None or code in (reviewed_names or {}) and reviewed is None:
             problems.append("name reviewed as unclear")
         elif not name_ar and translations.get(code):
             name_ar, ar_status = translations[code].strip(), "pending_review"
+        if reviewed:
+            if reviewed.get("ar"):
+                name_ar, ar_status = reviewed["ar"], reviewed.get("ar_status", "pending_review")
+            if reviewed.get("en"):
+                name_en, en_status = reviewed["en"], reviewed.get("en_status", "pending_review")
         if not name_ar and not name_en:
             problems.append("no name")
         elif not name_ar:
@@ -272,6 +336,11 @@ def build(records_dir: Path, translations: dict, cache: Path,
             continue
 
         basis = "PER_100ML" if is_drink(p) else "PER_100G"
+        category_code = (categories or {}).get(code) or category({**p, "product_name_en": name_en})
+        problems = density_problems(f"{name_en or ''} {name_ar or ''}", category_code, energy_kcal(n), basis)
+        if problems:
+            rejected.append({"barcode": code, "name": name_en or name_ar, "problems": problems})
+            continue
         nutrition = []
         for key, ntype, unit, factor in NUTRIENTS:
             v = energy_kcal(n) if key == "energy-kcal_100g" else _num(n.get(key))
@@ -283,13 +352,13 @@ def build(records_dir: Path, translations: dict, cache: Path,
             *(detect(t) for t in texts.values()),
             # Text in other languages (often French) is not stored, but its
             # allergens are.
-            detect(p.get("ingredients_text") or ""),
+            detect(p.get("ingredients_text") or "") if is_plausible_statement(p.get("ingredients_text") or "") else {},
         )
         entries.append({
             "barcode": code,
             "name_ar": name_ar, "name_ar_status": ar_status,
-            "name_en": name_en, "name_en_status": "approved",
-            "category": (categories or {}).get(code) or category({**p, "product_name_en": name_en}),
+            "name_en": name_en, "name_en_status": en_status,
+            "category": category_code,
             "image": image,
             "nutrition": nutrition,
             "ingredients": texts,
@@ -309,12 +378,14 @@ def main(argv=None) -> int:
     parser.add_argument("--rejected", default="rejected_off.json")
     parser.add_argument("--images-cache", default=".image_cache")
     parser.add_argument("--categories", help="barcode -> category code, reviewed by hand")
+    parser.add_argument("--names", help="barcode -> reviewed names, or null to reject")
     args = parser.parse_args(argv)
     cache = Path(args.images_cache)
     cache.mkdir(parents=True, exist_ok=True)
     translations = json.loads(Path(args.translations).read_text(encoding="utf-8"))
     categories = json.loads(Path(args.categories).read_text(encoding="utf-8")) if args.categories else None
-    entries, rejected = build(Path(args.records_dir), translations, cache, categories)
+    reviewed = json.loads(Path(args.names).read_text(encoding="utf-8")) if args.names else None
+    entries, rejected = build(Path(args.records_dir), translations, cache, categories, reviewed)
     Path(args.out).write_text(json.dumps(entries, ensure_ascii=False, indent=1), encoding="utf-8")
     Path(args.rejected).write_text(json.dumps(rejected, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"entries: {len(entries)}  rejected: {len(rejected)}")

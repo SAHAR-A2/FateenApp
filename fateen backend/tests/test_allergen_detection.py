@@ -41,3 +41,17 @@ def test_off_tags_and_merge_keep_contains_over_may_contain():
     assert off == {"MILK": "CONTAINS", "TREE_NUTS": "MAY_CONTAIN", "WHEAT": "MAY_CONTAIN", "GLUTEN": "MAY_CONTAIN"}
     assert merge(off, {"TREE_NUTS": "CONTAINS"})["TREE_NUTS"] == "CONTAINS"
     assert merge({"TREE_NUTS": "CONTAINS"}, off)["TREE_NUTS"] == "CONTAINS"
+
+
+@pytest.mark.parametrize("text,ok", [
+    ("price 3", False),                         # found in Open Food Facts as an "ingredient list"
+    ("price 2.50", False),
+    ("السعر 5 ريال", False),
+    ("Sugar", False),
+    ("Wheat flour, sugar, vegetable oil, salt", True),
+    ("دقيق القمح، سكر، زيت نباتي، ملح", True),
+    ("Water, sugar (10%), flavour, price 3 SR", False),
+])
+def test_statement_plausibility(text, ok):
+    from app.catalog.allergen_detection import is_plausible_statement
+    assert is_plausible_statement(text) is ok

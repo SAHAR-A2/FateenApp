@@ -111,3 +111,12 @@ def test_apply_needs_an_explicit_url(monkeypatch, tmp_path):
     manifest.write_text("[]")
     with pytest.raises(SystemExit, match="explicit --database-url"):
         loader.main([str(manifest), "--apply"])
+
+
+@pytest.mark.integration
+def test_products_sharing_a_photo_reuse_the_image(tx, refs):
+    loader.load_entry(tx, refs, ENTRY)
+    other = {**copy.deepcopy(ENTRY), "barcode": "6281007053662"}
+    assert "image" in loader.load_entry(tx, refs, other)["added"]
+    assert tx.execute("SELECT count(*) AS n FROM public.images WHERE content_hash = %s",
+                      ("a" * 64,)).fetchone()["n"] == 1

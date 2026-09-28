@@ -139,3 +139,21 @@ def from_off_tags(contains: list[str], traces: list[str]) -> dict[str, str]:
     result = {c: "MAY_CONTAIN" for t in traces or [] for c in OFF_TAGS.get(t, ())}
     result.update({c: "CONTAINS" for t in contains or [] for c in OFF_TAGS.get(t, ())})
     return result
+
+
+_PRICE = re.compile(r"(price|prix|السعر|ريال|\bsr\b|\bsar\b|\d+\s*(sr|sar|ريال))", re.I)
+_SEPARATOR = re.compile(r"[,،;؛:()\-]")
+
+
+def is_plausible_statement(text: str) -> bool:
+    """Whether text looks like an ingredient list and not a price, a note or
+    a stray word ("price 3"). The allergy check trusts a stored statement as
+    evidence, so a doubtful one must not be stored."""
+    t = (text or "").strip()
+    words = re.findall(r"[^\W\d_]{2,}", t)
+    return (
+        len(t) >= 15
+        and len(words) >= 3
+        and bool(_SEPARATOR.search(t))
+        and not _PRICE.search(t)
+    )

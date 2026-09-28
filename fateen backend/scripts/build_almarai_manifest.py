@@ -15,11 +15,11 @@ barcode and no ingredient list, so:
 
   * The barcode comes from an Open Food Facts record of the same brand
     family, with a Saudi EAN (628...), whose name matches the page name and
-    whose quantity, when stated, is one of the sizes the page lists. The
-    match must be one-to-one: a page matching several records, or a record
-    matching several pages, is left out. Products without a barcode are
-    listed in the unmatched file and not loaded: a wrong barcode is worse
-    than none.
+    whose stated quantity is one of the sizes the page lists. A page is one
+    product in several sizes, each with its own barcode, so it may receive
+    several barcodes (the size is then added to the name); a record that
+    fits two pages gets none. Products without a barcode are listed in the
+    unmatched file and not loaded: a wrong barcode is worse than none.
   * Ingredients and allergens come from that record when it has them.
   * Nutrition is stated per serving. It is converted to per 100 g/ml only
     when the serving size is stated in g or ml, and kept only when it passes
@@ -39,7 +39,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
 sys.path.insert(0, str(HERE))
 from build_off_manifest import fetch_image, statements  # noqa: E402
-from app.catalog.allergen_detection import detect, from_off_tags, merge  # noqa: E402
+from app.catalog.allergen_detection import detect, from_off_tags, is_plausible_statement, merge  # noqa: E402
 from app.core.gtin import has_valid_check_digit  # noqa: E402
 
 BRAND_FAMILY = {  # page brand slug -> words that identify it in an OFF brand/name
@@ -57,16 +57,15 @@ BRAND_FAMILY = {  # page brand slug -> words that identify it in an OFF brand/na
     "suregrow": ("suregrow",),
     "ice-leaf": ("ice leaf", "آيس ليف"),
 }
-CATEGORY_BY_SLUG = [  # first path segment after the brand -> product_categories.code
-    ("milk", "DAIRY"), ("laban", "DAIRY"), ("yoghurt", "DAIRY"), ("yogurt", "DAIRY"), ("cheese", "DAIRY"),
-    ("cream", "DAIRY"), ("butter", "DAIRY"), ("dairy", "DAIRY"), ("labneh", "DAIRY"),
-    ("juice", "BEVERAGES"), ("beverage", "BEVERAGES"), ("drink", "BEVERAGES"), ("tea", "BEVERAGES"),
-    ("water", "BEVERAGES"),
-    ("bakery", "BAKERY"), ("bread", "BAKERY"), ("croissant", "BAKERY"), ("cake", "BAKERY"), ("pastr", "BAKERY"),
-    ("poultry", "MEAT"), ("chicken", "MEAT"), ("meat", "MEAT"),
-    ("dessert", "CONFECTIONERY"), ("date", "FRUITS"), ("infant", "BABY_FOOD"), ("baby", "BABY_FOOD"),
-    ("dip", "SAUCES"), ("food", "OTHER"),
-]
+# The site's own sections (second path segment) -> product_categories.code,
+# with the few products that sit in a broader section named explicitly.
+SITE_SECTIONS = {
+    "bakery": "BAKERY", "beverages": "BEVERAGES", "cheeses-and-foods": "DAIRY", "dates": "FRUITS",
+    "dips": "SAUCES", "frozen": "FROZEN_FOOD", "ice-cream": "CONFECTIONERY",
+    "infant-medical-nutrition": "BABY_FOOD", "juices": "BEVERAGES", "liquid-dairy": "DAIRY",
+    "poultry": "MEAT", "seafood": "SEAFOOD", "yoghurts": "DAIRY",
+}
+SUBSECTIONS = {"olive-oil": "SAUCES"}
 _STOP = {"almarai", "al", "marai", "lusine", "l", "usine", "alyoum", "youm", "7days", "days", "seven",
          "nura", "the", "with", "and", "of", "fresh", "new", "pack", "ml", "g", "l", "kg", "x"}
 
@@ -74,7 +73,8 @@ _STOP = {"almarai", "al", "marai", "lusine", "l", "usine", "alyoum", "youm", "7d
 def _text(raw: str) -> str:
     body = raw[raw.find("<body"):]
     body = re.sub(r"<script.*?</script>|<style.*?</style>", "", body, flags=re.S)
-    text = html.unescape(re.sub(r"<[^>]+>", "|", body))
+    # The site separates labels from values with non-breaking spaces.
+    text = html.unescape(re.sub(r"<[^>]+>", "|", body)).replace("\xa0", " ")
     return re.sub(r"(\|\s*)+", "|", text)
 
 
@@ -141,16 +141,33 @@ def nutrition(page: dict) -> tuple[list[dict], str | None]:
             for k, x in v.items() if x is not None], None
 
 
+_AR_STOP = {"المراعي", "مراعي", "لوزين", "اليوم", "طازج", "طازجة", "جديد", "من", "مع", "و", "في"}
+
+
 def _tokens(s: str) -> set[str]:
     s = re.sub(r"[’'`]", "", (s or "").lower())
-    return {w for w in re.findall(r"[a-z]+|\d+", s) if w not in _STOP}
+    latin = {w for w in re.findall(r"[a-z]+|\d+", s) if w not in _STOP}
+    arabic = set()
+    for w in re.findall(r"[\u0621-\u064A]+", s):
+        w = w[2:] if w.startswith("ال") and len(w) > 3 else w
+        w = w[:-1] + "ة" if w.endswith("ه") else w  # لبنه = لبنة
+        if w not in _AR_STOP and len(w) > 1:
+            arabic.add(w)
+    return latin | arabic
+
+
+_UNITS = {"ml": "ml", "l": "l", "ltr": "l", "g": "g", "gm": "g", "gr": "g", "grams": "g", "kg": "kg",
+          "مل": "ml", "ملل": "ml", "لتر": "l", "جرام": "g", "غرام": "g", "غم": "g", "جم": "g", "غ": "g",
+          "كجم": "kg", "كغ": "kg", "كيلو": "kg", "كيلوجرام": "kg"}
+_QTY = re.compile(r"([\d.,٠-٩]+)\s*(" + "|".join(sorted(map(re.escape, _UNITS), key=len, reverse=True)) + r")(?![a-z])", re.I)
 
 
 def _qty(s: str | None) -> tuple[float, str] | None:
-    m = re.search(r"([\d.,]+)\s*(ml|l|g|kg|gm|gr)\b", (s or "").lower())
+    text = (s or "").lower().translate(str.maketrans("٠١٢٣٤٥٦٧٨٩", "0123456789"))
+    m = _QTY.search(text)
     if not m:
         return None
-    value, unit = _num(m.group(1)), {"gm": "g", "gr": "g"}.get(m.group(2), m.group(2))
+    value, unit = _num(m.group(1)), _UNITS[m.group(2)]
     if value is None:
         return None
     return (value * 1000, "ml") if unit == "l" else (value * 1000, "g") if unit == "kg" else (value, unit)
@@ -164,43 +181,74 @@ def _norm_sizes(sizes) -> set[tuple[float, str]]:
     return out
 
 
-def match_barcodes(products: list[dict], off: list[dict]) -> dict[str, str]:
-    """page path -> barcode, one-to-one only."""
-    candidates: dict[str, list[str]] = {}
-    for prod in products:
-        words = BRAND_FAMILY.get(prod["brand_slug"], ())
-        want = _tokens(prod["en"]["name"])
-        sizes = _norm_sizes(prod["en"]["sizes"])
-        if not want:
-            continue
-        found = []
-        for rec in off:
-            text = f"{rec.get('brands') or ''} {rec.get('product_name') or ''}".lower()
-            if not any(w in text for w in words):
-                continue
-            have = _tokens(rec.get("product_name_en") or rec.get("product_name"))
-            if not have or want != have and not (want <= have and len(have - want) <= 1):
-                continue
-            q = _qty(rec.get("quantity"))
-            if q and sizes and q not in sizes:
-                continue
-            found.append(rec["code"])
-        candidates[prod["path"]] = found
-    by_code: dict[str, list[str]] = {}
-    for path, codes in candidates.items():
-        for code in codes:
-            by_code.setdefault(code, []).append(path)
-    return {path: codes[0] for path, codes in candidates.items()
-            if len(codes) == 1 and len(by_code[codes[0]]) == 1}
+# Words a record may leave out of the page name without changing what the
+# product is. Flavours, fat levels, "salted" and the like are deliberately
+# absent: "Mini croissant" must not become "Chocolate Mini Croissant".
+_BENIGN_EXTRA = {"juice", "drink", "nectar", "fresh", "flavored", "flavoured", "natural", "pure",
+                 "sliced", "bread", "ice", "cream", "bar", "cake", "enrobed", "mixed", "fruit", "dessert",
+                 "extra", "virgin", "sandwich",
+                 "عصير", "مشروب", "طازج", "طازجة", "نكتار", "شرائح"}
+
+
+def _name_matches(record_tokens: set[str], page_tokens: set[str]) -> bool:
+    """Same product name. The record may omit up to two descriptive words of
+    the page name ("Gizzards chicken" for "Fresh Chicken Gizzards") or add
+    one word."""
+    if len(record_tokens) < 2 or not page_tokens:
+        return False
+    if record_tokens <= page_tokens:
+        extra = page_tokens - record_tokens
+        return len(extra) <= 2 and extra <= _BENIGN_EXTRA
+    if page_tokens <= record_tokens:
+        return len(record_tokens - page_tokens) <= 1
+    return False
+
+
+def match_barcodes(products: list[dict], off: list[dict]) -> dict[str, tuple[str, tuple[float, str] | None]]:
+    """barcode -> (page path, size or None) for records that match exactly one page.
+
+    A page is one product in several sizes, and each size has its own
+    barcode, so a page may receive several barcodes. Brand and name (English
+    or Arabic) must agree. A record that states its quantity must match a
+    size the page lists; one without a quantity is accepted only when its
+    name fits a single page (per-100 g facts do not depend on the size). A
+    record that fits two pages ("Natural Butter 400 g" for both salted and
+    unsalted) gets no page at all.
+    """
+    pages = [(prod, _tokens(prod["en"]["name"]), _tokens(prod.get("ar", {}).get("name", "")),
+              _norm_sizes(prod["en"]["sizes"])) for prod in products]
+    matched = {}
+    for rec in off:
+        text = f"{rec.get('brands') or ''} {rec.get('product_name') or ''} {rec.get('product_name_ar') or ''}".lower()
+        size = _qty(rec.get("quantity"))
+        names = [rec.get("product_name_en") or rec.get("product_name"), rec.get("product_name_ar")]
+        have = [{t for t in _tokens(n) if not t.isdigit()} for n in names if n]
+        fits = [prod["path"] for prod, want_en, want_ar, sizes in pages
+                if any(w in text for w in BRAND_FAMILY.get(prod["brand_slug"], ()))
+                and (size is None or size in sizes)
+                and any(_name_matches(h, want_en) or _name_matches(h, want_ar) for h in have)
+                # A record whose other name shares nothing with the page
+                # (English "Nestle", Arabic "حليب مكثف") contradicts itself.
+                and all(h & (want_en | want_ar) for h in have if h)]
+        if len(fits) == 1:
+            matched[rec["code"]] = (fits[0], size)
+    return matched
+
+
+def _size_label(size: tuple[float, str], lang: str) -> str:
+    value, unit = size
+    if value >= 1000:
+        value, unit = value / 1000, {"g": "kg", "ml": "l"}[unit]
+    number = f"{value:g}"
+    return f"{number} {unit}" if lang == "en" else f"{number} " + {"g": "غ", "kg": "كغ", "ml": "مل", "l": "لتر"}[unit]
 
 
 def category(path: str) -> str:
     parts = path.split("/")
-    for part in parts[1:]:
-        for key, code in CATEGORY_BY_SLUG:
-            if key in part:
-                return code
-    return "OTHER"
+    for part in parts[2:]:
+        if part in SUBSECTIONS:
+            return SUBSECTIONS[part]
+    return SITE_SECTIONS.get(parts[1] if len(parts) > 1 else "", "OTHER")
 
 
 def build(pages_dir: Path, off_dir: Path, cache: Path) -> tuple[list, list]:
@@ -225,41 +273,51 @@ def build(pages_dir: Path, off_dir: Path, cache: Path) -> tuple[list, list]:
             off.append(p)
     matched = match_barcodes(products, off)
     off_by_code = {p["code"]: p for p in off}
+    by_path: dict[str, list[tuple[str, tuple[float, str]]]] = {}
+    for code, (path, size) in matched.items():
+        by_path.setdefault(path, []).append((code, size))
 
     entries, unmatched = [], []
     for prod in products:
         en, ar = prod["en"], prod["ar"]
-        barcode = matched.get(prod["path"])
-        values, why_not = nutrition(en)
-        record = off_by_code.get(barcode, {})
-        problems = [] if barcode else ["no one-to-one barcode match in Open Food Facts"]
-        image = fetch_image(en["image"], cache) if en.get("image") and barcode else None
-        if barcode and not image:
-            problems.append("no photo")
-        if problems:
+        barcodes = sorted(by_path.get(prod["path"], []), key=lambda b: b[0])
+        if not barcodes:
             unmatched.append({"path": prod["path"], "name_en": en["name"], "name_ar": ar["name"],
-                              "sizes": en["sizes"], "problems": problems})
+                              "sizes": en["sizes"], "problems": ["no barcode matched this page alone"]})
             continue
-        texts = statements(record)
-        entries.append({
-            "barcode": barcode,
-            "name_ar": ar["name"], "name_ar_status": "approved",
-            "name_en": en["name"], "name_en_status": "approved",
-            "description_ar": ar["description"] or None, "description_en": en["description"] or None,
-            "brand": en.get("brand") or prod["brand_slug"].replace("-", " ").title(),
-            "company": "Almarai",
-            "category": category(prod["path"]),
-            "image": image,
-            "nutrition": values,
-            "nutrition_note": why_not,
-            "ingredients": texts,
-            "allergens": merge(from_off_tags(record.get("allergens_tags") or [], record.get("traces_tags") or []),
-                               *(detect(t) for t in texts.values()),
-                               detect(record.get("ingredients_text") or "")),
-            "source": "ALMARAI_WEBSITE",
-            "source_url": en["url"],
-            "confidence": 0.9,
-        })
+        image = fetch_image(en["image"], cache) if en.get("image") else None
+        if not image:
+            unmatched.append({"path": prod["path"], "name_en": en["name"], "name_ar": ar["name"],
+                              "sizes": en["sizes"], "problems": ["no photo"]})
+            continue
+        values, why_not = nutrition(en)
+        several = len(barcodes) > 1
+        for barcode, size in barcodes:
+            labelled = several and size is not None
+            record = off_by_code.get(barcode, {})
+            texts = statements(record)
+            entries.append({
+                "barcode": barcode,
+                "name_ar": f"{ar['name']} {_size_label(size, 'ar')}" if labelled else ar["name"],
+                "name_ar_status": "approved",
+                "name_en": f"{en['name']} {_size_label(size, 'en')}" if labelled else en["name"],
+                "name_en_status": "approved",
+                "description_ar": ar["description"] or None, "description_en": en["description"] or None,
+                "brand": prod["brand_slug"].replace("-", " ").title(),
+                "company": "Almarai",
+                "category": category(prod["path"]),
+                "image": image,
+                "nutrition": values,
+                "nutrition_note": why_not,
+                "ingredients": texts,
+                "allergens": merge(from_off_tags(record.get("allergens_tags") or [], record.get("traces_tags") or []),
+                                   *(detect(t) for t in texts.values()),
+                                   detect(record.get("ingredients_text") or "")
+                                   if is_plausible_statement(record.get("ingredients_text") or "") else {}),
+                "source": "ALMARAI_WEBSITE",
+                "source_url": en["url"],
+                "confidence": 0.9,
+            })
     return entries, unmatched
 
 

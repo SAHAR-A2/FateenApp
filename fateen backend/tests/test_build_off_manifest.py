@@ -108,3 +108,46 @@ def test_reviewed_category_wins(tmp_path, monkeypatch):
     _record(tmp_path, "6281007031585")
     entries, _ = off.build(tmp_path, {"6281007031585": "عصير تفاح"}, tmp_path, {"6281007031585": "DAIRY"})
     assert entries[0]["category"] == "DAIRY"
+
+
+def test_reviewed_names(tmp_path, monkeypatch):
+    monkeypatch.setattr(off, "fetch_image", lambda url, cache: {"url": url, "sha256": "a" * 64,
+                                                                "mime": "image/jpeg", "bytes": 1000})
+    _record(tmp_path, "6281007031585", product_name="لبن المراعي 360مل")      # Arabic only
+    _record(tmp_path, "6281007063234", product_name="Triple Cheese Puff", product_name_ar="منقوشة زعتر")
+    entries, rejected = off.build(tmp_path, {}, tmp_path, None, {
+        "6281007031585": {"en": "Almarai Laban 360 ml"},
+        "6281007063234": None,
+    })
+    assert [(e["name_ar"], e["name_ar_status"], e["name_en"], e["name_en_status"]) for e in entries] == [
+        ("لبن المراعي 360مل", "approved", "Almarai Laban 360 ml", "pending_review")]
+    assert "name reviewed as unclear" in {r["barcode"]: r for r in rejected}["6281007063234"]["problems"]
+
+
+@pytest.mark.parametrize("raw,clean", [
+    ("Almarai 8 Triangles 16days", "Almarai 8 Triangles"),
+    ("Almarai extra virgin olive oil 2yrs prod", "Almarai extra virgin olive oil"),
+    ("السعر 5 ريال Avemari lisce pasta", "Avemari lisce pasta"),
+])
+def test_clean_name(raw, clean):
+    assert off.clean_name(raw) == clean
+
+
+@pytest.mark.parametrize("name,category_code,kcal,rejected", [
+    ("Black cumin seed oil", "SAUCES", 10, True),          # an oil is ~900 kcal/100 g
+    ("Olive oil", "SAUCES", 884, False),
+    ("Sucre de canne", "SAUCES", 15, True),
+    ("arcor flics", "CONFECTIONERY", 10, True),            # candy values given per piece
+    ("ice pops", "CONFECTIONERY", 40, False),
+    ("Oat Biscuits", "BAKERY", 45, True),
+    ("Forsana Sandwiches cheese", "DAIRY", 59, True),
+    ("Almarai milk fat free", "DAIRY", 34, False),
+    ("Maggi Chicken broth", "SAUCES", 0.2, False),
+    ("Freshly Yellow mustard", "SAUCES", 0, True),
+])
+def test_energy_density_floors(name, category_code, kcal, rejected):
+    assert bool(off.density_problems(name, category_code, kcal, "PER_100G")) is rejected
+
+
+def test_density_is_not_judged_for_drinks():
+    assert off.density_problems("Sugar syrup", "BEVERAGES", 1, "PER_100ML") == []
