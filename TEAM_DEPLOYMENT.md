@@ -34,6 +34,29 @@ user may read and write only `users/{their uid}`).
 4. Build the Flutter app with `flutter build web --release --dart-define=FATEEN_API_SAME_ORIGIN=true`; deploy the backend image to Cloud Run as `fateen-api`, then deploy `build/web` with Firebase Hosting.
 5. Verify team sign-in, search, barcode details, compatibility, and alternatives from a second device. Confirm unauthenticated compatibility and alternatives return 401.
 
+## Without Google Cloud billing (Spark plan)
+
+Cloud Run, Cloud Build and Secret Manager need a billing account; in Saudi
+Arabia Google Cloud billing is handled by a local reseller and may not be
+available to a personal account. Until it is, run the API on Render and keep
+Firebase (Auth, Firestore, Hosting) on the free Spark plan:
+
+1. On render.com create a **Web Service** from this GitHub repository, root
+   directory `fateen backend`, runtime Docker, instance type Free.
+2. Environment variables: `APP_ENV=production`, `FIREBASE_PROJECT_ID=fateen-ap`,
+   `CORS_ALLOWED_ORIGINS=https://fateen-ap.web.app,https://fateen-ap.firebaseapp.com`,
+   `DB_POOL_MIN_SIZE=1`, `DB_POOL_MAX_SIZE=5`, `DATABASE_URL` (the
+   `fateen_app` runtime role) and `AGENT_INGEST_API_KEY` (random).
+3. Build the web app against it and deploy Hosting without the Cloud Run rewrite:
+
+   ```
+   flutter build web --release --dart-define=FATEEN_API_BASE_URL=https://<service>.onrender.com
+   firebase deploy --only hosting --project fateen-ap --config firebase.spark.json
+   ```
+
+A free Render service sleeps after 15 idle minutes; the first request after
+that takes up to a minute, which the app's 75-second timeout allows.
+
 ## Deployment gates
 
 This workspace has no Git remote, and Firebase CLI, Google Cloud CLI, and Docker daemon are unavailable here. A signed-in Google Cloud/Firebase deployment session is needed to create services and publish a stable team URL. Before deploying, confirm that allergy and disease profile values sent by compatibility/alternatives may be processed by the Fateen backend on Google Cloud Run in project `fateen-ap`; current calls send this health context along with the Firebase ID token. Hosting/API usage may incur Google Cloud charges.
