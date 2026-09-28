@@ -321,6 +321,18 @@ def _connect(url: str):
                            keepalives=1, keepalives_idle=30, keepalives_interval=10, keepalives_count=5)
 
 
+def _reconnect(url: str, tries: int = 8):
+    """Reopen the connection, waiting out a short network outage (a lost
+    route or DNS lookup fails too, not just the socket)."""
+    for attempt in range(tries):
+        time.sleep(min(60, 5 * (attempt + 1)))
+        try:
+            return _connect(url)
+        except psycopg.OperationalError as exc:
+            print(f"  cannot reconnect yet: {str(exc).splitlines()[0]}", flush=True)
+    raise SystemExit("Could not reconnect to the database. Check the network and run the same command again.")
+
+
 def _run_batch(conn, refs: Refs, batch: list[dict]) -> list[dict]:
     results = []
     for entry in batch:
@@ -389,8 +401,7 @@ def main(argv: list[str] | None = None) -> int:
                         conn.close()
                     except psycopg.Error:
                         pass
-                    time.sleep(5 * (attempt + 1))
-                    conn = _connect(url)
+                    conn = _reconnect(url)
             report.extend(results)
             counts.update(r["action"] for r in results)
             report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")

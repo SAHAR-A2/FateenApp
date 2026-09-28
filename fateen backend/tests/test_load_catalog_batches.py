@@ -46,3 +46,24 @@ def test_preview_in_batches_survives_a_dropped_connection(tmp_path, monkeypatch)
     assert [r["action"] for r in report] == ["created", "created", "rejected"]
     with psycopg.connect(settings.database_url) as conn:  # preview wrote nothing
         assert conn.execute("SELECT count(*) FROM public.barcodes WHERE barcode = '6281007031585'").fetchone()[0] == 0
+
+
+def test_reconnect_waits_out_a_network_outage(monkeypatch):
+    attempts = []
+
+    def connect(url):
+        attempts.append(url)
+        if len(attempts) < 3:
+            raise psycopg.OperationalError("failed to resolve host")
+        return "conn"
+
+    monkeypatch.setattr(loader, "_connect", connect)
+    monkeypatch.setattr(loader.time, "sleep", lambda s: None)
+    assert loader._reconnect("url") == "conn" and len(attempts) == 3
+
+
+def test_reconnect_gives_up_with_a_clear_message(monkeypatch):
+    monkeypatch.setattr(loader, "_connect", lambda url: (_ for _ in ()).throw(psycopg.OperationalError("down")))
+    monkeypatch.setattr(loader.time, "sleep", lambda s: None)
+    with pytest.raises(SystemExit, match="run the same command again"):
+        loader._reconnect("url", tries=2)
