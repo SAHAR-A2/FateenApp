@@ -17,8 +17,8 @@ class _HomeScreenState extends State<HomeScreen> {
   String _username = '';
   bool _isLoading = true;
 
-  bool _isConnectingBracelet = false;
-  bool _isBraceletConnected = false;
+  final bool _isConnectingBracelet = false;
+  final bool _isBraceletConnected = false;
 
   @override
   void initState() {
@@ -41,26 +41,16 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
-  Future<void> _connectBracelet() async {
-    if (_isConnectingBracelet) return;
-    setState(() {
-      _isConnectingBracelet = true;
-      _isBraceletConnected = false;
-    });
-
-    // محاكاة بحث عن السوار عبر البلوتوث — واجهة فقط بدون ربط فعلي حاليًا.
-    await Future.delayed(const Duration(seconds: 2));
-
-    if (!mounted) return;
-    setState(() {
-      _isConnectingBracelet = false;
-      _isBraceletConnected = true;
-    });
-
+  // There is no Bluetooth pairing yet, and the dish-photo estimate is not
+  // served by the public API. Say so instead of simulating a connection or
+  // opening a screen that can only fail.
+  void _showComingSoon(String feature) {
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('تم العثور على السوار والاتصال به')),
+      SnackBar(content: Text('$feature قريبًا')),
     );
   }
+
+  Future<void> _connectBracelet() async => _showComingSoon('ربط السوار');
 
   @override
   Widget build(BuildContext context) {
@@ -97,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: _SmallButton(
                       title: 'صور الطبق',
                       icon: Icons.restaurant_menu_rounded,
-                      onTap: () => Navigator.pushNamed(context, '/dish-scan'),
+                      onTap: () => _showComingSoon('تصوير الطبق'),
                     ),
                   ),
                   const SizedBox(width: AppSpacing.smMd),
