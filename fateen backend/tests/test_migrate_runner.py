@@ -122,6 +122,7 @@ def test_recorded_cloud_ledger_snapshot(migrations):
         "0054_product_completeness_view.sql",
         "0055_allergens_and_health_rules.sql",
         "0056_catalog_image_type_and_sources.sql",
+        "0057_runtime_read_access.sql",
     ]
     assert p.unknown == [
         "0040_security_hardening.sql",

@@ -42,7 +42,9 @@ available to a personal account. Until it is, run the API on Render and keep
 Firebase (Auth, Firestore, Hosting) on the free Spark plan:
 
 1. On render.com create a **Web Service** from this GitHub repository, root
-   directory `fateen backend`, runtime Docker, instance type Free.
+   directory `fateen backend`, runtime Docker, instance type Free, region
+   **Singapore** (closest to the Supabase database in Tokyo; every request
+   makes several database round trips).
 2. Environment variables: `APP_ENV=production`, `FIREBASE_PROJECT_ID=fateen-ap`,
    `CORS_ALLOWED_ORIGINS=https://fateen-ap.web.app,https://fateen-ap.firebaseapp.com`,
    `DB_POOL_MIN_SIZE=1`, `DB_POOL_MAX_SIZE=5`, `DATABASE_URL` (the
@@ -53,6 +55,15 @@ Firebase (Auth, Firestore, Hosting) on the free Spark plan:
    flutter build web --release --dart-define=FATEEN_API_BASE_URL=https://<service>.onrender.com
    firebase deploy --only hosting --project fateen-ap --config firebase.spark.json
    ```
+
+Before the first deploy, apply the pending migrations (0054-0057, see
+`fateen backend/docs/MIGRATIONS_GOVERNANCE.md`), correct the reviewed
+categories (`docs/CATALOG_LOADING.md`) and run
+`python scripts/check_runtime_access.py --database-url RUNTIME_URL` as the
+`fateen_app` account the server will use; every check must pass.
+
+Firebase ID tokens are verified against Google's public keys with only
+`FIREBASE_PROJECT_ID`; no Google credential is needed on Render.
 
 A free Render service sleeps after 15 idle minutes; the first request after
 that takes up to a minute, which the app's 75-second timeout allows.
