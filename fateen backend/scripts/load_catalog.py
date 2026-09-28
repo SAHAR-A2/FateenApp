@@ -32,8 +32,10 @@ Rules:
   * Allergens found in an ingredient statement (app.catalog.allergen_detection)
     are always added to the entry's own list: the allergy check trusts a
     statement as evidence.
-  * Preview (the default) runs everything inside a transaction that is
-    rolled back, so it reports exactly what --apply would do.
+  * Entries are written in batches (--batch, default 25), one transaction
+    each. Preview (the default) rolls every batch back; --apply commits it.
+    A dropped connection is reopened and the batch retried, and a stopped
+    run can be started again: loaded barcodes come back "unchanged".
 """
 
 from __future__ import annotations
@@ -43,6 +45,7 @@ import json
 import os
 import re
 import sys
+import time
 from collections import Counter
 from pathlib import Path
 
@@ -311,11 +314,37 @@ def load_entry(conn, refs: Refs, entry: dict) -> dict:
     return {"action": action, "added": added}
 
 
+def _connect(url: str):
+    # Keepalives stop a NAT or pooler from dropping a connection that waits
+    # on a long batch.
+    return psycopg.connect(url, row_factory=dict_row, connect_timeout=30,
+                           keepalives=1, keepalives_idle=30, keepalives_interval=10, keepalives_count=5)
+
+
+def _run_batch(conn, refs: Refs, batch: list[dict]) -> list[dict]:
+    results = []
+    for entry in batch:
+        problems = validate(entry, refs)
+        if problems:
+            results.append({"barcode": entry.get("barcode"), "action": "rejected", "problems": problems})
+            continue
+        try:
+            with conn.transaction():
+                result = load_entry(conn, refs, entry)
+        except psycopg.OperationalError:
+            raise  # the connection is gone: retry the whole batch
+        except psycopg.Error as exc:
+            result = {"action": "failed", "error": str(exc).splitlines()[0]}
+        results.append({"barcode": entry["barcode"], **result})
+    return results
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("manifest")
     parser.add_argument("--database-url")
     parser.add_argument("--apply", action="store_true", help="commit (default: preview, rolled back)")
+    parser.add_argument("--batch", type=int, default=25, help="entries per transaction (default 25)")
     parser.add_argument("--report", help="per-product JSON report (default: <manifest>.report.json)")
     args = parser.parse_args(argv)
 
@@ -325,31 +354,50 @@ def main(argv: list[str] | None = None) -> int:
     if not url:
         raise SystemExit("No database URL: pass --database-url or set CLOUD_DATABASE_URL")
     entries = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
-
-    report, counts = [], Counter()
-    with psycopg.connect(url, row_factory=dict_row) as conn:
-        print(f"Database: {conn.info.user}@{conn.info.host}/{conn.info.dbname}")
-        refs = Refs(conn)
-        for entry in entries:
-            problems = validate(entry, refs)
-            if problems:
-                report.append({"barcode": entry.get("barcode"), "action": "rejected", "problems": problems})
-                counts["rejected"] += 1
-                continue
-            try:
-                with conn.transaction():
-                    result = load_entry(conn, refs, entry)
-            except psycopg.Error as exc:
-                result = {"action": "failed", "error": str(exc).splitlines()[0]}
-            report.append({"barcode": entry["barcode"], **result})
-            counts[result["action"]] += 1
-        if args.apply:
-            conn.commit()
-        else:
-            conn.rollback()
-
     report_path = Path(args.report or f"{args.manifest}.report.json")
-    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    # Each batch is its own transaction: committed with --apply, rolled back
+    # in a preview. A dropped connection is reopened and the batch retried;
+    # a batch never half-commits, and loading is idempotent, so a run that
+    # stops can simply be started again.
+    report, counts = [], Counter()
+    conn = _connect(url)
+    try:
+        print(f"Database: {conn.info.user}@{conn.info.host}/{conn.info.dbname}", flush=True)
+        refs = Refs(conn)
+        conn.commit()  # end the read-only lookup transaction
+        for start in range(0, len(entries), args.batch):
+            batch = entries[start:start + args.batch]
+            for attempt in range(4):
+                try:
+                    # The outer transaction makes each entry's own
+                    # transaction a savepoint; a preview forces it to roll
+                    # back, so nothing of the batch is ever committed.
+                    with conn.transaction(force_rollback=not args.apply):
+                        results = _run_batch(conn, refs, batch)
+                    break
+                except psycopg.OperationalError as exc:
+                    if attempt == 3:
+                        raise SystemExit(
+                            f"Connection lost 4 times at entries {start + 1}-{start + len(batch)}: "
+                            f"{str(exc).splitlines()[0]}. Entries before {start + 1} are "
+                            + ("committed; run the same command again to continue." if args.apply
+                               else "checked; nothing was written.")
+                        )
+                    print(f"  connection lost, reconnecting (attempt {attempt + 2}/4)", flush=True)
+                    try:
+                        conn.close()
+                    except psycopg.Error:
+                        pass
+                    time.sleep(5 * (attempt + 1))
+                    conn = _connect(url)
+            report.extend(results)
+            counts.update(r["action"] for r in results)
+            report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+            print(f"  {min(start + args.batch, len(entries))}/{len(entries)}  {dict(counts)}", flush=True)
+    finally:
+        conn.close()
+
     print(f"Entries: {len(entries)}  {dict(counts)}")
     print(f"Per-product report: {report_path}")
     print("Committed." if args.apply else "Preview only, rolled back. Add --apply --database-url URL to write.")
