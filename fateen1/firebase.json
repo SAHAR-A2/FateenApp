@@ -42,5 +42,8 @@
       }
     ],
     "public": "build/web"
+  },
+  "firestore": {
+    "rules": "firestore.rules"
   }
 }
