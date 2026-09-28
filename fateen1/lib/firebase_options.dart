@@ -41,48 +41,46 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCOnSzWf9_IWF9YqGV8vn--zVuQ5hqTjVs',
-    appId: '1:322349985987:web:68397aa58954ffd1cc7276',
-    messagingSenderId: '322349985987',
-    projectId: 'fateen-app',
-    authDomain: 'fateen-app.firebaseapp.com',
-    storageBucket: 'fateen-app.firebasestorage.app',
-    measurementId: 'G-RW5ZCSKDPL',
+    apiKey: 'AIzaSyBLRdQS6iBdgg8losoF5AuEvmX5ccDQHBs',
+    appId: '1:804909741538:web:245160f712189596f4b5bb',
+    messagingSenderId: '804909741538',
+    projectId: 'fateen-ap',
+    authDomain: 'fateen-ap.firebaseapp.com',
+    storageBucket: 'fateen-ap.firebasestorage.app',
+    measurementId: 'G-66S4X4PB1H',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyA-LIOITCopkBecV040Ph2qTJ9NT5pK9BA',
-    appId: '1:322349985987:android:137f278a2ce05a41cc7276',
-    messagingSenderId: '322349985987',
-    projectId: 'fateen-app',
-    storageBucket: 'fateen-app.firebasestorage.app',
+    apiKey: 'AIzaSyBitpTL0JLQNKB5MJSbozO1b4zf0-SBb6I',
+    appId: '1:804909741538:android:148653e8d0dc28a4f4b5bb',
+    messagingSenderId: '804909741538',
+    projectId: 'fateen-ap',
+    storageBucket: 'fateen-ap.firebasestorage.app',
   );
-
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDJVzJQ5WHsYMJP0HZ5pNCq8vCphfEYBXk',
-    appId: '1:322349985987:ios:2c2ad70f8f67870ccc7276',
-    messagingSenderId: '322349985987',
-    projectId: 'fateen-app',
-    storageBucket: 'fateen-app.firebasestorage.app',
+    apiKey: 'AIzaSyBAhnYpHphhslbUMMk5xvH61lNoyU5QCt4',
+    appId: '1:804909741538:ios:27d864b10ac26079f4b5bb',
+    messagingSenderId: '804909741538',
+    projectId: 'fateen-ap',
+    storageBucket: 'fateen-ap.firebasestorage.app',
     iosBundleId: 'com.example.fateen',
   );
-
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDJVzJQ5WHsYMJP0HZ5pNCq8vCphfEYBXk',
-    appId: '1:322349985987:ios:2c2ad70f8f67870ccc7276',
-    messagingSenderId: '322349985987',
-    projectId: 'fateen-app',
-    storageBucket: 'fateen-app.firebasestorage.app',
+    apiKey: 'AIzaSyBAhnYpHphhslbUMMk5xvH61lNoyU5QCt4',
+    appId: '1:804909741538:ios:27d864b10ac26079f4b5bb',
+    messagingSenderId: '804909741538',
+    projectId: 'fateen-ap',
+    storageBucket: 'fateen-ap.firebasestorage.app',
     iosBundleId: 'com.example.fateen',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyCOnSzWf9_IWF9YqGV8vn--zVuQ5hqTjVs',
-    appId: '1:322349985987:web:4a445f85e2ea4335cc7276',
-    messagingSenderId: '322349985987',
-    projectId: 'fateen-app',
-    authDomain: 'fateen-app.firebaseapp.com',
-    storageBucket: 'fateen-app.firebasestorage.app',
-    measurementId: 'G-9WTGNNWEEW',
+    apiKey: 'AIzaSyBLRdQS6iBdgg8losoF5AuEvmX5ccDQHBs',
+    appId: '1:804909741538:web:a0a38cc765d22764f4b5bb',
+    messagingSenderId: '804909741538',
+    projectId: 'fateen-ap',
+    authDomain: 'fateen-ap.firebaseapp.com',
+    storageBucket: 'fateen-ap.firebasestorage.app',
+    measurementId: 'G-WKYNMXF20M',
   );
 }
