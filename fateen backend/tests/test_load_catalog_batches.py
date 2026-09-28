@@ -67,3 +67,21 @@ def test_reconnect_gives_up_with_a_clear_message(monkeypatch):
     monkeypatch.setattr(loader.time, "sleep", lambda s: None)
     with pytest.raises(SystemExit, match="run the same command again"):
         loader._reconnect("url", tries=2)
+
+
+@pytest.mark.integration
+def test_a_stale_loader_session_is_ended_on_reconnect():
+    try:
+        stale = loader._connect(settings.database_url)
+    except psycopg.OperationalError as exc:  # pragma: no cover
+        pytest.skip(f"database unavailable: {exc}")
+    stale.execute("SELECT 1")  # leaves it idle in transaction, as after a lost network
+    stale_pid = stale.info.backend_pid
+    fresh = loader._connect(settings.database_url)
+    try:
+        alive = fresh.execute("SELECT count(*) AS n FROM pg_stat_activity WHERE pid = %s",
+                              (stale_pid,)).fetchone()["n"]
+        assert alive == 0
+        assert fresh.execute("SHOW lock_timeout").fetchone()["lock_timeout"] == "20s"
+    finally:
+        fresh.close()

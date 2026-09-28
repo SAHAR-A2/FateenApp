@@ -314,11 +314,41 @@ def load_entry(conn, refs: Refs, entry: dict) -> dict:
     return {"action": action, "added": added}
 
 
+APP_NAME = "fateen_catalog_loader"
+
+
 def _connect(url: str):
     # Keepalives stop a NAT or pooler from dropping a connection that waits
-    # on a long batch.
-    return psycopg.connect(url, row_factory=dict_row, connect_timeout=30,
+    # on a long batch. A short lock_timeout makes a batch that waits on a
+    # stale session fail fast and be retried instead of hanging.
+    conn = psycopg.connect(url, row_factory=dict_row, connect_timeout=30, application_name=APP_NAME,
                            keepalives=1, keepalives_idle=30, keepalives_interval=10, keepalives_count=5)
+    conn.execute("SET lock_timeout = '20s'")
+    _end_stale_sessions(conn)
+    conn.commit()
+    return conn
+
+
+def _end_stale_sessions(conn) -> None:
+    """End this loader's own earlier sessions that are still open on the
+    server after the client lost its network: their open transaction holds
+    locks on the rows the retried batch writes. Only sessions named
+    fateen_catalog_loader are touched; if the role may not end them, the
+    batch simply waits for the server to drop them."""
+    try:
+        ended = conn.execute(
+            """
+            SELECT pg_terminate_backend(pid) AS ended
+            FROM pg_stat_activity
+            WHERE application_name = %s AND pid <> pg_backend_pid()
+              AND state LIKE 'idle in transaction%%'
+            """,
+            (APP_NAME,),
+        ).fetchall()
+        if ended:
+            print(f"  ended {len(ended)} stale loader session(s)", flush=True)
+    except psycopg.Error:
+        conn.rollback()
 
 
 def _reconnect(url: str, tries: int = 8):
