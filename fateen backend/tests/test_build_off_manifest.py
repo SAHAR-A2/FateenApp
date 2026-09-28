@@ -90,3 +90,21 @@ def test_build_gates(tmp_path, monkeypatch):
     assert "barcode is not a valid GTIN" in problems["6281007031580"]
     assert "not tagged as sold in Saudi Arabia" in problems["6281007063234"]
     assert "name reviewed as unclear" in problems["6281007058117"]
+
+
+@pytest.mark.parametrize("name,expected", [
+    ("Light Meat Tuna", "SEAFOOD"),          # "meat" must not win over "tuna"
+    ("Yaourt nature", "DAIRY"),
+    ("Lay's Kettle cooked original", "SNACKS"),
+    ("Extra virgin olive oil", "SAUCES"),
+])
+def test_name_keywords(name, expected):
+    assert off.category({"product_name": name}) == expected
+
+
+def test_reviewed_category_wins(tmp_path, monkeypatch):
+    monkeypatch.setattr(off, "fetch_image", lambda url, cache: {"url": url, "sha256": "a" * 64,
+                                                                "mime": "image/jpeg", "bytes": 1000})
+    _record(tmp_path, "6281007031585")
+    entries, _ = off.build(tmp_path, {"6281007031585": "عصير تفاح"}, tmp_path, {"6281007031585": "DAIRY"})
+    assert entries[0]["category"] == "DAIRY"

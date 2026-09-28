@@ -6,6 +6,9 @@ Usage (from the backend root):
         --out manifest_off.json [--rejected rejected_off.json] [--images-cache DIR]
 
 RECORDS_DIR holds one /api/v2/product/{code} JSON response per file.
+--categories CATEGORIES.json optionally maps barcode -> product_categories.code
+for products reviewed by hand; it wins over the automatic classification.
+
 AR_NAMES.json maps barcode -> Arabic name for products whose record has no
 Arabic name; those names are loaded as pending_review translations. A null
 value marks a name reviewed as meaningless: the product is rejected.
@@ -67,13 +70,26 @@ CATEGORY_TAGS = [
     ("VEGETABLES", {"en:vegetables", "en:legumes", "en:pulses", "en:olives"}),
 ]
 NAME_KEYWORDS = [
-    ("DAIRY", r"\b(milk|laban|yog(h)?urt|cheese|labneh|cream|ghee|butter)\b|حليب|لبن|زبادي|جبن|لبنة|قشطة"),
-    ("BEVERAGES", r"\b(juice|water|drink|nectar|soda|cola|tea|coffee)\b|عصير|ماء|مياه|مشروب|شاي|قهوة"),
-    ("CONFECTIONERY", r"\b(chocolate|candy|sweets?|jam|honey|wafer)\b|شوكولات|حلوى|مربى|عسل"),
-    ("BAKERY", r"\b(bread|cake|croissant|biscuits?|cookies?|toast|bun|muffin)\b|خبز|كيك|كعك|بسكويت|توست"),
-    ("SNACKS", r"\b(chips|crisps|popcorn|nuts|snacks?)\b|شيبس|فشار|مكسرات"),
-    ("CEREALS", r"\b(rice|pasta|spaghetti|flour|oats|cereals?|noodles?)\b|أرز|رز|مكرونة|معكرونة|دقيق|شوفان"),
-    ("SAUCES", r"\b(sauce|ketchup|mayonnaise|hummus|tahini|dressing|vinegar)\b|صلصة|كاتشب|مايونيز|حمص|طحينة"),
+    ("BABY_FOOD", r"\b(cerelac|infant|baby)\b|سيريلاك|أطفال"),
+    ("DAIRY", r"\b(milk|laban|yog(h)?urt|yaourt|cheese|fromage|feta|mozzarella|halloumi|labneh|cream cheese|"
+              r"ghee|butter|beurre|kiri|vache qui rit|lait|kashkaval|ricotta|parmesan)\b|حليب|لبن|زبادي|جبن|لبنة|قشطة|فيتا"),
+    ("BEVERAGES", r"\b(juice|jus|water|eau|drink|nectar|soda|cola|pepsi|mirinda|tea|thé|coffee|café|nescafe|"
+                  r"lemonade|mocktail|bitter lemon|ginger beer|smoothie|syrup)\b|عصير|ماء|مياه|مشروب|شاي|قهوة|نكتار"),
+    ("CONFECTIONERY", r"\b(chocolate|chocolat|candy|candies|bonbon|sweets?|jam|confiture|jelly|honey|miel|"
+                      r"gum|pop|lollipop|toffee|caramels?|fudge|marshmallow|wafer|milkybar|praline|halawa|"
+                      r"cheesecake|pudding|ice cream|gummy|chewits|trolli)\b|شوكولات|حلوى|مربى|عسل|علكة|حلاوة|آيس كريم"),
+    ("BAKERY", r"\b(bread|pain|cake|croissant|biscuits?|boscuits|cookies?|toast|bun|muffin|waffles?|donut|"
+               r"digestive|maamoul|rusk|crackers?|pretzel|tortilla|pita|pick up|clubs)\b|خبز|كيك|كعك|بسكويت|توست|معمول|مقرمشات"),
+    ("SNACKS", r"\b(chips|crisps|popcorn|nuts|peanuts|almonds?|cashew|pistachio|snacks?|puffs|bites|bars?|"
+               r"seeds|kettle cooked|cheetos|doritos|lay'?s|pringles)\b|شيبس|فشار|مكسرات|فول سوداني|لوز|قطع"),
+    ("CEREALS", r"\b(rice|riz|pasta|pâtes|spaghetti|penne|shells|macaroni|lasagne|flour|farine|oats|avoine|"
+                r"cereals?|flakes|muesli|m[uü]sli|granola|noodles?|quinoa|lentils|beans|chia)\b|"
+                r"أرز|رز|مكرونة|معكرونة|دقيق|شوفان|نودلز|عدس|اعواد حنطه"),
+    ("SAUCES", r"\b(sauce|ketchup|mayonnaise|mayo|hummus|tahini|dressing|vinegar|paste|pesto|mustard|"
+               r"spices?|pepper|curry|stock cubes?|broth|bouillon|salt|olive oil|oil|huile|olives?|pickles?|"
+               r"harissa|barbecue|bbq|dumpling mix|sugar)\b|صلصة|كاتشب|مايونيز|حمص|طحينة|شطة|زيت|توابل|بهارات|خل"),
+    ("SEAFOOD", r"\b(tuna|thon|sardines?|salmon|fish oil|fish)\b|تونة|سردين|سمك"),
+    ("MEAT", r"\b(chicken|beef|lamb|meat|burger|nuggets|sausages?|mortadella)\b|دجاج|لحم|برغر"),
 ]
 
 NUTRIENTS = [  # (OFF key, FateenDB type, unit, factor from OFF's grams)
@@ -213,7 +229,8 @@ def fetch_image(url: str, cache: Path) -> dict | None:
             "mime": mime_file.read_text() if mime_file.exists() else "image/jpeg", "bytes": len(data)}
 
 
-def build(records_dir: Path, translations: dict, cache: Path) -> tuple[list, list]:
+def build(records_dir: Path, translations: dict, cache: Path,
+          categories: dict | None = None) -> tuple[list, list]:
     entries, rejected = [], []
     for f in sorted(records_dir.glob("*.json")):
         record = json.loads(f.read_bytes())
@@ -272,7 +289,7 @@ def build(records_dir: Path, translations: dict, cache: Path) -> tuple[list, lis
             "barcode": code,
             "name_ar": name_ar, "name_ar_status": ar_status,
             "name_en": name_en, "name_en_status": "approved",
-            "category": category(p),
+            "category": (categories or {}).get(code) or category({**p, "product_name_en": name_en}),
             "image": image,
             "nutrition": nutrition,
             "ingredients": texts,
@@ -291,11 +308,13 @@ def main(argv=None) -> int:
     parser.add_argument("--out", required=True)
     parser.add_argument("--rejected", default="rejected_off.json")
     parser.add_argument("--images-cache", default=".image_cache")
+    parser.add_argument("--categories", help="barcode -> category code, reviewed by hand")
     args = parser.parse_args(argv)
     cache = Path(args.images_cache)
     cache.mkdir(parents=True, exist_ok=True)
     translations = json.loads(Path(args.translations).read_text(encoding="utf-8"))
-    entries, rejected = build(Path(args.records_dir), translations, cache)
+    categories = json.loads(Path(args.categories).read_text(encoding="utf-8")) if args.categories else None
+    entries, rejected = build(Path(args.records_dir), translations, cache, categories)
     Path(args.out).write_text(json.dumps(entries, ensure_ascii=False, indent=1), encoding="utf-8")
     Path(args.rejected).write_text(json.dumps(rejected, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"entries: {len(entries)}  rejected: {len(rejected)}")
