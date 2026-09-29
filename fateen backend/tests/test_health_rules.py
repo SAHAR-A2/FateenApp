@@ -45,10 +45,21 @@ def test_sodium_rule_uses_salt_when_sodium_is_missing(salt_g, expected):
     assert evidence[0]["nutrition_type"] == "SODIUM"
 
 
-def test_recorded_sodium_is_not_doubled_by_salt():
-    nutrition = {**_value("SODIUM", 100, unit="MG"), **_value("SALT", 5)}
-    result, evidence = evaluate_rules(SODIUM_RULES, nutrition)
-    assert result == "SAFE" and len(evidence) == 1
+def test_recorded_sodium_and_salt_are_both_judged():
+    # Consistent values agree: 0.2 g salt is 80 mg sodium.
+    result, _ = evaluate_rules(SODIUM_RULES, {**_value("SODIUM", 80, unit="MG"), **_value("SALT", 0.2)})
+    assert result == "SAFE"
+    # Contradicting values: the worse one wins (5 g salt is 2000 mg sodium).
+    result, evidence = evaluate_rules(SODIUM_RULES, {**_value("SODIUM", 100, unit="MG"), **_value("SALT", 5)})
+    assert result == "WARNING" and len(evidence) == 2
+
+
+def test_sodium_stored_in_grams_under_mg_does_not_pass_salty_food():
+    # Seen on Cloud: Lay's Salt & Vinegar, sodium 0.868 "MG" (really grams)
+    # next to 2.17 g salt per 100 g.
+    nutrition = {**_value("SODIUM", 0.868, unit="MG"), **_value("SALT", 2.17)}
+    result, _ = evaluate_rules(SODIUM_RULES, nutrition)
+    assert result == "WARNING"
 
 
 def test_missing_nutrient_does_not_hide_a_triggered_rule():

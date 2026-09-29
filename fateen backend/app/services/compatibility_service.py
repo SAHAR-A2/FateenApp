@@ -142,7 +142,8 @@ def evaluate_compatibility(
 
     product = ProductSummary(
         internal_code=details["internal_code"],
-        name=details["name"],
+        # Older catalogue rows keep an English base name; show Arabic first.
+        name=details.get("name_ar") or details["name"],
         barcode=barcode,
         lifecycle_status=details["lifecycle_status"],
         confidence_level=details["confidence_level"],
