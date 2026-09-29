@@ -21,6 +21,7 @@ No disease-specific logic is embedded in the code.
 # ---------------------------------------------------------------------------
 
 import logging
+import time
 import uuid
 from datetime import datetime, timezone
 from typing import Optional
@@ -93,8 +94,34 @@ def _determine_evaluation(severity: str, triggered: bool) -> str:
         return HealthEvaluation.WARNING.value
 
 
+# Conditions and their thresholds are reference data read for every
+# product checked (an alternatives request checks up to 20). Keep them for
+# a few minutes instead of re-reading them from a database that may be far
+# away; a change to a threshold takes effect within _CACHE_SECONDS.
+_CACHE_SECONDS = 300
+_cache: dict[str, tuple[float, list[dict]]] = {}
+
+
+def clear_cache() -> None:
+    _cache.clear()
+
+
+def _cached(key: str, load) -> list[dict]:
+    hit = _cache.get(key)
+    if hit and time.monotonic() - hit[0] < _CACHE_SECONDS:
+        return hit[1]
+    rows = load()
+    if rows:  # never cache a failed or empty read
+        _cache[key] = (time.monotonic(), rows)
+    return rows
+
+
 def get_health_conditions() -> list[dict]:
     """Get all active health conditions from the database."""
+    return _cached("conditions", _load_health_conditions)
+
+
+def _load_health_conditions() -> list[dict]:
     try:
         with get_connection() as conn:
             rows = conn.execute(
@@ -114,6 +141,10 @@ def get_health_conditions() -> list[dict]:
 def get_condition_rules(condition_id: str) -> list[dict]:
     """Get all active thresholds for a health condition (migration 0055;
     the older condition_nutrition_rules table is no longer read)."""
+    return _cached(f"rules:{condition_id}", lambda: _load_condition_rules(condition_id))
+
+
+def _load_condition_rules(condition_id: str) -> list[dict]:
     try:
         with get_connection() as conn:
             rows = conn.execute(
@@ -179,15 +210,18 @@ _SALT_PER_SODIUM = 2.5
 
 
 def _with_sodium_from_salt(nutrition: dict[str, list[dict]]) -> dict[str, list[dict]]:
-    """Add a SODIUM value derived from SALT for each basis that has salt but
-    no sodium, so a sodium rule is not reported as missing data."""
-    sodium_bases = {v.get("measurement_basis") for v in nutrition.get("SODIUM", [])}
+    """Add a SODIUM value derived from every SALT value, so a sodium rule is
+    not reported as missing data and is judged by the worse of the two.
+
+    Stored sodium is not always right: older imports saved Open Food Facts'
+    sodium in grams under the unit MG (0.868 "mg" for crisps with 2.17 g of
+    salt), which read as almost no salt. The derived value keeps such a
+    product from passing a high-blood-pressure check."""
     derived = [
         {**v, "nutrition_type_code": "SODIUM",
          "amount_value": _convert_to_unit(v["amount_value"], v.get("unit_code", "G"), "G") / _SALT_PER_SODIUM,
          "unit_code": "G", "derived_from": "SALT"}
         for v in nutrition.get("SALT", [])
-        if v.get("measurement_basis") not in sodium_bases
     ]
     if not derived:
         return nutrition

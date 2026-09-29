@@ -36,3 +36,13 @@ def mock_db_connection():
 def db_conn():
     with get_connection() as conn:
         yield conn
+
+
+@pytest.fixture(autouse=True)
+def _fresh_health_rule_cache():
+    """Health conditions and thresholds are cached per process; a test that
+    changes them must not see another test's copy."""
+    from app.collector import health_conditions
+    health_conditions.clear_cache()
+    yield
+    health_conditions.clear_cache()
