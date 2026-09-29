@@ -15,6 +15,7 @@ from app.db.health import check_database
 from app.db.connection import get_connection
 from app.services.database_service import get_database_summary
 from app.api.products import router as products_router
+from app.api.barcode_image import router as barcode_image_router
 from app.api.product_details import router as product_details_router
 from app.api.vision import router as vision_router
 from app.api.ingestion import router as ingestion_router
@@ -202,6 +203,7 @@ async def rate_limit_and_tracking(request: Request, call_next):
 
 
 app.include_router(products_router)
+app.include_router(barcode_image_router)
 app.include_router(product_details_router)
 app.include_router(vision_router)
 app.include_router(ingestion_router)

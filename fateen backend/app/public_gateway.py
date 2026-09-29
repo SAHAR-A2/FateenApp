@@ -31,6 +31,7 @@ _ROUTES = (
         "POST",
         re.compile(r"^/api/v1/products/barcode/[^/]+/alternatives$"),
     ),
+    ("POST", re.compile(r"^/api/v1/products/barcode-from-image$")),
 )
 
 
