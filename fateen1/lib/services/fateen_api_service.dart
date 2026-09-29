@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:typed_data';
+
 import '../models/product_model.dart';
 import '../models/compatibility_result_model.dart';
 import '../models/user_model.dart';
@@ -95,5 +98,15 @@ class FateenApiService {
         .toList();
   }
 
-  void dispose() => _client.dispose();
+  /// Barcode read by the backend from a photo (the browser cannot decode
+  /// a picked photo itself). Null when no product barcode is found.
+  Future<String?> readBarcodeFromImage(Uint8List imageBytes) async {
+    final json = await _client.post(
+      '/api/v1/products/barcode-from-image',
+      body: {'image_base64': base64Encode(imageBytes)},
+    );
+    return (json as Map<String, dynamic>)['barcode'] as String?;
+  }
+
+    void dispose() => _client.dispose();
 }

@@ -10,6 +10,7 @@ import '../widgets/bottom_nav_bar.dart';
 import '../widgets/circle_icon_button.dart';
 import '../widgets/scan_action_button.dart';
 import '../logic/gtin.dart';
+import '../services/fateen_api_service.dart';
 import '../services/product_check_service.dart';
 
 /// Product barcodes FATEEN can look up (retail EAN/UPC families).
@@ -103,30 +104,30 @@ class _BarcodeScanScreenState extends State<BarcodeScanScreen> {
     if (!mounted) return;
     setState(() => selectedImageBytes = bytes);
 
-    if (kIsWeb) {
-      // mobile_scanner لا يدعم قراءة الباركود من مسار صورة على الويب.
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text(
-              'قراءة الباركود من صورة غير مدعومة على المتصفح؛ استخدم المسح المباشر أو أدخل الرقم'),
-        ),
-      );
-      return;
-    }
-
     setState(() => isAnalyzing = true);
-    BarcodeCapture? capture;
-    try {
-      capture = await scannerController.analyzeImage(image.path);
-    } catch (_) {
-      capture = null;
+    String? value;
+    if (kIsWeb) {
+      // mobile_scanner cannot analyze a picked photo in the browser; the
+      // backend reads the barcode instead.
+      try {
+        value = await FateenApiService().readBarcodeFromImage(bytes);
+      } catch (_) {
+        value = null;
+      }
+    } else {
+      BarcodeCapture? capture;
+      try {
+        capture = await scannerController.analyzeImage(image.path);
+      } catch (_) {
+        capture = null;
+      }
+      value = capture?.barcodes
+          .map((b) => b.rawValue)
+          .firstWhere((v) => v != null && v.isNotEmpty, orElse: () => null);
     }
     if (!mounted) return;
     setState(() => isAnalyzing = false);
 
-    final value = capture?.barcodes
-        .map((b) => b.rawValue)
-        .firstWhere((v) => v != null && v.isNotEmpty, orElse: () => null);
     if (value == null) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(

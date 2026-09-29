@@ -46,3 +46,13 @@ def _fresh_health_rule_cache():
     health_conditions.clear_cache()
     yield
     health_conditions.clear_cache()
+
+
+@pytest.fixture(autouse=True)
+def _fresh_rate_limit():
+    """The per-IP rate limiter counts every test client request; start each
+    test with an empty window so a test's outcome never depends on how many
+    requests earlier tests made."""
+    from app.main import _rate_limit_store
+    _rate_limit_store.clear()
+    yield
