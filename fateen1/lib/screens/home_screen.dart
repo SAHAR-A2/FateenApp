@@ -1,9 +1,11 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import '../core/theme/app_colors.dart';
 import '../core/theme/app_text_styles.dart';
 import '../core/theme/app_theme.dart';
 import '../widgets/bottom_nav_bar.dart';
 import '../services/auth_service.dart';
+import '../services/ble_service.dart';
 import '../services/firestore_service.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,13 +19,24 @@ class _HomeScreenState extends State<HomeScreen> {
   String _username = '';
   bool _isLoading = true;
 
-  final bool _isConnectingBracelet = false;
-  final bool _isBraceletConnected = false;
+  BleConnectionStatus _bandStatus = BleService.instance.currentStatus;
+  StreamSubscription<BleConnectionStatus>? _bandSub;
 
   @override
   void initState() {
     super.initState();
     _loadUsername();
+
+    // Follow the real band connection state so the button updates itself.
+    _bandSub = BleService.instance.statusStream.listen((status) {
+      if (mounted) setState(() => _bandStatus = status);
+    });
+  }
+
+  @override
+  void dispose() {
+    _bandSub?.cancel();
+    super.dispose();
   }
 
   Future<void> _loadUsername() async {
@@ -41,16 +54,21 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
-  // There is no Bluetooth pairing yet, and the dish-photo estimate is not
-  // served by the public API. Say so instead of simulating a connection or
-  // opening a screen that can only fail.
+  // The dish-photo estimate is not served by the public API. Say so instead
+  // of opening a screen that can only fail.
   void _showComingSoon(String feature) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text('$feature قريبًا')),
     );
   }
 
-  Future<void> _connectBracelet() async => _showComingSoon('ربط السوار');
+  void _connectBracelet() {
+    if (_bandStatus == BleConnectionStatus.connected) {
+      BleService.instance.disconnect();
+    } else {
+      BleService.instance.scanAndConnect();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -103,8 +121,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               const SizedBox(height: AppSpacing.smMd),
               _BraceletConnectButton(
-                isConnecting: _isConnectingBracelet,
-                isConnected: _isBraceletConnected,
+                isConnecting: _bandStatus == BleConnectionStatus.scanning ||
+                    _bandStatus == BleConnectionStatus.connecting,
+                isConnected: _bandStatus == BleConnectionStatus.connected,
                 onTap: _connectBracelet,
               ),
               const Spacer(),

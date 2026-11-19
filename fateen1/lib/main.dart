@@ -19,6 +19,11 @@ import 'screens/stores_screen.dart';
 import 'screens/disclaimer_screen.dart';
 import 'screens/profile_screen.dart';
 import 'screens/edit_profile_screen.dart';
+import 'services/band_scan_handler.dart';
+
+// Global navigator key: lets the band (Bluetooth, in the background) open the
+// result screen from outside any widget.
+final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -46,10 +51,18 @@ class FateenApp extends StatefulWidget {
 
 class _FateenAppState extends State<FateenApp> {
   @override
+  void initState() {
+    super.initState();
+    // Start listening to the band once, from app launch.
+    BandScanHandler.instance.start(navigatorKey);
+  }
+
+  @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder<Locale>(
         valueListenable: FateenApp.locale,
         builder: (context, locale, _) => MaterialApp(
+              navigatorKey: navigatorKey,
               title: 'فطين',
               debugShowCheckedModeBanner: false,
               locale: locale,
